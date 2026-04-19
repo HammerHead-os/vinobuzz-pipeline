@@ -1,0 +1,92 @@
+[
+  {
+    "id": "test-001",
+    "producer": "Domaine Rossignol-Trapet",
+    "appellation": "Latricieres-Chambertin Grand Cru",
+    "cru_vineyard": "Latricieres-Chambertin",
+    "vintage": 2017,
+    "format": "750ml",
+    "region": "Burgundy"
+  },
+  {
+    "id": "test-002",
+    "producer": "Domaine Arlaud",
+    "appellation": "Morey-St-Denis",
+    "cru_vineyard": "Monts Luisants",
+    "vintage": 2019,
+    "format": "750ml",
+    "region": "Burgundy"
+  },
+  {
+    "id": "test-003",
+    "producer": "Domaine Taupenot-Merme",
+    "appellation": "Charmes-Chambertin Grand Cru",
+    "cru_vineyard": "Charmes-Chambertin",
+    "vintage": 2018,
+    "format": "750ml",
+    "region": "Burgundy"
+  },
+  {
+    "id": "test-004",
+    "producer": "Château Fonroque",
+    "appellation": "Saint-Émilion Grand Cru Classé",
+    "cru_vineyard": null,
+    "vintage": 2016,
+    "format": "750ml",
+    "region": "Bordeaux"
+  },
+  {
+    "id": "test-005",
+    "producer": "Eric Rodez",
+    "appellation": "Cuvée des Crayères Blanc de Noirs",
+    "cru_vineyard": null,
+    "vintage": null,
+    "format": "750ml",
+    "region": "Champagne"
+  },
+  {
+    "id": "test-006",
+    "producer": "Domaine du Tunnel",
+    "appellation": "Cornas",
+    "cru_vineyard": "Vin Noir",
+    "vintage": 2018,
+    "format": "750ml",
+    "region": "Northern Rhône"
+  },
+  {
+    "id": "test-007",
+    "producer": "Poderi Colla",
+    "appellation": "Barolo",
+    "cru_vineyard": "Bussia Dardi Le Rose",
+    "vintage": 2016,
+    "format": "750ml",
+    "region": "Piedmont"
+  },
+  {
+    "id": "test-008",
+    "producer": "Arnot-Roberts",
+    "appellation": "Trousseau Gris",
+    "cru_vineyard": "Watson Ranch",
+    "vintage": 2020,
+    "format": "750ml",
+    "region": "Sonoma"
+  },
+  {
+    "id": "test-009",
+    "producer": "Brokenwood",
+    "appellation": "Graveyard Vineyard Shiraz",
+    "cru_vineyard": "Graveyard Vineyard",
+    "vintage": 2015,
+    "format": "750ml",
+    "region": "Hunter Valley"
+  },
+  {
+    "id": "test-010",
+    "producer": "Domaine Weinbach",
+    "appellation": "Riesling Vendanges Tardives",
+    "cru_vineyard": "Clos des Capucins",
+    "vintage": 2017,
+    "format": "750ml",
+    "region": "Alsace"
+  }
+]

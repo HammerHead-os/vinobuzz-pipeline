@@ -1,0 +1,92 @@
+[
+  {
+    "id": "ref-001",
+    "producer": "Caroline Morey",
+    "appellation": "Beaune Premier Cru",
+    "cru_vineyard": "Les Grèves",
+    "vintage": 2022,
+    "format": "750ml",
+    "region": "Burgundy"
+  },
+  {
+    "id": "ref-002",
+    "producer": "Charles Lachaux",
+    "appellation": "Côte de Nuits Villages",
+    "cru_vineyard": "Aux Montagnes",
+    "vintage": 2019,
+    "format": "750ml",
+    "region": "Burgundy"
+  },
+  {
+    "id": "ref-003",
+    "producer": "Château de Charodon",
+    "appellation": "Beaune Premier Cru",
+    "cru_vineyard": "Les Chouacheux",
+    "vintage": 2023,
+    "format": "750ml",
+    "region": "Burgundy"
+  },
+  {
+    "id": "ref-004",
+    "producer": "Charles van Canneyt",
+    "appellation": "Griotte Chambertin Grand Cru",
+    "cru_vineyard": "Griotte-Chambertin",
+    "vintage": 2021,
+    "format": "750ml",
+    "region": "Burgundy"
+  },
+  {
+    "id": "ref-005",
+    "producer": "Comtesse de Cherisey",
+    "appellation": "Meursault Blagny 1er Cru",
+    "cru_vineyard": "La Genelotte",
+    "vintage": 2019,
+    "format": "750ml",
+    "region": "Burgundy"
+  },
+  {
+    "id": "ref-006",
+    "producer": "André Clouet",
+    "appellation": "Champagne Brut",
+    "cru_vineyard": "Chalky",
+    "vintage": null,
+    "format": "750ml",
+    "region": "Champagne"
+  },
+  {
+    "id": "ref-007",
+    "producer": "Château Rayas",
+    "appellation": "Les Tours Réserve",
+    "cru_vineyard": null,
+    "vintage": 2013,
+    "format": "750ml",
+    "region": "Rhône"
+  },
+  {
+    "id": "ref-008",
+    "producer": "Colgin Cellars",
+    "appellation": "Napa Valley",
+    "cru_vineyard": "Cariad",
+    "vintage": 2017,
+    "format": "750ml",
+    "region": "Napa"
+  },
+  {
+    "id": "ref-009",
+    "producer": "Castello di Querceto",
+    "appellation": "Colli della Toscana",
+    "cru_vineyard": "Cignale",
+    "vintage": 1989,
+    "format": "750ml",
+    "region": "Tuscany"
+  },
+  {
+    "id": "ref-010",
+    "producer": "Virginie de Valandraud",
+    "appellation": "Champagne Blanc",
+    "cru_vineyard": null,
+    "vintage": 2019,
+    "format": "750ml",
+    "region": "Bordeaux"
+  }
+]
