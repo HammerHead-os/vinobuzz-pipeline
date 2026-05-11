@@ -60,6 +60,12 @@ Get your Gemini API key at https://aistudio.google.com/apikey
 ### 3. Run the benchmark
 
 ```bash
+python scripts/benchmark.py --skus export_sku_20260427_062154.xlsx --bypass-cache
+```
+
+Or use the test SKUs:
+
+```bash
 python scripts/benchmark.py --skus data/test_skus.json --bypass-cache
 ```
 
@@ -96,6 +102,7 @@ Open http://localhost:8501 to see results with images, scores, and verdicts.
 │   ├── reference_skus.json # 10 reference wines (live on VinoBuzz)
 │   ├── production_skus.json # Production SKU dataset
 │   └── images/             # Locally saved candidate images
+├── export_sku_20260427_062154.xlsx  # Main SKU Excel file (298 wines)
 ├── charts/                 # Visualization and analysis charts
 ├── .kiro/specs/wine-photo-pipeline/
 │   ├── requirements.md     # Full requirements specification
