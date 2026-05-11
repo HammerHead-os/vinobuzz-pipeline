@@ -31,7 +31,7 @@ Wine SKU → Search → Download → Crop Label → Read Label → Cross-check O
 ### 1. Clone and install
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/vinobuzz-pipeline.git
+git clone https://github.com/HammerHead-os/vinobuzz-pipeline.git
 cd vinobuzz-pipeline
 pip install -r requirements.txt
 ```
@@ -87,14 +87,22 @@ Open http://localhost:8501 to see results with images, scores, and verdicts.
 │   ├── scoring.py          # Confidence scoring and verdict assignment
 │   ├── search.py           # DuckDuckGo image search with fallback chain
 │   └── verifier.py         # Gemini-based label fingerprint extraction
-├── tests/                  # 34 tests (unit + property-based)
+├── tests/                  # 212 tests (unit + property-based)
 ├── scripts/
-│   └── benchmark.py        # Benchmark runner with formatted output
+│   ├── benchmark.py        # Benchmark runner with formatted output
+│   └── test_single_sku.py  # Single SKU testing utility
 ├── data/
 │   ├── test_skus.json      # 10 test wines (pipeline must find these)
 │   ├── reference_skus.json # 10 reference wines (live on VinoBuzz)
+│   ├── production_skus.json # Production SKU dataset
 │   └── images/             # Locally saved candidate images
+├── charts/                 # Visualization and analysis charts
+├── .kiro/specs/wine-photo-pipeline/
+│   ├── requirements.md     # Full requirements specification
+│   ├── design.md           # Design document with architecture
+│   └── tasks.md            # Implementation task list
 ├── WRITEUP.txt             # Detailed write-up (approach, decisions, results)
+├── MEETING_PREP.md         # Meeting preparation notes
 ├── REQUIREMENTS.md         # Full requirements spec
 └── requirements.txt        # Python dependencies
 ```
@@ -112,6 +120,7 @@ Open http://localhost:8501 to see results with images, scores, and verdicts.
 | String Matching | rapidfuzz | Fast fuzzy matching with Levenshtein distance |
 | Cache | SQLite | Zero config, single file |
 | Demo UI | Streamlit | Quick visual demo |
+| Testing | pytest + Hypothesis | Unit tests + property-based testing |
 
 ### Why not GPT-4o?
 OpenAI is not available in Hong Kong.
@@ -158,7 +167,19 @@ Accuracy: 8/10 PASS (80%), best run 9/10 (90%)
 python -m pytest tests/ -v
 ```
 
-All 34 tests pass (unit tests + property-based tests with Hypothesis).
+All 212 tests pass:
+- Unit tests for each component
+- Property-based tests with Hypothesis
+- Integration tests for the full pipeline
+
+---
+
+## Documentation
+
+- **Requirements**: See `REQUIREMENTS.md` and `.kiro/specs/wine-photo-pipeline/requirements.md`
+- **Design**: See `.kiro/specs/wine-photo-pipeline/design.md`
+- **Implementation Plan**: See `.kiro/specs/wine-photo-pipeline/tasks.md`
+- **Write-up**: See `WRITEUP.txt`
 
 ---
 
