@@ -21,12 +21,13 @@ from wine_pipeline.scoring import compare_field
 EXTRACTION_PROMPT = (
     "You are a wine label reader. Examine this wine bottle label image and "
     "extract the following fields as a JSON object:\n"
-    '{"producer": "...", "appellation": "...", "cru_vineyard": "...", "vintage": "..."}\n'
+    '{"producer": "...", "appellation": "...", "cru_vineyard": "...", "vintage": "...", "is_wine_bottle": true/false}\n'
     "Rules:\n"
     "- producer: the winery or domaine name\n"
     "- appellation: the AOC / DOC / AVA or regional designation\n"
     "- cru_vineyard: the cru or specific vineyard name, or null if none\n"
     "- vintage: the year on the label as a string, or null if non-vintage\n"
+    "- is_wine_bottle: true if this image shows a wine bottle with a label, false otherwise\n"
     "Return ONLY valid JSON, no markdown fences or extra text."
 )
 
@@ -121,12 +122,14 @@ class FingerprintVerifier:
             return Fingerprint(
                 producer=None, appellation=None,
                 cru_vineyard=None, vintage=None,
+                is_wine_bottle=False,
             )
 
         if not isinstance(data, dict):
             return Fingerprint(
                 producer=None, appellation=None,
                 cru_vineyard=None, vintage=None,
+                is_wine_bottle=False,
             )
 
         def _str_or_none(val: object) -> Optional[str]:
@@ -140,6 +143,7 @@ class FingerprintVerifier:
             appellation=_str_or_none(data.get("appellation")),
             cru_vineyard=_str_or_none(data.get("cru_vineyard")),
             vintage=_str_or_none(data.get("vintage")),
+            is_wine_bottle=bool(data.get("is_wine_bottle", True)),
         )
 
     # ------------------------------------------------------------------

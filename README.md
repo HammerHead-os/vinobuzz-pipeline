@@ -1,8 +1,8 @@
 # VinoBuzz Wine Photo Pipeline 🍷
 
-An automated pipeline that finds, verifies, and scores wine product photos from the web. Built for Hong Kong deployment, targeting 90% accuracy across VinoBuzz's catalog.
+An automated pipeline that finds, verifies, and scores wine product photos from the web. Built for Hong Kong deployment, targeting 70% minimum accuracy across VinoBuzz's catalog.
 
-**Result: 80-90% accuracy on 10 test SKUs** (up from ~50% baseline).
+**Current Status**: 40% PASS on 5 SKU test (with DuckDuckGo search). Wine bottle detection added to filter non-wine images. Google Custom Search integration ready (requires valid API key).
 
 ---
 
@@ -12,7 +12,7 @@ An automated pipeline that finds, verifies, and scores wine product photos from 
 Wine SKU → Search → Download → Crop Label → Read Label → Cross-check OCR → Quality Check → Score → Pass/Fail
 ```
 
-1. **Search** — Finds candidate bottle photos using DuckDuckGo Images (free, no API key). Falls back to retailer scraping (Vivino, Wine-Searcher) and producer websites.
+1. **Search** — Finds candidate bottle photos using Google Custom Search API (highest quality) with fallback to DuckDuckGo Images. Falls back to retailer scraping (Vivino, Wine-Searcher) and producer websites.
 
 2. **Label Extraction** — OpenCV crops just the label region from the bottle photo, removing background noise.
 
@@ -51,11 +51,18 @@ mv ~/Downloads/your-service-account.json ./credentials.json
 Create a `.env` file:
 
 ```
-GOOGLE_API_KEY=your-gemini-api-key
+GOOGLE_API_KEY=your-google-api-key
 GOOGLE_APPLICATION_CREDENTIALS=./credentials.json
+GOOGLE_CX=your-custom-search-engine-id
 ```
 
 Get your Gemini API key at https://aistudio.google.com/apikey
+
+For Google Custom Search (recommended for better accuracy):
+1. Create a Programmable Search Engine at https://programmablesearchengine.google.com/
+2. Get your Search Engine ID (CX)
+3. Enable Custom Search API in Google Cloud Console
+4. Create an API key with Custom Search API access
 
 ### 3. Run the benchmark
 
@@ -122,7 +129,7 @@ Open http://localhost:8501 to see results with images, scores, and verdicts.
 |-----------|------|-----|
 | Vision AI | Google Gemini 2.5 Flash (Vertex AI) | Available in HK, strong label reading |
 | OCR | Google Cloud Vision (asia-east2) | HK endpoint, independent cross-reference |
-| Image Search | DuckDuckGo (ddgs) | Free, no API key, no signup |
+| Image Search | Google Custom Search (primary) + DuckDuckGo (fallback) | Google = high quality, DDG = free backup |
 | Label Cropping | OpenCV | Simple contour detection, works well |
 | String Matching | rapidfuzz | Fast fuzzy matching with Levenshtein distance |
 | Cache | SQLite | Zero config, single file |
@@ -132,28 +139,47 @@ Open http://localhost:8501 to see results with images, scores, and verdicts.
 ### Why not GPT-4o?
 OpenAI is not available in Hong Kong.
 
-### Why not SerpAPI?
-Phone verification issues during signup. DuckDuckGo works without any credentials.
+### Why Google Custom Search?
+DuckDuckGo returns mixed results (random images, stock photos) which hurts accuracy. Google Custom Search provides higher quality, more relevant wine bottle images.
+
+---
+
+## Recent Improvements
+
+### Wine Bottle Detection
+Added `is_wine_bottle` field to fingerprint extraction. GPT-4o/Gemini now explicitly checks if the downloaded image is actually a wine bottle before processing. This filters out:
+- Stock photos
+- Random images (motorcycles, flowers, etc.)
+- Non-product lifestyle shots
+
+### Google Custom Search Integration
+Added Google Custom Search API as primary search source for higher quality results. Falls back to DuckDuckGo if Google quota exceeded or API key missing.
+
+### Field Mapping Fix
+Fixed Excel SKU loading - `sub_region` column contains the actual cru/appellation (e.g., "Clos de Vougeot", "Richebourg"), not the generic `region` column ("Burgundy").
 
 ---
 
 ## Test Results
 
+### 5 SKU Benchmark (DuckDuckGo Search)
 ```
 SKU ID       Verdict      Confidence
-test-001     QUARANTINE       0.62    (Rossignol-Trapet, vintage mismatch)
-test-002     PASS             0.82    (Arlaud Morey-St-Denis)
-test-003     PASS             0.75    (Taupenot-Merme Charmes-Chambertin)
-test-004     PASS             0.75    (Chateau Fonroque)
-test-005     PASS             0.70    (Eric Rodez NV Champagne)
-test-006     PASS             0.88    (Domaine du Tunnel Cornas)
-test-007     PASS             0.85    (Poderi Colla Barolo)
-test-008     PASS             0.77    (Arnot-Roberts Trousseau Gris)
-test-009     PASS             0.78    (Brokenwood Graveyard Shiraz)
-test-010     QUARANTINE       0.52    (Weinbach Riesling VT, hard case)
+S000001      PASS             0.80    (Domaine A.F. Gros Clos de Vougeot)
+S000002      QUARANTINE       0.61    (Domaine A.F. Gros Moulin-à-Vent 2022)
+S000003      REJECT           0.48    (Domaine A.F. Gros Moulin-à-Vent 2021)
+S000004      PASS             0.96    (Domaine A.F. Gros Richebourg 2019)
+S000005      QUARANTINE       0.63    (Domaine A.F. Gros Richebourg 2020)
 
+Accuracy: 2/5 PASS (40%), 2/5 QUARANTINE (40%), 1/5 REJECT (20%)
+```
+
+### Historical Results (Test SKUs)
+```
 Accuracy: 8/10 PASS (80%), best run 9/10 (90%)
 ```
+
+**Note**: Accuracy varies based on search quality. Google Custom Search expected to significantly improve results.
 
 ---
 

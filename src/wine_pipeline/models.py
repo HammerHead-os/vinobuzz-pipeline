@@ -50,6 +50,7 @@ class Fingerprint:
     appellation: Optional[str]
     cru_vineyard: Optional[str]
     vintage: Optional[str]
+    is_wine_bottle: bool = True  # True if image shows a wine bottle
 
 
 @dataclass

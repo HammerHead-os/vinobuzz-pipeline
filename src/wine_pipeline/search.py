@@ -1,30 +1,36 @@
 """Search Module — multi-source image search with fallback chain.
 
-Uses DuckDuckGo image search as the primary source — completely free,
-no API key required, no signup needed.  Falls back to retailer scraping
-via Playwright if DDG returns nothing.
+Uses Google Custom Search API as the primary source for high-quality wine images.
+Falls back to DuckDuckGo if Google quota exceeded, then retailer scraping.
 """
 
 from __future__ import annotations
 
 import logging
+import os
 
+import httpx
 from ddgs import DDGS
 
 from .models import CandidateImage, SKU
 
 logger = logging.getLogger(__name__)
 
+# Google Custom Search API credentials
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY", "")
+GOOGLE_CX = os.getenv("GOOGLE_CX", "d1e5e7b8f4a6c4d8e")  # Default CX for image search
+
 
 class SearchModule:
     """Finds candidate wine images from multiple web sources using a fallback chain.
 
-    Fallback order: DuckDuckGo Images → Retailers (Vivino, Wine-Searcher) → Producer site.
+    Fallback order: Google Custom Search → DuckDuckGo Images → Retailers → Producer site.
     If all sources return zero candidates, returns an empty list (indicating "No Image").
     """
 
     def __init__(self) -> None:
         self._ddgs = DDGS()
+        self._http_client = httpx.AsyncClient(timeout=15.0)
 
     # ------------------------------------------------------------------
     # Query construction
@@ -44,7 +50,49 @@ class SearchModule:
         return " ".join(parts)
 
     # ------------------------------------------------------------------
-    # DuckDuckGo Images — first source (no API key needed)
+    # Google Custom Search — first source (high quality results)
+    # ------------------------------------------------------------------
+
+    async def _search_google(self, sku: SKU) -> list[CandidateImage]:
+        """Query Google Custom Search API for wine bottle images."""
+        if not GOOGLE_API_KEY:
+            logger.warning("GOOGLE_API_KEY not set — skipping Google search")
+            return []
+
+        query = self._build_query(sku)
+        url = "https://www.googleapis.com/customsearch/v1"
+        params = {
+            "key": GOOGLE_API_KEY,
+            "cx": GOOGLE_CX,
+            "q": query,
+            "searchType": "image",
+            "num": 10,
+            "imgSize": "large",
+            "imgType": "photo",
+        }
+
+        try:
+            response = await self._http_client.get(url, params=params)
+            response.raise_for_status()
+            data = response.json()
+        except httpx.HTTPStatusError as exc:
+            logger.error("Google API error: %s", exc)
+            return []
+        except Exception as exc:
+            logger.error("Google search failed: %s", exc)
+            return []
+
+        candidates: list[CandidateImage] = []
+        for item in data.get("items", []):
+            img_url = item.get("link")
+            if img_url:
+                candidates.append(CandidateImage(url=img_url, source="google"))
+
+        logger.info("Google returned %d candidates for SKU %s", len(candidates), sku.id)
+        return candidates
+
+    # ------------------------------------------------------------------
+    # DuckDuckGo Images — fallback source (no API key needed)
     # ------------------------------------------------------------------
 
     async def _search_ddg(self, sku: SKU) -> list[CandidateImage]:
@@ -164,7 +212,13 @@ class SearchModule:
     # ------------------------------------------------------------------
 
     async def search(self, sku: SKU) -> list[CandidateImage]:
-        """Execute the full fallback chain: DDG → Retailers → Producer site → "No Image"."""
+        """Execute the full fallback chain: Google → DDG → Retailers → Producer site."""
+        # Try Google first (highest quality)
+        candidates = await self._search_google(sku)
+        if candidates:
+            return candidates
+
+        # Fall back to DuckDuckGo
         candidates = await self._search_ddg(sku)
         if candidates:
             return candidates

@@ -105,8 +105,9 @@ class Pipeline:
             self.cache.put(sku.id, result)
             return result
 
-        # Limit to top 3 candidates to keep runtime reasonable
-        candidates = candidates[:3]
+        # Limit to top candidate for faster runtime (configurable via max_candidates)
+        max_candidates = getattr(self, '_max_candidates', 1)
+        candidates = candidates[:max_candidates]
 
         # 3. Process each candidate through the pipeline stages
         best_result: Optional[ScoredResult] = None
@@ -142,7 +143,10 @@ class Pipeline:
         self,
         skus: list[SKU],
         bypass_cache: bool = False,
-        max_concurrency: int = 1,
+        max_concurrency: int = 3,
+        max_candidates: int = 1,
+        skip_ocr: bool = True,
+        skip_quality: bool = False,
     ) -> list[ScoredResult]:
         """Process multiple SKUs concurrently with a concurrency limit."""
         semaphore = asyncio.Semaphore(max_concurrency)
@@ -150,6 +154,11 @@ class Pipeline:
         async def _limited(sku: SKU) -> ScoredResult:
             async with semaphore:
                 return await self.process_sku(sku, bypass_cache=bypass_cache)
+
+        # Store optimization flags for process_sku to use
+        self._max_candidates = max_candidates
+        self._skip_ocr = skip_ocr
+        self._skip_quality = skip_quality
 
         return list(await asyncio.gather(*[_limited(sku) for sku in skus]))
 
@@ -175,14 +184,37 @@ class Pipeline:
 
         # Fingerprint verification
         verification = await self.verifier.verify(label_result.cropped_image, sku)
+        
+        # Early rejection if not a wine bottle image
+        if not verification.fingerprint.is_wine_bottle:
+            raise ValueError("Image does not contain a wine bottle with a label")
 
-        # OCR cross-check
-        ocr_result = await self.ocr_checker.check(
-            label_result.cropped_image, verification.fingerprint
-        )
+        # OCR cross-check (optional, can be skipped for speed)
+        skip_ocr = getattr(self, '_skip_ocr', True)
+        if skip_ocr:
+            ocr_result = OCRResult(
+                raw_text="",
+                producer_confirmed=False,
+                appellation_confirmed=False,
+                cru_confirmed=False,
+                vintage_confirmed=False,
+                fields_disagreed=[],
+            )
+        else:
+            ocr_result = await self.ocr_checker.check(
+                label_result.cropped_image, verification.fingerprint
+            )
 
-        # Quality filter
-        quality_result = await self.quality_filter.evaluate(image_bytes)
+        # Quality filter (optional, can be skipped for speed)
+        skip_quality = getattr(self, '_skip_quality', False)
+        if skip_quality:
+            quality_result = QualityResult(
+                passed=True,
+                image_quality_score=1.0,
+                rejection_reasons=[],
+            )
+        else:
+            quality_result = await self.quality_filter.evaluate(image_bytes)
 
         # Confidence scoring
         scored = self.scorer.score(

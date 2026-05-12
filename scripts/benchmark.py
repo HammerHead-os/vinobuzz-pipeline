@@ -45,19 +45,52 @@ DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 
 
 def load_skus(path: Path) -> list[SKU]:
-    """Load SKU objects from a JSON file."""
-    with open(path) as f:
-        raw = json.load(f)
-    return [
-        SKU(
-            id=item["id"],
-            producer=item["producer"],
-            appellation=item["appellation"],
-            cru_vineyard=item.get("cru_vineyard"),
-            vintage=item.get("vintage"),
-            format=item.get("format", "750ml"),
-            region=item.get("region", ""),
-        )
+    """Load SKU objects from a JSON or Excel file."""
+    if str(path).endswith('.xlsx'):
+        import pandas as pd
+        df = pd.read_excel(path)
+        skus = []
+        for _, row in df.iterrows():
+            vintage = row.get('vintage')
+            if pd.isna(vintage) or vintage == 'NV':
+                vintage = None
+            elif isinstance(vintage, str):
+                try:
+                    vintage = int(vintage)
+                except ValueError:
+                    vintage = None
+            
+            # Use sub_region as appellation since it's more specific
+            # region is too generic (e.g., "Burgundy")
+            sub_region = row.get('sub_region')
+            region = row.get('region')
+            
+            # sub_region is the actual cru/appellation
+            appellation = str(sub_region) if not pd.isna(sub_region) and sub_region else str(region) if not pd.isna(region) else ''
+            
+            skus.append(SKU(
+                id=str(row.get('wine_id', '')),
+                producer=str(row.get('winery', '')) if not pd.isna(row.get('winery')) else '',
+                appellation=appellation,
+                cru_vineyard=str(row.get('ranking', '')) if not pd.isna(row.get('ranking')) and 'Cru' in str(row.get('ranking')) else None,
+                vintage=vintage,
+                format=str(row.get('format', '750ml')) if not pd.isna(row.get('format')) else '750ml',
+                region=str(row.get('country', '')) if not pd.isna(row.get('country')) else '',
+            ))
+        return skus
+    else:
+        with open(path) as f:
+            raw = json.load(f)
+        return [
+            SKU(
+                id=item["id"],
+                producer=item["producer"],
+                appellation=item["appellation"],
+                cru_vineyard=item.get("cru_vineyard"),
+                vintage=item.get("vintage"),
+                format=item.get("format", "750ml"),
+                region=item.get("region", ""),
+            )
         for item in raw
     ]
 
@@ -124,6 +157,10 @@ async def run_benchmark(
     sku_file: Path,
     bypass_cache: bool = False,
     cache_path: str = "benchmark_cache.db",
+    max_concurrency: int = 3,
+    max_candidates: int = 3,
+    skip_ocr: bool = True,
+    skip_quality: bool = False,
 ) -> None:
     """Load SKUs, run the pipeline, and print results."""
     skus = load_skus(sku_file)
@@ -132,7 +169,14 @@ async def run_benchmark(
     pipeline = build_pipeline(cache_path=cache_path)
 
     start = time.perf_counter()
-    results = await pipeline.process_batch(skus, bypass_cache=bypass_cache)
+    results = await pipeline.process_batch(
+        skus,
+        bypass_cache=bypass_cache,
+        max_concurrency=max_concurrency,
+        max_candidates=max_candidates,
+        skip_ocr=skip_ocr,
+        skip_quality=skip_quality,
+    )
     elapsed = time.perf_counter() - start
 
     print_result_table(results)
