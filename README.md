@@ -1,4 +1,3 @@
-```markdown
 # VinoBuzz Wine Photo Pipeline 🍷
 
 An automated pipeline that finds, verifies, and scores wine product photos from the web. Built for Hong Kong deployment, targeting 70% minimum accuracy across VinoBuzz's catalog.
