@@ -1,3 +1,4 @@
+```markdown
 # VinoBuzz Wine Photo Pipeline 🍷
 
 An automated pipeline that finds, verifies, and scores wine product photos from the web. Built for Hong Kong deployment, targeting 70% minimum accuracy across VinoBuzz's catalog.
@@ -98,7 +99,7 @@ Open http://localhost:8501 to see results with images, scores, and verdicts.
 │   ├── pipeline.py         # Main orchestrator wiring all stages together
 │   ├── quality_filter.py   # Gemini-based image quality evaluation
 │   ├── scoring.py          # Confidence scoring and verdict assignment
-│   ├── search.py           # DuckDuckGo image search with fallback chain
+│   ├── search.py           # Google Custom Search + DuckDuckGo fallback
 │   └── verifier.py         # Gemini-based label fingerprint extraction
 ├── tests/                  # 212 tests (unit + property-based)
 ├── scripts/
@@ -219,3 +220,4 @@ All 212 tests pass:
 ## License
 
 Built for the VinoBuzz internship assignment.
+```
