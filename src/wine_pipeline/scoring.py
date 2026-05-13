@@ -30,19 +30,56 @@ def compare_field(extracted: str | None, expected: str | None) -> float:
     ext_lower = extracted.lower()
     exp_lower = expected.lower()
 
+    # Exact match (after normalization)
+    if ext_lower == exp_lower:
+        return 1.0
+
+    # Normalize common variations
+    ext_norm = _normalize_wine_text(ext_lower)
+    exp_norm = _normalize_wine_text(exp_lower)
+
+    if ext_norm == exp_norm:
+        return 1.0
+
     # Base fuzzy similarity
-    base = Levenshtein.normalized_similarity(ext_lower, exp_lower)
+    base = Levenshtein.normalized_similarity(ext_norm, exp_norm)
 
     # Token overlap boost: what fraction of expected tokens appear in extracted?
-    exp_tokens = set(exp_lower.split())
-    ext_tokens = set(ext_lower.split())
+    exp_tokens = set(exp_norm.split())
+    ext_tokens = set(ext_norm.split())
     if exp_tokens:
         overlap = len(exp_tokens & ext_tokens) / len(exp_tokens)
     else:
         overlap = 0.0
 
-    # Return the better of the two signals
-    return max(base, overlap)
+    # Substring match boost: if expected is fully contained in extracted
+    substring_boost = 0.0
+    if exp_norm in ext_norm:
+        substring_boost = 0.85
+    elif ext_norm in exp_norm:
+        substring_boost = 0.80
+
+    # Return the best of all signals
+    return max(base, overlap, substring_boost)
+
+
+def _normalize_wine_text(text: str) -> str:
+    """Normalize wine-specific text variations for better matching."""
+    import re
+    # Normalize accented characters
+    text = text.replace("é", "e").replace("è", "e").replace("ê", "e")
+    text = text.replace("à", "a").replace("â", "a")
+    text = text.replace("ù", "u").replace("û", "u")
+    text = text.replace("ô", "o").replace("î", "i").replace("ï", "i")
+    text = text.replace("ç", "c")
+    
+    # Normalize common wine terms
+    text = re.sub(r"\bchateau\b", "château", text)
+    text = re.sub(r"\bdomaine\b", "domaine", text)
+    text = re.sub(r"\s+", " ", text)  # collapse multiple spaces
+    text = text.strip()
+    
+    return text
 
 
 # Default scoring weights

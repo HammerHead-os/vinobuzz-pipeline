@@ -1,5 +1,6 @@
 .env
 credentials.json
+credentials2.0.json
 *.db
 __pycache__/
 .hypothesis/

@@ -19,16 +19,19 @@ from wine_pipeline.scoring import compare_field
 
 
 EXTRACTION_PROMPT = (
-    "You are a wine label reader. Examine this wine bottle label image and "
+    "You are a wine label expert. Examine this wine bottle label image and "
     "extract the following fields as a JSON object:\n"
     '{"producer": "...", "appellation": "...", "cru_vineyard": "...", "vintage": "...", "is_wine_bottle": true/false}\n'
     "Rules:\n"
-    "- producer: the winery or domaine name\n"
-    "- appellation: the AOC / DOC / AVA or regional designation\n"
-    "- cru_vineyard: the cru or specific vineyard name, or null if none\n"
+    "- producer: the winery, domaine, or château name (include 'Domaine', 'Château' prefix if present)\n"
+    "- appellation: the AOC/DOC/AVA or regional designation (e.g., 'Clos de Vougeot', 'Saint-Émilion')\n"
+    "- cru_vineyard: the cru classification (e.g., 'Grand Cru', 'Premier Cru') or specific vineyard name, or null if none\n"
     "- vintage: the year on the label as a string, or null if non-vintage\n"
-    "- is_wine_bottle: true if this image shows a wine bottle with a label, false otherwise\n"
-    "Return ONLY valid JSON, no markdown fences or extra text."
+    "- is_wine_bottle: true if this image shows a wine bottle with a readable label, false otherwise\n"
+    "Important:\n"
+    "- Extract exactly what is written on the label, preserving accents (é, è, â, etc.)\n"
+    "- If the label shows both a region and a cru, put the region in appellation and cru in cru_vineyard\n"
+    "- Return ONLY valid JSON, no markdown fences or extra text."
 )
 
 
@@ -178,9 +181,13 @@ class FingerprintVerifier:
         appellation_cross = compare_field(all_extracted, sku.appellation)
         appellation_score = max(appellation_score, appellation_cross)
 
-        # Cru: try direct match, then cross-field
+        # Cru: try direct match, then cross-field, then check if in appellation
         cru_score = compare_field(fingerprint.cru_vineyard, sku.cru_vineyard)
         cru_cross = compare_field(all_extracted, sku.cru_vineyard)
+        # Also check if cru appears in the extracted appellation field
+        if sku.cru_vineyard and fingerprint.appellation:
+            cru_in_appellation = compare_field(fingerprint.appellation, sku.cru_vineyard)
+            cru_score = max(cru_score, cru_in_appellation)
         cru_score = max(cru_score, cru_cross)
 
         if is_nv:
