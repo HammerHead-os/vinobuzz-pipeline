@@ -1,0 +1,378 @@
+/home/gitanjali/.pyenv/versions/3.10.14/lib/python3.10/site-packages/google/api_core/_python_version_support.py:273: FutureWarning: You are using a Python version (3.10.14) which Google will stop supporting in new releases of google.api_core once it reaches its end of life (2026-10-04). Please upgrade to the latest Python version, or at least Python 3.11, to continue receiving updates for google.api_core past that date.
+  warnings.warn(message, FutureWarning)
+/home/gitanjali/.pyenv/versions/3.10.14/lib/python3.10/site-packages/google/api_core/_python_version_support.py:273: FutureWarning: You are using a Python version (3.10.14) which Google will stop supporting in new releases of google.cloud.vision_v1 once it reaches its end of life (2026-10-04). Please upgrade to the latest Python version, or at least Python 3.11, to continue receiving updates for google.cloud.vision_v1 past that date.
+  warnings.warn(message, FutureWarning)
+2026-06-06 22:51:57,187 [INFO] Loading pricelist from use_this.xlsx
+2026-06-06 22:51:57,257 [INFO] [TIMING] Load Excel file: 0.07s
+2026-06-06 22:51:57,257 [INFO] Found 87 wines to process
+2026-06-06 22:51:57,257 [INFO] Initializing pipeline...
+2026-06-06 22:51:57,355 [INFO] The user provided project/location will take precedence over the Vertex AI API key from the environment variable.
+2026-06-06 22:51:57,512 [INFO] The user provided project/location will take precedence over the Vertex AI API key from the environment variable.
+2026-06-06 22:51:57,624 [INFO] [TIMING] Initialize pipeline: 0.37s
+2026-06-06 22:51:57,629 [INFO] [TIMING] Create 87 SKU objects: 0.00s
+2026-06-06 22:51:57,629 [INFO] Processing wines through pipeline (one search per SKU, no dedup)...
+2026-06-06 22:51:57,632 [INFO] [1/87] Searching BH08/2021: Domaine de Bila-Haut V.I.T Cotes du Roussillon Latour de France AOP
+2026-06-06 22:51:57,839 [INFO] response: https://duckduckgo.com/?q=Domaine+de+Bila-Haut+V.I.T+Cotes+du+Roussillon+Latour+de+France+AOP+2021+wine+bottle 200
+2026-06-06 22:51:57,898 [INFO] response: https://duckduckgo.com/i.js?o=json&q=Domaine+de+Bila-Haut+V.I.T+Cotes+du+Roussillon+Latour+de+France+AOP+2021+wine+bottle&l=us-en&vqd=4-198120217365451432103007026441766154821&p=1&ct=AT 403
+2026-06-06 22:51:58,294 [INFO] response: https://www.bing.com/images/async?q=Domaine+de+Bila-Haut+V.I.T+Cotes+du+Roussillon+Latour+de+France+AOP+2021+wine+bottle&async=1&first=1&count=35 200
+2026-06-06 22:51:58,307 [INFO] DuckDuckGo returned 10 candidates for SKU BH08/2021
+2026-06-06 22:52:00,083 [INFO] HTTP Request: GET https://www.saq.com/media/catalog/product/1/5/15371980-1_1730227690.png?optimize=high&fit=bounds&height=&width=&format=jpeg "HTTP/1.1 200 OK"
+2026-06-06 22:52:00,283 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 22:52:05,481 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 22:52:12,585 [INFO] HTTP Request: GET https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhWcUiyAMYpxV1aIBwSEED1oH8S_Z34TFSYOkufYesKOx1-TffC9gfmMzWozIgE-k9RVObsePZVxSvnDPDBhkzQbOS54hMkQ8aF5mwv7PZNAoAlluSCQNLCC-lHn2Vq6tX_EfdUKDety43FWIqNl625zgjWYaEMfS8F8bdcUQgYOl2PHwdmZj_4TS8A_Q/s900/M-Chapoutier-Bila-Haut-Cotes-du-Roussillon-Blanc-2021-AP-Midi-France_07240.JPG "HTTP/1.1 200 OK"
+2026-06-06 22:52:12,709 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 22:52:15,394 [ERROR] Error processing candidate https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhWcUiyAMYpxV1aIBwSEED1oH8S_Z34TFSYOkufYesKOx1-TffC9gfmMzWozIgE-k9RVObsePZVxSvnDPDBhkzQbOS54hMkQ8aF5mwv7PZNAoAlluSCQNLCC-lHn2Vq6tX_EfdUKDety43FWIqNl625zgjWYaEMfS8F8bdcUQgYOl2PHwdmZj_4TS8A_Q/s900/M-Chapoutier-Bila-Haut-Cotes-du-Roussillon-Blanc-2021-AP-Midi-France_07240.JPG for SKU BH08/2021: Image does not contain a wine bottle with a label
+2026-06-06 22:52:17,033 [INFO] HTTP Request: GET https://media.bbr.com/s/bbr/20118109655-ms?img404=Default_Wine "HTTP/1.1 200 OK"
+2026-06-06 22:52:19,669 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 22:52:28,319 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 22:52:35,662 [INFO] HTTP Request: GET https://cdn11.bigcommerce.com/s-41e84jdtvf/images/stencil/1280x1280/products/48370/89381/61333__36700.1686081121.jpg?c=1 "HTTP/1.1 200 OK"
+2026-06-06 22:52:35,716 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 22:52:41,221 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 22:52:46,031 [INFO] HTTP Request: GET https://1.bp.blogspot.com/-BzSH_pt_jPk/YBHrHdwNY_I/AAAAAAAARKY/PxodD3Iz5issdT_1MT0EQvEqDTkF7-BkgCNcBGAsYHQ/s900/Les-Vignes-de-Bila-Haut-Cotes-du-Roussillon-Blanc-2018-AP-Midi-France_06006.JPG "HTTP/1.1 200 OK"
+2026-06-06 22:52:46,084 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 22:52:48,876 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 22:52:54,820 [INFO] HTTP Request: GET https://media.bbr.com/s/bbr/20118109655-ms?img404=Default_Wine "HTTP/1.1 200 OK"
+2026-06-06 22:53:10,077 [INFO]   ✓ BH08/2021 confidence=62% producer=100% vintage=0%
+2026-06-06 22:53:10,077 [INFO] [2/87] Searching BH09/2021: Domaine de Bila-Haut R.I Cotes du Roussillon Villages Lesquerde AOP
+2026-06-06 22:53:10,250 [INFO] response: https://duckduckgo.com/?q=Domaine+de+Bila-Haut+R.I+Cotes+du+Roussillon+Villages+Lesquerde+AOP+2021+wine+bottle 200
+2026-06-06 22:53:10,302 [INFO] response: https://duckduckgo.com/i.js?o=json&q=Domaine+de+Bila-Haut+R.I+Cotes+du+Roussillon+Villages+Lesquerde+AOP+2021+wine+bottle&l=us-en&vqd=4-97261218297104173103740301594911326882&p=1&ct=AT 403
+2026-06-06 22:53:10,635 [INFO] response: https://www.bing.com/images/async?q=Domaine+de+Bila-Haut+R.I+Cotes+du+Roussillon+Villages+Lesquerde+AOP+2021+wine+bottle&async=1&first=1&count=35 200
+2026-06-06 22:53:10,650 [INFO] DuckDuckGo returned 10 candidates for SKU BH09/2021
+2026-06-06 22:53:11,923 [INFO] HTTP Request: GET https://tablewineasheville.com/cdn/shop/products/Bila-HautRoussillonRouge_1800x1800.jpg?v=1623791139 "HTTP/1.1 200 OK"
+2026-06-06 22:53:12,022 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 22:53:17,657 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 22:53:24,083 [INFO] HTTP Request: GET https://www.mchapoutier.com.au/wp-content/uploads/2023/04/M.-CHAPOUTIER-Domaine-de-Bila-Haut-RI-75cL-NM-600x600.png "HTTP/1.1 403 Forbidden"
+2026-06-06 22:53:24,084 [ERROR] Image download failed for https://www.mchapoutier.com.au/wp-content/uploads/2023/04/M.-CHAPOUTIER-Domaine-de-Bila-Haut-RI-75cL-NM-600x600.png: Client error '403 Forbidden' for url 'https://www.mchapoutier.com.au/wp-content/uploads/2023/04/M.-CHAPOUTIER-Domaine-de-Bila-Haut-RI-75cL-NM-600x600.png'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 22:53:24,084 [ERROR] Error processing candidate https://www.mchapoutier.com.au/wp-content/uploads/2023/04/M.-CHAPOUTIER-Domaine-de-Bila-Haut-RI-75cL-NM-600x600.png for SKU BH09/2021: Failed to download image: https://www.mchapoutier.com.au/wp-content/uploads/2023/04/M.-CHAPOUTIER-Domaine-de-Bila-Haut-RI-75cL-NM-600x600.png
+2026-06-06 22:53:25,074 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/b7d3bd6d-07b6-46d5-8291-fbe4005c7c1d.jpg "HTTP/1.1 200 OK"
+2026-06-06 22:53:25,133 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 22:53:31,469 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 22:53:37,625 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/8fdd21b9-2d4c-4e6e-9a09-403d0249dca6.jpg "HTTP/1.1 200 OK"
+2026-06-06 22:53:37,711 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 22:53:42,075 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 22:53:50,690 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/242136f4-8e78-4959-9961-b9c4790b4098.jpg "HTTP/1.1 200 OK"
+2026-06-06 22:53:50,748 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 22:53:54,266 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 22:54:03,397 [INFO] HTTP Request: GET https://tablewineasheville.com/cdn/shop/products/Bila-HautRoussillonRouge_1800x1800.jpg?v=1623791139 "HTTP/1.1 200 OK"
+2026-06-06 22:57:48,669 [INFO]   ✓ BH09/2021 confidence=19% producer=10% vintage=0%
+2026-06-06 22:57:48,669 [INFO] [3/87] Searching BH10/2021: Domaine de Bila-Haut Chrysopee Blanc, Collioure AOP
+2026-06-06 22:57:49,134 [INFO] response: https://www.bing.com/images/async?q=Domaine+de+Bila-Haut+Chrysopee+Blanc%2C+Collioure+AOP+2021+wine+bottle&async=1&first=1&count=35 200
+2026-06-06 22:57:49,149 [INFO] DuckDuckGo returned 10 candidates for SKU BH10/2021
+2026-06-06 22:57:49,598 [INFO] HTTP Request: GET https://static2.wineandco.com/themes/wineandco/images/produits/4/9/8/6/grd49864.jpg "HTTP/1.1 403 Forbidden"
+2026-06-06 22:57:49,599 [ERROR] Image download failed for https://static2.wineandco.com/themes/wineandco/images/produits/4/9/8/6/grd49864.jpg: Client error '403 Forbidden' for url 'https://static2.wineandco.com/themes/wineandco/images/produits/4/9/8/6/grd49864.jpg'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 22:57:49,599 [ERROR] Error processing candidate https://static2.wineandco.com/themes/wineandco/images/produits/4/9/8/6/grd49864.jpg for SKU BH10/2021: Failed to download image: https://static2.wineandco.com/themes/wineandco/images/produits/4/9/8/6/grd49864.jpg
+2026-06-06 22:57:50,771 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/5ae1e824-78df-47a5-a4f6-063a5366b5d3.jpg "HTTP/1.1 200 OK"
+2026-06-06 22:57:50,835 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 22:57:57,210 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 22:58:04,943 [INFO] HTTP Request: GET https://cdn.sanity.io/images/h7fg0cr3/production/7983e96dcff466deb9219303c93155568d82bd57-1022x1074.jpg?w=1000&fit=crop&auto=format "HTTP/1.1 200 OK"
+2026-06-06 22:58:05,039 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 22:58:13,694 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 22:58:27,203 [INFO] HTTP Request: GET https://www.gute-weine.de/fileadmin/_processed_/0/4/csm_48003Hfl_o_d446b20915.png "HTTP/1.1 503 Service Temporarily Unavailable"
+2026-06-06 22:58:28,154 [ERROR] Image download failed for https://www.gute-weine.de/fileadmin/_processed_/0/4/csm_48003Hfl_o_d446b20915.png: Server error '503 Service Temporarily Unavailable' for url 'https://www.gute-weine.de/fileadmin/_processed_/0/4/csm_48003Hfl_o_d446b20915.png'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503
+2026-06-06 22:58:28,154 [ERROR] Error processing candidate https://www.gute-weine.de/fileadmin/_processed_/0/4/csm_48003Hfl_o_d446b20915.png for SKU BH10/2021: Failed to download image: https://www.gute-weine.de/fileadmin/_processed_/0/4/csm_48003Hfl_o_d446b20915.png
+2026-06-06 22:58:28,795 [INFO] HTTP Request: GET https://www.idealwine.com/media/00-migrated-variant-photos/B2670472_15-1.jpg "HTTP/1.1 200 OK"
+2026-06-06 22:58:29,507 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 22:58:33,971 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 22:58:38,313 [WARNING] No accurate image for BH10/2021 (verdict=REJECT, conf=0%)
+2026-06-06 22:58:38,313 [INFO] [4/87] Searching BH11/2021: M. Chapoutier L ermite Rouge Ermitage AOP
+2026-06-06 22:58:38,618 [INFO] response: https://www.bing.com/images/async?q=M.+Chapoutier+L+ermite+Rouge+Ermitage+AOP+2021+wine+bottle&async=1&first=1&count=35 200
+2026-06-06 22:58:38,630 [INFO] DuckDuckGo returned 10 candidates for SKU BH11/2021
+2026-06-06 22:58:39,526 [INFO] HTTP Request: GET http://worldwine.com.au/cdn/shop/files/F284_2014NM_c.jpg?crop=center&height=1200&v=1701870204&width=1200 "HTTP/1.1 301 Moved Permanently"
+2026-06-06 22:58:40,012 [INFO] HTTP Request: GET https://worldwine.com.au/cdn/shop/files/F284_2014NM_c.jpg?crop=center&height=1200&v=1701870204&width=1200 "HTTP/1.1 200 OK"
+2026-06-06 22:58:40,035 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 22:58:42,365 [ERROR] Error processing candidate http://worldwine.com.au/cdn/shop/files/F284_2014NM_c.jpg?crop=center&height=1200&v=1701870204&width=1200 for SKU BH11/2021: Image does not contain a wine bottle with a label
+2026-06-06 22:58:43,392 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/c3548c78-2ca5-483e-8f15-3f6054b70695.jpg "HTTP/1.1 200 OK"
+2026-06-06 22:58:43,464 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 22:58:48,205 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 22:58:53,325 [INFO] HTTP Request: GET https://www.saq.com/media/catalog/product/1/5/15371761-1_1730227686.png?optimize=high&fit=bounds&height=&width=&format=jpeg "HTTP/1.1 200 OK"
+2026-06-06 22:58:53,434 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 22:58:58,216 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 22:59:02,744 [INFO] HTTP Request: GET https://www.saq.com/media/catalog/product/1/5/15371875-1_1730227688.png?optimize=high&fit=bounds&height=&width=&format=jpeg "HTTP/1.1 200 OK"
+2026-06-06 22:59:02,886 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 22:59:05,408 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 22:59:11,143 [INFO] HTTP Request: GET https://bestofwines.com/wine-images/18277_big.jpg "HTTP/1.1 200 OK"
+2026-06-06 22:59:11,173 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 22:59:13,808 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 22:59:17,367 [INFO] HTTP Request: GET https://www.saq.com/media/catalog/product/1/5/15371761-1_1730227686.png?optimize=high&fit=bounds&height=&width=&format=jpeg "HTTP/1.1 200 OK"
+2026-06-06 22:59:21,136 [INFO]   ✓ BH11/2021 confidence=61% producer=100% vintage=0%
+2026-06-06 22:59:21,136 [INFO] [5/87] Searching BH11/2022: M. Chapoutier L ermite Rouge Ermitage AOP
+2026-06-06 22:59:21,309 [INFO] response: https://duckduckgo.com/?q=M.+Chapoutier+L+ermite+Rouge+Ermitage+AOP+2022+wine+bottle 200
+2026-06-06 22:59:21,365 [INFO] response: https://duckduckgo.com/i.js?o=json&q=M.+Chapoutier+L+ermite+Rouge+Ermitage+AOP+2022+wine+bottle&l=us-en&vqd=4-281072685924847093906862829675104749378&p=1&ct=AT 403
+2026-06-06 22:59:21,893 [INFO] response: https://www.bing.com/images/async?q=M.+Chapoutier+L+ermite+Rouge+Ermitage+AOP+2022+wine+bottle&async=1&first=1&count=35 200
+2026-06-06 22:59:21,905 [INFO] DuckDuckGo returned 10 candidates for SKU BH11/2022
+2026-06-06 22:59:22,917 [INFO] HTTP Request: GET https://www.foliowine.com/wp-content/uploads/2022/05/m-chapoutier-lErmite-rouge-nv-bottle-scaled.jpg "HTTP/1.1 200 OK"
+2026-06-06 22:59:23,385 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 22:59:30,003 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 22:59:34,796 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/c3548c78-2ca5-483e-8f15-3f6054b70695.jpg "HTTP/1.1 200 OK"
+2026-06-06 22:59:34,877 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 22:59:38,996 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 22:59:46,164 [INFO] HTTP Request: GET https://media.bbr.com/s/bbr/19998007140-ms?img404=Default_Wine "HTTP/1.1 200 OK"
+2026-06-06 22:59:46,403 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 22:59:50,052 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 22:59:57,046 [INFO] HTTP Request: GET https://www.foliowine.com/wp-content/uploads/2022/05/m-chapoutier-lermite-blanc-nv-bottle.jpg "HTTP/1.1 200 OK"
+2026-06-06 22:59:57,976 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:00:04,082 [ERROR] Error processing candidate https://www.foliowine.com/wp-content/uploads/2022/05/m-chapoutier-lermite-blanc-nv-bottle.jpg for SKU BH11/2022: Image does not contain a wine bottle with a label
+2026-06-06 23:00:04,493 [INFO] HTTP Request: GET https://bestofwines.com/wine-images/1327_big.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:00:04,786 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:00:09,305 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:00:14,703 [INFO] HTTP Request: GET https://www.foliowine.com/wp-content/uploads/2022/05/m-chapoutier-lErmite-rouge-nv-bottle-scaled.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:00:29,157 [INFO]   ✓ BH11/2022 confidence=10% producer=0% vintage=0%
+2026-06-06 23:00:29,157 [INFO] [6/87] Searching BH12/2021: M. Chapoutier L ermite Blanc Ermitage AOP
+2026-06-06 23:00:29,529 [INFO] response: https://www.bing.com/images/async?q=M.+Chapoutier+L+ermite+Blanc+Ermitage+AOP+2021+wine+bottle&async=1&first=1&count=35 200
+2026-06-06 23:00:29,541 [INFO] DuckDuckGo returned 10 candidates for SKU BH12/2021
+2026-06-06 23:00:29,642 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/d09db021-ca19-4c59-bd59-f78ccc3feb64.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:00:29,673 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:00:35,009 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:00:41,360 [INFO] HTTP Request: GET https://www.saq.com/media/catalog/product/1/5/15371875-1_1730227688.png?optimize=high&fit=bounds&height=&width=&format=jpeg "HTTP/1.1 200 OK"
+2026-06-06 23:00:41,458 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:00:44,532 [ERROR] Error processing candidate https://www.saq.com/media/catalog/product/1/5/15371875-1_1730227688.png?optimize=high&fit=bounds&height=&width=&format=jpeg for SKU BH12/2021: Image does not contain a wine bottle with a label
+2026-06-06 23:00:44,919 [INFO] HTTP Request: GET https://superbwine.com.hk/wp-content/uploads/2020/08/Ermitage_Blanc_Ermite_Chapoutier01.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:00:45,168 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:00:50,880 [ERROR] Error processing candidate https://superbwine.com.hk/wp-content/uploads/2020/08/Ermitage_Blanc_Ermite_Chapoutier01.jpg for SKU BH12/2021: Image does not contain a wine bottle with a label
+2026-06-06 23:00:51,506 [INFO] HTTP Request: GET https://nemowine.com/wp-content/uploads/2019/09/lermite_blanc_120x420.png "HTTP/1.1 200 OK"
+2026-06-06 23:00:51,566 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:00:54,565 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:00:59,778 [INFO] HTTP Request: GET https://cdn.klwines.com/images/skus/1638185x.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:00:59,795 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:01:05,074 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:01:08,474 [INFO] HTTP Request: GET https://cdn.klwines.com/images/skus/1638185x.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:01:08,751 [INFO]   ✓ BH12/2021 confidence=68% producer=100% vintage=50%
+2026-06-06 23:01:08,751 [INFO] [7/87] Searching BH12/2022: M. Chapoutier L ermite Blanc Ermitage AOP
+2026-06-06 23:01:09,113 [INFO] response: https://www.bing.com/images/async?q=M.+Chapoutier+L+ermite+Blanc+Ermitage+AOP+2022+wine+bottle&async=1&first=1&count=35 200
+2026-06-06 23:01:09,123 [INFO] DuckDuckGo returned 10 candidates for SKU BH12/2022
+2026-06-06 23:01:09,208 [INFO] HTTP Request: GET https://www.foliowine.com/wp-content/uploads/2022/05/m-chapoutier-lermite-blanc-nv-bottle.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:01:09,407 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:01:13,080 [ERROR] Error processing candidate https://www.foliowine.com/wp-content/uploads/2022/05/m-chapoutier-lermite-blanc-nv-bottle.jpg for SKU BH12/2022: Image does not contain a wine bottle with a label
+2026-06-06 23:01:13,609 [INFO] HTTP Request: GET https://www.enotekapremier.rs/media/catalog/product/cache/1/thumbnail/600x600/9df78eab33525d08d6e5fb8d27136e95/m/-/m-chapoutier-ermitage-l-ermite-blanc.jpg "HTTP/1.1 403 Forbidden"
+2026-06-06 23:01:13,613 [ERROR] Image download failed for https://www.enotekapremier.rs/media/catalog/product/cache/1/thumbnail/600x600/9df78eab33525d08d6e5fb8d27136e95/m/-/m-chapoutier-ermitage-l-ermite-blanc.jpg: Client error '403 Forbidden' for url 'https://www.enotekapremier.rs/media/catalog/product/cache/1/thumbnail/600x600/9df78eab33525d08d6e5fb8d27136e95/m/-/m-chapoutier-ermitage-l-ermite-blanc.jpg'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:01:13,613 [ERROR] Error processing candidate https://www.enotekapremier.rs/media/catalog/product/cache/1/thumbnail/600x600/9df78eab33525d08d6e5fb8d27136e95/m/-/m-chapoutier-ermitage-l-ermite-blanc.jpg for SKU BH12/2022: Failed to download image: https://www.enotekapremier.rs/media/catalog/product/cache/1/thumbnail/600x600/9df78eab33525d08d6e5fb8d27136e95/m/-/m-chapoutier-ermitage-l-ermite-blanc.jpg
+2026-06-06 23:01:14,534 [INFO] HTTP Request: GET https://images.vivino.com/thumbs/qVoGZzxFRiqYfqAGD1HxQQ_pb_x600.png "HTTP/1.1 200 OK"
+2026-06-06 23:01:14,571 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:01:18,119 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:01:24,401 [INFO] HTTP Request: GET https://static.millesima.com/s3/attachements/h531px/F292_2014NM_c.png "HTTP/1.1 200 OK"
+2026-06-06 23:01:24,610 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:01:30,583 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:01:36,170 [INFO] HTTP Request: GET http://www.chaisdoeuvre.fr/cdn/shop/files/ac409a419fa189c5f773078462d4977c_daae8d38-facd-4425-acb2-f369b4584c7e.png?v=1744938183 "HTTP/1.1 301 Moved Permanently"
+2026-06-06 23:01:36,827 [INFO] HTTP Request: GET https://www.chaisdoeuvre.fr/cdn/shop/files/ac409a419fa189c5f773078462d4977c_daae8d38-facd-4425-acb2-f369b4584c7e.png?v=1744938183 "HTTP/1.1 200 OK"
+2026-06-06 23:01:36,851 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:01:45,553 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:01:49,573 [INFO] HTTP Request: GET https://static.millesima.com/s3/attachements/h531px/F292_2014NM_c.png "HTTP/1.1 200 OK"
+2026-06-06 23:01:50,019 [INFO]   ✓ BH12/2022 confidence=61% producer=100% vintage=0%
+2026-06-06 23:01:50,019 [INFO] [8/87] Searching BH13/2021: M. Chapoutier Le Pavillon Ermitage AOP
+2026-06-06 23:01:50,365 [INFO] response: https://www.bing.com/images/async?q=M.+Chapoutier+Le+Pavillon+Ermitage+AOP+2021+wine+bottle&async=1&first=1&count=35 200
+2026-06-06 23:01:50,373 [INFO] DuckDuckGo returned 10 candidates for SKU BH13/2021
+2026-06-06 23:01:51,308 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/831ec762-d944-4a5d-a246-f2ea62438062.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:01:51,373 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:02:11,677 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:02:21,357 [INFO] HTTP Request: GET https://galiena.sg/cdn/shop/files/mchapoutierlepavillon_488d30c7-e3e6-4ed8-bdee-dab86240cf70_2048x.jpg?v=1727764197 "HTTP/1.1 200 OK"
+2026-06-06 23:02:21,385 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:02:25,278 [ERROR] Error processing candidate https://galiena.sg/cdn/shop/files/mchapoutierlepavillon_488d30c7-e3e6-4ed8-bdee-dab86240cf70_2048x.jpg?v=1727764197 for SKU BH13/2021: Image does not contain a wine bottle with a label
+2026-06-06 23:02:26,131 [INFO] HTTP Request: GET https://www.chapoutier.com/media/cache/Boutique/Primeurs/l/e/le_pavillon_aop_446x1500.png "HTTP/1.1 200 OK"
+2026-06-06 23:02:26,192 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:02:29,287 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:02:35,201 [INFO] HTTP Request: GET https://www.saq.com/media/catalog/product/1/5/15063928-1_1671656451.png?quality=80&fit=bounds&height=&width= "HTTP/1.1 200 OK"
+2026-06-06 23:02:35,464 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:02:40,551 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:02:49,256 [INFO] HTTP Request: GET https://assets.catawiki.nl/assets/2023/6/14/a/4/7/a4783768-bd99-433d-8b7e-14077c20e45b.jpg "HTTP/1.1 301 Moved Permanently"
+2026-06-06 23:02:49,664 [INFO] HTTP Request: GET https://assets.catawiki.com/image/cw_normal/plain/assets/catawiki/assets/2023/6/14/a/4/7/a4783768-bd99-433d-8b7e-14077c20e45b.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:02:49,705 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:02:59,270 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:03:02,816 [INFO] HTTP Request: GET https://www.chapoutier.com/media/cache/Boutique/Primeurs/l/e/le_pavillon_aop_446x1500.png "HTTP/1.1 200 OK"
+2026-06-06 23:03:07,159 [INFO]   ✓ BH13/2021 confidence=10% producer=0% vintage=0%
+2026-06-06 23:03:07,160 [INFO] [9/87] Searching BH13/2022: M. Chapoutier Le Pavillon Ermitage AOP
+2026-06-06 23:03:07,332 [INFO] response: https://duckduckgo.com/?q=M.+Chapoutier+Le+Pavillon+Ermitage+AOP+2022+wine+bottle 200
+2026-06-06 23:03:07,389 [INFO] response: https://duckduckgo.com/i.js?o=json&q=M.+Chapoutier+Le+Pavillon+Ermitage+AOP+2022+wine+bottle&l=us-en&vqd=4-180907587663450095823947166318731957207&p=1&ct=AT 403
+2026-06-06 23:03:07,788 [INFO] response: https://www.bing.com/images/async?q=M.+Chapoutier+Le+Pavillon+Ermitage+AOP+2022+wine+bottle&async=1&first=1&count=35 200
+2026-06-06 23:03:07,800 [INFO] DuckDuckGo returned 10 candidates for SKU BH13/2022
+2026-06-06 23:03:08,813 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/831ec762-d944-4a5d-a246-f2ea62438062.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:03:08,873 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:03:12,846 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:03:18,336 [INFO] HTTP Request: GET https://sothebys-md.brightspotcdn.com/dims4/default/997f497/2147483647/strip/true/crop/752x2002+0+0/resize/1024x2726!/quality/90/?url=http://sothebys-brightspot.s3.amazonaws.com/media-desk/00/ba/8bcea15143bb9a56c183b7cb05df/chplepavillonnvbottle-generic.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:03:18,826 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:03:22,398 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:03:28,341 [INFO] HTTP Request: GET https://www.enotekapremier.rs/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/m/-/m-chapoutier-ermitage-le-pavillon-rouge.jpg "HTTP/1.1 403 Forbidden"
+2026-06-06 23:03:28,343 [ERROR] Image download failed for https://www.enotekapremier.rs/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/m/-/m-chapoutier-ermitage-le-pavillon-rouge.jpg: Client error '403 Forbidden' for url 'https://www.enotekapremier.rs/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/m/-/m-chapoutier-ermitage-le-pavillon-rouge.jpg'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:03:28,343 [ERROR] Error processing candidate https://www.enotekapremier.rs/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/m/-/m-chapoutier-ermitage-le-pavillon-rouge.jpg for SKU BH13/2022: Failed to download image: https://www.enotekapremier.rs/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/m/-/m-chapoutier-ermitage-le-pavillon-rouge.jpg
+2026-06-06 23:03:28,708 [INFO] HTTP Request: GET https://www.leclos-prive.com/shop/6444-thickbox_default/m-chapoutier-ermitage-le-pavillon-2022-primeur.jpg "HTTP/1.1 403 Forbidden"
+2026-06-06 23:03:28,710 [ERROR] Image download failed for https://www.leclos-prive.com/shop/6444-thickbox_default/m-chapoutier-ermitage-le-pavillon-2022-primeur.jpg: Client error '403 Forbidden' for url 'https://www.leclos-prive.com/shop/6444-thickbox_default/m-chapoutier-ermitage-le-pavillon-2022-primeur.jpg'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:03:28,710 [ERROR] Error processing candidate https://www.leclos-prive.com/shop/6444-thickbox_default/m-chapoutier-ermitage-le-pavillon-2022-primeur.jpg for SKU BH13/2022: Failed to download image: https://www.leclos-prive.com/shop/6444-thickbox_default/m-chapoutier-ermitage-le-pavillon-2022-primeur.jpg
+2026-06-06 23:03:29,063 [INFO] HTTP Request: GET https://assets.catawiki.nl/assets/2023/6/14/a/4/7/a4783768-bd99-433d-8b7e-14077c20e45b.jpg "HTTP/1.1 301 Moved Permanently"
+2026-06-06 23:03:29,165 [INFO] HTTP Request: GET https://assets.catawiki.com/image/cw_normal/plain/assets/catawiki/assets/2023/6/14/a/4/7/a4783768-bd99-433d-8b7e-14077c20e45b.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:03:29,217 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:03:44,448 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:03:50,807 [INFO] HTTP Request: GET https://sothebys-md.brightspotcdn.com/dims4/default/997f497/2147483647/strip/true/crop/752x2002+0+0/resize/1024x2726!/quality/90/?url=http://sothebys-brightspot.s3.amazonaws.com/media-desk/00/ba/8bcea15143bb9a56c183b7cb05df/chplepavillonnvbottle-generic.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:04:08,685 [INFO]   ✓ BH13/2022 confidence=10% producer=0% vintage=0%
+2026-06-06 23:04:08,685 [INFO] [10/87] Searching BH14/2021: M. Chapoutier Le Meal Rouge Ermitage AOP
+2026-06-06 23:04:08,999 [INFO] response: https://www.bing.com/images/async?q=M.+Chapoutier+Le+Meal+Rouge+Ermitage+AOP+2021+wine+bottle&async=1&first=1&count=35 200
+2026-06-06 23:04:09,010 [INFO] DuckDuckGo returned 10 candidates for SKU BH14/2021
+2026-06-06 23:04:09,332 [INFO] HTTP Request: GET https://bestofwines.com/wine-images/35181_big.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:04:09,357 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:04:21,585 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:04:32,065 [INFO] HTTP Request: GET https://farehamwinecellar.co.uk/wp-content/uploads/2024/07/M.-Chapoutier-Le-Meal-Ermitage-Rouge-2021.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:04:32,643 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:04:35,778 [ERROR] Error processing candidate https://farehamwinecellar.co.uk/wp-content/uploads/2024/07/M.-Chapoutier-Le-Meal-Ermitage-Rouge-2021.jpg for SKU BH14/2021: Image does not contain a wine bottle with a label
+2026-06-06 23:04:36,774 [INFO] HTTP Request: GET https://assets.farthinghoefinewine.com/img/product/lw/1109687.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:04:37,152 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:04:40,563 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:04:45,457 [INFO] HTTP Request: GET http://www.cavissima.com/cdn/shop/files/m-chapoutier-le-meal-ermitage-rouge_0da042e2-be1e-4952-af09-094d11e049b7.png?v=1745482931 "HTTP/1.1 301 Moved Permanently"
+2026-06-06 23:04:45,771 [INFO] HTTP Request: GET https://www.cavissima.com/cdn/shop/files/m-chapoutier-le-meal-ermitage-rouge_0da042e2-be1e-4952-af09-094d11e049b7.png?v=1745482931 "HTTP/1.1 200 OK"
+2026-06-06 23:04:45,801 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:04:49,165 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:04:53,554 [INFO] HTTP Request: GET https://bestofwines.com/wine-images/34573_big.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:04:53,572 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:04:57,675 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:05:01,638 [INFO] HTTP Request: GET https://bestofwines.com/wine-images/35181_big.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:05:04,212 [INFO]   ✓ BH14/2021 confidence=10% producer=0% vintage=0%
+2026-06-06 23:05:04,212 [INFO] [11/87] Searching BH14/2022: M. Chapoutier Le Meal Rouge Ermitage AOP
+2026-06-06 23:05:04,392 [INFO] response: https://duckduckgo.com/?q=M.+Chapoutier+Le+Meal+Rouge+Ermitage+AOP+2022+wine+bottle 200
+2026-06-06 23:05:04,447 [INFO] response: https://duckduckgo.com/i.js?o=json&q=M.+Chapoutier+Le+Meal+Rouge+Ermitage+AOP+2022+wine+bottle&l=us-en&vqd=4-63840222166370002545768988209149562760&p=1&ct=AT 403
+2026-06-06 23:05:04,831 [INFO] response: https://www.bing.com/images/async?q=M.+Chapoutier+Le+Meal+Rouge+Ermitage+AOP+2022+wine+bottle&async=1&first=1&count=35 200
+2026-06-06 23:05:04,841 [INFO] DuckDuckGo returned 10 candidates for SKU BH14/2022
+2026-06-06 23:05:05,295 [INFO] HTTP Request: GET https://www.mchapoutier.com.au/wp-content/uploads/2023/04/M.-CHAPOUTIER-Le-Meal-rouge-NM-AOP.png "HTTP/1.1 403 Forbidden"
+2026-06-06 23:05:05,298 [ERROR] Image download failed for https://www.mchapoutier.com.au/wp-content/uploads/2023/04/M.-CHAPOUTIER-Le-Meal-rouge-NM-AOP.png: Client error '403 Forbidden' for url 'https://www.mchapoutier.com.au/wp-content/uploads/2023/04/M.-CHAPOUTIER-Le-Meal-rouge-NM-AOP.png'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:05:05,299 [ERROR] Error processing candidate https://www.mchapoutier.com.au/wp-content/uploads/2023/04/M.-CHAPOUTIER-Le-Meal-rouge-NM-AOP.png for SKU BH14/2022: Failed to download image: https://www.mchapoutier.com.au/wp-content/uploads/2023/04/M.-CHAPOUTIER-Le-Meal-rouge-NM-AOP.png
+2026-06-06 23:05:05,379 [INFO] HTTP Request: GET https://assets.farthinghoefinewine.com/img/product/lw/1109687.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:05:05,402 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:05:08,389 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:05:13,133 [INFO] HTTP Request: GET https://bestofwines.com/wine-images/6683_big.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:05:13,226 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:05:17,022 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:05:24,187 [INFO] HTTP Request: GET https://nemowine.com/wp-content/uploads/2019/09/lemeal_rouge_120x420.png "HTTP/1.1 200 OK"
+2026-06-06 23:05:24,255 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:05:27,073 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:05:32,583 [INFO] HTTP Request: GET https://media.bbr.com/s/bbr/20098116734-ms?img404=Default_Wine "HTTP/1.1 200 OK"
+2026-06-06 23:05:32,854 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:05:36,985 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:05:42,298 [INFO] HTTP Request: GET https://bestofwines.com/wine-images/6683_big.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:06:07,806 [INFO]   ✓ BH14/2022 confidence=68% producer=100% vintage=50%
+2026-06-06 23:06:07,806 [INFO] [12/87] Searching BH15/2021: M. Chapoutier Le Meal Blanc  Ermitage AOP
+2026-06-06 23:06:08,018 [INFO] response: https://duckduckgo.com/?q=M.+Chapoutier+Le+Meal+Blanc++Ermitage+AOP+2021+wine+bottle 200
+2026-06-06 23:06:08,066 [INFO] response: https://duckduckgo.com/i.js?o=json&q=M.+Chapoutier+Le+Meal+Blanc++Ermitage+AOP+2021+wine+bottle&l=us-en&vqd=4-128243574471371854545324265644831482427&p=1&ct=AT 403
+2026-06-06 23:06:08,405 [INFO] response: https://www.bing.com/images/async?q=M.+Chapoutier+Le+Meal+Blanc++Ermitage+AOP+2021+wine+bottle&async=1&first=1&count=35 200
+2026-06-06 23:06:08,416 [INFO] DuckDuckGo returned 10 candidates for SKU BH15/2021
+2026-06-06 23:06:09,816 [INFO] HTTP Request: GET https://bilder.vinmonopolet.no/cache/1200x1200-0/17120101-1.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:06:10,067 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:06:16,614 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:06:22,554 [INFO] HTTP Request: GET https://www.saq.com/media/catalog/product/1/5/15371795-1_1730227687.png?optimize=high&fit=bounds&height=&width=&format=jpeg "HTTP/1.1 200 OK"
+2026-06-06 23:06:22,643 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:06:26,267 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:06:32,793 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/6f7f93eb-caa5-4799-97d1-c3f1de59986d.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:06:32,855 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:06:37,609 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:06:45,294 [INFO] HTTP Request: GET https://www.winebow.co.kr/media/image/wine_master/wine/M_CHAPOUTIER_Ermitage_Le_Meal_Blanc_1500ml.png "HTTP/1.1 200 OK"
+2026-06-06 23:06:45,731 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:06:47,813 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:06:52,148 [INFO] HTTP Request: GET https://media.bbr.com/s/bbr/20118116721-ms?img404=Default_Wine "HTTP/1.1 200 OK"
+2026-06-06 23:06:52,473 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:07:02,183 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:07:06,555 [INFO] HTTP Request: GET https://bilder.vinmonopolet.no/cache/1200x1200-0/17120101-1.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:07:07,728 [INFO]   ✓ BH15/2021 confidence=61% producer=100% vintage=0%
+2026-06-06 23:07:07,728 [INFO] [13/87] Searching BH15/2022: M. Chapoutier Le Meal Blanc  Ermitage AOP
+2026-06-06 23:07:08,014 [INFO] response: https://www.bing.com/images/async?q=M.+Chapoutier+Le+Meal+Blanc++Ermitage+AOP+2022+wine+bottle&async=1&first=1&count=35 200
+2026-06-06 23:07:08,025 [INFO] DuckDuckGo returned 10 candidates for SKU BH15/2022
+2026-06-06 23:07:08,624 [INFO] HTTP Request: GET https://www.foliowine.com/wp-content/uploads/2022/05/m-chapoutier-le-meal-blanc-nv-bottle-scaled.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:07:09,181 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:07:12,791 [ERROR] Error processing candidate https://www.foliowine.com/wp-content/uploads/2022/05/m-chapoutier-le-meal-blanc-nv-bottle-scaled.jpg for SKU BH15/2022: Image does not contain a wine bottle with a label
+2026-06-06 23:07:13,119 [INFO] HTTP Request: GET https://www.winebow.co.kr/media/image/wine_master/wine/M_CHAPOUTIER_Ermitage_Le_Meal_Blanc_1500ml.png "HTTP/1.1 200 OK"
+2026-06-06 23:07:13,223 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:07:15,647 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:07:20,053 [INFO] HTTP Request: GET https://www.saq.com/media/catalog/product/1/5/15215354-1_1698869287.png?optimize=high&fit=bounds&height=&width=&format=jpeg "HTTP/1.1 200 OK"
+2026-06-06 23:07:20,156 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:07:26,472 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:07:31,345 [INFO] HTTP Request: GET https://nemowine.com/wp-content/uploads/2019/09/lemeal_blanc_120x420.png "HTTP/1.1 200 OK"
+2026-06-06 23:07:31,401 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:07:35,684 [ERROR] Error processing candidate https://nemowine.com/wp-content/uploads/2019/09/lemeal_blanc_120x420.png for SKU BH15/2022: Image does not contain a wine bottle with a label
+2026-06-06 23:07:36,646 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/32030110-88fe-40e0-baf2-de026b4c28b0.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:07:36,708 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:07:41,089 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:07:44,970 [INFO] HTTP Request: GET https://www.saq.com/media/catalog/product/1/5/15215354-1_1698869287.png?optimize=high&fit=bounds&height=&width=&format=jpeg "HTTP/1.1 200 OK"
+2026-06-06 23:07:48,320 [INFO]   ✓ BH15/2022 confidence=61% producer=100% vintage=0%
+2026-06-06 23:07:48,320 [INFO] [14/87] Searching BH17/2021: M. Chapoutier Le Clos Saint-Joseph AOP
+2026-06-06 23:07:48,647 [INFO] response: https://www.bing.com/images/async?q=M.+Chapoutier+Le+Clos+Saint-Joseph+AOP+2021+wine+bottle&async=1&first=1&count=35 200
+2026-06-06 23:07:48,658 [INFO] DuckDuckGo returned 10 candidates for SKU BH17/2021
+2026-06-06 23:07:49,691 [INFO] HTTP Request: GET https://www.saq.com/media/catalog/product/1/5/15371859-1_1730227688.png?optimize=high&fit=bounds&height=&width=&format=jpeg "HTTP/1.1 200 OK"
+2026-06-06 23:07:49,788 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:07:52,448 [ERROR] Error processing candidate https://www.saq.com/media/catalog/product/1/5/15371859-1_1730227688.png?optimize=high&fit=bounds&height=&width=&format=jpeg for SKU BH17/2021: Image does not contain a wine bottle with a label
+2026-06-06 23:07:52,846 [INFO] HTTP Request: GET https://www.mchapoutier.com.au/wp-content/uploads/2023/04/M.-CHAPOUTIER-Le-Clos-NM-AOP.png "HTTP/1.1 403 Forbidden"
+2026-06-06 23:07:52,847 [ERROR] Image download failed for https://www.mchapoutier.com.au/wp-content/uploads/2023/04/M.-CHAPOUTIER-Le-Clos-NM-AOP.png: Client error '403 Forbidden' for url 'https://www.mchapoutier.com.au/wp-content/uploads/2023/04/M.-CHAPOUTIER-Le-Clos-NM-AOP.png'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:07:52,847 [ERROR] Error processing candidate https://www.mchapoutier.com.au/wp-content/uploads/2023/04/M.-CHAPOUTIER-Le-Clos-NM-AOP.png for SKU BH17/2021: Failed to download image: https://www.mchapoutier.com.au/wp-content/uploads/2023/04/M.-CHAPOUTIER-Le-Clos-NM-AOP.png
+2026-06-06 23:07:56,183 [INFO] HTTP Request: GET https://www.chapoutier.com/media/cache/produit_import/l/e/le_clos_rouge_255x878.png "HTTP/1.1 200 OK"
+2026-06-06 23:07:56,995 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:08:00,882 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:08:07,078 [INFO] HTTP Request: GET https://images.vivino.com/thumbs/n_VjaOV_QM6x1FzQTiRctA_pb_x600.png "HTTP/1.1 200 OK"
+2026-06-06 23:08:07,316 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:08:10,863 [ERROR] Error processing candidate https://images.vivino.com/thumbs/n_VjaOV_QM6x1FzQTiRctA_pb_x600.png for SKU BH17/2021: Image does not contain a wine bottle with a label
+2026-06-06 23:08:11,635 [INFO] HTTP Request: GET https://www.saq.com/media/catalog/product/1/5/15215160-1_1698869286.png?optimize=high&fit=bounds&height=&width=&format=jpeg "HTTP/1.1 200 OK"
+2026-06-06 23:08:11,732 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:08:15,626 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:08:21,181 [INFO] HTTP Request: GET https://www.chapoutier.com/media/cache/produit_import/l/e/le_clos_rouge_255x878.png "HTTP/1.1 200 OK"
+2026-06-06 23:08:22,623 [INFO]   ✓ BH17/2021 confidence=63% producer=100% vintage=0%
+2026-06-06 23:08:22,623 [INFO] [15/87] Searching BH17/2022: M. Chapoutier Le Clos Saint-Joseph AOP
+2026-06-06 23:08:22,801 [INFO] response: https://duckduckgo.com/?q=M.+Chapoutier+Le+Clos+Saint-Joseph+AOP+2022+wine+bottle 200
+2026-06-06 23:08:22,860 [INFO] response: https://duckduckgo.com/i.js?o=json&q=M.+Chapoutier+Le+Clos+Saint-Joseph+AOP+2022+wine+bottle&l=us-en&vqd=4-96652705179032980014852146364981464441&p=1&ct=AT 403
+2026-06-06 23:08:23,155 [INFO] response: https://www.bing.com/images/async?q=M.+Chapoutier+Le+Clos+Saint-Joseph+AOP+2022+wine+bottle&async=1&first=1&count=35 200
+2026-06-06 23:08:23,170 [INFO] DuckDuckGo returned 10 candidates for SKU BH17/2022
+2026-06-06 23:08:23,266 [INFO] HTTP Request: GET https://www.chapoutier.com/media/cache/produit_import/l/e/le_clos_rouge_255x878.png "HTTP/1.1 200 OK"
+2026-06-06 23:08:23,334 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:08:27,617 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:08:31,870 [INFO] HTTP Request: GET https://www.vinlegender.se/wp-content/uploads/2020/11/Chapoutier-St-Joseph-Le-Clos-a-scaled.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:08:34,908 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:08:40,692 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:08:48,872 [INFO] HTTP Request: GET https://bilder.vinmonopolet.no/cache/1200x1200-0/17517401-1.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:08:49,128 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:08:54,713 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:08:58,686 [INFO] HTTP Request: GET https://images.vivino.com/thumbs/n_VjaOV_QM6x1FzQTiRctA_pl_375x500.png "HTTP/1.1 200 OK"
+2026-06-06 23:08:58,707 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:09:00,806 [ERROR] Error processing candidate https://images.vivino.com/thumbs/n_VjaOV_QM6x1FzQTiRctA_pl_375x500.png for SKU BH17/2022: Image does not contain a wine bottle with a label
+2026-06-06 23:09:01,889 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/557117b0-6ea5-43d4-84d8-4d12366d65af.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:09:01,969 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:09:05,721 [ERROR] Error processing candidate https://cdn.ct-static.com/labels/557117b0-6ea5-43d4-84d8-4d12366d65af.jpg for SKU BH17/2022: Image does not contain a wine bottle with a label
+2026-06-06 23:09:05,809 [INFO] HTTP Request: GET https://bilder.vinmonopolet.no/cache/1200x1200-0/17517401-1.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:09:07,066 [INFO]   ✓ BH17/2022 confidence=74% producer=100% vintage=75%
+2026-06-06 23:09:07,066 [INFO] [16/87] Searching BH21/2021: M. Chapoutier Les Granits Blanc  Saint-Joseph AOP
+2026-06-06 23:09:07,246 [INFO] response: https://duckduckgo.com/?q=M.+Chapoutier+Les+Granits+Blanc++Saint-Joseph+AOP+2021+wine+bottle 200
+2026-06-06 23:09:07,300 [INFO] response: https://duckduckgo.com/i.js?o=json&q=M.+Chapoutier+Les+Granits+Blanc++Saint-Joseph+AOP+2021+wine+bottle&l=us-en&vqd=4-224045998695025636892033607530358314061&p=1&ct=AT 403
+2026-06-06 23:09:07,621 [INFO] response: https://www.bing.com/images/async?q=M.+Chapoutier+Les+Granits+Blanc++Saint-Joseph+AOP+2021+wine+bottle&async=1&first=1&count=35 200
+2026-06-06 23:09:07,642 [INFO] DuckDuckGo returned 10 candidates for SKU BH21/2021
+2026-06-06 23:09:08,749 [INFO] HTTP Request: GET https://www.thewinesociety.com/globalassets/product-image-target/white-wine/rh66931/rh66931_saint-joseph-blanc-les-granits-chapoutier-2021_2.png?width=1200&rsampler=bicubic&compand=true "HTTP/1.1 200 OK"
+2026-06-06 23:09:09,984 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:09:12,820 [ERROR] Error processing candidate https://www.thewinesociety.com/globalassets/product-image-target/white-wine/rh66931/rh66931_saint-joseph-blanc-les-granits-chapoutier-2021_2.png?width=1200&rsampler=bicubic&compand=true for SKU BH21/2021: Image does not contain a wine bottle with a label
+2026-06-06 23:09:13,489 [INFO] HTTP Request: GET https://jebdunnuck.com/wp-content/uploads/wine-images/167/CHP+Les+Granits+Blanc+NV+Btl.jpg "HTTP/1.1 404 Not Found"
+2026-06-06 23:09:13,491 [ERROR] Image download failed for https://jebdunnuck.com/wp-content/uploads/wine-images/167/CHP+Les+Granits+Blanc+NV+Btl.jpg: Client error '404 Not Found' for url 'https://jebdunnuck.com/wp-content/uploads/wine-images/167/CHP+Les+Granits+Blanc+NV+Btl.jpg'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-06-06 23:09:13,491 [ERROR] Error processing candidate https://jebdunnuck.com/wp-content/uploads/wine-images/167/CHP+Les+Granits+Blanc+NV+Btl.jpg for SKU BH21/2021: Failed to download image: https://jebdunnuck.com/wp-content/uploads/wine-images/167/CHP+Les+Granits+Blanc+NV+Btl.jpg
+2026-06-06 23:09:14,798 [INFO] HTTP Request: GET https://www.chapoutier.com/media/cache/Boutique/Primeurs/g/r/granits_blanc_aop_446x1500.png "HTTP/1.1 200 OK"
+2026-06-06 23:09:15,666 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:09:18,024 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:09:25,030 [INFO] HTTP Request: GET https://cloud.quierovinos.com/9933-large_default/m-chapoutier-saint-joseph-les-granits-blanc.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:09:25,043 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:09:27,185 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:09:32,047 [INFO] HTTP Request: GET https://img.ep-cdn.com/i/500/500/pe/pefkcmnwlgzrjvsyithu/m-chapoutier-saint-joseph-les-granits-blanc-0-75l-cene.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:09:32,059 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:09:34,553 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:09:38,737 [INFO] HTTP Request: GET https://www.chapoutier.com/media/cache/Boutique/Primeurs/g/r/granits_blanc_aop_446x1500.png "HTTP/1.1 200 OK"
+2026-06-06 23:09:44,623 [INFO]   ✓ BH21/2021 confidence=10% producer=0% vintage=0%
+2026-06-06 23:09:44,623 [INFO] [17/87] Searching BH21/2022: M. Chapoutier Les Granits Blanc  Saint-Joseph AOP
+2026-06-06 23:09:44,932 [INFO] response: https://www.bing.com/images/async?q=M.+Chapoutier+Les+Granits+Blanc++Saint-Joseph+AOP+2022+wine+bottle&async=1&first=1&count=35 200
+2026-06-06 23:09:44,944 [INFO] DuckDuckGo returned 10 candidates for SKU BH21/2022
+2026-06-06 23:09:45,409 [INFO] HTTP Request: GET https://bestofwines.com/wine-images/39044_big.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:09:45,438 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:09:47,353 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:09:52,520 [INFO] HTTP Request: GET https://cdn.klwines.com/images/skus/generated_638367141973832090_1709049x.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:09:52,552 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:09:55,582 [ERROR] Error processing candidate https://cdn.klwines.com/images/skus/generated_638367141973832090_1709049x.jpg for SKU BH21/2022: Image does not contain a wine bottle with a label
+2026-06-06 23:09:56,375 [INFO] HTTP Request: GET https://ruouvang24h.vn/wp-content/uploads/2019/05/R%C6%B0%E1%BB%A3u-Vang-M.Chapoutier-Les-Granits-Blanc-Saint-Joseph.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:09:56,438 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:09:59,136 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:10:03,713 [INFO] HTTP Request: GET https://ruouvang24h.vn/wp-content/uploads/2019/05/R%C6%B0%E1%BB%A3u-Vang-M.Chapoutier-Les-Granits-Blanc-Saint-Joseph-1.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:10:03,760 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:10:06,725 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:10:10,934 [INFO] HTTP Request: GET https://www.thewinesociety.com/49c9bc/globalassets/product-image-target/france-white---white-wine/rh53971/rh53971_saint-joseph-blanc-les-granits-chapoutier-2018_2.png?width=1440 "HTTP/1.1 200 OK"

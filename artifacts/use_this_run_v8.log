@@ -1,0 +1,918 @@
+/home/gitanjali/.pyenv/versions/3.10.14/lib/python3.10/site-packages/google/api_core/_python_version_support.py:273: FutureWarning: You are using a Python version (3.10.14) which Google will stop supporting in new releases of google.api_core once it reaches its end of life (2026-10-04). Please upgrade to the latest Python version, or at least Python 3.11, to continue receiving updates for google.api_core past that date.
+  warnings.warn(message, FutureWarning)
+/home/gitanjali/.pyenv/versions/3.10.14/lib/python3.10/site-packages/google/api_core/_python_version_support.py:273: FutureWarning: You are using a Python version (3.10.14) which Google will stop supporting in new releases of google.cloud.vision_v1 once it reaches its end of life (2026-10-04). Please upgrade to the latest Python version, or at least Python 3.11, to continue receiving updates for google.cloud.vision_v1 past that date.
+  warnings.warn(message, FutureWarning)
+2026-06-06 23:33:03,942 [INFO] Loading pricelist from use_this.xlsx
+2026-06-06 23:33:04,028 [INFO] [TIMING] Load Excel file: 0.09s
+2026-06-06 23:33:04,029 [INFO] Found 87 wines to process
+2026-06-06 23:33:04,029 [INFO] Initializing pipeline...
+2026-06-06 23:33:04,160 [INFO] The user provided project/location will take precedence over the Vertex AI API key from the environment variable.
+2026-06-06 23:33:04,405 [INFO] The user provided project/location will take precedence over the Vertex AI API key from the environment variable.
+2026-06-06 23:33:04,570 [INFO] [TIMING] Initialize pipeline: 0.54s
+2026-06-06 23:33:04,576 [INFO] [TIMING] Create 87 SKU objects: 0.01s
+2026-06-06 23:33:04,577 [INFO] Processing wines through pipeline (one search per SKU, no dedup)...
+2026-06-06 23:33:04,582 [INFO] [1/87] Searching BH08/2021: Domaine de Bila-Haut V.I.T Cotes du Roussillon Latour de France AOP
+2026-06-06 23:33:04,666 [INFO] HTTP Request: GET https://www.googleapis.com/customsearch/v1?key=AIzaSyBZ5p08dd5cR_Q5bMHhaAFuH6kPUO9jxrY&cx=02211d6d3950b4d03&q=Domaine+de+Bila-Haut+V.I.T+Cotes+du+Roussillon+Latour+de+France+AOP+2021+wine+bottle&searchType=image&num=10&imgSize=large&imgType=photo "HTTP/1.1 403 Forbidden"
+2026-06-06 23:33:04,667 [WARNING] Custom Search JSON API returned 403: this GCP project likely has no JSON API entitlement (Google closed JSON API access for new projects; DDG/Bing fallback will be used). See https://developers.google.com/custom-search/v1/overview (Vertex AI Search or a third-party SERP API are alternatives).
+2026-06-06 23:33:04,766 [INFO] response: https://duckduckgo.com/?q=Domaine+de+Bila-Haut+V.I.T+Cotes+du+Roussillon+Latour+de+France+AOP+2021+wine+bottle 200
+2026-06-06 23:33:04,831 [INFO] response: https://duckduckgo.com/i.js?o=json&q=Domaine+de+Bila-Haut+V.I.T+Cotes+du+Roussillon+Latour+de+France+AOP+2021+wine+bottle&l=us-en&vqd=4-198119934679367495910105876121494855765&p=1&ct=AT 403
+2026-06-06 23:33:04,831 [ERROR] DuckDuckGo image search failed: No results found.
+2026-06-06 23:33:04,861 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Domaine+de+Bila-Haut+V.I.T+Cotes+du+Roussillon+Latour+de+France+AOP+2021+wine+bottle&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 429 Too Many Requests"
+2026-06-06 23:33:04,862 [WARNING] SerpApi rate-limited for SKU BH08/2021 — retry in 8s
+2026-06-06 23:33:04,897 [INFO] response: https://www.bing.com/images/async?q=Domaine+de+Bila-Haut+V.I.T+Cotes+du+Roussillon+Latour+de+France+AOP+2021+wine+bottle&async=1&first=1&count=35 200
+2026-06-06 23:33:04,909 [INFO] Bing returned 25 candidates for SKU BH08/2021
+2026-06-06 23:33:05,600 [INFO] HTTP Request: GET https://api.search.brave.com/res/v1/images/search?q=Domaine+de+Bila-Haut+V.I.T+Cotes+du+Roussillon+Latour+de+France+AOP+2021+wine+bottle&count=25&search_lang=en&country=ALL&safesearch=strict&spellcheck=true "HTTP/1.1 200 OK"
+2026-06-06 23:33:05,602 [INFO] Brave returned 25 candidates for SKU BH08/2021 (query='Domaine de Bila-Haut V.I.T Cotes du Roussillon Latour de France AOP 2021 wine bo')
+2026-06-06 23:33:13,204 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Domaine+de+Bila-Haut+V.I.T+Cotes+du+Roussillon+Latour+de+France+AOP+2021+wine+bottle&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 429 Too Many Requests"
+2026-06-06 23:33:13,204 [WARNING] SerpApi rate-limited for SKU BH08/2021 — retry in 16s
+2026-06-06 23:33:29,586 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Domaine+de+Bila-Haut+V.I.T+Cotes+du+Roussillon+Latour+de+France+AOP+2021+wine+bottle&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 429 Too Many Requests"
+2026-06-06 23:33:29,587 [WARNING] SerpApi rate-limited for SKU BH08/2021 — retry in 24s
+2026-06-06 23:33:53,684 [INFO] Merged 50 candidates for SKU BH08/2021 — sources: brave=25, bing=25
+2026-06-06 23:33:53,775 [INFO] HTTP Request: GET https://www.idealwine.com/media/00-migrated-variant-photos/B1087095_5047.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:33:53,876 [ERROR] Error processing candidate https://www.idealwine.com/media/00-migrated-variant-photos/B1087095_5047.jpg for SKU BH08/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:33:54,270 [INFO] HTTP Request: GET https://www.saq.com/media/catalog/product/1/5/15371980-1_1730227690.png?optimize=high&fit=bounds&height=&width=&format=jpeg "HTTP/1.1 200 OK"
+2026-06-06 23:33:54,383 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:34:05,946 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:34:11,227 [INFO] HTTP Request: GET https://www.mtouton.com/sites/default/files/styles/item_card_label_detail/public/infosys/bottles/13623_bottle.jpg?itok=6hNQMC5V "HTTP/1.1 403 Forbidden"
+2026-06-06 23:34:11,228 [ERROR] Image download failed for https://www.mtouton.com/sites/default/files/styles/item_card_label_detail/public/infosys/bottles/13623_bottle.jpg?itok=6hNQMC5V: Client error '403 Forbidden' for url 'https://www.mtouton.com/sites/default/files/styles/item_card_label_detail/public/infosys/bottles/13623_bottle.jpg?itok=6hNQMC5V'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:34:11,228 [ERROR] Error processing candidate https://www.mtouton.com/sites/default/files/styles/item_card_label_detail/public/infosys/bottles/13623_bottle.jpg?itok=6hNQMC5V for SKU BH08/2021: Failed to download image: https://www.mtouton.com/sites/default/files/styles/item_card_label_detail/public/infosys/bottles/13623_bottle.jpg?itok=6hNQMC5V
+2026-06-06 23:34:12,650 [INFO] HTTP Request: GET https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhWcUiyAMYpxV1aIBwSEED1oH8S_Z34TFSYOkufYesKOx1-TffC9gfmMzWozIgE-k9RVObsePZVxSvnDPDBhkzQbOS54hMkQ8aF5mwv7PZNAoAlluSCQNLCC-lHn2Vq6tX_EfdUKDety43FWIqNl625zgjWYaEMfS8F8bdcUQgYOl2PHwdmZj_4TS8A_Q/s900/M-Chapoutier-Bila-Haut-Cotes-du-Roussillon-Blanc-2021-AP-Midi-France_07240.JPG "HTTP/1.1 200 OK"
+2026-06-06 23:34:12,707 [ERROR] Error processing candidate https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhWcUiyAMYpxV1aIBwSEED1oH8S_Z34TFSYOkufYesKOx1-TffC9gfmMzWozIgE-k9RVObsePZVxSvnDPDBhkzQbOS54hMkQ8aF5mwv7PZNAoAlluSCQNLCC-lHn2Vq6tX_EfdUKDety43FWIqNl625zgjWYaEMfS8F8bdcUQgYOl2PHwdmZj_4TS8A_Q/s900/M-Chapoutier-Bila-Haut-Cotes-du-Roussillon-Blanc-2021-AP-Midi-France_07240.JPG for SKU BH08/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:34:14,854 [INFO] HTTP Request: GET https://www.idealwine.com/media/00-migrated-variant-photos/B2761712_19.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:34:15,382 [ERROR] Error processing candidate https://www.idealwine.com/media/00-migrated-variant-photos/B2761712_19.jpg for SKU BH08/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:34:15,503 [INFO] HTTP Request: GET https://media.bbr.com/s/bbr/20118109655-ms?img404=Default_Wine "HTTP/1.1 200 OK"
+2026-06-06 23:34:15,749 [ERROR] Error processing candidate https://media.bbr.com/s/bbr/20118109655-ms?img404=Default_Wine for SKU BH08/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:34:16,264 [INFO] HTTP Request: GET https://www.idealwine.com/media/00-migrated-variant-photos/B2761712_19-1.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:34:16,981 [ERROR] Error processing candidate https://www.idealwine.com/media/00-migrated-variant-photos/B2761712_19-1.jpg for SKU BH08/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:34:17,076 [INFO] HTTP Request: GET https://cdn11.bigcommerce.com/s-41e84jdtvf/images/stencil/1280x1280/products/48370/89381/61333__36700.1686081121.jpg?c=1 "HTTP/1.1 200 OK"
+2026-06-06 23:34:17,140 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:34:28,267 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:34:34,503 [INFO] HTTP Request: GET https://hic.wine/cdn/shop/files/VITBt.jpg?v=1688739924&width=1200 "HTTP/1.1 200 OK"
+2026-06-06 23:34:34,530 [ERROR] Error processing candidate https://hic.wine/cdn/shop/files/VITBt.jpg?v=1688739924&width=1200 for SKU BH08/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:34:34,643 [INFO] HTTP Request: GET https://1.bp.blogspot.com/-BzSH_pt_jPk/YBHrHdwNY_I/AAAAAAAARKY/PxodD3Iz5issdT_1MT0EQvEqDTkF7-BkgCNcBGAsYHQ/s900/Les-Vignes-de-Bila-Haut-Cotes-du-Roussillon-Blanc-2018-AP-Midi-France_06006.JPG "HTTP/1.1 200 OK"
+2026-06-06 23:34:34,687 [ERROR] Error processing candidate https://1.bp.blogspot.com/-BzSH_pt_jPk/YBHrHdwNY_I/AAAAAAAARKY/PxodD3Iz5issdT_1MT0EQvEqDTkF7-BkgCNcBGAsYHQ/s900/Les-Vignes-de-Bila-Haut-Cotes-du-Roussillon-Blanc-2018-AP-Midi-France_06006.JPG for SKU BH08/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:34:34,786 [INFO] HTTP Request: GET https://www.hatchmansfield.com/wp-content/uploads/2026/01/UBRIR21B-335x1005.png "HTTP/1.1 200 OK"
+2026-06-06 23:34:34,807 [ERROR] Error processing candidate https://www.hatchmansfield.com/wp-content/uploads/2026/01/UBRIR21B-335x1005.png for SKU BH08/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:34:34,982 [INFO] HTTP Request: GET https://www.saq.com/media/catalog/product/1/5/15490170-1_1757331786.png?optimize=high&fit=bounds&height=&width=&format=jpeg "HTTP/1.1 200 OK"
+2026-06-06 23:34:35,104 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:34:43,672 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:34:48,847 [INFO] HTTP Request: GET https://www.omycellar.com/cdn/shop/files/DomainedeBila-HautLesVignesdeBila-HautRougeCotesduRoussillonAOP_92b72cf1-912a-4599-8484-522e8423443c.png?v=1740480902&width=1445 "HTTP/1.1 200 OK"
+2026-06-06 23:34:48,944 [ERROR] Error processing candidate https://www.omycellar.com/cdn/shop/files/DomainedeBila-HautLesVignesdeBila-HautRougeCotesduRoussillonAOP_92b72cf1-912a-4599-8484-522e8423443c.png?v=1740480902&width=1445 for SKU BH08/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:34:49,875 [INFO] HTTP Request: GET https://ndjohn.co.uk/cdn/shop/products/les_vignes_de_bila_haut_rouge_800x.jpg?v=1588697494 "HTTP/1.1 200 OK"
+2026-06-06 23:34:49,892 [ERROR] Error processing candidate https://ndjohn.co.uk/cdn/shop/products/les_vignes_de_bila_haut_rouge_800x.jpg?v=1588697494 for SKU BH08/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:34:49,970 [INFO] HTTP Request: GET https://www.cavedelacrosse.fr/4032-medium_default/domaine-de-bila-haut-vit-cotes-du-roussillon-villages-chapoutier-2017.jpg "HTTP/1.1 403 Forbidden"
+2026-06-06 23:34:49,971 [ERROR] Image download failed for https://www.cavedelacrosse.fr/4032-medium_default/domaine-de-bila-haut-vit-cotes-du-roussillon-villages-chapoutier-2017.jpg: Client error '403 Forbidden' for url 'https://www.cavedelacrosse.fr/4032-medium_default/domaine-de-bila-haut-vit-cotes-du-roussillon-villages-chapoutier-2017.jpg'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:34:49,971 [ERROR] Error processing candidate https://www.cavedelacrosse.fr/4032-medium_default/domaine-de-bila-haut-vit-cotes-du-roussillon-villages-chapoutier-2017.jpg for SKU BH08/2021: Failed to download image: https://www.cavedelacrosse.fr/4032-medium_default/domaine-de-bila-haut-vit-cotes-du-roussillon-villages-chapoutier-2017.jpg
+2026-06-06 23:34:51,618 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/9b0fdbe4-bf10-4ce9-a544-9be7b0842c2f.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:34:51,657 [ERROR] Error processing candidate https://cdn.ct-static.com/labels/9b0fdbe4-bf10-4ce9-a544-9be7b0842c2f.jpg for SKU BH08/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:34:52,552 [INFO] HTTP Request: GET https://wineanorak.com/wp-content/uploads/2025/12/bilahaut22.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:34:53,673 [ERROR] Error processing candidate https://wineanorak.com/wp-content/uploads/2025/12/bilahaut22.jpg for SKU BH08/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:34:54,380 [INFO] HTTP Request: GET https://cheapwineratings.com/wp-content/uploads/2019/06/bilahaut.roussillon.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:34:54,760 [ERROR] Error processing candidate https://cheapwineratings.com/wp-content/uploads/2019/06/bilahaut.roussillon.jpg for SKU BH08/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:34:54,859 [INFO] HTTP Request: GET https://shop.klwines.com/_next/image?url=https://cdn.klwines.com/images/skus/1864395x.jpg&w=256&q=75 "HTTP/1.1 403 Forbidden"
+2026-06-06 23:34:54,864 [ERROR] Image download failed for https://shop.klwines.com/_next/image?url=https://cdn.klwines.com/images/skus/1864395x.jpg&w=256&q=75: Client error '403 Forbidden' for url 'https://shop.klwines.com/_next/image?url=https://cdn.klwines.com/images/skus/1864395x.jpg&w=256&q=75'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:34:54,864 [ERROR] Error processing candidate https://shop.klwines.com/_next/image?url=https://cdn.klwines.com/images/skus/1864395x.jpg&w=256&q=75 for SKU BH08/2021: Failed to download image: https://shop.klwines.com/_next/image?url=https://cdn.klwines.com/images/skus/1864395x.jpg&w=256&q=75
+2026-06-06 23:34:55,083 [INFO] HTTP Request: GET https://www.mtouton.com/sites/default/files/styles/item_card_label_detail/public/infosys/bottles/13616_bottle.jpg?itok=FDePuig- "HTTP/1.1 403 Forbidden"
+2026-06-06 23:34:55,084 [ERROR] Image download failed for https://www.mtouton.com/sites/default/files/styles/item_card_label_detail/public/infosys/bottles/13616_bottle.jpg?itok=FDePuig-: Client error '403 Forbidden' for url 'https://www.mtouton.com/sites/default/files/styles/item_card_label_detail/public/infosys/bottles/13616_bottle.jpg?itok=FDePuig-'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:34:55,084 [ERROR] Error processing candidate https://www.mtouton.com/sites/default/files/styles/item_card_label_detail/public/infosys/bottles/13616_bottle.jpg?itok=FDePuig- for SKU BH08/2021: Failed to download image: https://www.mtouton.com/sites/default/files/styles/item_card_label_detail/public/infosys/bottles/13616_bottle.jpg?itok=FDePuig-
+2026-06-06 23:34:55,302 [INFO] HTTP Request: GET https://www.wine-searcher.com/images/labels/27/44/11742744.jpg?width=288&height=180&fit=bounds&canvas=288,180&format=auto&auto=compress&dpr=1&quality=70 "HTTP/1.1 200 OK"
+2026-06-06 23:34:55,305 [ERROR] Error processing candidate https://www.wine-searcher.com/images/labels/27/44/11742744.jpg?width=288&height=180&fit=bounds&canvas=288,180&format=auto&auto=compress&dpr=1&quality=70 for SKU BH08/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:34:56,327 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/b7d3bd6d-07b6-46d5-8291-fbe4005c7c1d.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:34:56,372 [ERROR] Error processing candidate https://cdn.ct-static.com/labels/b7d3bd6d-07b6-46d5-8291-fbe4005c7c1d.jpg for SKU BH08/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:34:57,452 [INFO] HTTP Request: GET https://wineanorak.com/wp-content/uploads/2025/12/bilahaut27.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:34:58,421 [ERROR] Error processing candidate https://wineanorak.com/wp-content/uploads/2025/12/bilahaut27.jpg for SKU BH08/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:34:58,642 [INFO] HTTP Request: GET https://www.mtouton.com/sites/default/files/styles/item_card_label_detail/public/infosys/bottles/13617_bottle.jpg?itok=g1AmOe4k "HTTP/1.1 403 Forbidden"
+2026-06-06 23:34:58,642 [ERROR] Image download failed for https://www.mtouton.com/sites/default/files/styles/item_card_label_detail/public/infosys/bottles/13617_bottle.jpg?itok=g1AmOe4k: Client error '403 Forbidden' for url 'https://www.mtouton.com/sites/default/files/styles/item_card_label_detail/public/infosys/bottles/13617_bottle.jpg?itok=g1AmOe4k'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:34:58,643 [ERROR] Error processing candidate https://www.mtouton.com/sites/default/files/styles/item_card_label_detail/public/infosys/bottles/13617_bottle.jpg?itok=g1AmOe4k for SKU BH08/2021: Failed to download image: https://www.mtouton.com/sites/default/files/styles/item_card_label_detail/public/infosys/bottles/13617_bottle.jpg?itok=g1AmOe4k
+2026-06-06 23:34:58,718 [INFO] HTTP Request: GET https://www.idealwine.com/media/00-migrated-variant-photos/B2899348_36.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:34:58,814 [ERROR] Error processing candidate https://www.idealwine.com/media/00-migrated-variant-photos/B2899348_36.jpg for SKU BH08/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:34:58,983 [INFO] HTTP Request: GET https://www.saq.com/media/catalog/product/1/5/15371980-1_1730227690.png?optimize=high&fit=bounds&height=&width=&format=jpeg "HTTP/1.1 200 OK"
+2026-06-06 23:35:01,720 [INFO] HTTP Request: POST https://api.remove.bg/v1.0/removebg "HTTP/1.1 200 OK"
+2026-06-06 23:35:01,840 [INFO]   ✓ BH08/2021 confidence=63% producer=100% vintage=0%
+2026-06-06 23:35:01,840 [INFO] [2/87] Searching BH09/2021: Domaine de Bila-Haut R.I Cotes du Roussillon Villages Lesquerde AOP
+2026-06-06 23:35:01,964 [INFO] HTTP Request: GET https://www.googleapis.com/customsearch/v1?key=AIzaSyBZ5p08dd5cR_Q5bMHhaAFuH6kPUO9jxrY&cx=02211d6d3950b4d03&q=Domaine+de+Bila-Haut+R.I+Cotes+du+Roussillon+Villages+Lesquerde+AOP+2021+wine+bottle&searchType=image&num=10&imgSize=large&imgType=photo "HTTP/1.1 403 Forbidden"
+2026-06-06 23:35:01,966 [WARNING] Custom Search JSON API returned 403: this GCP project likely has no JSON API entitlement (Google closed JSON API access for new projects; DDG/Bing fallback will be used). See https://developers.google.com/custom-search/v1/overview (Vertex AI Search or a third-party SERP API are alternatives).
+2026-06-06 23:35:02,023 [INFO] response: https://duckduckgo.com/?q=Domaine+de+Bila-Haut+R.I+Cotes+du+Roussillon+Villages+Lesquerde+AOP+2021+wine+bottle 200
+2026-06-06 23:35:02,087 [INFO] response: https://duckduckgo.com/i.js?o=json&q=Domaine+de+Bila-Haut+R.I+Cotes+du+Roussillon+Villages+Lesquerde+AOP+2021+wine+bottle&l=us-en&vqd=4-97260935611020237501134966031392198834&p=1&ct=AT 403
+2026-06-06 23:35:02,088 [ERROR] DuckDuckGo image search failed: No results found.
+2026-06-06 23:35:02,126 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Domaine+de+Bila-Haut+R.I+Cotes+du+Roussillon+Villages+Lesquerde+AOP+2021+wine+bottle&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 429 Too Many Requests"
+2026-06-06 23:35:02,126 [WARNING] SerpApi rate-limited for SKU BH09/2021 — retry in 8s
+2026-06-06 23:35:02,138 [INFO] response: https://www.bing.com/images/async?q=Domaine+de+Bila-Haut+R.I+Cotes+du+Roussillon+Villages+Lesquerde+AOP+2021+wine+bottle&async=1&first=1&count=35 200
+2026-06-06 23:35:02,151 [INFO] Bing returned 25 candidates for SKU BH09/2021
+2026-06-06 23:35:03,084 [INFO] HTTP Request: GET https://api.search.brave.com/res/v1/images/search?q=Domaine+de+Bila-Haut+R.I+Cotes+du+Roussillon+Villages+Lesquerde+AOP+2021+wine+bottle&count=25&search_lang=en&country=ALL&safesearch=strict&spellcheck=true "HTTP/1.1 200 OK"
+2026-06-06 23:35:03,085 [INFO] Brave returned 25 candidates for SKU BH09/2021 (query='Domaine de Bila-Haut R.I Cotes du Roussillon Villages Lesquerde AOP 2021 wine bo')
+2026-06-06 23:35:10,405 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Domaine+de+Bila-Haut+R.I+Cotes+du+Roussillon+Villages+Lesquerde+AOP+2021+wine+bottle&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 429 Too Many Requests"
+2026-06-06 23:35:10,405 [WARNING] SerpApi rate-limited for SKU BH09/2021 — retry in 16s
+2026-06-06 23:35:26,740 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Domaine+de+Bila-Haut+R.I+Cotes+du+Roussillon+Villages+Lesquerde+AOP+2021+wine+bottle&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 429 Too Many Requests"
+2026-06-06 23:35:26,740 [WARNING] SerpApi rate-limited for SKU BH09/2021 — retry in 24s
+2026-06-06 23:35:50,840 [INFO] Merged 50 candidates for SKU BH09/2021 — sources: brave=25, bing=25
+2026-06-06 23:35:51,724 [INFO] HTTP Request: GET https://mrwheelerwine.2dimg.com/36/ri_aop_nm_891x3000_1ebf38d3e3.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:35:51,727 [ERROR] Error processing candidate https://mrwheelerwine.2dimg.com/36/ri_aop_nm_891x3000_1ebf38d3e3.jpg for SKU BH09/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:35:51,849 [INFO] HTTP Request: GET https://tablewineasheville.com/cdn/shop/products/Bila-HautRoussillonRouge_1800x1800.jpg?v=1623791139 "HTTP/1.1 200 OK"
+2026-06-06 23:35:51,962 [ERROR] Error processing candidate https://tablewineasheville.com/cdn/shop/products/Bila-HautRoussillonRouge_1800x1800.jpg?v=1623791139 for SKU BH09/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:35:52,749 [INFO] HTTP Request: GET https://mrwheelerwine.2dimg.com/4/ri_aop_nm_891x3000_1ebf38d3e3.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:35:52,963 [ERROR] Error processing candidate https://mrwheelerwine.2dimg.com/4/ri_aop_nm_891x3000_1ebf38d3e3.jpg for SKU BH09/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:35:53,210 [INFO] HTTP Request: GET https://www.mchapoutier.com.au/wp-content/uploads/2023/04/M.-CHAPOUTIER-Domaine-de-Bila-Haut-RI-75cL-NM-600x600.png "HTTP/1.1 403 Forbidden"
+2026-06-06 23:35:53,210 [ERROR] Image download failed for https://www.mchapoutier.com.au/wp-content/uploads/2023/04/M.-CHAPOUTIER-Domaine-de-Bila-Haut-RI-75cL-NM-600x600.png: Client error '403 Forbidden' for url 'https://www.mchapoutier.com.au/wp-content/uploads/2023/04/M.-CHAPOUTIER-Domaine-de-Bila-Haut-RI-75cL-NM-600x600.png'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:35:53,210 [ERROR] Error processing candidate https://www.mchapoutier.com.au/wp-content/uploads/2023/04/M.-CHAPOUTIER-Domaine-de-Bila-Haut-RI-75cL-NM-600x600.png for SKU BH09/2021: Failed to download image: https://www.mchapoutier.com.au/wp-content/uploads/2023/04/M.-CHAPOUTIER-Domaine-de-Bila-Haut-RI-75cL-NM-600x600.png
+2026-06-06 23:35:53,293 [INFO] HTTP Request: GET https://woodencork.com/cdn/shop/products/Bottle-Chapoutier_20_Bila_20Haut_20-_20Cotes_20Roussillon_20Villages_20RI_20-_20Cotes_20du_20Roussillon-Villages_20-_20Roussillon_20-_20Red_20-_20Label_20-_201317163_600x_56444d10-7983-453d-8873-4545b7a39a68.png?v=1676087935&width=1080 "HTTP/1.1 200 OK"
+2026-06-06 23:35:53,317 [ERROR] Error processing candidate https://woodencork.com/cdn/shop/products/Bottle-Chapoutier_20_Bila_20Haut_20-_20Cotes_20Roussillon_20Villages_20RI_20-_20Cotes_20du_20Roussillon-Villages_20-_20Roussillon_20-_20Red_20-_20Label_20-_201317163_600x_56444d10-7983-453d-8873-4545b7a39a68.png?v=1676087935&width=1080 for SKU BH09/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:35:53,423 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/b7d3bd6d-07b6-46d5-8291-fbe4005c7c1d.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:35:53,474 [ERROR] Error processing candidate https://cdn.ct-static.com/labels/b7d3bd6d-07b6-46d5-8291-fbe4005c7c1d.jpg for SKU BH09/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:35:53,966 [INFO] HTTP Request: GET https://assets.wine.com/winecom/image/upload/w_600,h_600,dpr_2.0,c_fit,q_auto:good,fl_progressive/vggi5l5eqr43vvugjehd.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:35:53,987 [ERROR] Error processing candidate https://assets.wine.com/winecom/image/upload/w_600,h_600,dpr_2.0,c_fit,q_auto:good,fl_progressive/vggi5l5eqr43vvugjehd.jpg for SKU BH09/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:35:54,067 [INFO] HTTP Request: GET https://galiena.sg/cdn/shop/products/bila_haut_vit_mchapoutier_2048x.png?v=1665739096 "HTTP/1.1 200 OK"
+2026-06-06 23:35:54,300 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:36:02,914 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:36:09,362 [INFO] HTTP Request: GET https://www.cavedelacrosse.fr/4032-medium_default/domaine-de-bila-haut-vit-cotes-du-roussillon-villages-chapoutier-2017.jpg "HTTP/1.1 403 Forbidden"
+2026-06-06 23:36:09,363 [ERROR] Image download failed for https://www.cavedelacrosse.fr/4032-medium_default/domaine-de-bila-haut-vit-cotes-du-roussillon-villages-chapoutier-2017.jpg: Client error '403 Forbidden' for url 'https://www.cavedelacrosse.fr/4032-medium_default/domaine-de-bila-haut-vit-cotes-du-roussillon-villages-chapoutier-2017.jpg'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:36:09,363 [ERROR] Error processing candidate https://www.cavedelacrosse.fr/4032-medium_default/domaine-de-bila-haut-vit-cotes-du-roussillon-villages-chapoutier-2017.jpg for SKU BH09/2021: Failed to download image: https://www.cavedelacrosse.fr/4032-medium_default/domaine-de-bila-haut-vit-cotes-du-roussillon-villages-chapoutier-2017.jpg
+2026-06-06 23:36:09,538 [INFO] HTTP Request: GET https://www.mchapoutier.com.au/wp-content/uploads/2022/10/M.-CHAPOUTIER-Occultum-Lapidem-AOP-1024x1024.jpg "HTTP/1.1 403 Forbidden"
+2026-06-06 23:36:09,539 [ERROR] Image download failed for https://www.mchapoutier.com.au/wp-content/uploads/2022/10/M.-CHAPOUTIER-Occultum-Lapidem-AOP-1024x1024.jpg: Client error '403 Forbidden' for url 'https://www.mchapoutier.com.au/wp-content/uploads/2022/10/M.-CHAPOUTIER-Occultum-Lapidem-AOP-1024x1024.jpg'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:36:09,539 [ERROR] Error processing candidate https://www.mchapoutier.com.au/wp-content/uploads/2022/10/M.-CHAPOUTIER-Occultum-Lapidem-AOP-1024x1024.jpg for SKU BH09/2021: Failed to download image: https://www.mchapoutier.com.au/wp-content/uploads/2022/10/M.-CHAPOUTIER-Occultum-Lapidem-AOP-1024x1024.jpg
+2026-06-06 23:36:09,953 [INFO] HTTP Request: GET https://cdn11.bigcommerce.com/s-720fd/images/stencil/800x800/products/6930/11109/Bila-Haut-RI-Chapoutier__10169.1631891090.png?c=2 "HTTP/1.1 200 OK"
+2026-06-06 23:36:09,990 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:36:13,659 [ERROR] Error processing candidate https://cdn11.bigcommerce.com/s-720fd/images/stencil/800x800/products/6930/11109/Bila-Haut-RI-Chapoutier__10169.1631891090.png?c=2 for SKU BH09/2021: Image does not contain a wine bottle with a label
+2026-06-06 23:36:13,827 [INFO] HTTP Request: GET https://barnebys2.imgix.net/532/2022/09/397123/2227910_1109_0.jpg?auto=format,compress&cs=tinysrgb&trim=auto&padding=by-color&h=400&w=400&fit=crop&crop=0 "HTTP/1.1 200 OK"
+2026-06-06 23:36:13,837 [ERROR] Error processing candidate https://barnebys2.imgix.net/532/2022/09/397123/2227910_1109_0.jpg?auto=format,compress&cs=tinysrgb&trim=auto&padding=by-color&h=400&w=400&fit=crop&crop=0 for SKU BH09/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:36:15,481 [INFO] HTTP Request: GET https://www.wein-direktimport.de/media/c3/25/30/1751703461/rimage-2021-zip.jpg?ts=1767853334 "HTTP/1.1 200 OK"
+2026-06-06 23:36:16,525 [ERROR] Error processing candidate https://www.wein-direktimport.de/media/c3/25/30/1751703461/rimage-2021-zip.jpg?ts=1767853334 for SKU BH09/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:36:16,706 [INFO] HTTP Request: GET https://cdn11.bigcommerce.com/s-41e84jdtvf/images/stencil/1280x1280/products/48370/89381/61333__36700.1686081121.jpg?c=1 "HTTP/1.1 200 OK"
+2026-06-06 23:36:16,806 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:36:29,957 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:36:35,654 [INFO] HTTP Request: GET https://static.wineaccess.com/media/optimized/images/products/2021/02/bilahaut_Lesquerda_Bottleshot/670071f75f7622094b4f488edd18bd58.png "HTTP/1.1 200 OK"
+2026-06-06 23:36:36,154 [ERROR] Error processing candidate https://static.wineaccess.com/media/optimized/images/products/2021/02/bilahaut_Lesquerda_Bottleshot/670071f75f7622094b4f488edd18bd58.png for SKU BH09/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:36:36,373 [INFO] HTTP Request: GET https://www.mtouton.com/sites/default/files/styles/item_card_label_detail/public/infosys/bottles/13616_bottle.jpg?itok=FDePuig- "HTTP/1.1 403 Forbidden"
+2026-06-06 23:36:36,373 [ERROR] Image download failed for https://www.mtouton.com/sites/default/files/styles/item_card_label_detail/public/infosys/bottles/13616_bottle.jpg?itok=FDePuig-: Client error '403 Forbidden' for url 'https://www.mtouton.com/sites/default/files/styles/item_card_label_detail/public/infosys/bottles/13616_bottle.jpg?itok=FDePuig-'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:36:36,374 [ERROR] Error processing candidate https://www.mtouton.com/sites/default/files/styles/item_card_label_detail/public/infosys/bottles/13616_bottle.jpg?itok=FDePuig- for SKU BH09/2021: Failed to download image: https://www.mtouton.com/sites/default/files/styles/item_card_label_detail/public/infosys/bottles/13616_bottle.jpg?itok=FDePuig-
+2026-06-06 23:36:38,214 [INFO] HTTP Request: GET https://trouver-un-vin.com/image-vins/13473456.webp "HTTP/1.1 200 OK"
+2026-06-06 23:36:38,221 [ERROR] Error processing candidate https://trouver-un-vin.com/image-vins/13473456.webp for SKU BH09/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:36:39,648 [INFO] HTTP Request: GET https://resize.bidforwine.co.uk/resized/images/w590/lots/0/286252-2.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:36:40,197 [ERROR] Error processing candidate https://resize.bidforwine.co.uk/resized/images/w590/lots/0/286252-2.jpg for SKU BH09/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:36:40,276 [INFO] HTTP Request: GET https://www.cavedelacrosse.fr/4032-home_default/domaine-de-bila-haut-vit-cotes-du-roussillon-villages-chapoutier-2017.jpg "HTTP/1.1 403 Forbidden"
+2026-06-06 23:36:40,277 [ERROR] Image download failed for https://www.cavedelacrosse.fr/4032-home_default/domaine-de-bila-haut-vit-cotes-du-roussillon-villages-chapoutier-2017.jpg: Client error '403 Forbidden' for url 'https://www.cavedelacrosse.fr/4032-home_default/domaine-de-bila-haut-vit-cotes-du-roussillon-villages-chapoutier-2017.jpg'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:36:40,277 [ERROR] Error processing candidate https://www.cavedelacrosse.fr/4032-home_default/domaine-de-bila-haut-vit-cotes-du-roussillon-villages-chapoutier-2017.jpg for SKU BH09/2021: Failed to download image: https://www.cavedelacrosse.fr/4032-home_default/domaine-de-bila-haut-vit-cotes-du-roussillon-villages-chapoutier-2017.jpg
+2026-06-06 23:36:40,474 [INFO] HTTP Request: GET https://www.mchapoutier.com.au/wp-content/uploads/2022/10/Lesquerda-nv-1024x1024.jpg "HTTP/1.1 403 Forbidden"
+2026-06-06 23:36:40,475 [ERROR] Image download failed for https://www.mchapoutier.com.au/wp-content/uploads/2022/10/Lesquerda-nv-1024x1024.jpg: Client error '403 Forbidden' for url 'https://www.mchapoutier.com.au/wp-content/uploads/2022/10/Lesquerda-nv-1024x1024.jpg'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:36:40,476 [ERROR] Error processing candidate https://www.mchapoutier.com.au/wp-content/uploads/2022/10/Lesquerda-nv-1024x1024.jpg for SKU BH09/2021: Failed to download image: https://www.mchapoutier.com.au/wp-content/uploads/2022/10/Lesquerda-nv-1024x1024.jpg
+2026-06-06 23:36:41,164 [INFO] HTTP Request: GET https://res.cloudinary.com/unjourunvin/image/upload/f_auto,q_auto:good,dpr_auto,fl_lossy/productimg/bila-haut-roussillon-ri-G_554b17e331b47_566019faedb9a.png "HTTP/1.1 200 OK"
+2026-06-06 23:36:41,172 [ERROR] Error processing candidate https://res.cloudinary.com/unjourunvin/image/upload/f_auto,q_auto:good,dpr_auto,fl_lossy/productimg/bila-haut-roussillon-ri-G_554b17e331b47_566019faedb9a.png for SKU BH09/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:36:42,003 [INFO] HTTP Request: GET https://cdn.klwines.com/images/skus/1354011x.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:36:42,011 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:36:55,559 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:37:01,871 [INFO] HTTP Request: GET https://trouver-un-vin.com/image-vins/7552379.webp "HTTP/1.1 200 OK"
+2026-06-06 23:37:01,880 [ERROR] Error processing candidate https://trouver-un-vin.com/image-vins/7552379.webp for SKU BH09/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:37:02,794 [INFO] HTTP Request: GET https://hillsidevineyards.com/wp-content/uploads/2024/03/598673.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:37:03,028 [ERROR] Error processing candidate https://hillsidevineyards.com/wp-content/uploads/2024/03/598673.jpg for SKU BH09/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:37:03,126 [INFO] HTTP Request: GET https://www.brix26.com/cdn/shop/products/Bila-Haut_lesquerda.jpg?v=1617334752&width=1080 "HTTP/1.1 200 OK"
+2026-06-06 23:37:03,133 [ERROR] Error processing candidate https://www.brix26.com/cdn/shop/products/Bila-Haut_lesquerda.jpg?v=1617334752&width=1080 for SKU BH09/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:37:03,275 [INFO] HTTP Request: GET https://galiena.sg/cdn/shop/products/bila_haut_vit_mchapoutier_2048x.png?v=1665739096 "HTTP/1.1 200 OK"
+2026-06-06 23:37:05,452 [INFO] HTTP Request: POST https://api.remove.bg/v1.0/removebg "HTTP/1.1 200 OK"
+2026-06-06 23:37:05,495 [INFO]   ✓ BH09/2021 confidence=42% producer=10% vintage=50%
+2026-06-06 23:37:05,495 [INFO] [3/87] Searching BH10/2021: Domaine de Bila-Haut Chrysopee Blanc, Collioure AOP
+2026-06-06 23:37:05,603 [INFO] HTTP Request: GET https://www.googleapis.com/customsearch/v1?key=AIzaSyBZ5p08dd5cR_Q5bMHhaAFuH6kPUO9jxrY&cx=02211d6d3950b4d03&q=Domaine+de+Bila-Haut+Chrysopee+Blanc%2C+Collioure+AOP+2021+wine+bottle&searchType=image&num=10&imgSize=large&imgType=photo "HTTP/1.1 403 Forbidden"
+2026-06-06 23:37:05,604 [WARNING] Custom Search JSON API returned 403: this GCP project likely has no JSON API entitlement (Google closed JSON API access for new projects; DDG/Bing fallback will be used). See https://developers.google.com/custom-search/v1/overview (Vertex AI Search or a third-party SERP API are alternatives).
+2026-06-06 23:37:05,672 [INFO] response: https://duckduckgo.com/?q=Domaine+de+Bila-Haut+Chrysopee+Blanc%2C+Collioure+AOP+2021+wine+bottle 200
+2026-06-06 23:37:05,727 [INFO] response: https://duckduckgo.com/i.js?o=json&q=Domaine+de+Bila-Haut+Chrysopee+Blanc%2C+Collioure+AOP+2021+wine+bottle&l=us-en&vqd=4-135293364484661836756844833526667356837&p=1&ct=AT 403
+2026-06-06 23:37:05,728 [ERROR] DuckDuckGo image search failed: No results found.
+2026-06-06 23:37:05,740 [INFO] response: https://www.bing.com/images/async?q=Domaine+de+Bila-Haut+Chrysopee+Blanc%2C+Collioure+AOP+2021+wine+bottle&async=1&first=1&count=35 200
+2026-06-06 23:37:05,753 [INFO] Bing returned 25 candidates for SKU BH10/2021
+2026-06-06 23:37:05,778 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Domaine+de+Bila-Haut+Chrysopee+Blanc%2C+Collioure+AOP+2021+wine+bottle&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 429 Too Many Requests"
+2026-06-06 23:37:05,778 [WARNING] SerpApi rate-limited for SKU BH10/2021 — retry in 8s
+2026-06-06 23:37:06,436 [INFO] HTTP Request: GET https://api.search.brave.com/res/v1/images/search?q=Domaine+de+Bila-Haut+Chrysopee+Blanc%2C+Collioure+AOP+2021+wine+bottle&count=25&search_lang=en&country=ALL&safesearch=strict&spellcheck=true "HTTP/1.1 200 OK"
+2026-06-06 23:37:06,437 [INFO] Brave returned 25 candidates for SKU BH10/2021 (query='Domaine de Bila-Haut Chrysopee Blanc, Collioure AOP 2021 wine bottle')
+2026-06-06 23:37:14,073 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Domaine+de+Bila-Haut+Chrysopee+Blanc%2C+Collioure+AOP+2021+wine+bottle&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 429 Too Many Requests"
+2026-06-06 23:37:14,074 [WARNING] SerpApi rate-limited for SKU BH10/2021 — retry in 16s
+2026-06-06 23:37:30,397 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Domaine+de+Bila-Haut+Chrysopee+Blanc%2C+Collioure+AOP+2021+wine+bottle&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 429 Too Many Requests"
+2026-06-06 23:37:30,398 [WARNING] SerpApi rate-limited for SKU BH10/2021 — retry in 24s
+2026-06-06 23:37:54,497 [INFO] Merged 48 candidates for SKU BH10/2021 — sources: brave=25, bing=25
+2026-06-06 23:37:54,583 [INFO] HTTP Request: GET https://www.idealwine.com/media/00-migrated-variant-photos/B2761712_128.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:37:54,660 [ERROR] Error processing candidate https://www.idealwine.com/media/00-migrated-variant-photos/B2761712_128.jpg for SKU BH10/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:37:54,738 [INFO] HTTP Request: GET https://static2.wineandco.com/themes/wineandco/images/produits/4/9/8/6/grd49864.jpg "HTTP/1.1 403 Forbidden"
+2026-06-06 23:37:54,738 [ERROR] Image download failed for https://static2.wineandco.com/themes/wineandco/images/produits/4/9/8/6/grd49864.jpg: Client error '403 Forbidden' for url 'https://static2.wineandco.com/themes/wineandco/images/produits/4/9/8/6/grd49864.jpg'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:37:54,739 [ERROR] Error processing candidate https://static2.wineandco.com/themes/wineandco/images/produits/4/9/8/6/grd49864.jpg for SKU BH10/2021: Failed to download image: https://static2.wineandco.com/themes/wineandco/images/produits/4/9/8/6/grd49864.jpg
+2026-06-06 23:37:54,821 [INFO] HTTP Request: GET https://www.idealwine.com/media/00-migrated-variant-photos/B2761712_128-1.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:37:54,902 [ERROR] Error processing candidate https://www.idealwine.com/media/00-migrated-variant-photos/B2761712_128-1.jpg for SKU BH10/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:37:56,056 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/5ae1e824-78df-47a5-a4f6-063a5366b5d3.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:37:56,140 [ERROR] Error processing candidate https://cdn.ct-static.com/labels/5ae1e824-78df-47a5-a4f6-063a5366b5d3.jpg for SKU BH10/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:37:56,223 [INFO] HTTP Request: GET https://www.tauruswines.co.uk/cdn/shop/files/ChrysopeeCollioureNV_530x@2x.png?v=1710426057 "HTTP/1.1 200 OK"
+2026-06-06 23:37:56,254 [ERROR] Error processing candidate https://www.tauruswines.co.uk/cdn/shop/files/ChrysopeeCollioureNV_530x@2x.png?v=1710426057 for SKU BH10/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:37:56,354 [INFO] HTTP Request: GET https://cdn.sanity.io/images/h7fg0cr3/production/7983e96dcff466deb9219303c93155568d82bd57-1022x1074.jpg?w=1000&fit=crop&auto=format "HTTP/1.1 200 OK"
+2026-06-06 23:37:56,418 [ERROR] Error processing candidate https://cdn.sanity.io/images/h7fg0cr3/production/7983e96dcff466deb9219303c93155568d82bd57-1022x1074.jpg?w=1000&fit=crop&auto=format for SKU BH10/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:37:56,782 [INFO] HTTP Request: GET https://cdn.shopify.com/s/files/1/1421/5622/products/DomainedeBila-HautCollioure_Chrysopee_2015_800x.jpg?v=1629455371 "HTTP/1.1 200 OK"
+2026-06-06 23:37:56,804 [ERROR] Error processing candidate https://cdn.shopify.com/s/files/1/1421/5622/products/DomainedeBila-HautCollioure_Chrysopee_2015_800x.jpg?v=1629455371 for SKU BH10/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:37:57,882 [INFO] HTTP Request: GET https://www.gute-weine.de/fileadmin/_processed_/0/4/csm_48003Hfl_o_d446b20915.png "HTTP/1.1 503 Service Temporarily Unavailable"
+2026-06-06 23:37:58,704 [ERROR] Image download failed for https://www.gute-weine.de/fileadmin/_processed_/0/4/csm_48003Hfl_o_d446b20915.png: Server error '503 Service Temporarily Unavailable' for url 'https://www.gute-weine.de/fileadmin/_processed_/0/4/csm_48003Hfl_o_d446b20915.png'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503
+2026-06-06 23:37:58,704 [ERROR] Error processing candidate https://www.gute-weine.de/fileadmin/_processed_/0/4/csm_48003Hfl_o_d446b20915.png for SKU BH10/2021: Failed to download image: https://www.gute-weine.de/fileadmin/_processed_/0/4/csm_48003Hfl_o_d446b20915.png
+2026-06-06 23:37:59,008 [INFO] HTTP Request: GET https://cdn.shopify.com/s/files/1/1421/5622/products/DomainedeBila-HautCollioure_Chrysopee_2015_130x.jpg?v=1629455371 "HTTP/1.1 200 OK"
+2026-06-06 23:37:59,009 [ERROR] Error processing candidate https://cdn.shopify.com/s/files/1/1421/5622/products/DomainedeBila-HautCollioure_Chrysopee_2015_130x.jpg?v=1629455371 for SKU BH10/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:37:59,081 [INFO] HTTP Request: GET https://www.idealwine.com/media/00-migrated-variant-photos/B2670472_15-1.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:37:59,163 [ERROR] Error processing candidate https://www.idealwine.com/media/00-migrated-variant-photos/B2670472_15-1.jpg for SKU BH10/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:37:59,240 [INFO] HTTP Request: GET https://www.idealwine.com/media/00-migrated-variant-photos/B2761712_23-1.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:37:59,315 [ERROR] Error processing candidate https://www.idealwine.com/media/00-migrated-variant-photos/B2761712_23-1.jpg for SKU BH10/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:38:00,306 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/b2545096-da3f-459c-8104-8509827aeb08.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:38:00,342 [ERROR] Error processing candidate https://cdn.ct-static.com/labels/b2545096-da3f-459c-8104-8509827aeb08.jpg for SKU BH10/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:38:00,423 [INFO] HTTP Request: GET https://www.idealwine.com/media/00-migrated-variant-photos/B2761712_23.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:38:00,499 [ERROR] Error processing candidate https://www.idealwine.com/media/00-migrated-variant-photos/B2761712_23.jpg for SKU BH10/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:38:01,156 [INFO] HTTP Request: GET https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhWcUiyAMYpxV1aIBwSEED1oH8S_Z34TFSYOkufYesKOx1-TffC9gfmMzWozIgE-k9RVObsePZVxSvnDPDBhkzQbOS54hMkQ8aF5mwv7PZNAoAlluSCQNLCC-lHn2Vq6tX_EfdUKDety43FWIqNl625zgjWYaEMfS8F8bdcUQgYOl2PHwdmZj_4TS8A_Q/s900/M-Chapoutier-Bila-Haut-Cotes-du-Roussillon-Blanc-2021-AP-Midi-France_07240.JPG "HTTP/1.1 200 OK"
+2026-06-06 23:38:01,225 [ERROR] Error processing candidate https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhWcUiyAMYpxV1aIBwSEED1oH8S_Z34TFSYOkufYesKOx1-TffC9gfmMzWozIgE-k9RVObsePZVxSvnDPDBhkzQbOS54hMkQ8aF5mwv7PZNAoAlluSCQNLCC-lHn2Vq6tX_EfdUKDety43FWIqNl625zgjWYaEMfS8F8bdcUQgYOl2PHwdmZj_4TS8A_Q/s900/M-Chapoutier-Bila-Haut-Cotes-du-Roussillon-Blanc-2021-AP-Midi-France_07240.JPG for SKU BH10/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:38:01,311 [INFO] HTTP Request: GET https://www.hatchmansfield.com/wp-content/uploads/2025/06/UBCHW21B-335x1005.png "HTTP/1.1 200 OK"
+2026-06-06 23:38:01,353 [ERROR] Error processing candidate https://www.hatchmansfield.com/wp-content/uploads/2025/06/UBCHW21B-335x1005.png for SKU BH10/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:38:01,492 [INFO] HTTP Request: GET https://media.idealwine.com/cache/product_variant_medium/00-migrated-variant-photos/B2761712_118-1.jpg "HTTP/1.1 301 Moved Permanently"
+2026-06-06 23:38:01,527 [INFO] HTTP Request: GET https://www.idealwine.com/media/cache/product_variant_medium/00-migrated-variant-photos/B2761712_118-1.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:38:01,536 [ERROR] Error processing candidate https://media.idealwine.com/cache/product_variant_medium/00-migrated-variant-photos/B2761712_118-1.jpg for SKU BH10/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:38:01,611 [INFO] HTTP Request: GET https://www.idealwine.com/media/00-migrated-variant-photos/B2670472_15.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:38:01,687 [ERROR] Error processing candidate https://www.idealwine.com/media/00-migrated-variant-photos/B2670472_15.jpg for SKU BH10/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:38:01,819 [INFO] HTTP Request: GET https://images.vivino.com/thumbs/MFgMOitOSkWf9BD9KZHrPA_pl_375x500.png "HTTP/1.1 200 OK"
+2026-06-06 23:38:01,838 [ERROR] Error processing candidate https://images.vivino.com/thumbs/MFgMOitOSkWf9BD9KZHrPA_pl_375x500.png for SKU BH10/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:38:02,388 [INFO] HTTP Request: GET https://res.cloudinary.com/unjourunvin/f_auto,c_limit,w_1920,q_90/productimg/bila-haut-cotes-du-roussillon-occultum-lapidem-blanc-2016-G_59dcab13ade6e_6200fcdbb8d435_42147028.png "HTTP/1.1 200 OK"
+2026-06-06 23:38:02,484 [ERROR] Error processing candidate https://res.cloudinary.com/unjourunvin/f_auto,c_limit,w_1920,q_90/productimg/bila-haut-cotes-du-roussillon-occultum-lapidem-blanc-2016-G_59dcab13ade6e_6200fcdbb8d435_42147028.png for SKU BH10/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:38:03,698 [INFO] HTTP Request: GET https://www.mrvinos.com/data/vinos/21113/mini-m-chapoutier-domaine-de-bila-haut-chrysopee-1283296-s372_p.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:38:03,701 [ERROR] Error processing candidate https://www.mrvinos.com/data/vinos/21113/mini-m-chapoutier-domaine-de-bila-haut-chrysopee-1283296-s372_p.jpg for SKU BH10/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:38:03,786 [INFO] HTTP Request: GET https://www.tauruswines.co.uk/cdn/shop/products/tinywow_ChapoutierBilaHaitChrysopee2018_7639657_12b9b824-88ee-4987-9d42-172cd3878b8e_530x@2x.png?v=1667650863 "HTTP/1.1 200 OK"
+2026-06-06 23:38:03,816 [ERROR] Error processing candidate https://www.tauruswines.co.uk/cdn/shop/products/tinywow_ChapoutierBilaHaitChrysopee2018_7639657_12b9b824-88ee-4987-9d42-172cd3878b8e_530x@2x.png?v=1667650863 for SKU BH10/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:38:04,204 [INFO] HTTP Request: GET https://www.thewinesociety.com/globalassets/product-image-target/red-wine/fc46181/fc46181_collioure-rouge-chrysopee-chapoutier-2022_2.png?v=5rF453kCtMP&width=1200&rsampler=bicubic&compand=true "HTTP/1.1 200 OK"
+2026-06-06 23:38:05,374 [ERROR] Error processing candidate https://www.thewinesociety.com/globalassets/product-image-target/red-wine/fc46181/fc46181_collioure-rouge-chrysopee-chapoutier-2022_2.png?v=5rF453kCtMP&width=1200&rsampler=bicubic&compand=true for SKU BH10/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:38:05,766 [INFO] HTTP Request: GET https://wine-family.com/cdn/shop/files/b-wh20-4829-cha_1200x.jpg?v=1682482503 "HTTP/1.1 200 OK"
+2026-06-06 23:38:05,825 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:38:09,760 [ERROR] Error processing candidate https://wine-family.com/cdn/shop/files/b-wh20-4829-cha_1200x.jpg?v=1682482503 for SKU BH10/2021: Image does not contain a wine bottle with a label
+2026-06-06 23:38:11,065 [INFO] HTTP Request: GET https://lacavedetahiti.pf/wp-content/uploads/2024/04/49.png "HTTP/1.1 200 OK"
+2026-06-06 23:38:12,845 [ERROR] Error processing candidate https://lacavedetahiti.pf/wp-content/uploads/2024/04/49.png for SKU BH10/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:38:13,223 [INFO] HTTP Request: GET https://www.wine-searcher.com/images/labels/27/74/11742774.jpg?width=288&height=180&fit=bounds&canvas=288,180&format=auto&auto=compress&dpr=1&quality=70 "HTTP/1.1 200 OK"
+2026-06-06 23:38:13,225 [ERROR] Error processing candidate https://www.wine-searcher.com/images/labels/27/74/11742774.jpg?width=288&height=180&fit=bounds&canvas=288,180&format=auto&auto=compress&dpr=1&quality=70 for SKU BH10/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:38:13,227 [WARNING] No accurate image for BH10/2021 (verdict=REJECT, conf=0%)
+2026-06-06 23:38:13,227 [INFO] [4/87] Searching BH11/2021: M. Chapoutier L ermite Rouge Ermitage AOP
+2026-06-06 23:38:13,231 [INFO] Error in engine bing: DDGSException("RequestError: RequestError('error sending request for url (https://www.bing.com/images/async?q=M.+Chapoutier+L+ermite+Rouge+Ermitage+AOP+2021+wine+bottle&async=1&first=1&count=35)', 'https://www.bing.com/images/async?q=M.+Chapoutier+L+ermite+Rouge+Ermitage+AOP+2021+wine+bottle&async=1&first=1&count=35')")
+2026-06-06 23:38:13,232 [ERROR] Bing image search failed: RequestError: RequestError('error sending request for url (https://www.bing.com/images/async?q=M.+Chapoutier+L+ermite+Rouge+Ermitage+AOP+2021+wine+bottle&async=1&first=1&count=35)', 'https://www.bing.com/images/async?q=M.+Chapoutier+L+ermite+Rouge+Ermitage+AOP+2021+wine+bottle&async=1&first=1&count=35')
+2026-06-06 23:38:13,298 [INFO] HTTP Request: GET https://www.googleapis.com/customsearch/v1?key=AIzaSyBZ5p08dd5cR_Q5bMHhaAFuH6kPUO9jxrY&cx=02211d6d3950b4d03&q=M.+Chapoutier+L+ermite+Rouge+Ermitage+AOP+2021+wine+bottle&searchType=image&num=10&imgSize=large&imgType=photo "HTTP/1.1 403 Forbidden"
+2026-06-06 23:38:13,298 [WARNING] Custom Search JSON API returned 403: this GCP project likely has no JSON API entitlement (Google closed JSON API access for new projects; DDG/Bing fallback will be used). See https://developers.google.com/custom-search/v1/overview (Vertex AI Search or a third-party SERP API are alternatives).
+2026-06-06 23:38:13,408 [INFO] response: https://duckduckgo.com/?q=M.+Chapoutier+L+ermite+Rouge+Ermitage+AOP+2021+wine+bottle 200
+2026-06-06 23:38:13,463 [INFO] response: https://duckduckgo.com/i.js?o=json&q=M.+Chapoutier+L+ermite+Rouge+Ermitage+AOP+2021+wine+bottle&l=us-en&vqd=4-326831031325639017261259681822325961908&p=1&ct=AT 403
+2026-06-06 23:38:13,464 [ERROR] DuckDuckGo image search failed: No results found.
+2026-06-06 23:38:13,494 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=M.+Chapoutier+L+ermite+Rouge+Ermitage+AOP+2021+wine+bottle&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 429 Too Many Requests"
+2026-06-06 23:38:13,494 [WARNING] SerpApi rate-limited for SKU BH11/2021 — retry in 8s
+2026-06-06 23:38:14,265 [INFO] HTTP Request: GET https://api.search.brave.com/res/v1/images/search?q=M.+Chapoutier+L+ermite+Rouge+Ermitage+AOP+2021+wine+bottle&count=25&search_lang=en&country=ALL&safesearch=strict&spellcheck=true "HTTP/1.1 200 OK"
+2026-06-06 23:38:14,266 [INFO] Brave returned 25 candidates for SKU BH11/2021 (query='M. Chapoutier L ermite Rouge Ermitage AOP 2021 wine bottle')
+2026-06-06 23:38:22,047 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=M.+Chapoutier+L+ermite+Rouge+Ermitage+AOP+2021+wine+bottle&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 429 Too Many Requests"
+2026-06-06 23:38:22,048 [WARNING] SerpApi rate-limited for SKU BH11/2021 — retry in 16s
+2026-06-06 23:38:38,431 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=M.+Chapoutier+L+ermite+Rouge+Ermitage+AOP+2021+wine+bottle&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 429 Too Many Requests"
+2026-06-06 23:38:38,432 [WARNING] SerpApi rate-limited for SKU BH11/2021 — retry in 24s
+2026-06-06 23:39:02,532 [INFO] Merged 25 candidates for SKU BH11/2021 — sources: brave=25
+2026-06-06 23:39:02,850 [INFO] HTTP Request: GET https://d2uqzpf6d2kb73.cloudfront.net/eyJidWNrZXQiOiJzcGluZS1wcm9kdWN0LWltYWdlcy1wcm9kIiwia2V5IjoiYjkxYjNmOWItZGRlOC00OTYxLWEwYzMtNWNiY2E2YTFkYTc0LnBuZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJoZWlnaHQiOjgwMH0sInRyaW0iOjAuMX19 "HTTP/1.1 200 OK"
+2026-06-06 23:39:02,881 [ERROR] Error processing candidate https://d2uqzpf6d2kb73.cloudfront.net/eyJidWNrZXQiOiJzcGluZS1wcm9kdWN0LWltYWdlcy1wcm9kIiwia2V5IjoiYjkxYjNmOWItZGRlOC00OTYxLWEwYzMtNWNiY2E2YTFkYTc0LnBuZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJoZWlnaHQiOjgwMH0sInRyaW0iOjAuMX19 for SKU BH11/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:39:02,961 [INFO] HTTP Request: GET https://bottleofitaly.com/cdn/shop/files/Ermitage-Rouge-Ermite-M.-Chapoutier-bottle-of-italy_grande.jpg?v=1708956469 "HTTP/1.1 200 OK"
+2026-06-06 23:39:02,970 [ERROR] Error processing candidate https://bottleofitaly.com/cdn/shop/files/Ermitage-Rouge-Ermite-M.-Chapoutier-bottle-of-italy_grande.jpg?v=1708956469 for SKU BH11/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:39:03,585 [INFO] HTTP Request: GET https://www.foliowine.com/wp-content/uploads/2022/05/m-chapoutier-lErmite-rouge-nv-bottle-thumb.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:39:03,909 [ERROR] Error processing candidate https://www.foliowine.com/wp-content/uploads/2022/05/m-chapoutier-lErmite-rouge-nv-bottle-thumb.jpg for SKU BH11/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:39:04,077 [INFO] HTTP Request: GET https://assets.wine.com/winecom/image/upload/w_600,h_400,dpr_2.0,c_fit,q_auto:good,fl_progressive/yyi0qhd2zg7t4hfkgt3h.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:39:04,089 [ERROR] Error processing candidate https://assets.wine.com/winecom/image/upload/w_600,h_400,dpr_2.0,c_fit,q_auto:good,fl_progressive/yyi0qhd2zg7t4hfkgt3h.jpg for SKU BH11/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:39:04,181 [INFO] HTTP Request: GET https://shop.klwines.com/_next/image?url=https://cdn.klwines.com/images/skus/1640887x.jpg&w=256&q=75 "HTTP/1.1 403 Forbidden"
+2026-06-06 23:39:04,185 [ERROR] Image download failed for https://shop.klwines.com/_next/image?url=https://cdn.klwines.com/images/skus/1640887x.jpg&w=256&q=75: Client error '403 Forbidden' for url 'https://shop.klwines.com/_next/image?url=https://cdn.klwines.com/images/skus/1640887x.jpg&w=256&q=75'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:39:04,185 [ERROR] Error processing candidate https://shop.klwines.com/_next/image?url=https://cdn.klwines.com/images/skus/1640887x.jpg&w=256&q=75 for SKU BH11/2021: Failed to download image: https://shop.klwines.com/_next/image?url=https://cdn.klwines.com/images/skus/1640887x.jpg&w=256&q=75
+2026-06-06 23:39:04,265 [INFO] HTTP Request: GET https://www.thewinesociety.com/globalassets/product-image-target/organic/rh54021/rh54021_ermitage-rouge-lermite-chapoutier-2018_1.png?v=DHUH0ENrzZy&width=100&height=100&rmode=crop&rsampler=bicubic&compand=true "HTTP/1.1 200 OK"
+2026-06-06 23:39:04,266 [ERROR] Error processing candidate https://www.thewinesociety.com/globalassets/product-image-target/organic/rh54021/rh54021_ermitage-rouge-lermite-chapoutier-2018_1.png?v=DHUH0ENrzZy&width=100&height=100&rmode=crop&rsampler=bicubic&compand=true for SKU BH11/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:39:04,351 [INFO] HTTP Request: GET https://www.thewinesociety.com/globalassets/product-image-target/organic/rh54021/rh54021_ermitage-rouge-lermite-chapoutier-2018_1.png?v=DHUH0ENrzZy&width=100&rsampler=bicubic&compand=true "HTTP/1.1 200 OK"
+2026-06-06 23:39:04,352 [ERROR] Error processing candidate https://www.thewinesociety.com/globalassets/product-image-target/organic/rh54021/rh54021_ermitage-rouge-lermite-chapoutier-2018_1.png?v=DHUH0ENrzZy&width=100&rsampler=bicubic&compand=true for SKU BH11/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:39:04,439 [INFO] HTTP Request: GET https://grandcruwines.com/cdn/shop/files/media_ce7a2e0a-a3fe-42c8-96a8-3827d3b25b8f_1024x1024.png?v=1761294592 "HTTP/1.1 200 OK"
+2026-06-06 23:39:04,462 [ERROR] Error processing candidate https://grandcruwines.com/cdn/shop/files/media_ce7a2e0a-a3fe-42c8-96a8-3827d3b25b8f_1024x1024.png?v=1761294592 for SKU BH11/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:39:04,539 [INFO] HTTP Request: GET https://www.sodivin.co.uk/img/p/4/0/8/4/3/40843-large_default.jpg "HTTP/1.1 403 Forbidden"
+2026-06-06 23:39:04,540 [ERROR] Image download failed for https://www.sodivin.co.uk/img/p/4/0/8/4/3/40843-large_default.jpg: Client error '403 Forbidden' for url 'https://www.sodivin.co.uk/img/p/4/0/8/4/3/40843-large_default.jpg'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:39:04,540 [ERROR] Error processing candidate https://www.sodivin.co.uk/img/p/4/0/8/4/3/40843-large_default.jpg for SKU BH11/2021: Failed to download image: https://www.sodivin.co.uk/img/p/4/0/8/4/3/40843-large_default.jpg
+2026-06-06 23:39:04,605 [INFO] HTTP Request: GET https://www.sodivin.co.uk/img/p/1/8/8/8/2/18882-large_default.jpg "HTTP/1.1 403 Forbidden"
+2026-06-06 23:39:04,605 [ERROR] Image download failed for https://www.sodivin.co.uk/img/p/1/8/8/8/2/18882-large_default.jpg: Client error '403 Forbidden' for url 'https://www.sodivin.co.uk/img/p/1/8/8/8/2/18882-large_default.jpg'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:39:04,605 [ERROR] Error processing candidate https://www.sodivin.co.uk/img/p/1/8/8/8/2/18882-large_default.jpg for SKU BH11/2021: Failed to download image: https://www.sodivin.co.uk/img/p/1/8/8/8/2/18882-large_default.jpg
+2026-06-06 23:39:06,183 [INFO] HTTP Request: GET https://images.ctfassets.net/qygihzjkzuyj/77uG5yQ21wwZXGUl7ie46M/91e24c65ad60fa113fd8709bece056fb/CI_Bottles_Festtagsweine.png?fm=webp "HTTP/1.1 200 OK"
+2026-06-06 23:39:06,361 [ERROR] Error processing candidate https://images.ctfassets.net/qygihzjkzuyj/77uG5yQ21wwZXGUl7ie46M/91e24c65ad60fa113fd8709bece056fb/CI_Bottles_Festtagsweine.png?fm=webp for SKU BH11/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:39:07,002 [INFO] HTTP Request: GET https://preview.redd.it/57cikhgjllj71.jpg?width=640&crop=smart&auto=webp&s=1866b80deb9ed8c2e23608d4b9c54d92727ba1de "HTTP/1.1 200 OK"
+2026-06-06 23:39:07,033 [ERROR] Error processing candidate https://preview.redd.it/57cikhgjllj71.jpg?width=640&crop=smart&auto=webp&s=1866b80deb9ed8c2e23608d4b9c54d92727ba1de for SKU BH11/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:39:07,608 [INFO] HTTP Request: GET https://falconvintners-21644.kxcdn.com/wp-content/uploads/2024/05/10850824_square-4.png "HTTP/1.1 403 Forbidden"
+2026-06-06 23:39:07,609 [ERROR] Image download failed for https://falconvintners-21644.kxcdn.com/wp-content/uploads/2024/05/10850824_square-4.png: Client error '403 Forbidden' for url 'https://falconvintners-21644.kxcdn.com/wp-content/uploads/2024/05/10850824_square-4.png'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:39:07,609 [ERROR] Error processing candidate https://falconvintners-21644.kxcdn.com/wp-content/uploads/2024/05/10850824_square-4.png for SKU BH11/2021: Failed to download image: https://falconvintners-21644.kxcdn.com/wp-content/uploads/2024/05/10850824_square-4.png
+2026-06-06 23:39:07,674 [INFO] HTTP Request: GET https://www.sodivin.co.uk/img/p/1/8/8/8/4/18884-home_default.jpg "HTTP/1.1 403 Forbidden"
+2026-06-06 23:39:07,675 [ERROR] Image download failed for https://www.sodivin.co.uk/img/p/1/8/8/8/4/18884-home_default.jpg: Client error '403 Forbidden' for url 'https://www.sodivin.co.uk/img/p/1/8/8/8/4/18884-home_default.jpg'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:39:07,675 [ERROR] Error processing candidate https://www.sodivin.co.uk/img/p/1/8/8/8/4/18884-home_default.jpg for SKU BH11/2021: Failed to download image: https://www.sodivin.co.uk/img/p/1/8/8/8/4/18884-home_default.jpg
+2026-06-06 23:39:07,755 [INFO] HTTP Request: GET https://www.sundaytimeswineclub.co.uk/images/uk/en/law/product/2435921b.png "HTTP/1.1 200 OK"
+2026-06-06 23:39:07,768 [ERROR] Error processing candidate https://www.sundaytimeswineclub.co.uk/images/uk/en/law/product/2435921b.png for SKU BH11/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:39:08,644 [INFO] HTTP Request: GET https://laywheelertrading-21644.kxcdn.com/wp-content/uploads/2024/04/10245085_square-600x600.png "HTTP/1.1 200 OK"
+2026-06-06 23:39:08,652 [ERROR] Error processing candidate https://laywheelertrading-21644.kxcdn.com/wp-content/uploads/2024/04/10245085_square-600x600.png for SKU BH11/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:39:08,726 [INFO] HTTP Request: GET https://www.sodivin.co.uk/img/p/4/0/8/4/4/40844-home_default.jpg "HTTP/1.1 403 Forbidden"
+2026-06-06 23:39:08,727 [ERROR] Image download failed for https://www.sodivin.co.uk/img/p/4/0/8/4/4/40844-home_default.jpg: Client error '403 Forbidden' for url 'https://www.sodivin.co.uk/img/p/4/0/8/4/4/40844-home_default.jpg'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:39:08,727 [ERROR] Error processing candidate https://www.sodivin.co.uk/img/p/4/0/8/4/4/40844-home_default.jpg for SKU BH11/2021: Failed to download image: https://www.sodivin.co.uk/img/p/4/0/8/4/4/40844-home_default.jpg
+2026-06-06 23:39:08,808 [INFO] HTTP Request: GET https://www.thewinesociety.com/globalassets/product-image-target/organic/rh54021/rh54021_ermitage-rouge-lermite-chapoutier-2018_2.png?v=A91KtgYkJpd&width=100&rsampler=bicubic&compand=true "HTTP/1.1 200 OK"
+2026-06-06 23:39:08,811 [ERROR] Error processing candidate https://www.thewinesociety.com/globalassets/product-image-target/organic/rh54021/rh54021_ermitage-rouge-lermite-chapoutier-2018_2.png?v=A91KtgYkJpd&width=100&rsampler=bicubic&compand=true for SKU BH11/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:39:09,644 [INFO] HTTP Request: GET https://media.bbr.com/s/bbr/20168007140-ms?img404=Default_Wine&$PLPDesk$&fmt=auto "HTTP/1.1 200 OK"
+2026-06-06 23:39:09,648 [ERROR] Error processing candidate https://media.bbr.com/s/bbr/20168007140-ms?img404=Default_Wine&$PLPDesk$&fmt=auto for SKU BH11/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:39:10,956 [INFO] HTTP Request: GET https://www.chapoutier.com/media/cache//produit_import/Selections_Parcellaires/l/e/lermite_rouge_297x1000.png "HTTP/1.1 200 OK"
+2026-06-06 23:39:11,522 [ERROR] Error processing candidate https://www.chapoutier.com/media/cache//produit_import/Selections_Parcellaires/l/e/lermite_rouge_297x1000.png for SKU BH11/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:39:12,104 [INFO] HTTP Request: GET https://falconvintners-21644.kxcdn.com/wp-content/uploads/2024/05/10850782_square-600x600.png "HTTP/1.1 403 Forbidden"
+2026-06-06 23:39:12,105 [ERROR] Image download failed for https://falconvintners-21644.kxcdn.com/wp-content/uploads/2024/05/10850782_square-600x600.png: Client error '403 Forbidden' for url 'https://falconvintners-21644.kxcdn.com/wp-content/uploads/2024/05/10850782_square-600x600.png'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:39:12,105 [ERROR] Error processing candidate https://falconvintners-21644.kxcdn.com/wp-content/uploads/2024/05/10850782_square-600x600.png for SKU BH11/2021: Failed to download image: https://falconvintners-21644.kxcdn.com/wp-content/uploads/2024/05/10850782_square-600x600.png
+2026-06-06 23:39:12,200 [INFO] HTTP Request: GET https://grandcruwines.com/cdn/shop/files/media_ce7a2e0a-a3fe-42c8-96a8-3827d3b25b8f_compact.png?v=1761294592 "HTTP/1.1 200 OK"
+2026-06-06 23:39:12,204 [ERROR] Error processing candidate https://grandcruwines.com/cdn/shop/files/media_ce7a2e0a-a3fe-42c8-96a8-3827d3b25b8f_compact.png?v=1761294592 for SKU BH11/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:39:12,272 [INFO] HTTP Request: GET https://www.sodivin.co.uk/img/p/1/8/8/8/3/18883-home_default.jpg "HTTP/1.1 403 Forbidden"
+2026-06-06 23:39:12,273 [ERROR] Image download failed for https://www.sodivin.co.uk/img/p/1/8/8/8/3/18883-home_default.jpg: Client error '403 Forbidden' for url 'https://www.sodivin.co.uk/img/p/1/8/8/8/3/18883-home_default.jpg'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:39:12,273 [ERROR] Error processing candidate https://www.sodivin.co.uk/img/p/1/8/8/8/3/18883-home_default.jpg for SKU BH11/2021: Failed to download image: https://www.sodivin.co.uk/img/p/1/8/8/8/3/18883-home_default.jpg
+2026-06-06 23:39:12,736 [INFO] HTTP Request: GET https://www.thewinesociety.com/globalassets/product-image-target/organic/rh54021/rh54021_ermitage-rouge-lermite-chapoutier-2018_3.png?v=A91KtgYkJpd&width=100&height=100&rmode=crop&rsampler=bicubic&compand=true "HTTP/1.1 200 OK"
+2026-06-06 23:39:12,739 [ERROR] Error processing candidate https://www.thewinesociety.com/globalassets/product-image-target/organic/rh54021/rh54021_ermitage-rouge-lermite-chapoutier-2018_3.png?v=A91KtgYkJpd&width=100&height=100&rmode=crop&rsampler=bicubic&compand=true for SKU BH11/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:39:12,809 [INFO] HTTP Request: GET https://www.sodivin.co.uk/img/p/4/0/8/4/3/40843-home_default.jpg "HTTP/1.1 403 Forbidden"
+2026-06-06 23:39:12,810 [ERROR] Image download failed for https://www.sodivin.co.uk/img/p/4/0/8/4/3/40843-home_default.jpg: Client error '403 Forbidden' for url 'https://www.sodivin.co.uk/img/p/4/0/8/4/3/40843-home_default.jpg'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:39:12,810 [ERROR] Error processing candidate https://www.sodivin.co.uk/img/p/4/0/8/4/3/40843-home_default.jpg for SKU BH11/2021: Failed to download image: https://www.sodivin.co.uk/img/p/4/0/8/4/3/40843-home_default.jpg
+2026-06-06 23:39:12,810 [WARNING] No accurate image for BH11/2021 (verdict=REJECT, conf=0%)
+2026-06-06 23:39:12,810 [INFO] [5/87] Searching BH11/2022: M. Chapoutier L ermite Rouge Ermitage AOP
+2026-06-06 23:39:12,869 [INFO] HTTP Request: GET https://www.googleapis.com/customsearch/v1?key=AIzaSyBZ5p08dd5cR_Q5bMHhaAFuH6kPUO9jxrY&cx=02211d6d3950b4d03&q=M.+Chapoutier+L+ermite+Rouge+Ermitage+AOP+2022+wine+bottle&searchType=image&num=10&imgSize=large&imgType=photo "HTTP/1.1 403 Forbidden"
+2026-06-06 23:39:12,870 [WARNING] Custom Search JSON API returned 403: this GCP project likely has no JSON API entitlement (Google closed JSON API access for new projects; DDG/Bing fallback will be used). See https://developers.google.com/custom-search/v1/overview (Vertex AI Search or a third-party SERP API are alternatives).
+2026-06-06 23:39:13,006 [INFO] response: https://duckduckgo.com/?q=M.+Chapoutier+L+ermite+Rouge+Ermitage+AOP+2022+wine+bottle 200
+2026-06-06 23:39:13,060 [INFO] response: https://www.bing.com/images/async?q=M.+Chapoutier+L+ermite+Rouge+Ermitage+AOP+2022+wine+bottle&async=1&first=1&count=35 200
+2026-06-06 23:39:13,066 [INFO] response: https://duckduckgo.com/i.js?o=json&q=M.+Chapoutier+L+ermite+Rouge+Ermitage+AOP+2022+wine+bottle&l=us-en&vqd=4-281073049740569425226683934084533638482&p=1&ct=AT 403
+2026-06-06 23:39:13,067 [ERROR] DuckDuckGo image search failed: No results found.
+2026-06-06 23:39:13,073 [INFO] Bing returned 25 candidates for SKU BH11/2022
+2026-06-06 23:39:13,073 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=M.+Chapoutier+L+ermite+Rouge+Ermitage+AOP+2022+wine+bottle&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 429 Too Many Requests"
+2026-06-06 23:39:13,074 [WARNING] SerpApi rate-limited for SKU BH11/2022 — retry in 8s
+2026-06-06 23:39:13,818 [INFO] HTTP Request: GET https://api.search.brave.com/res/v1/images/search?q=M.+Chapoutier+L+ermite+Rouge+Ermitage+AOP+2022+wine+bottle&count=25&search_lang=en&country=ALL&safesearch=strict&spellcheck=true "HTTP/1.1 200 OK"
+2026-06-06 23:39:13,820 [INFO] Brave returned 25 candidates for SKU BH11/2022 (query='M. Chapoutier L ermite Rouge Ermitage AOP 2022 wine bottle')
+2026-06-06 23:39:21,373 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=M.+Chapoutier+L+ermite+Rouge+Ermitage+AOP+2022+wine+bottle&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 429 Too Many Requests"
+2026-06-06 23:39:21,373 [WARNING] SerpApi rate-limited for SKU BH11/2022 — retry in 16s
+2026-06-06 23:39:37,824 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=M.+Chapoutier+L+ermite+Rouge+Ermitage+AOP+2022+wine+bottle&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 429 Too Many Requests"
+2026-06-06 23:39:37,824 [WARNING] SerpApi rate-limited for SKU BH11/2022 — retry in 24s
+2026-06-06 23:40:01,924 [INFO] Merged 50 candidates for SKU BH11/2022 — sources: brave=25, bing=25
+2026-06-06 23:40:01,994 [INFO] HTTP Request: GET https://d2uqzpf6d2kb73.cloudfront.net/eyJidWNrZXQiOiJzcGluZS1wcm9kdWN0LWltYWdlcy1wcm9kIiwia2V5IjoiYjkxYjNmOWItZGRlOC00OTYxLWEwYzMtNWNiY2E2YTFkYTc0LnBuZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJoZWlnaHQiOjgwMH0sInRyaW0iOjAuMX19 "HTTP/1.1 200 OK"
+2026-06-06 23:40:02,018 [ERROR] Error processing candidate https://d2uqzpf6d2kb73.cloudfront.net/eyJidWNrZXQiOiJzcGluZS1wcm9kdWN0LWltYWdlcy1wcm9kIiwia2V5IjoiYjkxYjNmOWItZGRlOC00OTYxLWEwYzMtNWNiY2E2YTFkYTc0LnBuZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJoZWlnaHQiOjgwMH0sInRyaW0iOjAuMX19 for SKU BH11/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:40:02,090 [INFO] HTTP Request: GET https://www.foliowine.com/wp-content/uploads/2022/05/m-chapoutier-lErmite-rouge-nv-bottle-scaled.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:40:02,158 [ERROR] Error processing candidate https://www.foliowine.com/wp-content/uploads/2022/05/m-chapoutier-lErmite-rouge-nv-bottle-scaled.jpg for SKU BH11/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:40:02,400 [INFO] HTTP Request: GET https://shop.klwines.com/_next/image?url=https://cdn.klwines.com/images/skus/1640887x.jpg&w=256&q=75 "HTTP/1.1 403 Forbidden"
+2026-06-06 23:40:02,400 [ERROR] Image download failed for https://shop.klwines.com/_next/image?url=https://cdn.klwines.com/images/skus/1640887x.jpg&w=256&q=75: Client error '403 Forbidden' for url 'https://shop.klwines.com/_next/image?url=https://cdn.klwines.com/images/skus/1640887x.jpg&w=256&q=75'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:40:02,401 [ERROR] Error processing candidate https://shop.klwines.com/_next/image?url=https://cdn.klwines.com/images/skus/1640887x.jpg&w=256&q=75 for SKU BH11/2022: Failed to download image: https://shop.klwines.com/_next/image?url=https://cdn.klwines.com/images/skus/1640887x.jpg&w=256&q=75
+2026-06-06 23:40:02,560 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/c3548c78-2ca5-483e-8f15-3f6054b70695.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:40:02,636 [ERROR] Error processing candidate https://cdn.ct-static.com/labels/c3548c78-2ca5-483e-8f15-3f6054b70695.jpg for SKU BH11/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:40:02,730 [INFO] HTTP Request: GET https://bottleofitaly.com/cdn/shop/files/Ermitage-Rouge-Ermite-M.-Chapoutier-bottle-of-italy_grande.jpg?v=1708956469 "HTTP/1.1 200 OK"
+2026-06-06 23:40:02,738 [ERROR] Error processing candidate https://bottleofitaly.com/cdn/shop/files/Ermitage-Rouge-Ermite-M.-Chapoutier-bottle-of-italy_grande.jpg?v=1708956469 for SKU BH11/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:40:02,834 [INFO] HTTP Request: GET https://media.bbr.com/s/bbr/19998007140-ms?img404=Default_Wine "HTTP/1.1 200 OK"
+2026-06-06 23:40:03,054 [ERROR] Error processing candidate https://media.bbr.com/s/bbr/19998007140-ms?img404=Default_Wine for SKU BH11/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:40:03,936 [INFO] HTTP Request: GET https://www.colaris.nl/media/catalog/product/e/1/e107642-ermitage-l-ermite-rouge-2022_8.png?quality=95&fit=bounds&height=560&width=700&bg-color=FFF "HTTP/1.1 200 OK"
+2026-06-06 23:40:04,045 [ERROR] Error processing candidate https://www.colaris.nl/media/catalog/product/e/1/e107642-ermitage-l-ermite-rouge-2022_8.png?quality=95&fit=bounds&height=560&width=700&bg-color=FFF for SKU BH11/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:40:04,123 [INFO] HTTP Request: GET https://www.foliowine.com/wp-content/uploads/2022/05/m-chapoutier-lermite-blanc-nv-bottle.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:40:04,331 [ERROR] Error processing candidate https://www.foliowine.com/wp-content/uploads/2022/05/m-chapoutier-lermite-blanc-nv-bottle.jpg for SKU BH11/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:40:05,063 [INFO] HTTP Request: GET https://cloud.quierovinos.com/9930-large_default/m-chapoutier-ermitage-l-ermite-rouge.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:40:05,068 [ERROR] Error processing candidate https://cloud.quierovinos.com/9930-large_default/m-chapoutier-ermitage-l-ermite-rouge.jpg for SKU BH11/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:40:05,164 [INFO] HTTP Request: GET https://bestofwines.com/wine-images/1327_big.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:40:05,316 [ERROR] Error processing candidate https://bestofwines.com/wine-images/1327_big.jpg for SKU BH11/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:40:05,387 [INFO] HTTP Request: GET https://cdn.vinissimus.com/img/unsafe/p500x/plain/local:///prfmtgrande/vi/chhle22_anv800.png "HTTP/1.1 200 OK"
+2026-06-06 23:40:05,415 [ERROR] Error processing candidate https://cdn.vinissimus.com/img/unsafe/p500x/plain/local:///prfmtgrande/vi/chhle22_anv800.png for SKU BH11/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:40:07,262 [INFO] HTTP Request: GET https://www.nelsonrarewine.com/wp-content/uploads/2022/09/Ermitage_Rouge_LErmite__02553-1-1536x992.png "HTTP/1.1 200 OK"
+2026-06-06 23:40:09,422 [ERROR] Error processing candidate https://www.nelsonrarewine.com/wp-content/uploads/2022/09/Ermitage_Rouge_LErmite__02553-1-1536x992.png for SKU BH11/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:40:10,081 [INFO] HTTP Request: GET https://media.hawesko.de/pdmain/hawesko_6126276_mainimagevads_1_df7423dee96e334c736b63868f9dc3e8613f33e5.png "HTTP/1.1 200 OK"
+2026-06-06 23:40:10,089 [ERROR] Error processing candidate https://media.hawesko.de/pdmain/hawesko_6126276_mainimagevads_1_df7423dee96e334c736b63868f9dc3e8613f33e5.png for SKU BH11/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:40:10,520 [INFO] HTTP Request: GET https://www.saq.com/media/catalog/product/1/5/15063936-1_1666117600.png?optimize=high&fit=bounds&height=&width=&format=jpeg "HTTP/1.1 200 OK"
+2026-06-06 23:40:10,604 [ERROR] Error processing candidate https://www.saq.com/media/catalog/product/1/5/15063936-1_1666117600.png?optimize=high&fit=bounds&height=&width=&format=jpeg for SKU BH11/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:40:11,309 [INFO] HTTP Request: GET https://www.silkes-weinkeller.de/out/pictures/generated/product/1/228_340_90/chapoutier_l_ermite_ermitage_rouge_2020(2).jpg "HTTP/1.1 200 OK"
+2026-06-06 23:40:11,312 [ERROR] Error processing candidate https://www.silkes-weinkeller.de/out/pictures/generated/product/1/228_340_90/chapoutier_l_ermite_ermitage_rouge_2020(2).jpg for SKU BH11/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:40:12,641 [INFO] HTTP Request: GET https://www.saq.com/media/catalog/product/1/5/15215274-1_1698869287.png?optimize=high&fit=bounds&height=&width=&format=jpeg "HTTP/1.1 200 OK"
+2026-06-06 23:40:12,721 [ERROR] Error processing candidate https://www.saq.com/media/catalog/product/1/5/15215274-1_1698869287.png?optimize=high&fit=bounds&height=&width=&format=jpeg for SKU BH11/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:40:13,399 [INFO] HTTP Request: GET https://cloud.quierovinos.com/9930-cart_default/m-chapoutier-ermitage-l-ermite-rouge.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:40:13,400 [ERROR] Error processing candidate https://cloud.quierovinos.com/9930-cart_default/m-chapoutier-ermitage-l-ermite-rouge.jpg for SKU BH11/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:40:13,478 [INFO] HTTP Request: GET http://grandcruliquidassets.com/cdn/shop/files/RHNCHALERR-0750-1996-F0L0C0_1024x.jpg?v=1726850111 "HTTP/1.1 301 Moved Permanently"
+2026-06-06 23:40:13,524 [INFO] HTTP Request: GET https://grandcruliquidassets.com/cdn/shop/files/RHNCHALERR-0750-1996-F0L0C0_1024x.jpg?v=1726850111 "HTTP/1.1 200 OK"
+2026-06-06 23:40:13,582 [ERROR] Error processing candidate http://grandcruliquidassets.com/cdn/shop/files/RHNCHALERR-0750-1996-F0L0C0_1024x.jpg?v=1726850111 for SKU BH11/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:40:13,664 [INFO] HTTP Request: GET https://www.thewinesociety.com/globalassets/product-image-target/organic/rh54021/rh54021_ermitage-rouge-lermite-chapoutier-2018_1.png?v=DHUH0ENrzZy&width=100&rsampler=bicubic&compand=true "HTTP/1.1 200 OK"
+2026-06-06 23:40:13,665 [ERROR] Error processing candidate https://www.thewinesociety.com/globalassets/product-image-target/organic/rh54021/rh54021_ermitage-rouge-lermite-chapoutier-2018_1.png?v=DHUH0ENrzZy&width=100&rsampler=bicubic&compand=true for SKU BH11/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:40:14,689 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/38cb65b1-18c4-45a8-bff1-c89b5bf683b8.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:40:14,766 [ERROR] Error processing candidate https://cdn.ct-static.com/labels/38cb65b1-18c4-45a8-bff1-c89b5bf683b8.jpg for SKU BH11/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:40:15,507 [INFO] HTTP Request: GET https://www.silkes-weinkeller.de/out/pictures/generated/product/1/228_340_90/chapoutier_le_pavillon_ermitage_rouge_2020(1).jpg "HTTP/1.1 200 OK"
+2026-06-06 23:40:15,509 [ERROR] Error processing candidate https://www.silkes-weinkeller.de/out/pictures/generated/product/1/228_340_90/chapoutier_le_pavillon_ermitage_rouge_2020(1).jpg for SKU BH11/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:40:15,583 [INFO] HTTP Request: GET https://images.vivino.com/thumbs/25fLonL3QPGNDB8T6q87CQ_pb_x960.png "HTTP/1.1 200 OK"
+2026-06-06 23:40:15,609 [ERROR] Error processing candidate https://images.vivino.com/thumbs/25fLonL3QPGNDB8T6q87CQ_pb_x960.png for SKU BH11/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:40:15,698 [INFO] HTTP Request: GET https://www.thewinesociety.com/globalassets/product-image-target/organic/rh54021/rh54021_ermitage-rouge-lermite-chapoutier-2018_1.png?v=DHUH0ENrzZy&width=100&height=100&rmode=crop&rsampler=bicubic&compand=true "HTTP/1.1 200 OK"
+2026-06-06 23:40:15,699 [ERROR] Error processing candidate https://www.thewinesociety.com/globalassets/product-image-target/organic/rh54021/rh54021_ermitage-rouge-lermite-chapoutier-2018_1.png?v=DHUH0ENrzZy&width=100&height=100&rmode=crop&rsampler=bicubic&compand=true for SKU BH11/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:40:17,453 [INFO] HTTP Request: GET https://www.primecellar.com/wp-content/uploads/2020/09/748ABADC-DF7C-4560-AD10-EBF674F2B531.jpeg "HTTP/1.1 403 Forbidden"
+2026-06-06 23:40:17,454 [ERROR] Image download failed for https://www.primecellar.com/wp-content/uploads/2020/09/748ABADC-DF7C-4560-AD10-EBF674F2B531.jpeg: Client error '403 Forbidden' for url 'https://www.primecellar.com/wp-content/uploads/2020/09/748ABADC-DF7C-4560-AD10-EBF674F2B531.jpeg'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:40:17,454 [ERROR] Error processing candidate https://www.primecellar.com/wp-content/uploads/2020/09/748ABADC-DF7C-4560-AD10-EBF674F2B531.jpeg for SKU BH11/2022: Failed to download image: https://www.primecellar.com/wp-content/uploads/2020/09/748ABADC-DF7C-4560-AD10-EBF674F2B531.jpeg
+2026-06-06 23:40:18,067 [INFO] HTTP Request: GET https://falconvintners-21644.kxcdn.com/wp-content/uploads/2024/05/10850782_square-600x600.png "HTTP/1.1 403 Forbidden"
+2026-06-06 23:40:18,068 [ERROR] Image download failed for https://falconvintners-21644.kxcdn.com/wp-content/uploads/2024/05/10850782_square-600x600.png: Client error '403 Forbidden' for url 'https://falconvintners-21644.kxcdn.com/wp-content/uploads/2024/05/10850782_square-600x600.png'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:40:18,068 [ERROR] Error processing candidate https://falconvintners-21644.kxcdn.com/wp-content/uploads/2024/05/10850782_square-600x600.png for SKU BH11/2022: Failed to download image: https://falconvintners-21644.kxcdn.com/wp-content/uploads/2024/05/10850782_square-600x600.png
+2026-06-06 23:40:18,068 [WARNING] No accurate image for BH11/2022 (verdict=REJECT, conf=0%)
+2026-06-06 23:40:18,068 [INFO] [6/87] Searching BH12/2021: M. Chapoutier L ermite Blanc Ermitage AOP
+2026-06-06 23:40:18,142 [INFO] HTTP Request: GET https://www.googleapis.com/customsearch/v1?key=AIzaSyBZ5p08dd5cR_Q5bMHhaAFuH6kPUO9jxrY&cx=02211d6d3950b4d03&q=M.+Chapoutier+L+ermite+Blanc+Ermitage+AOP+2021+wine+bottle&searchType=image&num=10&imgSize=large&imgType=photo "HTTP/1.1 403 Forbidden"
+2026-06-06 23:40:18,143 [WARNING] Custom Search JSON API returned 403: this GCP project likely has no JSON API entitlement (Google closed JSON API access for new projects; DDG/Bing fallback will be used). See https://developers.google.com/custom-search/v1/overview (Vertex AI Search or a third-party SERP API are alternatives).
+2026-06-06 23:40:18,246 [INFO] response: https://duckduckgo.com/?q=M.+Chapoutier+L+ermite+Blanc+Ermitage+AOP+2021+wine+bottle 200
+2026-06-06 23:40:18,299 [INFO] response: https://duckduckgo.com/i.js?o=json&q=M.+Chapoutier+L+ermite+Blanc+Ermitage+AOP+2021+wine+bottle&l=us-en&vqd=4-230812624178696961078977460898832234347&p=1&ct=AT 403
+2026-06-06 23:40:18,299 [ERROR] DuckDuckGo image search failed: No results found.
+2026-06-06 23:40:18,310 [INFO] response: https://www.bing.com/images/async?q=M.+Chapoutier+L+ermite+Blanc+Ermitage+AOP+2021+wine+bottle&async=1&first=1&count=35 200
+2026-06-06 23:40:18,319 [INFO] Bing returned 25 candidates for SKU BH12/2021
+2026-06-06 23:40:18,334 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=M.+Chapoutier+L+ermite+Blanc+Ermitage+AOP+2021+wine+bottle&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 429 Too Many Requests"
+2026-06-06 23:40:18,335 [WARNING] SerpApi rate-limited for SKU BH12/2021 — retry in 8s
+2026-06-06 23:40:19,092 [INFO] HTTP Request: GET https://api.search.brave.com/res/v1/images/search?q=M.+Chapoutier+L+ermite+Blanc+Ermitage+AOP+2021+wine+bottle&count=25&search_lang=en&country=ALL&safesearch=strict&spellcheck=true "HTTP/1.1 200 OK"
+2026-06-06 23:40:19,093 [INFO] Brave returned 25 candidates for SKU BH12/2021 (query='M. Chapoutier L ermite Blanc Ermitage AOP 2021 wine bottle')
+2026-06-06 23:40:26,627 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=M.+Chapoutier+L+ermite+Blanc+Ermitage+AOP+2021+wine+bottle&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 429 Too Many Requests"
+2026-06-06 23:40:26,627 [WARNING] SerpApi rate-limited for SKU BH12/2021 — retry in 16s
+2026-06-06 23:40:42,986 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=M.+Chapoutier+L+ermite+Blanc+Ermitage+AOP+2021+wine+bottle&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 429 Too Many Requests"
+2026-06-06 23:40:42,987 [WARNING] SerpApi rate-limited for SKU BH12/2021 — retry in 24s
+2026-06-06 23:41:07,087 [INFO] Merged 50 candidates for SKU BH12/2021 — sources: brave=25, bing=25
+2026-06-06 23:41:07,160 [INFO] HTTP Request: GET https://www.foliowine.com/wp-content/uploads/2022/05/m-chapoutier-lermite-blanc-nv-bottle-thumb.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:41:07,188 [ERROR] Error processing candidate https://www.foliowine.com/wp-content/uploads/2022/05/m-chapoutier-lermite-blanc-nv-bottle-thumb.jpg for SKU BH12/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:41:07,356 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/d09db021-ca19-4c59-bd59-f78ccc3feb64.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:41:07,388 [ERROR] Error processing candidate https://cdn.ct-static.com/labels/d09db021-ca19-4c59-bd59-f78ccc3feb64.jpg for SKU BH12/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:41:07,467 [INFO] HTTP Request: GET https://shop.klwines.com/_next/image?url=https://cdn.klwines.com/images/skus/1771943x.jpg&w=256&q=75 "HTTP/1.1 403 Forbidden"
+2026-06-06 23:41:07,468 [ERROR] Image download failed for https://shop.klwines.com/_next/image?url=https://cdn.klwines.com/images/skus/1771943x.jpg&w=256&q=75: Client error '403 Forbidden' for url 'https://shop.klwines.com/_next/image?url=https://cdn.klwines.com/images/skus/1771943x.jpg&w=256&q=75'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:41:07,468 [ERROR] Error processing candidate https://shop.klwines.com/_next/image?url=https://cdn.klwines.com/images/skus/1771943x.jpg&w=256&q=75 for SKU BH12/2021: Failed to download image: https://shop.klwines.com/_next/image?url=https://cdn.klwines.com/images/skus/1771943x.jpg&w=256&q=75
+2026-06-06 23:41:07,622 [INFO] HTTP Request: GET https://www.saq.com/media/catalog/product/1/5/15371875-1_1730227688.png?optimize=high&fit=bounds&height=&width=&format=jpeg "HTTP/1.1 200 OK"
+2026-06-06 23:41:07,716 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:41:13,569 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:41:17,934 [INFO] HTTP Request: GET https://static2.wineandco.com/themes/carrefour/images/produits/4/9/6/9/pt49691.jpg "HTTP/1.1 403 Forbidden"
+2026-06-06 23:41:17,935 [ERROR] Image download failed for https://static2.wineandco.com/themes/carrefour/images/produits/4/9/6/9/pt49691.jpg: Client error '403 Forbidden' for url 'https://static2.wineandco.com/themes/carrefour/images/produits/4/9/6/9/pt49691.jpg'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:41:17,935 [ERROR] Error processing candidate https://static2.wineandco.com/themes/carrefour/images/produits/4/9/6/9/pt49691.jpg for SKU BH12/2021: Failed to download image: https://static2.wineandco.com/themes/carrefour/images/produits/4/9/6/9/pt49691.jpg
+2026-06-06 23:41:18,021 [INFO] HTTP Request: GET https://superbwine.com.hk/wp-content/uploads/2020/08/Ermitage_Blanc_Ermite_Chapoutier01.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:41:18,246 [ERROR] Error processing candidate https://superbwine.com.hk/wp-content/uploads/2020/08/Ermitage_Blanc_Ermite_Chapoutier01.jpg for SKU BH12/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:41:18,438 [INFO] HTTP Request: GET https://assets.wine.com/winecom/image/upload/w_600,h_600,dpr_2.0,c_fit,q_auto:good,fl_progressive/nsq6jj7fryz1rwdxbsa8.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:41:18,499 [ERROR] Error processing candidate https://assets.wine.com/winecom/image/upload/w_600,h_600,dpr_2.0,c_fit,q_auto:good,fl_progressive/nsq6jj7fryz1rwdxbsa8.jpg for SKU BH12/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:41:18,588 [INFO] HTTP Request: GET https://nemowine.com/wp-content/uploads/2019/09/lermite_blanc_120x420.png "HTTP/1.1 200 OK"
+2026-06-06 23:41:18,638 [ERROR] Error processing candidate https://nemowine.com/wp-content/uploads/2019/09/lermite_blanc_120x420.png for SKU BH12/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:41:18,716 [INFO] HTTP Request: GET https://static3.wineandco.com/themes/carrefour/images/produits/4/9/6/6/pt49660.jpg "HTTP/1.1 403 Forbidden"
+2026-06-06 23:41:18,717 [ERROR] Image download failed for https://static3.wineandco.com/themes/carrefour/images/produits/4/9/6/6/pt49660.jpg: Client error '403 Forbidden' for url 'https://static3.wineandco.com/themes/carrefour/images/produits/4/9/6/6/pt49660.jpg'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:41:18,717 [ERROR] Error processing candidate https://static3.wineandco.com/themes/carrefour/images/produits/4/9/6/6/pt49660.jpg for SKU BH12/2021: Failed to download image: https://static3.wineandco.com/themes/carrefour/images/produits/4/9/6/6/pt49660.jpg
+2026-06-06 23:41:19,534 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/62fd0d79-b437-4c5f-8073-1f695aa61c60.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:41:19,563 [ERROR] Error processing candidate https://cdn.ct-static.com/labels/62fd0d79-b437-4c5f-8073-1f695aa61c60.jpg for SKU BH12/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:41:19,663 [INFO] HTTP Request: GET https://www.sundaytimeswineclub.co.uk/images/uk/en/law/product/2435921b.png "HTTP/1.1 200 OK"
+2026-06-06 23:41:19,675 [ERROR] Error processing candidate https://www.sundaytimeswineclub.co.uk/images/uk/en/law/product/2435921b.png for SKU BH12/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:41:19,790 [INFO] HTTP Request: GET https://images.vivino.com/thumbs/qVoGZzxFRiqYfqAGD1HxQQ_pb_x600.png "HTTP/1.1 200 OK"
+2026-06-06 23:41:19,800 [ERROR] Error processing candidate https://images.vivino.com/thumbs/qVoGZzxFRiqYfqAGD1HxQQ_pb_x600.png for SKU BH12/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:41:20,857 [INFO] HTTP Request: GET https://vintmarketplace-21644.kxcdn.com/wp-content/uploads/2024/06/10868098_square-300x300.png "HTTP/1.1 418 "
+2026-06-06 23:41:20,857 [ERROR] Image download failed for https://vintmarketplace-21644.kxcdn.com/wp-content/uploads/2024/06/10868098_square-300x300.png: Client error '418 ' for url 'https://vintmarketplace-21644.kxcdn.com/wp-content/uploads/2024/06/10868098_square-300x300.png'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/418
+2026-06-06 23:41:20,857 [ERROR] Error processing candidate https://vintmarketplace-21644.kxcdn.com/wp-content/uploads/2024/06/10868098_square-300x300.png for SKU BH12/2021: Failed to download image: https://vintmarketplace-21644.kxcdn.com/wp-content/uploads/2024/06/10868098_square-300x300.png
+2026-06-06 23:41:21,029 [INFO] HTTP Request: GET https://www.saq.com/media/catalog/product/1/5/15371761-1_1730227686.png?optimize=high&fit=bounds&height=&width=&format=jpeg "HTTP/1.1 200 OK"
+2026-06-06 23:41:21,126 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:41:25,241 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:41:30,887 [INFO] HTTP Request: GET https://vintmarketplace-21644.kxcdn.com/wp-content/uploads/2024/06/10868098_square.png "HTTP/1.1 418 "
+2026-06-06 23:41:30,888 [ERROR] Image download failed for https://vintmarketplace-21644.kxcdn.com/wp-content/uploads/2024/06/10868098_square.png: Client error '418 ' for url 'https://vintmarketplace-21644.kxcdn.com/wp-content/uploads/2024/06/10868098_square.png'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/418
+2026-06-06 23:41:30,888 [ERROR] Error processing candidate https://vintmarketplace-21644.kxcdn.com/wp-content/uploads/2024/06/10868098_square.png for SKU BH12/2021: Failed to download image: https://vintmarketplace-21644.kxcdn.com/wp-content/uploads/2024/06/10868098_square.png
+2026-06-06 23:41:31,203 [INFO] HTTP Request: GET https://dxlu3le4zp2pd.cloudfront.net/preferabli-label/58e06b9d/800x800/filters:fill(ffffff)/1882-06c379c6a5ac349-original "HTTP/1.1 200 OK"
+2026-06-06 23:41:31,228 [ERROR] Error processing candidate https://dxlu3le4zp2pd.cloudfront.net/preferabli-label/58e06b9d/800x800/filters:fill(ffffff)/1882-06c379c6a5ac349-original for SKU BH12/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:41:31,604 [INFO] HTTP Request: GET https://www.sodivin.com/img/p/3/0/4/5/1/30451-large_default.jpg "HTTP/1.1 403 Forbidden"
+2026-06-06 23:41:31,605 [ERROR] Image download failed for https://www.sodivin.com/img/p/3/0/4/5/1/30451-large_default.jpg: Client error '403 Forbidden' for url 'https://www.sodivin.com/img/p/3/0/4/5/1/30451-large_default.jpg'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:41:31,605 [ERROR] Error processing candidate https://www.sodivin.com/img/p/3/0/4/5/1/30451-large_default.jpg for SKU BH12/2021: Failed to download image: https://www.sodivin.com/img/p/3/0/4/5/1/30451-large_default.jpg
+2026-06-06 23:41:32,616 [INFO] HTTP Request: GET https://www.saq.com/media/catalog/product/1/5/15215338-1_1698869287.png?optimize=high&fit=bounds&height=&width=&format=jpeg "HTTP/1.1 200 OK"
+2026-06-06 23:41:32,690 [ERROR] Error processing candidate https://www.saq.com/media/catalog/product/1/5/15215338-1_1698869287.png?optimize=high&fit=bounds&height=&width=&format=jpeg for SKU BH12/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:41:32,765 [INFO] HTTP Request: GET https://static3.wineandco.com/themes/wineandco/images/produits/4/9/6/6/grd49660.jpg "HTTP/1.1 403 Forbidden"
+2026-06-06 23:41:32,765 [ERROR] Image download failed for https://static3.wineandco.com/themes/wineandco/images/produits/4/9/6/6/grd49660.jpg: Client error '403 Forbidden' for url 'https://static3.wineandco.com/themes/wineandco/images/produits/4/9/6/6/grd49660.jpg'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:41:32,765 [ERROR] Error processing candidate https://static3.wineandco.com/themes/wineandco/images/produits/4/9/6/6/grd49660.jpg for SKU BH12/2021: Failed to download image: https://static3.wineandco.com/themes/wineandco/images/produits/4/9/6/6/grd49660.jpg
+2026-06-06 23:41:32,850 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/38cb65b1-18c4-45a8-bff1-c89b5bf683b8.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:41:32,888 [ERROR] Error processing candidate https://cdn.ct-static.com/labels/38cb65b1-18c4-45a8-bff1-c89b5bf683b8.jpg for SKU BH12/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:41:33,238 [INFO] HTTP Request: GET https://www.leclos.net/wp-content/uploads/m-chapoutier-le-meal-blanc-2014-ermitage-rhone.png "HTTP/1.1 403 Forbidden"
+2026-06-06 23:41:33,239 [ERROR] Image download failed for https://www.leclos.net/wp-content/uploads/m-chapoutier-le-meal-blanc-2014-ermitage-rhone.png: Client error '403 Forbidden' for url 'https://www.leclos.net/wp-content/uploads/m-chapoutier-le-meal-blanc-2014-ermitage-rhone.png'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:41:33,239 [ERROR] Error processing candidate https://www.leclos.net/wp-content/uploads/m-chapoutier-le-meal-blanc-2014-ermitage-rhone.png for SKU BH12/2021: Failed to download image: https://www.leclos.net/wp-content/uploads/m-chapoutier-le-meal-blanc-2014-ermitage-rhone.png
+2026-06-06 23:41:34,590 [INFO] HTTP Request: GET https://www.lecarredesvins.com/22174-large_default/domaine-m-chapoutier-ermitage-blanc-l-ermite-2018.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:41:35,402 [ERROR] Error processing candidate https://www.lecarredesvins.com/22174-large_default/domaine-m-chapoutier-ermitage-blanc-l-ermite-2018.jpg for SKU BH12/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:41:35,472 [INFO] HTTP Request: GET https://static2.wineandco.com/themes/carrefour/images/produits/4/9/6/6/grd49660.jpg "HTTP/1.1 403 Forbidden"
+2026-06-06 23:41:35,473 [ERROR] Image download failed for https://static2.wineandco.com/themes/carrefour/images/produits/4/9/6/6/grd49660.jpg: Client error '403 Forbidden' for url 'https://static2.wineandco.com/themes/carrefour/images/produits/4/9/6/6/grd49660.jpg'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:41:35,473 [ERROR] Error processing candidate https://static2.wineandco.com/themes/carrefour/images/produits/4/9/6/6/grd49660.jpg for SKU BH12/2021: Failed to download image: https://static2.wineandco.com/themes/carrefour/images/produits/4/9/6/6/grd49660.jpg
+2026-06-06 23:41:36,199 [INFO] HTTP Request: GET https://cdn.klwines.com/images/skus/1701881x.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:41:36,204 [ERROR] Error processing candidate https://cdn.klwines.com/images/skus/1701881x.jpg for SKU BH12/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:41:36,273 [INFO] HTTP Request: GET https://static2.wineandco.com/themes/lesechos/images/produits/4/9/6/6/grd49660.jpg "HTTP/1.1 403 Forbidden"
+2026-06-06 23:41:36,274 [ERROR] Image download failed for https://static2.wineandco.com/themes/lesechos/images/produits/4/9/6/6/grd49660.jpg: Client error '403 Forbidden' for url 'https://static2.wineandco.com/themes/lesechos/images/produits/4/9/6/6/grd49660.jpg'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:41:36,274 [ERROR] Error processing candidate https://static2.wineandco.com/themes/lesechos/images/produits/4/9/6/6/grd49660.jpg for SKU BH12/2021: Failed to download image: https://static2.wineandco.com/themes/lesechos/images/produits/4/9/6/6/grd49660.jpg
+2026-06-06 23:41:36,441 [INFO] HTTP Request: GET https://www.saq.com/media/catalog/product/1/5/15371875-1_1730227688.png?optimize=high&fit=bounds&height=&width=&format=jpeg "HTTP/1.1 200 OK"
+2026-06-06 23:41:37,837 [INFO] HTTP Request: POST https://api.remove.bg/v1.0/removebg "HTTP/1.1 200 OK"
+2026-06-06 23:41:37,943 [INFO]   ✓ BH12/2021 confidence=10% producer=0% vintage=0%
+2026-06-06 23:41:37,943 [INFO] [7/87] Searching BH12/2022: M. Chapoutier L ermite Blanc Ermitage AOP
+2026-06-06 23:41:37,945 [INFO] Error in engine bing: DDGSException("RequestError: RequestError('error sending request for url (https://www.bing.com/images/async?q=M.+Chapoutier+L+ermite+Blanc+Ermitage+AOP+2022+wine+bottle&async=1&first=1&count=35)', 'https://www.bing.com/images/async?q=M.+Chapoutier+L+ermite+Blanc+Ermitage+AOP+2022+wine+bottle&async=1&first=1&count=35')")
+2026-06-06 23:41:37,946 [ERROR] Bing image search failed: RequestError: RequestError('error sending request for url (https://www.bing.com/images/async?q=M.+Chapoutier+L+ermite+Blanc+Ermitage+AOP+2022+wine+bottle&async=1&first=1&count=35)', 'https://www.bing.com/images/async?q=M.+Chapoutier+L+ermite+Blanc+Ermitage+AOP+2022+wine+bottle&async=1&first=1&count=35')
+2026-06-06 23:41:38,012 [INFO] HTTP Request: GET https://www.googleapis.com/customsearch/v1?key=AIzaSyBZ5p08dd5cR_Q5bMHhaAFuH6kPUO9jxrY&cx=02211d6d3950b4d03&q=M.+Chapoutier+L+ermite+Blanc+Ermitage+AOP+2022+wine+bottle&searchType=image&num=10&imgSize=large&imgType=photo "HTTP/1.1 403 Forbidden"
+2026-06-06 23:41:38,013 [WARNING] Custom Search JSON API returned 403: this GCP project likely has no JSON API entitlement (Google closed JSON API access for new projects; DDG/Bing fallback will be used). See https://developers.google.com/custom-search/v1/overview (Vertex AI Search or a third-party SERP API are alternatives).
+2026-06-06 23:41:38,121 [INFO] response: https://duckduckgo.com/?q=M.+Chapoutier+L+ermite+Blanc+Ermitage+AOP+2022+wine+bottle 200
+2026-06-06 23:41:38,174 [INFO] response: https://duckduckgo.com/i.js?o=json&q=M.+Chapoutier+L+ermite+Blanc+Ermitage+AOP+2022+wine+bottle&l=us-en&vqd=4-224925924891141562578225471521789977949&p=1&ct=AT 403
+2026-06-06 23:41:38,174 [ERROR] DuckDuckGo image search failed: No results found.
+2026-06-06 23:41:38,213 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=M.+Chapoutier+L+ermite+Blanc+Ermitage+AOP+2022+wine+bottle&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 429 Too Many Requests"
+2026-06-06 23:41:38,214 [WARNING] SerpApi rate-limited for SKU BH12/2022 — retry in 8s
+2026-06-06 23:41:38,871 [INFO] HTTP Request: GET https://api.search.brave.com/res/v1/images/search?q=M.+Chapoutier+L+ermite+Blanc+Ermitage+AOP+2022+wine+bottle&count=25&search_lang=en&country=ALL&safesearch=strict&spellcheck=true "HTTP/1.1 200 OK"
+2026-06-06 23:41:38,873 [INFO] Brave returned 25 candidates for SKU BH12/2022 (query='M. Chapoutier L ermite Blanc Ermitage AOP 2022 wine bottle')
+2026-06-06 23:41:46,541 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=M.+Chapoutier+L+ermite+Blanc+Ermitage+AOP+2022+wine+bottle&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 429 Too Many Requests"
+2026-06-06 23:41:46,541 [WARNING] SerpApi rate-limited for SKU BH12/2022 — retry in 16s
+2026-06-06 23:42:02,925 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=M.+Chapoutier+L+ermite+Blanc+Ermitage+AOP+2022+wine+bottle&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 429 Too Many Requests"
+2026-06-06 23:42:02,925 [WARNING] SerpApi rate-limited for SKU BH12/2022 — retry in 24s
+2026-06-06 23:42:27,024 [INFO] Merged 25 candidates for SKU BH12/2022 — sources: brave=25
+2026-06-06 23:42:27,111 [INFO] HTTP Request: GET https://www.foliowine.com/wp-content/uploads/2022/05/m-chapoutier-lermite-blanc-nv-bottle-thumb.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:42:27,140 [ERROR] Error processing candidate https://www.foliowine.com/wp-content/uploads/2022/05/m-chapoutier-lermite-blanc-nv-bottle-thumb.jpg for SKU BH12/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:42:27,319 [INFO] HTTP Request: GET https://assets.wine.com/winecom/image/upload/w_600,h_600,dpr_2.0,c_fit,q_auto:good,fl_progressive/nsq6jj7fryz1rwdxbsa8.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:42:27,377 [ERROR] Error processing candidate https://assets.wine.com/winecom/image/upload/w_600,h_600,dpr_2.0,c_fit,q_auto:good,fl_progressive/nsq6jj7fryz1rwdxbsa8.jpg for SKU BH12/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:42:27,456 [INFO] HTTP Request: GET https://cdn.vinissimus.com/img/unsafe/p500x/plain/local:///prfmtgrande/vi/ceemb22_anv800_1750143025.png "HTTP/1.1 200 OK"
+2026-06-06 23:42:27,464 [ERROR] Error processing candidate https://cdn.vinissimus.com/img/unsafe/p500x/plain/local:///prfmtgrande/vi/ceemb22_anv800_1750143025.png for SKU BH12/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:42:27,549 [INFO] HTTP Request: GET https://grandcruwines.com/cdn/shop/files/media_ce7a2e0a-a3fe-42c8-96a8-3827d3b25b8f_1024x1024.png?v=1761294592 "HTTP/1.1 200 OK"
+2026-06-06 23:42:27,579 [ERROR] Error processing candidate https://grandcruwines.com/cdn/shop/files/media_ce7a2e0a-a3fe-42c8-96a8-3827d3b25b8f_1024x1024.png?v=1761294592 for SKU BH12/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:42:27,661 [INFO] HTTP Request: GET https://www.sodivin.co.uk/img/p/3/0/4/5/1/30451-large_default.jpg "HTTP/1.1 403 Forbidden"
+2026-06-06 23:42:27,662 [ERROR] Image download failed for https://www.sodivin.co.uk/img/p/3/0/4/5/1/30451-large_default.jpg: Client error '403 Forbidden' for url 'https://www.sodivin.co.uk/img/p/3/0/4/5/1/30451-large_default.jpg'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:42:27,663 [ERROR] Error processing candidate https://www.sodivin.co.uk/img/p/3/0/4/5/1/30451-large_default.jpg for SKU BH12/2022: Failed to download image: https://www.sodivin.co.uk/img/p/3/0/4/5/1/30451-large_default.jpg
+2026-06-06 23:42:28,609 [INFO] HTTP Request: GET https://vintmarketplace-21644.kxcdn.com/wp-content/uploads/2024/06/10868098_square-300x300.png "HTTP/1.1 418 "
+2026-06-06 23:42:28,610 [ERROR] Image download failed for https://vintmarketplace-21644.kxcdn.com/wp-content/uploads/2024/06/10868098_square-300x300.png: Client error '418 ' for url 'https://vintmarketplace-21644.kxcdn.com/wp-content/uploads/2024/06/10868098_square-300x300.png'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/418
+2026-06-06 23:42:28,610 [ERROR] Error processing candidate https://vintmarketplace-21644.kxcdn.com/wp-content/uploads/2024/06/10868098_square-300x300.png for SKU BH12/2022: Failed to download image: https://vintmarketplace-21644.kxcdn.com/wp-content/uploads/2024/06/10868098_square-300x300.png
+2026-06-06 23:42:28,697 [INFO] HTTP Request: GET https://images.vivino.com/thumbs/qVoGZzxFRiqYfqAGD1HxQQ_pb_x600.png "HTTP/1.1 200 OK"
+2026-06-06 23:42:28,706 [ERROR] Error processing candidate https://images.vivino.com/thumbs/qVoGZzxFRiqYfqAGD1HxQQ_pb_x600.png for SKU BH12/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:42:29,345 [INFO] HTTP Request: GET https://cdn.vinissimus.com/img/unsafe/p500x/plain/local:///prfmtgrande/vi/chleb22_anv800.png "HTTP/1.1 200 OK"
+2026-06-06 23:42:29,559 [ERROR] Error processing candidate https://cdn.vinissimus.com/img/unsafe/p500x/plain/local:///prfmtgrande/vi/chleb22_anv800.png for SKU BH12/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:42:29,645 [INFO] HTTP Request: GET https://grandcruwines.com/cdn/shop/files/media_ce7a2e0a-a3fe-42c8-96a8-3827d3b25b8f_compact.png?v=1761294592 "HTTP/1.1 200 OK"
+2026-06-06 23:42:29,649 [ERROR] Error processing candidate https://grandcruwines.com/cdn/shop/files/media_ce7a2e0a-a3fe-42c8-96a8-3827d3b25b8f_compact.png?v=1761294592 for SKU BH12/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:42:30,310 [INFO] HTTP Request: GET https://www.silkes-weinkeller.de/out/pictures/generated/product/1/228_340_90/chapoutier_l_ermite_ermitage_blanc_2020(1).jpg "HTTP/1.1 200 OK"
+2026-06-06 23:42:30,312 [ERROR] Error processing candidate https://www.silkes-weinkeller.de/out/pictures/generated/product/1/228_340_90/chapoutier_l_ermite_ermitage_blanc_2020(1).jpg for SKU BH12/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:42:30,678 [INFO] HTTP Request: GET https://www.vinha.fr/wp-content/uploads/2023/03/106642.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:42:30,717 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:42:34,669 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:42:40,893 [INFO] HTTP Request: GET https://s3-eu-west-1.amazonaws.com/lw-bottles/Generic/A00000001750/3/A00000001750-V600X600.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:42:41,163 [ERROR] Error processing candidate https://s3-eu-west-1.amazonaws.com/lw-bottles/Generic/A00000001750/3/A00000001750-V600X600.jpg for SKU BH12/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:42:41,252 [INFO] HTTP Request: GET https://www.thewinesociety.com/globalassets/product-image-target/organic/rh54021/rh54021_ermitage-rouge-lermite-chapoutier-2018_1.png?v=DHUH0ENrzZy&width=100&rsampler=bicubic&compand=true "HTTP/1.1 200 OK"
+2026-06-06 23:42:41,253 [ERROR] Error processing candidate https://www.thewinesociety.com/globalassets/product-image-target/organic/rh54021/rh54021_ermitage-rouge-lermite-chapoutier-2018_1.png?v=DHUH0ENrzZy&width=100&rsampler=bicubic&compand=true for SKU BH12/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:42:41,321 [INFO] HTTP Request: GET https://www.sodivin.co.uk/img/p/1/8/8/8/4/18884-home_default.jpg "HTTP/1.1 403 Forbidden"
+2026-06-06 23:42:41,322 [ERROR] Image download failed for https://www.sodivin.co.uk/img/p/1/8/8/8/4/18884-home_default.jpg: Client error '403 Forbidden' for url 'https://www.sodivin.co.uk/img/p/1/8/8/8/4/18884-home_default.jpg'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:42:41,322 [ERROR] Error processing candidate https://www.sodivin.co.uk/img/p/1/8/8/8/4/18884-home_default.jpg for SKU BH12/2022: Failed to download image: https://www.sodivin.co.uk/img/p/1/8/8/8/4/18884-home_default.jpg
+2026-06-06 23:42:41,390 [INFO] HTTP Request: GET https://www.sodivin.co.uk/img/p/3/0/4/4/9/30449-home_default.jpg "HTTP/1.1 403 Forbidden"
+2026-06-06 23:42:41,391 [ERROR] Image download failed for https://www.sodivin.co.uk/img/p/3/0/4/4/9/30449-home_default.jpg: Client error '403 Forbidden' for url 'https://www.sodivin.co.uk/img/p/3/0/4/4/9/30449-home_default.jpg'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:42:41,391 [ERROR] Error processing candidate https://www.sodivin.co.uk/img/p/3/0/4/4/9/30449-home_default.jpg for SKU BH12/2022: Failed to download image: https://www.sodivin.co.uk/img/p/3/0/4/4/9/30449-home_default.jpg
+2026-06-06 23:42:41,472 [INFO] HTTP Request: GET https://www.thewinesociety.com/globalassets/product-image-target/organic/rh54021/rh54021_ermitage-rouge-lermite-chapoutier-2018_1.png?v=DHUH0ENrzZy&width=100&height=100&rmode=crop&rsampler=bicubic&compand=true "HTTP/1.1 200 OK"
+2026-06-06 23:42:41,473 [ERROR] Error processing candidate https://www.thewinesociety.com/globalassets/product-image-target/organic/rh54021/rh54021_ermitage-rouge-lermite-chapoutier-2018_1.png?v=DHUH0ENrzZy&width=100&height=100&rmode=crop&rsampler=bicubic&compand=true for SKU BH12/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:42:42,215 [INFO] HTTP Request: GET https://www.esow.com/images/sites/esow/labels/m-chapoutier-ermitage-l-ermite-blanc_1.jpg?1754705721 "HTTP/1.1 403 Forbidden"
+2026-06-06 23:42:42,216 [ERROR] Image download failed for https://www.esow.com/images/sites/esow/labels/m-chapoutier-ermitage-l-ermite-blanc_1.jpg?1754705721: Client error '403 Forbidden' for url 'https://www.esow.com/images/sites/esow/labels/m-chapoutier-ermitage-l-ermite-blanc_1.jpg?1754705721'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:42:42,216 [ERROR] Error processing candidate https://www.esow.com/images/sites/esow/labels/m-chapoutier-ermitage-l-ermite-blanc_1.jpg?1754705721 for SKU BH12/2022: Failed to download image: https://www.esow.com/images/sites/esow/labels/m-chapoutier-ermitage-l-ermite-blanc_1.jpg?1754705721
+2026-06-06 23:42:42,295 [INFO] HTTP Request: GET https://www.sodivin.co.uk/img/p/3/0/4/5/1/30451-home_default.jpg "HTTP/1.1 403 Forbidden"
+2026-06-06 23:42:42,296 [ERROR] Image download failed for https://www.sodivin.co.uk/img/p/3/0/4/5/1/30451-home_default.jpg: Client error '403 Forbidden' for url 'https://www.sodivin.co.uk/img/p/3/0/4/5/1/30451-home_default.jpg'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:42:42,296 [ERROR] Error processing candidate https://www.sodivin.co.uk/img/p/3/0/4/5/1/30451-home_default.jpg for SKU BH12/2022: Failed to download image: https://www.sodivin.co.uk/img/p/3/0/4/5/1/30451-home_default.jpg
+2026-06-06 23:42:43,271 [INFO] HTTP Request: GET https://s3-eu-west-1.amazonaws.com/lw-bottles/Generic/A00000001752/3/A00000001752-V600X600.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:42:43,539 [ERROR] Error processing candidate https://s3-eu-west-1.amazonaws.com/lw-bottles/Generic/A00000001752/3/A00000001752-V600X600.jpg for SKU BH12/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:42:43,605 [INFO] HTTP Request: GET https://www.sodivin.co.uk/img/p/1/8/8/8/3/18883-home_default.jpg "HTTP/1.1 403 Forbidden"
+2026-06-06 23:42:43,605 [ERROR] Image download failed for https://www.sodivin.co.uk/img/p/1/8/8/8/3/18883-home_default.jpg: Client error '403 Forbidden' for url 'https://www.sodivin.co.uk/img/p/1/8/8/8/3/18883-home_default.jpg'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:42:43,606 [ERROR] Error processing candidate https://www.sodivin.co.uk/img/p/1/8/8/8/3/18883-home_default.jpg for SKU BH12/2022: Failed to download image: https://www.sodivin.co.uk/img/p/1/8/8/8/3/18883-home_default.jpg
+2026-06-06 23:42:44,090 [INFO] HTTP Request: GET https://www.saratogawine.com/wp-content/uploads/2024/01/d1f5b9f-0-0.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:42:44,094 [ERROR] Error processing candidate https://www.saratogawine.com/wp-content/uploads/2024/01/d1f5b9f-0-0.jpg for SKU BH12/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:42:44,164 [INFO] HTTP Request: GET https://images.vivino.com/thumbs/qVoGZzxFRiqYfqAGD1HxQQ_pb_x300.png "HTTP/1.1 200 OK"
+2026-06-06 23:42:44,171 [ERROR] Error processing candidate https://images.vivino.com/thumbs/qVoGZzxFRiqYfqAGD1HxQQ_pb_x300.png for SKU BH12/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:42:45,217 [INFO] HTTP Request: GET https://s3-eu-west-1.amazonaws.com/lw-bottles/Generic/A00000001751/3/A00000001751-V600X600.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:42:45,527 [ERROR] Error processing candidate https://s3-eu-west-1.amazonaws.com/lw-bottles/Generic/A00000001751/3/A00000001751-V600X600.jpg for SKU BH12/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:42:45,617 [INFO] HTTP Request: GET https://www.chapoutier.com/media/cache//Boutique/Packshot/j/u/jubile_site_120x420.png "HTTP/1.1 200 OK"
+2026-06-06 23:42:45,629 [ERROR] Error processing candidate https://www.chapoutier.com/media/cache//Boutique/Packshot/j/u/jubile_site_120x420.png for SKU BH12/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:42:45,696 [INFO] HTTP Request: GET https://cdn.vinissimus.com/img/unsafe/p500x/plain/local:///prfmtgrande/vi/chhle22_anv800.png "HTTP/1.1 200 OK"
+2026-06-06 23:42:45,719 [ERROR] Error processing candidate https://cdn.vinissimus.com/img/unsafe/p500x/plain/local:///prfmtgrande/vi/chhle22_anv800.png for SKU BH12/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:42:45,793 [INFO] HTTP Request: GET https://www.vinha.fr/wp-content/uploads/2023/03/106642.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:42:46,973 [INFO] HTTP Request: POST https://api.remove.bg/v1.0/removebg "HTTP/1.1 200 OK"
+2026-06-06 23:42:47,542 [INFO]   ✓ BH12/2022 confidence=10% producer=0% vintage=0%
+2026-06-06 23:42:47,543 [INFO] [8/87] Searching BH13/2021: M. Chapoutier Le Pavillon Ermitage AOP
+2026-06-06 23:42:47,608 [INFO] HTTP Request: GET https://www.googleapis.com/customsearch/v1?key=AIzaSyBZ5p08dd5cR_Q5bMHhaAFuH6kPUO9jxrY&cx=02211d6d3950b4d03&q=M.+Chapoutier+Le+Pavillon+Ermitage+AOP+2021+wine+bottle&searchType=image&num=10&imgSize=large&imgType=photo "HTTP/1.1 403 Forbidden"
+2026-06-06 23:42:47,609 [WARNING] Custom Search JSON API returned 403: this GCP project likely has no JSON API entitlement (Google closed JSON API access for new projects; DDG/Bing fallback will be used). See https://developers.google.com/custom-search/v1/overview (Vertex AI Search or a third-party SERP API are alternatives).
+2026-06-06 23:42:47,728 [INFO] response: https://duckduckgo.com/?q=M.+Chapoutier+Le+Pavillon+Ermitage+AOP+2021+wine+bottle 200
+2026-06-06 23:42:47,786 [INFO] response: https://duckduckgo.com/i.js?o=json&q=M.+Chapoutier+Le+Pavillon+Ermitage+AOP+2021+wine+bottle&l=us-en&vqd=4-318622037722472121754958843806139941503&p=1&ct=AT 403
+2026-06-06 23:42:47,787 [ERROR] DuckDuckGo image search failed: No results found.
+2026-06-06 23:42:47,806 [INFO] response: https://www.bing.com/images/async?q=M.+Chapoutier+Le+Pavillon+Ermitage+AOP+2021+wine+bottle&async=1&first=1&count=35 200
+2026-06-06 23:42:47,815 [INFO] Bing returned 25 candidates for SKU BH13/2021
+2026-06-06 23:42:47,822 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=M.+Chapoutier+Le+Pavillon+Ermitage+AOP+2021+wine+bottle&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 429 Too Many Requests"
+2026-06-06 23:42:47,822 [WARNING] SerpApi rate-limited for SKU BH13/2021 — retry in 8s
+2026-06-06 23:42:48,476 [INFO] HTTP Request: GET https://api.search.brave.com/res/v1/images/search?q=M.+Chapoutier+Le+Pavillon+Ermitage+AOP+2021+wine+bottle&count=25&search_lang=en&country=ALL&safesearch=strict&spellcheck=true "HTTP/1.1 200 OK"
+2026-06-06 23:42:48,477 [INFO] Brave returned 25 candidates for SKU BH13/2021 (query='M. Chapoutier Le Pavillon Ermitage AOP 2021 wine bottle')
+2026-06-06 23:42:56,093 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=M.+Chapoutier+Le+Pavillon+Ermitage+AOP+2021+wine+bottle&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 429 Too Many Requests"
+2026-06-06 23:42:56,093 [WARNING] SerpApi rate-limited for SKU BH13/2021 — retry in 16s
+2026-06-06 23:43:12,454 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=M.+Chapoutier+Le+Pavillon+Ermitage+AOP+2021+wine+bottle&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 429 Too Many Requests"
+2026-06-06 23:43:12,455 [WARNING] SerpApi rate-limited for SKU BH13/2021 — retry in 24s
+2026-06-06 23:43:36,476 [INFO] Merged 50 candidates for SKU BH13/2021 — sources: brave=25, bing=25
+2026-06-06 23:43:36,577 [INFO] HTTP Request: GET https://www.idealwine.com/media/00-migrated-variant-photos/B2761712_105-1.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:43:36,659 [ERROR] Error processing candidate https://www.idealwine.com/media/00-migrated-variant-photos/B2761712_105-1.jpg for SKU BH13/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:43:36,744 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/831ec762-d944-4a5d-a246-f2ea62438062.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:43:36,780 [ERROR] Error processing candidate https://cdn.ct-static.com/labels/831ec762-d944-4a5d-a246-f2ea62438062.jpg for SKU BH13/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:43:36,866 [INFO] HTTP Request: GET https://www.idealwine.com/media/00-migrated-variant-photos/B2761712_105.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:43:36,950 [ERROR] Error processing candidate https://www.idealwine.com/media/00-migrated-variant-photos/B2761712_105.jpg for SKU BH13/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:43:37,043 [INFO] HTTP Request: GET https://galiena.sg/cdn/shop/files/mchapoutierlepavillon_488d30c7-e3e6-4ed8-bdee-dab86240cf70_2048x.jpg?v=1727764197 "HTTP/1.1 200 OK"
+2026-06-06 23:43:37,085 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:43:41,130 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:43:47,374 [INFO] HTTP Request: GET https://www.laithwaites.co.uk/images/uk/en/law/product/1093721b.png "HTTP/1.1 200 OK"
+2026-06-06 23:43:47,625 [ERROR] Error processing candidate https://www.laithwaites.co.uk/images/uk/en/law/product/1093721b.png for SKU BH13/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:43:47,887 [INFO] HTTP Request: GET https://www.chapoutier.com/media/cache/Boutique/Primeurs/l/e/le_pavillon_aop_446x1500.png "HTTP/1.1 200 OK"
+2026-06-06 23:43:47,944 [ERROR] Error processing candidate https://www.chapoutier.com/media/cache/Boutique/Primeurs/l/e/le_pavillon_aop_446x1500.png for SKU BH13/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:43:48,023 [INFO] HTTP Request: GET https://www.theperfectbottle.com/cdn/shop/files/red-wine-m-chapoutier-ermitage-le-pavillon-hermitage-2015-35819974197398_1024x1024@2x.jpg?v=1712264518 "HTTP/1.1 200 OK"
+2026-06-06 23:43:48,028 [ERROR] Error processing candidate https://www.theperfectbottle.com/cdn/shop/files/red-wine-m-chapoutier-ermitage-le-pavillon-hermitage-2015-35819974197398_1024x1024@2x.jpg?v=1712264518 for SKU BH13/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:43:48,213 [INFO] HTTP Request: GET https://www.saq.com/media/catalog/product/1/5/15063928-1_1671656451.png?quality=80&fit=bounds&height=&width= "HTTP/1.1 200 OK"
+2026-06-06 23:43:48,496 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:43:53,211 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:43:57,702 [INFO] HTTP Request: GET https://www.idealwine.com/media/00-migrated-variant-photos/B2518153_2345-1.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:43:57,894 [ERROR] Error processing candidate https://www.idealwine.com/media/00-migrated-variant-photos/B2518153_2345-1.jpg for SKU BH13/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:43:58,404 [INFO] HTTP Request: GET https://assets.catawiki.nl/assets/2023/6/14/a/4/7/a4783768-bd99-433d-8b7e-14077c20e45b.jpg "HTTP/1.1 301 Moved Permanently"
+2026-06-06 23:43:58,462 [INFO] HTTP Request: GET https://assets.catawiki.com/image/cw_normal/plain/assets/catawiki/assets/2023/6/14/a/4/7/a4783768-bd99-433d-8b7e-14077c20e45b.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:43:58,493 [ERROR] Error processing candidate https://assets.catawiki.nl/assets/2023/6/14/a/4/7/a4783768-bd99-433d-8b7e-14077c20e45b.jpg for SKU BH13/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:43:58,692 [INFO] HTTP Request: GET https://www.idealwine.com/media/00-migrated-variant-photos/B2518153_2345.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:43:58,763 [ERROR] Error processing candidate https://www.idealwine.com/media/00-migrated-variant-photos/B2518153_2345.jpg for SKU BH13/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:43:58,853 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/3df2fd4e-2415-4489-91d2-932e2fe8824c.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:43:58,893 [ERROR] Error processing candidate https://cdn.ct-static.com/labels/3df2fd4e-2415-4489-91d2-932e2fe8824c.jpg for SKU BH13/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:43:58,993 [INFO] HTTP Request: GET https://www.idealwine.com/media/00-migrated-variant-photos/B2589041_904.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:43:59,091 [ERROR] Error processing candidate https://www.idealwine.com/media/00-migrated-variant-photos/B2589041_904.jpg for SKU BH13/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:43:59,230 [INFO] HTTP Request: GET https://media.nicks.com.au/products/7fc929f1/90900528_1.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:43:59,287 [ERROR] Error processing candidate https://media.nicks.com.au/products/7fc929f1/90900528_1.jpg for SKU BH13/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:43:59,553 [INFO] HTTP Request: GET https://assets.wine.com/winecom/image/upload/w_600,h_400,dpr_2.0,c_fit,q_auto:good,fl_progressive/x4gsjbue6uskcjkabi0t.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:43:59,684 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:44:02,971 [ERROR] Error processing candidate https://assets.wine.com/winecom/image/upload/w_600,h_400,dpr_2.0,c_fit,q_auto:good,fl_progressive/x4gsjbue6uskcjkabi0t.jpg for SKU BH13/2021: Image does not contain a wine bottle with a label
+2026-06-06 23:44:03,304 [INFO] HTTP Request: GET http://www.cavissima.com/cdn/shop/files/m-chapoutier-le-pavillon-ermitage.png?v=1745481546 "HTTP/1.1 301 Moved Permanently"
+2026-06-06 23:44:03,659 [INFO] HTTP Request: GET https://www.cavissima.com/cdn/shop/files/m-chapoutier-le-pavillon-ermitage.png?v=1745481546 "HTTP/1.1 200 OK"
+2026-06-06 23:44:03,694 [ERROR] Error processing candidate http://www.cavissima.com/cdn/shop/files/m-chapoutier-le-pavillon-ermitage.png?v=1745481546 for SKU BH13/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:44:04,756 [INFO] HTTP Request: GET https://www.svinando.at/var/cache/img/srv/www/htdocs/giordanoweb/images/catalogo/H600_S6972-b-S6972.webp "HTTP/1.1 200 OK"
+2026-06-06 23:44:04,765 [ERROR] Error processing candidate https://www.svinando.at/var/cache/img/srv/www/htdocs/giordanoweb/images/catalogo/H600_S6972-b-S6972.webp for SKU BH13/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:44:04,828 [INFO] HTTP Request: GET http://grandcruliquidassets.com/cdn/shop/files/RHNCHAPAVI-0750-2019-F0L0C0_1024x.jpg?v=1742520240 "HTTP/1.1 301 Moved Permanently"
+2026-06-06 23:44:04,866 [INFO] HTTP Request: GET https://grandcruliquidassets.com/cdn/shop/files/RHNCHAPAVI-0750-2019-F0L0C0_1024x.jpg?v=1742520240 "HTTP/1.1 200 OK"
+2026-06-06 23:44:04,920 [ERROR] Error processing candidate http://grandcruliquidassets.com/cdn/shop/files/RHNCHAPAVI-0750-2019-F0L0C0_1024x.jpg?v=1742520240 for SKU BH13/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:44:04,999 [INFO] HTTP Request: GET https://www.perfectcellar.com/cdn/shop/files/M.ChapoutierErmitageLePavillon2021.png?v=1756374679&width=1445 "HTTP/1.1 200 OK"
+2026-06-06 23:44:05,130 [ERROR] Error processing candidate https://www.perfectcellar.com/cdn/shop/files/M.ChapoutierErmitageLePavillon2021.png?v=1756374679&width=1445 for SKU BH13/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:44:05,736 [INFO] HTTP Request: GET https://www.wineintime.at/wp-content/uploads/2023/06/2345.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:44:05,780 [ERROR] Error processing candidate https://www.wineintime.at/wp-content/uploads/2023/06/2345.jpg for SKU BH13/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:44:05,867 [INFO] HTTP Request: GET https://static2.wineandco.com/themes/carrefour/images/produits/4/9/5/2/pt49521.jpg "HTTP/1.1 403 Forbidden"
+2026-06-06 23:44:05,868 [ERROR] Image download failed for https://static2.wineandco.com/themes/carrefour/images/produits/4/9/5/2/pt49521.jpg: Client error '403 Forbidden' for url 'https://static2.wineandco.com/themes/carrefour/images/produits/4/9/5/2/pt49521.jpg'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:44:05,868 [ERROR] Error processing candidate https://static2.wineandco.com/themes/carrefour/images/produits/4/9/5/2/pt49521.jpg for SKU BH13/2021: Failed to download image: https://static2.wineandco.com/themes/carrefour/images/produits/4/9/5/2/pt49521.jpg
+2026-06-06 23:44:07,037 [INFO] HTTP Request: GET https://highburyvintners.co.uk/cdn/shop/products/Chapoutier-Le-Pavillon-Ermitage_1200x.png?v=1666026488 "HTTP/1.1 200 OK"
+2026-06-06 23:44:07,088 [ERROR] Error processing candidate https://highburyvintners.co.uk/cdn/shop/products/Chapoutier-Le-Pavillon-Ermitage_1200x.png?v=1666026488 for SKU BH13/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:44:07,168 [INFO] HTTP Request: GET https://wine-family.com/cdn/shop/files/ef34f2ef-e05a-4993-8424-ff7b5c6ba97c_1200x.jpg?v=1750824888 "HTTP/1.1 200 OK"
+2026-06-06 23:44:07,209 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:44:09,988 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:44:14,921 [INFO] HTTP Request: GET https://centurywines.com.sg/cdn/shop/files/CWS12348_M.-Chapoutier-Le-Pavillon-Hermitage-Organic-Wine-2018-750ml.jpg?v=1755952011 "HTTP/1.1 200 OK"
+2026-06-06 23:44:14,985 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:44:18,105 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:44:23,444 [INFO] HTTP Request: GET https://static.wineandco.com/themes/carrefour/images/produits/4/9/5/2/grd49521.jpg "HTTP/1.1 403 Forbidden"
+2026-06-06 23:44:23,445 [ERROR] Image download failed for https://static.wineandco.com/themes/carrefour/images/produits/4/9/5/2/grd49521.jpg: Client error '403 Forbidden' for url 'https://static.wineandco.com/themes/carrefour/images/produits/4/9/5/2/grd49521.jpg'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:44:23,445 [ERROR] Error processing candidate https://static.wineandco.com/themes/carrefour/images/produits/4/9/5/2/grd49521.jpg for SKU BH13/2021: Failed to download image: https://static.wineandco.com/themes/carrefour/images/produits/4/9/5/2/grd49521.jpg
+2026-06-06 23:44:23,614 [INFO] HTTP Request: GET https://www.saq.com/media/catalog/product/1/5/15063928-1_1671656451.png?quality=80&fit=bounds&height=&width= "HTTP/1.1 200 OK"
+2026-06-06 23:44:25,262 [INFO] HTTP Request: POST https://api.remove.bg/v1.0/removebg "HTTP/1.1 200 OK"
+2026-06-06 23:44:25,309 [INFO]   ✓ BH13/2021 confidence=63% producer=100% vintage=0%
+2026-06-06 23:44:25,309 [INFO] [9/87] Searching BH13/2022: M. Chapoutier Le Pavillon Ermitage AOP
+2026-06-06 23:44:25,379 [INFO] HTTP Request: GET https://www.googleapis.com/customsearch/v1?key=AIzaSyBZ5p08dd5cR_Q5bMHhaAFuH6kPUO9jxrY&cx=02211d6d3950b4d03&q=M.+Chapoutier+Le+Pavillon+Ermitage+AOP+2022+wine+bottle&searchType=image&num=10&imgSize=large&imgType=photo "HTTP/1.1 403 Forbidden"
+2026-06-06 23:44:25,380 [WARNING] Custom Search JSON API returned 403: this GCP project likely has no JSON API entitlement (Google closed JSON API access for new projects; DDG/Bing fallback will be used). See https://developers.google.com/custom-search/v1/overview (Vertex AI Search or a third-party SERP API are alternatives).
+2026-06-06 23:44:25,484 [INFO] response: https://duckduckgo.com/?q=M.+Chapoutier+Le+Pavillon+Ermitage+AOP+2022+wine+bottle 200
+2026-06-06 23:44:25,541 [INFO] response: https://duckduckgo.com/i.js?o=json&q=M.+Chapoutier+Le+Pavillon+Ermitage+AOP+2022+wine+bottle&l=us-en&vqd=4-180907587663450095823947166318731957207&p=1&ct=AT 403
+2026-06-06 23:44:25,541 [ERROR] DuckDuckGo image search failed: No results found.
+2026-06-06 23:44:25,573 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=M.+Chapoutier+Le+Pavillon+Ermitage+AOP+2022+wine+bottle&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 429 Too Many Requests"
+2026-06-06 23:44:25,574 [WARNING] SerpApi rate-limited for SKU BH13/2022 — retry in 8s
+2026-06-06 23:44:25,575 [INFO] response: https://www.bing.com/images/async?q=M.+Chapoutier+Le+Pavillon+Ermitage+AOP+2022+wine+bottle&async=1&first=1&count=35 200
+2026-06-06 23:44:25,588 [INFO] Bing returned 25 candidates for SKU BH13/2022
+2026-06-06 23:44:26,328 [INFO] HTTP Request: GET https://api.search.brave.com/res/v1/images/search?q=M.+Chapoutier+Le+Pavillon+Ermitage+AOP+2022+wine+bottle&count=25&search_lang=en&country=ALL&safesearch=strict&spellcheck=true "HTTP/1.1 200 OK"
+2026-06-06 23:44:26,329 [INFO] Brave returned 25 candidates for SKU BH13/2022 (query='M. Chapoutier Le Pavillon Ermitage AOP 2022 wine bottle')
+2026-06-06 23:44:33,863 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=M.+Chapoutier+Le+Pavillon+Ermitage+AOP+2022+wine+bottle&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 429 Too Many Requests"
+2026-06-06 23:44:33,863 [WARNING] SerpApi rate-limited for SKU BH13/2022 — retry in 16s
+2026-06-06 23:44:50,146 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=M.+Chapoutier+Le+Pavillon+Ermitage+AOP+2022+wine+bottle&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 429 Too Many Requests"
+2026-06-06 23:44:50,147 [WARNING] SerpApi rate-limited for SKU BH13/2022 — retry in 24s
+2026-06-06 23:45:14,171 [INFO] Merged 49 candidates for SKU BH13/2022 — sources: brave=25, bing=25
+2026-06-06 23:45:14,302 [INFO] HTTP Request: GET https://assets.langtons.com.au/images/B0027812.png?height=360 "HTTP/1.1 200 OK"
+2026-06-06 23:45:14,306 [ERROR] Error processing candidate https://assets.langtons.com.au/images/B0027812.png?height=360 for SKU BH13/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:45:14,387 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/831ec762-d944-4a5d-a246-f2ea62438062.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:45:14,426 [ERROR] Error processing candidate https://cdn.ct-static.com/labels/831ec762-d944-4a5d-a246-f2ea62438062.jpg for SKU BH13/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:45:14,648 [INFO] HTTP Request: GET https://m.media-amazon.com/images/I/61CcYZcT5oL.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:45:14,875 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:45:21,753 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:45:28,341 [INFO] HTTP Request: GET https://sothebys-md.brightspotcdn.com/dims4/default/997f497/2147483647/strip/true/crop/752x2002+0+0/resize/1024x2726!/quality/90/?url=http://sothebys-brightspot.s3.amazonaws.com/media-desk/00/ba/8bcea15143bb9a56c183b7cb05df/chplepavillonnvbottle-generic.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:45:28,821 [ERROR] Error processing candidate https://sothebys-md.brightspotcdn.com/dims4/default/997f497/2147483647/strip/true/crop/752x2002+0+0/resize/1024x2726!/quality/90/?url=http://sothebys-brightspot.s3.amazonaws.com/media-desk/00/ba/8bcea15143bb9a56c183b7cb05df/chplepavillonnvbottle-generic.jpg for SKU BH13/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:45:29,024 [INFO] HTTP Request: GET https://m.media-amazon.com/images/I/31wd+ZN7a0L.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:45:29,037 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:45:32,420 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:45:36,396 [INFO] HTTP Request: GET https://www.enotekapremier.rs/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/m/-/m-chapoutier-ermitage-le-pavillon-rouge.jpg "HTTP/1.1 403 Forbidden"
+2026-06-06 23:45:36,398 [ERROR] Image download failed for https://www.enotekapremier.rs/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/m/-/m-chapoutier-ermitage-le-pavillon-rouge.jpg: Client error '403 Forbidden' for url 'https://www.enotekapremier.rs/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/m/-/m-chapoutier-ermitage-le-pavillon-rouge.jpg'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:45:36,398 [ERROR] Error processing candidate https://www.enotekapremier.rs/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/m/-/m-chapoutier-ermitage-le-pavillon-rouge.jpg for SKU BH13/2022: Failed to download image: https://www.enotekapremier.rs/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/m/-/m-chapoutier-ermitage-le-pavillon-rouge.jpg
+2026-06-06 23:45:36,478 [INFO] HTTP Request: GET https://www.theperfectbottle.com/cdn/shop/files/red-wine-m-chapoutier-ermitage-le-pavillon-hermitage-2015-35819974197398_1024x1024@2x.jpg?v=1712264518 "HTTP/1.1 200 OK"
+2026-06-06 23:45:36,485 [ERROR] Error processing candidate https://www.theperfectbottle.com/cdn/shop/files/red-wine-m-chapoutier-ermitage-le-pavillon-hermitage-2015-35819974197398_1024x1024@2x.jpg?v=1712264518 for SKU BH13/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:45:36,568 [INFO] HTTP Request: GET https://www.leclos-prive.com/shop/6444-thickbox_default/m-chapoutier-ermitage-le-pavillon-2022-primeur.jpg "HTTP/1.1 403 Forbidden"
+2026-06-06 23:45:36,570 [ERROR] Image download failed for https://www.leclos-prive.com/shop/6444-thickbox_default/m-chapoutier-ermitage-le-pavillon-2022-primeur.jpg: Client error '403 Forbidden' for url 'https://www.leclos-prive.com/shop/6444-thickbox_default/m-chapoutier-ermitage-le-pavillon-2022-primeur.jpg'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:45:36,570 [ERROR] Error processing candidate https://www.leclos-prive.com/shop/6444-thickbox_default/m-chapoutier-ermitage-le-pavillon-2022-primeur.jpg for SKU BH13/2022: Failed to download image: https://www.leclos-prive.com/shop/6444-thickbox_default/m-chapoutier-ermitage-le-pavillon-2022-primeur.jpg
+2026-06-06 23:45:36,751 [INFO] HTTP Request: GET https://assets.wine.com/winecom/image/upload/w_600,h_400,dpr_2.0,c_fit,q_auto:good,fl_progressive/yyi0qhd2zg7t4hfkgt3h.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:45:36,762 [ERROR] Error processing candidate https://assets.wine.com/winecom/image/upload/w_600,h_400,dpr_2.0,c_fit,q_auto:good,fl_progressive/yyi0qhd2zg7t4hfkgt3h.jpg for SKU BH13/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:45:37,035 [INFO] HTTP Request: GET https://assets.catawiki.nl/assets/2023/6/14/a/4/7/a4783768-bd99-433d-8b7e-14077c20e45b.jpg "HTTP/1.1 301 Moved Permanently"
+2026-06-06 23:45:37,128 [INFO] HTTP Request: GET https://assets.catawiki.com/image/cw_normal/plain/assets/catawiki/assets/2023/6/14/a/4/7/a4783768-bd99-433d-8b7e-14077c20e45b.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:45:37,158 [ERROR] Error processing candidate https://assets.catawiki.nl/assets/2023/6/14/a/4/7/a4783768-bd99-433d-8b7e-14077c20e45b.jpg for SKU BH13/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:45:37,319 [INFO] HTTP Request: GET https://assets.wine.com/winecom/image/upload/w_600,h_400,dpr_2.0,c_fit,q_auto:good,fl_progressive/x4gsjbue6uskcjkabi0t.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:45:37,335 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:45:39,502 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:45:45,177 [INFO] HTTP Request: GET https://dxlu3le4zp2pd.cloudfront.net/preferabli-label/58e06b9d/800x800/filters:fill(ffffff)/b9b74ef6-8441-4a89-b949-02ff42f3cfb2-original "HTTP/1.1 200 OK"
+2026-06-06 23:45:45,401 [ERROR] Error processing candidate https://dxlu3le4zp2pd.cloudfront.net/preferabli-label/58e06b9d/800x800/filters:fill(ffffff)/b9b74ef6-8441-4a89-b949-02ff42f3cfb2-original for SKU BH13/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:45:46,289 [INFO] HTTP Request: GET https://s3-eu-west-1.amazonaws.com/lw-bottles/Generic/A00000001749/3/A00000001749-V600X600.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:45:46,574 [ERROR] Error processing candidate https://s3-eu-west-1.amazonaws.com/lw-bottles/Generic/A00000001749/3/A00000001749-V600X600.jpg for SKU BH13/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:45:47,592 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/5dc9f91c-6489-4af9-aaf1-c4e65c7a3513.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:45:47,634 [ERROR] Error processing candidate https://cdn.ct-static.com/labels/5dc9f91c-6489-4af9-aaf1-c4e65c7a3513.jpg for SKU BH13/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:45:47,866 [INFO] HTTP Request: GET https://www.mchapoutier.com.au/wp-content/uploads/2023/04/M.-CHAPOUTIER-Le-Pavillon-NM-AOP.png "HTTP/1.1 403 Forbidden"
+2026-06-06 23:45:47,867 [ERROR] Image download failed for https://www.mchapoutier.com.au/wp-content/uploads/2023/04/M.-CHAPOUTIER-Le-Pavillon-NM-AOP.png: Client error '403 Forbidden' for url 'https://www.mchapoutier.com.au/wp-content/uploads/2023/04/M.-CHAPOUTIER-Le-Pavillon-NM-AOP.png'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:45:47,867 [ERROR] Error processing candidate https://www.mchapoutier.com.au/wp-content/uploads/2023/04/M.-CHAPOUTIER-Le-Pavillon-NM-AOP.png for SKU BH13/2022: Failed to download image: https://www.mchapoutier.com.au/wp-content/uploads/2023/04/M.-CHAPOUTIER-Le-Pavillon-NM-AOP.png
+2026-06-06 23:45:50,342 [INFO] HTTP Request: GET https://revistaadega.uol.com.br/media/_versions/garrafas/m.chapoutier_le_pavillon_ermitage_1996_ok_sm.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:45:50,353 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:45:52,805 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:45:56,363 [INFO] HTTP Request: GET https://wine-family.com/cdn/shop/files/ef34f2ef-e05a-4993-8424-ff7b5c6ba97c_1200x.jpg?v=1750824888 "HTTP/1.1 200 OK"
+2026-06-06 23:45:56,404 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:45:58,855 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:46:03,314 [INFO] HTTP Request: GET https://www.christies.com/img/LotImages/2019/NYR/2019_NYR_17609_0262_000(m_chapoutier_ermitage_le_pavillon_2000_6_bottles_per_lot104340).jpg?mode=max "HTTP/1.1 200 OK"
+2026-06-06 23:46:03,740 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:46:07,409 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:46:13,019 [INFO] HTTP Request: GET https://www.sodivin.com/img/p/2/7/8/5/1/27851-large_default.jpg "HTTP/1.1 403 Forbidden"
+2026-06-06 23:46:13,020 [ERROR] Image download failed for https://www.sodivin.com/img/p/2/7/8/5/1/27851-large_default.jpg: Client error '403 Forbidden' for url 'https://www.sodivin.com/img/p/2/7/8/5/1/27851-large_default.jpg'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:46:13,020 [ERROR] Error processing candidate https://www.sodivin.com/img/p/2/7/8/5/1/27851-large_default.jpg for SKU BH13/2022: Failed to download image: https://www.sodivin.com/img/p/2/7/8/5/1/27851-large_default.jpg
+2026-06-06 23:46:14,438 [INFO] HTTP Request: GET https://www.vineut.com/wp-content/uploads/2023/12/Chapoutier-Ermitage-Le-Pavillon-2016.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:46:14,972 [ERROR] Error processing candidate https://www.vineut.com/wp-content/uploads/2023/12/Chapoutier-Ermitage-Le-Pavillon-2016.jpg for SKU BH13/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:46:15,074 [INFO] HTTP Request: GET https://www.thewinesociety.com/globalassets/product-image-target/red-wine/rh57251/rh57251_ermitage-le-pavillon-chapoutier-2019_12.png?width=100&rsampler=bicubic&compand=true "HTTP/1.1 200 OK"
+2026-06-06 23:46:15,076 [ERROR] Error processing candidate https://www.thewinesociety.com/globalassets/product-image-target/red-wine/rh57251/rh57251_ermitage-le-pavillon-chapoutier-2019_12.png?width=100&rsampler=bicubic&compand=true for SKU BH13/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:46:15,162 [INFO] HTTP Request: GET https://highburyvintners.co.uk/cdn/shop/products/Chapoutier-Le-Pavillon-Ermitage_1200x.png?v=1666026488 "HTTP/1.1 200 OK"
+2026-06-06 23:46:15,219 [ERROR] Error processing candidate https://highburyvintners.co.uk/cdn/shop/products/Chapoutier-Le-Pavillon-Ermitage_1200x.png?v=1666026488 for SKU BH13/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:46:15,318 [INFO] HTTP Request: GET https://www.thewinesociety.com/globalassets/product-image-target/red-wine/rh57251/rh57251_ermitage-le-pavillon-chapoutier-2019_12.png?width=100&height=100&rmode=crop&rsampler=bicubic&compand=true "HTTP/1.1 200 OK"
+2026-06-06 23:46:15,320 [ERROR] Error processing candidate https://www.thewinesociety.com/globalassets/product-image-target/red-wine/rh57251/rh57251_ermitage-le-pavillon-chapoutier-2019_12.png?width=100&height=100&rmode=crop&rsampler=bicubic&compand=true for SKU BH13/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:46:15,408 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/6ccc4ac5-e4f0-4c00-a8a3-ea855e708bd8.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:46:15,452 [ERROR] Error processing candidate https://cdn.ct-static.com/labels/6ccc4ac5-e4f0-4c00-a8a3-ea855e708bd8.jpg for SKU BH13/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:46:15,556 [INFO] HTTP Request: GET https://shop.klwines.com/_next/image?url=https://cdn.klwines.com/images/skus/1919712l.jpg&w=128&q=75 "HTTP/1.1 403 Forbidden"
+2026-06-06 23:46:15,557 [ERROR] Image download failed for https://shop.klwines.com/_next/image?url=https://cdn.klwines.com/images/skus/1919712l.jpg&w=128&q=75: Client error '403 Forbidden' for url 'https://shop.klwines.com/_next/image?url=https://cdn.klwines.com/images/skus/1919712l.jpg&w=128&q=75'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:46:15,557 [ERROR] Error processing candidate https://shop.klwines.com/_next/image?url=https://cdn.klwines.com/images/skus/1919712l.jpg&w=128&q=75 for SKU BH13/2022: Failed to download image: https://shop.klwines.com/_next/image?url=https://cdn.klwines.com/images/skus/1919712l.jpg&w=128&q=75
+2026-06-06 23:46:15,769 [INFO] HTTP Request: GET https://m.media-amazon.com/images/I/31wd+ZN7a0L.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:46:16,673 [INFO] HTTP Request: POST https://api.remove.bg/v1.0/removebg "HTTP/1.1 200 OK"
+2026-06-06 23:46:16,765 [INFO]   ✓ BH13/2022 confidence=70% producer=100% vintage=50%
+2026-06-06 23:46:16,766 [INFO] [10/87] Searching BH14/2021: M. Chapoutier Le Meal Rouge Ermitage AOP
+2026-06-06 23:46:16,835 [INFO] HTTP Request: GET https://www.googleapis.com/customsearch/v1?key=AIzaSyBZ5p08dd5cR_Q5bMHhaAFuH6kPUO9jxrY&cx=02211d6d3950b4d03&q=M.+Chapoutier+Le+Meal+Rouge+Ermitage+AOP+2021+wine+bottle&searchType=image&num=10&imgSize=large&imgType=photo "HTTP/1.1 403 Forbidden"
+2026-06-06 23:46:16,835 [WARNING] Custom Search JSON API returned 403: this GCP project likely has no JSON API entitlement (Google closed JSON API access for new projects; DDG/Bing fallback will be used). See https://developers.google.com/custom-search/v1/overview (Vertex AI Search or a third-party SERP API are alternatives).
+2026-06-06 23:46:16,979 [INFO] response: https://duckduckgo.com/?q=M.+Chapoutier+Le+Meal+Rouge+Ermitage+AOP+2021+wine+bottle 200
+2026-06-06 23:46:17,008 [INFO] response: https://www.bing.com/images/async?q=M.+Chapoutier+Le+Meal+Rouge+Ermitage+AOP+2021+wine+bottle&async=1&first=1&count=35 200
+2026-06-06 23:46:17,017 [INFO] Bing returned 25 candidates for SKU BH14/2021
+2026-06-06 23:46:17,033 [INFO] response: https://duckduckgo.com/i.js?o=json&q=M.+Chapoutier+Le+Meal+Rouge+Ermitage+AOP+2021+wine+bottle&l=us-en&vqd=4-248828490120820613169704884575137782389&p=1&ct=AT 403
+2026-06-06 23:46:17,034 [ERROR] DuckDuckGo image search failed: No results found.
+2026-06-06 23:46:17,035 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=M.+Chapoutier+Le+Meal+Rouge+Ermitage+AOP+2021+wine+bottle&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 429 Too Many Requests"
+2026-06-06 23:46:17,035 [WARNING] SerpApi rate-limited for SKU BH14/2021 — retry in 8s
+2026-06-06 23:46:17,902 [INFO] HTTP Request: GET https://api.search.brave.com/res/v1/images/search?q=M.+Chapoutier+Le+Meal+Rouge+Ermitage+AOP+2021+wine+bottle&count=25&search_lang=en&country=ALL&safesearch=strict&spellcheck=true "HTTP/1.1 200 OK"
+2026-06-06 23:46:17,903 [INFO] Brave returned 23 candidates for SKU BH14/2021 (query='M. Chapoutier Le Meal Rouge Ermitage AOP 2021 wine bottle')
+2026-06-06 23:46:25,311 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=M.+Chapoutier+Le+Meal+Rouge+Ermitage+AOP+2021+wine+bottle&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 429 Too Many Requests"
+2026-06-06 23:46:25,312 [WARNING] SerpApi rate-limited for SKU BH14/2021 — retry in 16s
+2026-06-06 23:46:41,603 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=M.+Chapoutier+Le+Meal+Rouge+Ermitage+AOP+2021+wine+bottle&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 429 Too Many Requests"
+2026-06-06 23:46:41,604 [WARNING] SerpApi rate-limited for SKU BH14/2021 — retry in 24s
+2026-06-06 23:47:05,628 [INFO] Merged 48 candidates for SKU BH14/2021 — sources: brave=23, bing=25
+2026-06-06 23:47:06,159 [INFO] HTTP Request: GET https://images.squarespace-cdn.com/content/v1/65bb94daa53e6c53fb7087fc/2aff2f61-c5ac-441f-9777-1848a6c2de44/2021+M.+Chapoutier+Ermitage+'Le+M%C3%A9al'+Rouge.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:47:06,177 [ERROR] Error processing candidate https://images.squarespace-cdn.com/content/v1/65bb94daa53e6c53fb7087fc/2aff2f61-c5ac-441f-9777-1848a6c2de44/2021+M.+Chapoutier+Ermitage+'Le+M%C3%A9al'+Rouge.jpg for SKU BH14/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:47:06,280 [INFO] HTTP Request: GET https://bestofwines.com/wine-images/35181_big.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:47:06,292 [ERROR] Error processing candidate https://bestofwines.com/wine-images/35181_big.jpg for SKU BH14/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:47:06,388 [INFO] HTTP Request: GET https://static3.wineandco.com/themes/carrefour/images/produits/4/9/6/5/grd49659.jpg "HTTP/1.1 403 Forbidden"
+2026-06-06 23:47:06,390 [ERROR] Image download failed for https://static3.wineandco.com/themes/carrefour/images/produits/4/9/6/5/grd49659.jpg: Client error '403 Forbidden' for url 'https://static3.wineandco.com/themes/carrefour/images/produits/4/9/6/5/grd49659.jpg'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:47:06,390 [ERROR] Error processing candidate https://static3.wineandco.com/themes/carrefour/images/produits/4/9/6/5/grd49659.jpg for SKU BH14/2021: Failed to download image: https://static3.wineandco.com/themes/carrefour/images/produits/4/9/6/5/grd49659.jpg
+2026-06-06 23:47:06,479 [INFO] HTTP Request: GET https://farehamwinecellar.co.uk/wp-content/uploads/2024/07/M.-Chapoutier-Le-Meal-Ermitage-Rouge-2021.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:47:06,522 [ERROR] Error processing candidate https://farehamwinecellar.co.uk/wp-content/uploads/2024/07/M.-Chapoutier-Le-Meal-Ermitage-Rouge-2021.jpg for SKU BH14/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:47:06,592 [INFO] HTTP Request: GET https://static.wineandco.com/themes/carrefour/images/produits/4/9/6/5/pt49659.jpg "HTTP/1.1 403 Forbidden"
+2026-06-06 23:47:06,593 [ERROR] Image download failed for https://static.wineandco.com/themes/carrefour/images/produits/4/9/6/5/pt49659.jpg: Client error '403 Forbidden' for url 'https://static.wineandco.com/themes/carrefour/images/produits/4/9/6/5/pt49659.jpg'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:47:06,593 [ERROR] Error processing candidate https://static.wineandco.com/themes/carrefour/images/produits/4/9/6/5/pt49659.jpg for SKU BH14/2021: Failed to download image: https://static.wineandco.com/themes/carrefour/images/produits/4/9/6/5/pt49659.jpg
+2026-06-06 23:47:06,724 [INFO] HTTP Request: GET https://assets.farthinghoefinewine.com/img/product/lw/1109687.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:47:06,744 [ERROR] Error processing candidate https://assets.farthinghoefinewine.com/img/product/lw/1109687.jpg for SKU BH14/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:47:06,812 [INFO] HTTP Request: GET https://static3.wineandco.com/themes/wineandco/images/produits/4/9/6/5/grd49659.jpg "HTTP/1.1 403 Forbidden"
+2026-06-06 23:47:06,813 [ERROR] Image download failed for https://static3.wineandco.com/themes/wineandco/images/produits/4/9/6/5/grd49659.jpg: Client error '403 Forbidden' for url 'https://static3.wineandco.com/themes/wineandco/images/produits/4/9/6/5/grd49659.jpg'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:47:06,813 [ERROR] Error processing candidate https://static3.wineandco.com/themes/wineandco/images/produits/4/9/6/5/grd49659.jpg for SKU BH14/2021: Failed to download image: https://static3.wineandco.com/themes/wineandco/images/produits/4/9/6/5/grd49659.jpg
+2026-06-06 23:47:06,883 [INFO] HTTP Request: GET http://www.cavissima.com/cdn/shop/files/m-chapoutier-le-meal-ermitage-rouge_0da042e2-be1e-4952-af09-094d11e049b7.png?v=1745482931 "HTTP/1.1 301 Moved Permanently"
+2026-06-06 23:47:06,922 [INFO] HTTP Request: GET https://www.cavissima.com/cdn/shop/files/m-chapoutier-le-meal-ermitage-rouge_0da042e2-be1e-4952-af09-094d11e049b7.png?v=1745482931 "HTTP/1.1 200 OK"
+2026-06-06 23:47:06,945 [ERROR] Error processing candidate http://www.cavissima.com/cdn/shop/files/m-chapoutier-le-meal-ermitage-rouge_0da042e2-be1e-4952-af09-094d11e049b7.png?v=1745482931 for SKU BH14/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:47:07,015 [INFO] HTTP Request: GET https://static2.wineandco.com/themes/lesechos/images/produits/4/9/6/5/grd49659.jpg "HTTP/1.1 403 Forbidden"
+2026-06-06 23:47:07,016 [ERROR] Image download failed for https://static2.wineandco.com/themes/lesechos/images/produits/4/9/6/5/grd49659.jpg: Client error '403 Forbidden' for url 'https://static2.wineandco.com/themes/lesechos/images/produits/4/9/6/5/grd49659.jpg'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:47:07,016 [ERROR] Error processing candidate https://static2.wineandco.com/themes/lesechos/images/produits/4/9/6/5/grd49659.jpg for SKU BH14/2021: Failed to download image: https://static2.wineandco.com/themes/lesechos/images/produits/4/9/6/5/grd49659.jpg
+2026-06-06 23:47:07,091 [INFO] HTTP Request: GET https://bestofwines.com/wine-images/34573_big.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:47:07,103 [ERROR] Error processing candidate https://bestofwines.com/wine-images/34573_big.jpg for SKU BH14/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:47:07,387 [INFO] HTTP Request: GET https://images.squarespace-cdn.com/content/v1/65bb94daa53e6c53fb7087fc/09b85351-2a93-4fdf-8c50-e21d2eaef5cc/2021+M.+Chapoutier+Ermitage+'L'Ermite'+Rouge.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:47:07,436 [ERROR] Error processing candidate https://images.squarespace-cdn.com/content/v1/65bb94daa53e6c53fb7087fc/09b85351-2a93-4fdf-8c50-e21d2eaef5cc/2021+M.+Chapoutier+Ermitage+'L'Ermite'+Rouge.jpg for SKU BH14/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:47:07,534 [INFO] HTTP Request: GET https://media.nicks.com.au/products/ed05ac33/3456768000_1.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:47:07,601 [ERROR] Error processing candidate https://media.nicks.com.au/products/ed05ac33/3456768000_1.jpg for SKU BH14/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:47:08,050 [INFO] HTTP Request: GET https://images.squarespace-cdn.com/content/v1/65bb94daa53e6c53fb7087fc/15632731-ed6a-429b-adfa-49a71ef178ef/2021+M.+Chapoutier+Ermitage+'Le+Pavillon'+Rouge.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:47:08,059 [ERROR] Error processing candidate https://images.squarespace-cdn.com/content/v1/65bb94daa53e6c53fb7087fc/15632731-ed6a-429b-adfa-49a71ef178ef/2021+M.+Chapoutier+Ermitage+'Le+Pavillon'+Rouge.jpg for SKU BH14/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:47:08,536 [INFO] HTTP Request: GET https://jebdunnuck.com/wp-content/uploads/wine-images/160/meal-ermitage-rge+NV.jpg "HTTP/1.1 404 Not Found"
+2026-06-06 23:47:08,536 [ERROR] Image download failed for https://jebdunnuck.com/wp-content/uploads/wine-images/160/meal-ermitage-rge+NV.jpg: Client error '404 Not Found' for url 'https://jebdunnuck.com/wp-content/uploads/wine-images/160/meal-ermitage-rge+NV.jpg'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-06-06 23:47:08,537 [ERROR] Error processing candidate https://jebdunnuck.com/wp-content/uploads/wine-images/160/meal-ermitage-rge+NV.jpg for SKU BH14/2021: Failed to download image: https://jebdunnuck.com/wp-content/uploads/wine-images/160/meal-ermitage-rge+NV.jpg
+2026-06-06 23:47:08,604 [INFO] HTTP Request: GET https://static3.wineandco.com/themes/carrefour/images/produits/1/4/4/1/pt14411.jpg "HTTP/1.1 403 Forbidden"
+2026-06-06 23:47:08,605 [ERROR] Image download failed for https://static3.wineandco.com/themes/carrefour/images/produits/1/4/4/1/pt14411.jpg: Client error '403 Forbidden' for url 'https://static3.wineandco.com/themes/carrefour/images/produits/1/4/4/1/pt14411.jpg'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:47:08,605 [ERROR] Error processing candidate https://static3.wineandco.com/themes/carrefour/images/produits/1/4/4/1/pt14411.jpg for SKU BH14/2021: Failed to download image: https://static3.wineandco.com/themes/carrefour/images/produits/1/4/4/1/pt14411.jpg
+2026-06-06 23:47:10,095 [INFO] HTTP Request: GET https://www.saq.com/media/catalog/product/1/5/15215303-1_1698792186.png?optimize=high&fit=bounds&height=&width=&format=jpeg "HTTP/1.1 200 OK"
+2026-06-06 23:47:10,174 [ERROR] Error processing candidate https://www.saq.com/media/catalog/product/1/5/15215303-1_1698792186.png?optimize=high&fit=bounds&height=&width=&format=jpeg for SKU BH14/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:47:10,372 [INFO] HTTP Request: GET https://assets.wine.com/winecom/image/upload/w_600,h_400,dpr_2.0,c_fit,q_auto:good,fl_progressive/pfqqmpgksa1k3e1t9gxv.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:47:10,383 [ERROR] Error processing candidate https://assets.wine.com/winecom/image/upload/w_600,h_400,dpr_2.0,c_fit,q_auto:good,fl_progressive/pfqqmpgksa1k3e1t9gxv.jpg for SKU BH14/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:47:11,435 [INFO] HTTP Request: GET https://wineconsigners.com/cdn/shop/files/20031.5M.CHAPOUTIERLEMEAL_1c76c643-6a51-407a-b89f-75ed64de99b9.jpg?v=1696538733 "HTTP/1.1 200 OK"
+2026-06-06 23:47:12,067 [ERROR] Error processing candidate https://wineconsigners.com/cdn/shop/files/20031.5M.CHAPOUTIERLEMEAL_1c76c643-6a51-407a-b89f-75ed64de99b9.jpg?v=1696538733 for SKU BH14/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:47:12,141 [INFO] HTTP Request: GET https://static2.wineandco.com/themes/carrefour/images/produits/1/2/9/7/pt12972.jpg "HTTP/1.1 403 Forbidden"
+2026-06-06 23:47:12,142 [ERROR] Image download failed for https://static2.wineandco.com/themes/carrefour/images/produits/1/2/9/7/pt12972.jpg: Client error '403 Forbidden' for url 'https://static2.wineandco.com/themes/carrefour/images/produits/1/2/9/7/pt12972.jpg'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:47:12,142 [ERROR] Error processing candidate https://static2.wineandco.com/themes/carrefour/images/produits/1/2/9/7/pt12972.jpg for SKU BH14/2021: Failed to download image: https://static2.wineandco.com/themes/carrefour/images/produits/1/2/9/7/pt12972.jpg
+2026-06-06 23:47:12,229 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/7ab8a40b-3d64-45b1-9d1b-74c394142fe8.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:47:12,252 [ERROR] Error processing candidate https://cdn.ct-static.com/labels/7ab8a40b-3d64-45b1-9d1b-74c394142fe8.jpg for SKU BH14/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:47:12,606 [INFO] HTTP Request: GET https://wine-family.com/cdn/shop/files/mchapoutierlemealwhite_1200x.jpg?v=1727764145 "HTTP/1.1 200 OK"
+2026-06-06 23:47:12,663 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:47:17,316 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:47:23,571 [INFO] HTTP Request: GET https://www.saq.com/media/catalog/product/1/4/14778323-1_1634743536.png?quality=80&fit=bounds&height=&width= "HTTP/1.1 200 OK"
+2026-06-06 23:47:23,838 [ERROR] Error processing candidate https://www.saq.com/media/catalog/product/1/4/14778323-1_1634743536.png?quality=80&fit=bounds&height=&width= for SKU BH14/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:47:23,931 [INFO] HTTP Request: GET https://www.londonendwines.com/cdn/shop/products/Mchapoutierhermitagelemealblanc2007rhonewhite_580x.jpg?v=1637072273 "HTTP/1.1 200 OK"
+2026-06-06 23:47:23,937 [ERROR] Error processing candidate https://www.londonendwines.com/cdn/shop/products/Mchapoutierhermitagelemealblanc2007rhonewhite_580x.jpg?v=1637072273 for SKU BH14/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:47:24,258 [INFO] HTTP Request: GET https://www.mchapoutier.com.au/wp-content/uploads/2023/04/M.-CHAPOUTIER-LErmite-blanc-NM-AOP-600x800.png "HTTP/1.1 403 Forbidden"
+2026-06-06 23:47:24,259 [ERROR] Image download failed for https://www.mchapoutier.com.au/wp-content/uploads/2023/04/M.-CHAPOUTIER-LErmite-blanc-NM-AOP-600x800.png: Client error '403 Forbidden' for url 'https://www.mchapoutier.com.au/wp-content/uploads/2023/04/M.-CHAPOUTIER-LErmite-blanc-NM-AOP-600x800.png'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:47:24,259 [ERROR] Error processing candidate https://www.mchapoutier.com.au/wp-content/uploads/2023/04/M.-CHAPOUTIER-LErmite-blanc-NM-AOP-600x800.png for SKU BH14/2021: Failed to download image: https://www.mchapoutier.com.au/wp-content/uploads/2023/04/M.-CHAPOUTIER-LErmite-blanc-NM-AOP-600x800.png
+2026-06-06 23:47:24,964 [INFO] HTTP Request: GET https://farehamwinecellar.co.uk/wp-content/uploads/2024/07/M.-Chapoutier-Ermitage-Blanc-Plaine-des-Murets-2011-1-300x400.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:47:25,180 [ERROR] Error processing candidate https://farehamwinecellar.co.uk/wp-content/uploads/2024/07/M.-Chapoutier-Ermitage-Blanc-Plaine-des-Murets-2011-1-300x400.jpg for SKU BH14/2021: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:47:25,257 [INFO] HTTP Request: GET https://wine-family.com/cdn/shop/files/mchapoutierlemealwhite_1200x.jpg?v=1727764145 "HTTP/1.1 200 OK"
+2026-06-06 23:47:26,512 [INFO] HTTP Request: POST https://api.remove.bg/v1.0/removebg "HTTP/1.1 200 OK"
+2026-06-06 23:47:26,999 [INFO]   ✓ BH14/2021 confidence=61% producer=100% vintage=0%
+2026-06-06 23:47:26,999 [INFO] [11/87] Searching BH14/2022: M. Chapoutier Le Meal Rouge Ermitage AOP
+2026-06-06 23:47:27,092 [INFO] HTTP Request: GET https://www.googleapis.com/customsearch/v1?key=AIzaSyBZ5p08dd5cR_Q5bMHhaAFuH6kPUO9jxrY&cx=02211d6d3950b4d03&q=M.+Chapoutier+Le+Meal+Rouge+Ermitage+AOP+2022+wine+bottle&searchType=image&num=10&imgSize=large&imgType=photo "HTTP/1.1 403 Forbidden"
+2026-06-06 23:47:27,093 [WARNING] Custom Search JSON API returned 403: this GCP project likely has no JSON API entitlement (Google closed JSON API access for new projects; DDG/Bing fallback will be used). See https://developers.google.com/custom-search/v1/overview (Vertex AI Search or a third-party SERP API are alternatives).
+2026-06-06 23:47:27,195 [INFO] response: https://duckduckgo.com/?q=M.+Chapoutier+Le+Meal+Rouge+Ermitage+AOP+2022+wine+bottle 200
+2026-06-06 23:47:27,253 [INFO] response: https://duckduckgo.com/i.js?o=json&q=M.+Chapoutier+Le+Meal+Rouge+Ermitage+AOP+2022+wine+bottle&l=us-en&vqd=4-63840222166370002545768988209149562760&p=1&ct=AT 403
+2026-06-06 23:47:27,254 [ERROR] DuckDuckGo image search failed: No results found.
+2026-06-06 23:47:27,277 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=M.+Chapoutier+Le+Meal+Rouge+Ermitage+AOP+2022+wine+bottle&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 429 Too Many Requests"
+2026-06-06 23:47:27,278 [WARNING] SerpApi rate-limited for SKU BH14/2022 — retry in 8s
+2026-06-06 23:47:27,288 [INFO] response: https://www.bing.com/images/async?q=M.+Chapoutier+Le+Meal+Rouge+Ermitage+AOP+2022+wine+bottle&async=1&first=1&count=35 200
+2026-06-06 23:47:27,301 [INFO] Bing returned 25 candidates for SKU BH14/2022
+2026-06-06 23:47:27,951 [INFO] HTTP Request: GET https://api.search.brave.com/res/v1/images/search?q=M.+Chapoutier+Le+Meal+Rouge+Ermitage+AOP+2022+wine+bottle&count=25&search_lang=en&country=ALL&safesearch=strict&spellcheck=true "HTTP/1.1 200 OK"
+2026-06-06 23:47:27,954 [INFO] Brave returned 24 candidates for SKU BH14/2022 (query='M. Chapoutier Le Meal Rouge Ermitage AOP 2022 wine bottle')
+2026-06-06 23:47:35,625 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=M.+Chapoutier+Le+Meal+Rouge+Ermitage+AOP+2022+wine+bottle&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 429 Too Many Requests"
+2026-06-06 23:47:35,626 [WARNING] SerpApi rate-limited for SKU BH14/2022 — retry in 16s
+2026-06-06 23:47:52,007 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=M.+Chapoutier+Le+Meal+Rouge+Ermitage+AOP+2022+wine+bottle&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 429 Too Many Requests"
+2026-06-06 23:47:52,008 [WARNING] SerpApi rate-limited for SKU BH14/2022 — retry in 24s
+2026-06-06 23:48:16,032 [INFO] Merged 49 candidates for SKU BH14/2022 — sources: brave=24, bing=25
+2026-06-06 23:48:16,313 [INFO] HTTP Request: GET https://www.theperfectbottle.com/cdn/shop/files/red-wine-m-chapoutier-ermitage-le-meal-hermitage-2010-33230529462422_1024x1024@2x.jpg?v=1704916814 "HTTP/1.1 200 OK"
+2026-06-06 23:48:16,398 [ERROR] Error processing candidate https://www.theperfectbottle.com/cdn/shop/files/red-wine-m-chapoutier-ermitage-le-meal-hermitage-2010-33230529462422_1024x1024@2x.jpg?v=1704916814 for SKU BH14/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:48:16,818 [INFO] HTTP Request: GET https://www.mchapoutier.com.au/wp-content/uploads/2023/04/M.-CHAPOUTIER-Le-Meal-rouge-NM-AOP.png "HTTP/1.1 403 Forbidden"
+2026-06-06 23:48:16,819 [ERROR] Image download failed for https://www.mchapoutier.com.au/wp-content/uploads/2023/04/M.-CHAPOUTIER-Le-Meal-rouge-NM-AOP.png: Client error '403 Forbidden' for url 'https://www.mchapoutier.com.au/wp-content/uploads/2023/04/M.-CHAPOUTIER-Le-Meal-rouge-NM-AOP.png'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:48:16,819 [ERROR] Error processing candidate https://www.mchapoutier.com.au/wp-content/uploads/2023/04/M.-CHAPOUTIER-Le-Meal-rouge-NM-AOP.png for SKU BH14/2022: Failed to download image: https://www.mchapoutier.com.au/wp-content/uploads/2023/04/M.-CHAPOUTIER-Le-Meal-rouge-NM-AOP.png
+2026-06-06 23:48:16,911 [INFO] HTTP Request: GET https://cdn.vinissimus.com/img/unsafe/p500x/plain/local:///prfmtgrande/vi/chemb22_anv800_1750143977.png "HTTP/1.1 200 OK"
+2026-06-06 23:48:16,950 [ERROR] Error processing candidate https://cdn.vinissimus.com/img/unsafe/p500x/plain/local:///prfmtgrande/vi/chemb22_anv800_1750143977.png for SKU BH14/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:48:17,035 [INFO] HTTP Request: GET https://assets.farthinghoefinewine.com/img/product/lw/1109687.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:48:17,058 [ERROR] Error processing candidate https://assets.farthinghoefinewine.com/img/product/lw/1109687.jpg for SKU BH14/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:48:17,149 [INFO] HTTP Request: GET https://worldclasswine.us/cdn/shop/products/LeMealrouge_793918a2-a42b-48e0-b22c-90334e7a50ea_170x167.jpg?v=1661381735 "HTTP/1.1 200 OK"
+2026-06-06 23:48:17,153 [ERROR] Error processing candidate https://worldclasswine.us/cdn/shop/products/LeMealrouge_793918a2-a42b-48e0-b22c-90334e7a50ea_170x167.jpg?v=1661381735 for SKU BH14/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:48:17,238 [INFO] HTTP Request: GET https://bestofwines.com/wine-images/6683_big.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:48:17,335 [ERROR] Error processing candidate https://bestofwines.com/wine-images/6683_big.jpg for SKU BH14/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:48:17,411 [INFO] HTTP Request: GET https://images.squarespace-cdn.com/content/v1/65bb94daa53e6c53fb7087fc/2aff2f61-c5ac-441f-9777-1848a6c2de44/2021+M.+Chapoutier+Ermitage+'Le+M%C3%A9al'+Rouge.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:48:17,429 [ERROR] Error processing candidate https://images.squarespace-cdn.com/content/v1/65bb94daa53e6c53fb7087fc/2aff2f61-c5ac-441f-9777-1848a6c2de44/2021+M.+Chapoutier+Ermitage+'Le+M%C3%A9al'+Rouge.jpg for SKU BH14/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:48:17,513 [INFO] HTTP Request: GET https://nemowine.com/wp-content/uploads/2019/09/lemeal_rouge_120x420.png "HTTP/1.1 200 OK"
+2026-06-06 23:48:17,565 [ERROR] Error processing candidate https://nemowine.com/wp-content/uploads/2019/09/lemeal_rouge_120x420.png for SKU BH14/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:48:17,643 [INFO] HTTP Request: GET https://www.londonendwines.com/cdn/shop/products/Mchapoutierhermitagelemealblanc2007rhonewhite_580x.jpg?v=1637072273 "HTTP/1.1 200 OK"
+2026-06-06 23:48:17,649 [ERROR] Error processing candidate https://www.londonendwines.com/cdn/shop/products/Mchapoutierhermitagelemealblanc2007rhonewhite_580x.jpg?v=1637072273 for SKU BH14/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:48:17,760 [INFO] HTTP Request: GET https://media.bbr.com/s/bbr/20098116734-ms?img404=Default_Wine "HTTP/1.1 200 OK"
+2026-06-06 23:48:17,976 [ERROR] Error processing candidate https://media.bbr.com/s/bbr/20098116734-ms?img404=Default_Wine for SKU BH14/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:48:19,054 [INFO] HTTP Request: GET https://www.twil.fr/media/catalog/product/cache/1/image/605x302/a8c876702c6cb649fba7cbed6b6e2e91/9/1/910a8da3eabfad8c0e731fc31322e8a8.jpeg "HTTP/1.1 200 OK"
+2026-06-06 23:48:19,057 [ERROR] Error processing candidate https://www.twil.fr/media/catalog/product/cache/1/image/605x302/a8c876702c6cb649fba7cbed6b6e2e91/9/1/910a8da3eabfad8c0e731fc31322e8a8.jpeg for SKU BH14/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:48:20,169 [INFO] HTTP Request: GET https://www.saq.com/media/catalog/product/1/3/13745378-1_1578541824.png?optimize=high&fit=bounds&height=&width=&format=jpeg "HTTP/1.1 200 OK"
+2026-06-06 23:48:20,247 [ERROR] Error processing candidate https://www.saq.com/media/catalog/product/1/3/13745378-1_1578541824.png?optimize=high&fit=bounds&height=&width=&format=jpeg for SKU BH14/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:48:20,823 [INFO] HTTP Request: GET https://falconvintners-21644.kxcdn.com/wp-content/uploads/2024/05/10850782_square-600x600.png "HTTP/1.1 403 Forbidden"
+2026-06-06 23:48:20,823 [ERROR] Image download failed for https://falconvintners-21644.kxcdn.com/wp-content/uploads/2024/05/10850782_square-600x600.png: Client error '403 Forbidden' for url 'https://falconvintners-21644.kxcdn.com/wp-content/uploads/2024/05/10850782_square-600x600.png'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:48:20,823 [ERROR] Error processing candidate https://falconvintners-21644.kxcdn.com/wp-content/uploads/2024/05/10850782_square-600x600.png for SKU BH14/2022: Failed to download image: https://falconvintners-21644.kxcdn.com/wp-content/uploads/2024/05/10850782_square-600x600.png
+2026-06-06 23:48:20,994 [INFO] HTTP Request: GET https://www.saq.com/media/catalog/product/1/5/15215354-1_1698869287.png?optimize=high&fit=bounds&height=&width=&format=jpeg "HTTP/1.1 200 OK"
+2026-06-06 23:48:21,072 [ERROR] Error processing candidate https://www.saq.com/media/catalog/product/1/5/15215354-1_1698869287.png?optimize=high&fit=bounds&height=&width=&format=jpeg for SKU BH14/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:48:21,165 [INFO] HTTP Request: GET https://www.chapoutier.com/media/cache//Boutique/Primeurs/l/e/le_meal_rouge_aop_446x1500.png "HTTP/1.1 200 OK"
+2026-06-06 23:48:21,218 [ERROR] Error processing candidate https://www.chapoutier.com/media/cache//Boutique/Primeurs/l/e/le_meal_rouge_aop_446x1500.png for SKU BH14/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:48:21,290 [INFO] HTTP Request: GET https://bestofwines.com/wine-images/35181_big.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:48:21,303 [ERROR] Error processing candidate https://bestofwines.com/wine-images/35181_big.jpg for SKU BH14/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:48:21,396 [INFO] HTTP Request: GET https://www.odyssee-vins.com/media/catalog/product/cache/2/image/9df78eab33525d08d6e5fb8d27136e95/1/_/bb887810c3f66420cd5847154a7040ed/chapoutier-le-meal-ermitage-rouge-2010-75cl-www.odyssee-vins.com-ov103956.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:48:21,442 [ERROR] Error processing candidate https://www.odyssee-vins.com/media/catalog/product/cache/2/image/9df78eab33525d08d6e5fb8d27136e95/1/_/bb887810c3f66420cd5847154a7040ed/chapoutier-le-meal-ermitage-rouge-2010-75cl-www.odyssee-vins.com-ov103956.jpg for SKU BH14/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:48:21,532 [INFO] HTTP Request: GET https://jebdunnuck.com/wp-content/uploads/wine-images/160/meal-ermitage-rge+NV.jpg "HTTP/1.1 404 Not Found"
+2026-06-06 23:48:21,533 [ERROR] Image download failed for https://jebdunnuck.com/wp-content/uploads/wine-images/160/meal-ermitage-rge+NV.jpg: Client error '404 Not Found' for url 'https://jebdunnuck.com/wp-content/uploads/wine-images/160/meal-ermitage-rge+NV.jpg'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-06-06 23:48:21,533 [ERROR] Error processing candidate https://jebdunnuck.com/wp-content/uploads/wine-images/160/meal-ermitage-rge+NV.jpg for SKU BH14/2022: Failed to download image: https://jebdunnuck.com/wp-content/uploads/wine-images/160/meal-ermitage-rge+NV.jpg
+2026-06-06 23:48:22,117 [INFO] HTTP Request: GET https://laywheelertrading-21644.kxcdn.com/wp-content/uploads/2024/04/10396212_square-600x600.png "HTTP/1.1 200 OK"
+2026-06-06 23:48:22,126 [ERROR] Error processing candidate https://laywheelertrading-21644.kxcdn.com/wp-content/uploads/2024/04/10396212_square-600x600.png for SKU BH14/2022: Bottle is cropped — cap or base not fully visible
+2026-06-06 23:48:23,650 [INFO] HTTP Request: GET https://www.saq.com/media/catalog/product/1/5/15063944-1_1671656451.png?width=367&height=550&canvas=367,550&quality=80&fit=bounds "HTTP/1.1 200 OK"
+2026-06-06 23:48:23,750 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:48:27,397 [ERROR] Error processing candidate https://www.saq.com/media/catalog/product/1/5/15063944-1_1671656451.png?width=367&height=550&canvas=367,550&quality=80&fit=bounds for SKU BH14/2022: Image does not contain a wine bottle with a label
+2026-06-06 23:48:27,740 [INFO] HTTP Request: GET https://wine-family.com/cdn/shop/files/f38d6091-f581-4c0d-ac53-3c9d696f9427_1200x.jpg?v=1750828976 "HTTP/1.1 200 OK"
+2026-06-06 23:48:27,790 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:48:31,380 [INFO] AFC is enabled with max remote calls: 10.

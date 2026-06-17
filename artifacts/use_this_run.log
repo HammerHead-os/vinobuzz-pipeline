@@ -1,0 +1,827 @@
+/home/gitanjali/.pyenv/versions/3.10.14/lib/python3.10/site-packages/google/api_core/_python_version_support.py:273: FutureWarning: You are using a Python version (3.10.14) which Google will stop supporting in new releases of google.api_core once it reaches its end of life (2026-10-04). Please upgrade to the latest Python version, or at least Python 3.11, to continue receiving updates for google.api_core past that date.
+  warnings.warn(message, FutureWarning)
+/home/gitanjali/.pyenv/versions/3.10.14/lib/python3.10/site-packages/google/api_core/_python_version_support.py:273: FutureWarning: You are using a Python version (3.10.14) which Google will stop supporting in new releases of google.cloud.vision_v1 once it reaches its end of life (2026-10-04). Please upgrade to the latest Python version, or at least Python 3.11, to continue receiving updates for google.cloud.vision_v1 past that date.
+  warnings.warn(message, FutureWarning)
+2026-06-03 19:34:39,599 [INFO] Loading pricelist from use_this.xlsx
+2026-06-03 19:34:39,674 [INFO] [TIMING] Load Excel file: 0.08s
+2026-06-03 19:34:39,674 [INFO] Found 87 wines to process
+2026-06-03 19:34:39,675 [INFO] Initializing pipeline...
+2026-06-03 19:34:39,794 [INFO] The user provided project/location will take precedence over the Vertex AI API key from the environment variable.
+2026-06-03 19:34:39,956 [INFO] The user provided project/location will take precedence over the Vertex AI API key from the environment variable.
+2026-06-03 19:34:40,095 [INFO] [TIMING] Initialize pipeline: 0.42s
+2026-06-03 19:34:40,100 [INFO] [TIMING] Create 87 SKU objects: 0.00s
+2026-06-03 19:34:40,100 [INFO] Processing wines through pipeline...
+2026-06-03 19:34:40,101 [INFO] Deduping enabled: 87 line items → 65 unique searches
+2026-06-03 19:34:40,104 [INFO] [1/65] Searching (rep) BH08/2021: Domaine de Bila-Haut V.I.T Cotes du Roussillon Latour de France AOP
+2026-06-03 19:34:43,420 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Domaine+Languedoc-Roussillon+Domaine+de+Bila-Haut+V.I.T+Cotes+du+Roussillon+Latour+de+France+AOP+Grenache+2021+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:34:43,422 [INFO] SerpApi returned 11 candidates for SKU BH08/2021
+2026-06-03 19:34:45,223 [INFO] HTTP Request: GET https://www.saq.com/media/catalog/product/1/5/15371980-1_1730227690.png?optimize=high&fit=bounds&height=&width=&format=jpeg "HTTP/1.1 200 OK"
+2026-06-03 19:34:45,533 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:35:03,733 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:35:08,741 [INFO] HTTP Request: GET https://www.saq.com/media/catalog/product/1/5/15371980-1_1730227690.png?optimize=high&fit=bounds&height=&width=&format=jpeg "HTTP/1.1 200 OK"
+2026-06-03 19:35:08,799 [INFO] [2/65] Searching (rep) BH09/2021: Domaine de Bila-Haut R.I Cotes du Roussillon Villages Lesquerde AOP
+2026-06-03 19:35:10,294 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Domaine+Languedoc-Roussillon+Domaine+de+Bila-Haut+R.I+Cotes+du+Roussillon+Villages+Lesquerde+AOP+100%25+Syrah+2021+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:35:12,645 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Domaine+Languedoc-Roussillon+Domaine+de+Bila-Haut+R.I+Cotes+du+Roussillon+Villages+Lesquerde+AOP+100%25+Syrah+2021+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=1&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:35:12,648 [INFO] SerpApi returned 2 candidates for SKU BH09/2021
+2026-06-03 19:35:13,666 [INFO] HTTP Request: GET https://www.saq.com/media/catalog/product/1/5/15371971-1_1730227689.png?optimize=high&fit=bounds&height=&width=&format=jpeg "HTTP/1.1 200 OK"
+2026-06-03 19:35:13,778 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:35:18,603 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:35:24,203 [INFO] HTTP Request: GET https://www.saq.com/media/catalog/product/1/5/15371971-1_1730227689.png?optimize=high&fit=bounds&height=&width=&format=jpeg "HTTP/1.1 200 OK"
+2026-06-03 19:35:24,265 [INFO] [3/65] Searching (rep) BH10/2021: Domaine de Bila-Haut Chrysopee Blanc, Collioure AOP
+2026-06-03 19:35:25,155 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Domaine+Languedoc-Roussillon+Domaine+de+Bila-Haut+Chrysopee+Blanc%2C+Collioure+AOP+90%25+Grenache+gris%2C10%25+Grenache+Blanc+2021+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:35:28,955 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Domaine+Languedoc-Roussillon+Domaine+de+Bila-Haut+Chrysopee+Blanc%2C+Collioure+AOP+90%25+Grenache+gris%2C10%25+Grenache+Blanc+2021+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=1&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:35:28,958 [INFO] SerpApi returned 4 candidates for SKU BH10/2021
+2026-06-03 19:35:30,882 [INFO] HTTP Request: GET https://www.idealwine.com/media/15/44/dfa90be6d06b312c4b606285872f.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:35:32,021 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:35:34,796 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:35:40,153 [INFO] HTTP Request: GET https://www.idealwine.com/media/73/17/4c49bd6a06f1ecdc4cbf25d71837.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:35:41,295 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:35:47,234 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:35:51,023 [INFO] HTTP Request: GET https://imgv2-2-f.scribdassets.com/img/document/523150157/original/4550cda1e1/1?v=1 "HTTP/1.1 200 OK"
+2026-06-03 19:35:51,096 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:35:53,909 [ERROR] Error processing candidate https://imgv2-2-f.scribdassets.com/img/document/523150157/original/4550cda1e1/1?v=1 for SKU BH10/2021: Image does not contain a wine bottle with a label
+2026-06-03 19:35:54,192 [INFO] HTTP Request: GET https://imgv2-1-f.scribdassets.com/img/document/452886109/original/9737dc21be/1?v=1 "HTTP/1.1 200 OK"
+2026-06-03 19:35:54,236 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:35:57,400 [ERROR] Error processing candidate https://imgv2-1-f.scribdassets.com/img/document/452886109/original/9737dc21be/1?v=1 for SKU BH10/2021: Image does not contain a wine bottle with a label
+2026-06-03 19:35:57,494 [INFO] HTTP Request: GET https://www.idealwine.com/media/73/17/4c49bd6a06f1ecdc4cbf25d71837.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:35:57,522 [INFO] [4/65] Searching (rep) BH11/2021: M. Chapoutier L ermite Rouge Ermitage AOP
+2026-06-03 19:36:01,523 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=M.+Languedoc-Roussillon+M.+Chapoutier+L+ermite+Rouge+Ermitage+AOP+100%25+Syrah+2021+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:36:01,535 [INFO] SerpApi returned 99 candidates for SKU BH11/2021
+2026-06-03 19:36:03,535 [INFO] HTTP Request: GET https://www.idealwine.com/media/00-migrated-variant-photos/B2761712_102.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:36:04,210 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:36:09,035 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:36:13,380 [INFO] HTTP Request: GET https://www.idealwine.com/media/00-migrated-variant-photos/B2761712_102-1.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:36:13,499 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:36:19,373 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:36:25,614 [INFO] HTTP Request: GET https://www.idealwine.com/media/00-migrated-variant-photos/B2390704_5121-1.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:36:26,346 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:36:32,330 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:36:36,330 [INFO] HTTP Request: GET https://cdn.shopify.com/s/files/1/0650/4356/2708/files/marius-rouge-michel-chapoutier-202420260518172951_1d995a07-2da4-4873-a494-39f25758e064.png?v=1779879190 "HTTP/1.1 200 OK"
+2026-06-03 19:36:37,051 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:36:43,958 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:36:48,145 [INFO] HTTP Request: GET https://cdn.shopify.com/s/files/1/0650/4356/2708/files/marius-rouge-michel-chapoutier-202420260518172951_1d995a07-2da4-4873-a494-39f25758e064.png?v=1779879190 "HTTP/1.1 200 OK"
+2026-06-03 19:36:48,404 [INFO] [5/65] Searching (rep) BH12/2021: M. Chapoutier L ermite Blanc Ermitage AOP
+2026-06-03 19:36:49,533 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=M.+Languedoc-Roussillon+M.+Chapoutier+L+ermite+Blanc+Ermitage+AOP+Marsanne+2021+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:36:49,539 [INFO] SerpApi returned 100 candidates for SKU BH12/2021
+2026-06-03 19:36:49,652 [INFO] HTTP Request: GET https://www.idealwine.com/media/00-migrated-variant-photos/B2761712_102.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:36:49,790 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:36:54,708 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:36:58,400 [INFO] HTTP Request: GET https://www.idealwine.com/media/00-migrated-variant-photos/B2761712_102-1.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:36:58,527 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:37:02,783 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:37:07,893 [INFO] HTTP Request: GET https://www.vininova.pl/media/43/64/de/1779887733/95064d92991f56ea9d5b18952134fc080af07034_la_bernardine_b_nm.png?1779887733 "HTTP/1.1 200 OK"
+2026-06-03 19:37:16,248 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:37:19,633 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:37:26,398 [INFO] HTTP Request: GET https://www.vininova.pl/media/43/64/de/1779887733/95064d92991f56ea9d5b18952134fc080af07034_la_bernardine_b_nm.png?1779887733 "HTTP/1.1 200 OK"
+2026-06-03 19:37:38,581 [INFO] [6/65] Searching (rep) BH13/2021: M. Chapoutier Le Pavillon Ermitage AOP
+2026-06-03 19:37:40,296 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=M.+Languedoc-Roussillon+M.+Chapoutier+Le+Pavillon+Ermitage+AOP+Syrah+2021+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:37:40,309 [INFO] SerpApi returned 100 candidates for SKU BH13/2021
+2026-06-03 19:37:41,327 [INFO] HTTP Request: GET https://www.mchapoutier.com.au/wp-content/uploads/2023/04/M.-CHAPOUTIER-Le-Pavillon-NM-AOP.png "HTTP/1.1 200 OK"
+2026-06-03 19:37:41,717 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:37:48,007 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:37:53,340 [INFO] HTTP Request: GET https://www.mchapoutier.com.au/wp-content/uploads/2023/04/M.-CHAPOUTIER-Le-Pavillon-NM-AOP.png "HTTP/1.1 200 OK"
+2026-06-03 19:37:54,645 [INFO] [7/65] Searching (rep) BH14/2021: M. Chapoutier Le Meal Rouge Ermitage AOP
+2026-06-03 19:37:57,805 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=M.+Languedoc-Roussillon+M.+Chapoutier+Le+Meal+Rouge+Ermitage+AOP+100%25+Syrah+2021+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:37:57,821 [INFO] SerpApi returned 100 candidates for SKU BH14/2021
+2026-06-03 19:37:59,779 [INFO] HTTP Request: GET https://www.idealwine.com/media/00-migrated-variant-photos/B2761712_109-1.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:38:00,515 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:38:05,522 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:38:10,940 [INFO] HTTP Request: GET https://www.idealwine.com/media/00-migrated-variant-photos/B2761712_109.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:38:11,560 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:38:16,089 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:38:21,069 [INFO] HTTP Request: GET https://www.idealwine.com/media/00-migrated-variant-photos/B2761712_102.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:38:21,183 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:38:26,507 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:38:29,932 [INFO] HTTP Request: GET https://www.idealwine.com/media/00-migrated-variant-photos/B2761712_102-1.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:38:30,048 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:38:33,757 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:38:39,182 [INFO] HTTP Request: GET https://thewineknitter.com/uploads/3/4/7/9/34791843/20171115-140624_orig.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:38:39,818 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:38:42,552 [ERROR] Error processing candidate https://thewineknitter.com/uploads/3/4/7/9/34791843/20171115-140624_orig.jpg for SKU BH14/2021: Image does not contain a wine bottle with a label
+2026-06-03 19:38:42,742 [INFO] HTTP Request: GET https://www.idealwine.com/media/00-migrated-variant-photos/B2761712_109.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:38:42,777 [INFO] [8/65] Searching (rep) BH15/2021: M. Chapoutier Le Meal Blanc  Ermitage AOP
+2026-06-03 19:38:44,221 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=M.+Languedoc-Roussillon+M.+Chapoutier+Le+Meal+Blanc++Ermitage+AOP+Marsanne+2021+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:38:44,227 [INFO] SerpApi returned 98 candidates for SKU BH15/2021
+2026-06-03 19:38:44,333 [INFO] HTTP Request: GET https://www.idealwine.com/media/00-migrated-variant-photos/B2761712_109.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:38:44,477 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:38:50,166 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:38:54,460 [INFO] HTTP Request: GET https://www.idealwine.com/media/00-migrated-variant-photos/B2761712_109-1.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:38:54,676 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:38:58,676 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:39:04,633 [INFO] HTTP Request: GET https://www.idealwine.com/media/00-migrated-variant-photos/B2761712_109-2.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:39:05,391 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:39:12,894 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:39:16,545 [INFO] HTTP Request: GET https://www.idealwine.com/media/00-migrated-variant-photos/B2761712_102.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:39:16,771 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:39:21,576 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:39:26,538 [INFO] HTTP Request: GET https://farehamwinecellar.co.uk/wp-content/uploads/2024/07/Baron-de-Sigognac-1992-Vintage-Armagnac-70cl-2-1200x2133.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:39:27,112 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:39:31,192 [ERROR] Error processing candidate https://farehamwinecellar.co.uk/wp-content/uploads/2024/07/Baron-de-Sigognac-1992-Vintage-Armagnac-70cl-2-1200x2133.jpg for SKU BH15/2021: Image does not contain a wine bottle with a label
+2026-06-03 19:39:31,288 [INFO] HTTP Request: GET https://www.idealwine.com/media/00-migrated-variant-photos/B2761712_109-1.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:39:31,303 [INFO] [9/65] Searching (rep) BH17/2021: M. Chapoutier Le Clos Saint-Joseph AOP
+2026-06-03 19:39:35,103 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=M.+Languedoc-Roussillon+M.+Chapoutier+Le+Clos+Saint-Joseph+AOP+100%25+Syrah+2021+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:39:35,122 [INFO] SerpApi returned 100 candidates for SKU BH17/2021
+2026-06-03 19:39:37,044 [INFO] HTTP Request: GET https://www.idealwine.com/media/a6/6d/1926cb9255b279ba09fb0700a599.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:39:37,846 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:39:41,404 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:39:46,945 [INFO] HTTP Request: GET https://www.idealwine.com/media/a3/2d/2d80f52034c3b3def52dd177c6bf.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:39:47,666 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:39:51,990 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:39:59,271 [INFO] HTTP Request: GET https://a.serve.cfweb.uk/cambridgewine/web/full/966736.webp "HTTP/1.1 200 OK"
+2026-06-03 19:39:59,511 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:40:02,768 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:40:06,941 [INFO] HTTP Request: GET https://a.serve.cfweb.uk/cambridgewine/web/full/966736.webp "HTTP/1.1 200 OK"
+2026-06-03 19:40:07,169 [INFO] [10/65] Searching (rep) BH21/2021: M. Chapoutier Les Granits Blanc  Saint-Joseph AOP
+2026-06-03 19:40:08,865 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=M.+Languedoc-Roussillon+M.+Chapoutier+Les+Granits+Blanc++Saint-Joseph+AOP+Marsanne+2021+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:40:08,875 [INFO] SerpApi returned 100 candidates for SKU BH21/2021
+2026-06-03 19:40:09,445 [INFO] HTTP Request: GET https://www.koelner-weinkeller.de/media/02/d8/2d/1681620543/2019-Saint%20Joseph%20Granits-Chapoutiere-21295-19_x.png?ts=1681620543 "HTTP/1.1 200 OK"
+2026-06-03 19:40:09,556 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:40:12,494 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:40:16,041 [INFO] HTTP Request: GET https://www.koelner-weinkeller.de/media/02/d8/2d/1681620543/2019-Saint%20Joseph%20Granits-Chapoutiere-21295-19_x.png?ts=1681620543 "HTTP/1.1 200 OK"
+2026-06-03 19:40:16,095 [INFO] [11/65] Searching (rep) BH23/2021: Domaine de Bila-Haut Chrysopee Rouge, Collioure AOP
+2026-06-03 19:40:20,069 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Domaine+Languedoc-Roussillon+Domaine+de+Bila-Haut+Chrysopee+Rouge%2C+Collioure+AOP+90%25+Grenache+Noir%2C+10%25+Mourv%C3%A8dre+2021+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:40:21,301 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Domaine+Languedoc-Roussillon+Domaine+de+Bila-Haut+Chrysopee+Rouge%2C+Collioure+AOP+90%25+Grenache+Noir%2C+10%25+Mourv%C3%A8dre+2021+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=1&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:40:21,304 [INFO] SerpApi returned 1 candidates for SKU BH23/2021
+2026-06-03 19:40:21,400 [INFO] HTTP Request: GET https://imgv2-1-f.scribdassets.com/img/document/452886109/original/9737dc21be/1?v=1 "HTTP/1.1 200 OK"
+2026-06-03 19:40:21,445 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:40:24,590 [ERROR] Error processing candidate https://imgv2-1-f.scribdassets.com/img/document/452886109/original/9737dc21be/1?v=1 for SKU BH23/2021: Image does not contain a wine bottle with a label
+2026-06-03 19:40:24,590 [WARNING] No image found for rep BH23/2021: Domaine de Bila-Haut Chrysopee Rouge, Collioure AOP
+2026-06-03 19:40:24,591 [INFO] [12/65] Searching (rep) BM14/2008: Chateau Batailley 5th Grand Cru Classe
+2026-06-03 19:40:25,701 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Chateau+Chateau+Batailley+5th+Grand+Cru+Classe+2008+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:40:25,719 [INFO] SerpApi returned 100 candidates for SKU BM14/2008
+2026-06-03 19:40:26,945 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/3440ec83-8f1d-4a01-8d4c-2896a29ff782.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:40:27,010 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:40:30,075 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:40:34,970 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/7e15bc35-e43b-4af0-b12d-a4d78b6b9940.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:40:35,051 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:40:38,383 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:40:43,520 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/7de0164a-eeea-4d15-941f-e9299346663a.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:40:43,617 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:40:51,589 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:40:56,012 [INFO] HTTP Request: GET https://image.invaluable.com/housePhotos/martelmaidesauctions/39/805539/H1117-L425045088_original.JPG "HTTP/1.1 403 Forbidden"
+2026-06-03 19:40:56,014 [ERROR] Image download failed for https://image.invaluable.com/housePhotos/martelmaidesauctions/39/805539/H1117-L425045088_original.JPG: Client error '403 Forbidden' for url 'https://image.invaluable.com/housePhotos/martelmaidesauctions/39/805539/H1117-L425045088_original.JPG'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-03 19:40:56,014 [ERROR] Error processing candidate https://image.invaluable.com/housePhotos/martelmaidesauctions/39/805539/H1117-L425045088_original.JPG for SKU BM14/2008: Failed to download image: https://image.invaluable.com/housePhotos/martelmaidesauctions/39/805539/H1117-L425045088_original.JPG
+2026-06-03 19:40:56,390 [INFO] HTTP Request: GET https://www.sodivin.com/21995-product_zoom/chateau-haut-batailley-2008.jpg "HTTP/1.1 403 Forbidden"
+2026-06-03 19:40:56,398 [ERROR] Image download failed for https://www.sodivin.com/21995-product_zoom/chateau-haut-batailley-2008.jpg: Client error '403 Forbidden' for url 'https://www.sodivin.com/21995-product_zoom/chateau-haut-batailley-2008.jpg'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-03 19:40:56,399 [ERROR] Error processing candidate https://www.sodivin.com/21995-product_zoom/chateau-haut-batailley-2008.jpg for SKU BM14/2008: Failed to download image: https://www.sodivin.com/21995-product_zoom/chateau-haut-batailley-2008.jpg
+2026-06-03 19:40:56,541 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/7de0164a-eeea-4d15-941f-e9299346663a.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:40:56,556 [INFO] [13/65] Searching (rep) CY05/2021: Craggy Range Sophia
+2026-06-03 19:40:58,777 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Craggy+Craggy+Range+Sophia+2021+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:40:58,787 [INFO] SerpApi returned 100 candidates for SKU CY05/2021
+2026-06-03 19:40:59,905 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/fcc2614c-5c44-4f39-83da-4b23cfb677ef.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:40:59,996 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:41:09,859 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:41:16,483 [INFO] HTTP Request: GET https://cdn.shopify.com/s/files/1/0697/2712/5752/files/RC_Fallback_v2_d13461cb-a4f8-4bcd-90a8-3cdd554892ed.png?v=1737990084 "HTTP/1.1 200 OK"
+2026-06-03 19:41:16,632 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:41:20,281 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:41:25,112 [INFO] HTTP Request: GET https://cdn.shopify.com/s/files/1/0697/2712/5752/files/RC_Fallback_v2_d13461cb-a4f8-4bcd-90a8-3cdd554892ed.png?v=1737990084 "HTTP/1.1 200 OK"
+2026-06-03 19:41:25,174 [INFO] [14/65] Searching (rep) CY06/2021: Craggy Range Aroha
+2026-06-03 19:41:31,327 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Craggy+Craggy+Range+Aroha+2021+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:41:31,337 [INFO] SerpApi returned 100 candidates for SKU CY06/2021
+2026-06-03 19:41:32,453 [INFO] HTTP Request: GET https://kenastonwine.com/cdn/shop/files/CraggyRangeArohaTeMuna.jpg?v=1752511696 "HTTP/1.1 200 OK"
+2026-06-03 19:41:32,562 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:41:36,770 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:41:40,146 [INFO] HTTP Request: GET https://kenastonwine.com/cdn/shop/files/CraggyRangeArohaTeMuna.jpg?v=1752511696 "HTTP/1.1 200 OK"
+2026-06-03 19:41:40,166 [INFO] [15/65] Searching (rep) CY19/2016: Craggy Range Sophia 1.5L
+2026-06-03 19:41:41,990 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Craggy+Craggy+Range+Sophia+1.5L+2016+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:41:42,002 [INFO] SerpApi returned 100 candidates for SKU CY19/2016
+2026-06-03 19:41:42,947 [INFO] HTTP Request: GET https://www.icheers.tw/fileserver/Upload/DomaineData/WR001123/WI00112301/VT2015/VL00750/5bfb907d-c9a3-4c60-9b3f-e81f83a0ac8d.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:41:43,250 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:41:48,750 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:41:52,978 [INFO] HTTP Request: GET https://www.icheers.tw/fileserver/Upload/DomaineData/WR001123/WI00112301/VT2015/VL00750/5bfb907d-c9a3-4c60-9b3f-e81f83a0ac8d.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:41:53,018 [INFO] [16/65] Searching (rep) DA04/2004: Bodegas Roda 'Roda I' Reserva
+2026-06-03 19:41:54,280 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Bodegas+Bodegas+Roda+%27Roda+I%27+Reserva+2004+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:41:54,292 [INFO] SerpApi returned 100 candidates for SKU DA04/2004
+2026-06-03 19:41:54,997 [INFO] HTTP Request: GET https://vinonueva.com/cdn/shop/files/PhotoRoom_20230309_152406_88c58cfc-8fef-41e7-93da-88504ed0b321_1800x.jpg?v=1767640334 "HTTP/1.1 200 OK"
+2026-06-03 19:41:55,177 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:41:59,786 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:42:05,141 [INFO] HTTP Request: GET https://vinonueva.com/cdn/shop/files/PhotoRoom_20230309_152406_88c58cfc-8fef-41e7-93da-88504ed0b321_1800x.jpg?v=1767640334 "HTTP/1.1 200 OK"
+2026-06-03 19:42:05,162 [INFO] [17/65] Searching (rep) DA05/2016: Bodegas Roda Cirsion
+2026-06-03 19:42:06,875 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Bodegas+Bodegas+Roda+Cirsion+2016+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:42:06,889 [INFO] SerpApi returned 100 candidates for SKU DA05/2016
+2026-06-03 19:42:08,003 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/76555424-cf18-46d0-9362-0aedd6b776d1.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:42:08,062 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:42:09,563 [ERROR] Error processing candidate https://cdn.ct-static.com/labels/76555424-cf18-46d0-9362-0aedd6b776d1.jpg for SKU DA05/2016: Image does not contain a wine bottle with a label
+2026-06-03 19:42:10,757 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/b8a3ea2f-6aa8-47c1-ba68-1eb0ef248be3.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:42:10,821 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:42:15,793 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:42:20,514 [INFO] HTTP Request: GET https://www.wine-searcher.com/images/labels/79/30/11637930.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:42:20,704 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:42:24,034 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:42:29,487 [INFO] HTTP Request: GET https://tworockwines.com/wp-content/uploads/2025/02/IMG_7843-2.webp "HTTP/1.1 200 OK"
+2026-06-03 19:42:29,934 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:42:36,424 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:42:39,918 [INFO] HTTP Request: GET https://tworockwines.com/wp-content/uploads/2025/02/IMG_7843-2.webp "HTTP/1.1 200 OK"
+2026-06-03 19:42:39,924 [INFO] [18/65] Searching (rep) DA09/2021: Bodegas Roda Roda I Blanco Rioja DOCa
+2026-06-03 19:42:42,719 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Bodegas+Bodegas+Roda+Roda+I+Blanco+Rioja+DOCa+2021+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:42:42,727 [INFO] SerpApi returned 100 candidates for SKU DA09/2021
+2026-06-03 19:42:43,738 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/fd8ad857-071c-4af4-9560-3fd72b524e61.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:42:43,818 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:42:46,299 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:42:50,820 [INFO] HTTP Request: GET https://www.lavinia.com/media/catalog/product/cache/b5e1050ecb922e9c3e39c68023644bd0/r/o/roda-i-blanco-2019_1.jpg "HTTP/1.1 403 Forbidden"
+2026-06-03 19:42:50,823 [ERROR] Image download failed for https://www.lavinia.com/media/catalog/product/cache/b5e1050ecb922e9c3e39c68023644bd0/r/o/roda-i-blanco-2019_1.jpg: Client error '403 Forbidden' for url 'https://www.lavinia.com/media/catalog/product/cache/b5e1050ecb922e9c3e39c68023644bd0/r/o/roda-i-blanco-2019_1.jpg'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-03 19:42:50,823 [ERROR] Error processing candidate https://www.lavinia.com/media/catalog/product/cache/b5e1050ecb922e9c3e39c68023644bd0/r/o/roda-i-blanco-2019_1.jpg for SKU DA09/2021: Failed to download image: https://www.lavinia.com/media/catalog/product/cache/b5e1050ecb922e9c3e39c68023644bd0/r/o/roda-i-blanco-2019_1.jpg
+2026-06-03 19:42:51,773 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/2af4557b-9af0-48c2-9a9f-d2c3c4a37d78.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:42:51,847 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:42:53,340 [ERROR] Error processing candidate https://cdn.ct-static.com/labels/2af4557b-9af0-48c2-9a9f-d2c3c4a37d78.jpg for SKU DA09/2021: Image does not contain a wine bottle with a label
+2026-06-03 19:42:53,564 [INFO] HTTP Request: GET https://www.wine-searcher.com/images/labels/01/71/11630171.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:42:54,774 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:42:59,695 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:43:04,543 [INFO] HTTP Request: GET https://www.wine-searcher.com/images/labels/79/30/11637930.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:43:04,704 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:43:08,221 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:43:12,247 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/fd8ad857-071c-4af4-9560-3fd72b524e61.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:43:12,276 [INFO] [19/65] Searching (rep) DR01/NV: Champagne Drappier Carte d Or Brut
+2026-06-03 19:43:15,893 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Champagne+Champagne+Drappier+Carte+d+Or+Brut+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:43:15,900 [INFO] SerpApi returned 100 candidates for SKU DR01/NV
+2026-06-03 19:43:16,830 [INFO] HTTP Request: GET https://wineonsale.com/cdn/shop/products/DrappierCarted_OrBrutChampagne_800x.jpg?v=1702751023 "HTTP/1.1 200 OK"
+2026-06-03 19:43:16,877 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:43:19,886 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:43:22,962 [INFO] HTTP Request: GET https://wineonsale.com/cdn/shop/products/DrappierCarted_OrBrutChampagne_800x.jpg?v=1702751023 "HTTP/1.1 200 OK"
+2026-06-03 19:43:22,972 [INFO] [20/65] Searching (rep) DR02/NV: Champagne Drappier Brut Nature Zero Dosage
+2026-06-03 19:43:24,961 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Champagne+Champagne+Drappier+Brut+Nature+Zero+Dosage+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:43:24,968 [INFO] SerpApi returned 99 candidates for SKU DR02/NV
+2026-06-03 19:43:25,377 [INFO] HTTP Request: GET https://www.blackwellswines.com/cdn/shop/files/Drappier_Brut_Nature_San_Soufre_Champagne_Zero_Dosage_Zero_Sulfur_2048x.jpg?v=1758657830 "HTTP/1.1 200 OK"
+2026-06-03 19:43:25,509 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:43:30,982 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:43:34,768 [INFO] HTTP Request: GET https://www.blackwellswines.com/cdn/shop/files/Drappier_Brut_Nature_San_Soufre_Champagne_Zero_Dosage_Zero_Sulfur_2048x.jpg?v=1758657830 "HTTP/1.1 200 OK"
+2026-06-03 19:43:34,796 [INFO] [21/65] Searching (rep) DR05/NV: Champagne Drappier Rose de Saignee Brut
+2026-06-03 19:43:36,679 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Champagne+Champagne+Drappier+Rose+de+Saignee+Brut+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:43:36,689 [INFO] SerpApi returned 100 candidates for SKU DR05/NV
+2026-06-03 19:43:37,395 [INFO] HTTP Request: GET https://www.liquorstore-online.com/product_images/p_205376.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:43:37,851 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:43:41,410 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:43:45,052 [INFO] HTTP Request: GET https://www.liquorstore-online.com/product_images/p_205376.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:43:45,437 [INFO] [22/65] Searching (rep) DR06/NV: Champagne Drappier Blanc de Blancs Brut
+2026-06-03 19:43:46,969 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Champagne+Champagne+Drappier+Blanc+de+Blancs+Brut+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:43:46,976 [INFO] SerpApi returned 100 candidates for SKU DR06/NV
+2026-06-03 19:43:48,270 [INFO] HTTP Request: GET https://assets.liquidcommerce.co/catalog/images/3381149.png "HTTP/1.1 200 OK"
+2026-06-03 19:43:48,774 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:43:54,428 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:43:57,479 [INFO] HTTP Request: GET https://assets.liquidcommerce.co/catalog/images/3381149.png "HTTP/1.1 200 OK"
+2026-06-03 19:43:57,520 [INFO] [23/65] Searching (rep) DR07/NV: Champagne Drappier Cuvée Charles de Gaulle Brut
+2026-06-03 19:44:00,964 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Champagne+Champagne+Drappier+Cuv%C3%A9e+Charles+de+Gaulle+Brut+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:44:00,970 [INFO] SerpApi returned 81 candidates for SKU DR07/NV
+2026-06-03 19:44:01,579 [INFO] HTTP Request: GET https://www.blackwellswines.com/products/drappier-brut-champagne-charles-de-gaulle?srsltid=AfmBOoobDH6S9yN5_2Yensw8MtOke-S08M3tFlNEeTENOlJKmDVcZDKH "HTTP/1.1 200 OK"
+2026-06-03 19:44:01,600 [ERROR] Error processing candidate https://www.blackwellswines.com/products/drappier-brut-champagne-charles-de-gaulle?srsltid=AfmBOoobDH6S9yN5_2Yensw8MtOke-S08M3tFlNEeTENOlJKmDVcZDKH for SKU DR07/NV: Failed to download image: https://www.blackwellswines.com/products/drappier-brut-champagne-charles-de-gaulle?srsltid=AfmBOoobDH6S9yN5_2Yensw8MtOke-S08M3tFlNEeTENOlJKmDVcZDKH
+2026-06-03 19:44:05,470 [INFO] HTTP Request: GET https://buywinenow.com/product/champagne-drappier-charles-de-gaulle-brut-nv/?srsltid=AfmBOorRoqe0TAb4CrjvQ2RYb1Uk1EjEBbOPCfoOeyDMLJCe6g9kRkcX "HTTP/1.1 200 OK"
+2026-06-03 19:44:05,476 [ERROR] Error processing candidate https://buywinenow.com/product/champagne-drappier-charles-de-gaulle-brut-nv/?srsltid=AfmBOorRoqe0TAb4CrjvQ2RYb1Uk1EjEBbOPCfoOeyDMLJCe6g9kRkcX for SKU DR07/NV: Failed to download image: https://buywinenow.com/product/champagne-drappier-charles-de-gaulle-brut-nv/?srsltid=AfmBOorRoqe0TAb4CrjvQ2RYb1Uk1EjEBbOPCfoOeyDMLJCe6g9kRkcX
+2026-06-03 19:44:06,083 [INFO] HTTP Request: GET https://www.cellartracker.com/wine.asp?iWine=2060797 "HTTP/1.1 403 Forbidden"
+2026-06-03 19:44:06,085 [ERROR] Image download failed for https://www.cellartracker.com/wine.asp?iWine=2060797: Client error '403 Forbidden' for url 'https://www.cellartracker.com/wine.asp?iWine=2060797'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-03 19:44:06,085 [ERROR] Error processing candidate https://www.cellartracker.com/wine.asp?iWine=2060797 for SKU DR07/NV: Failed to download image: https://www.cellartracker.com/wine.asp?iWine=2060797
+2026-06-03 19:44:07,100 [ERROR] Image download failed for https://www.champagne-drappier.com/sites/drappier/files/upload/Champagne%20Drappier%20Charles%20de%20Gaulle%20EN.pdf: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)
+2026-06-03 19:44:07,102 [ERROR] Error processing candidate https://www.champagne-drappier.com/sites/drappier/files/upload/Champagne%20Drappier%20Charles%20de%20Gaulle%20EN.pdf for SKU DR07/NV: Failed to download image: https://www.champagne-drappier.com/sites/drappier/files/upload/Champagne%20Drappier%20Charles%20de%20Gaulle%20EN.pdf
+2026-06-03 19:44:28,314 [ERROR] Image download failed for https://buywinenow.com/product/champagne-drappier-charles-de-gaulle-brut-nv/?srsltid=AfmBOoqnTIjaWfftaLf4AUi5oUQu7SDSAmYmciAq_Wip1WWFVIJaOO69: 
+2026-06-03 19:44:28,315 [ERROR] Error processing candidate https://buywinenow.com/product/champagne-drappier-charles-de-gaulle-brut-nv/?srsltid=AfmBOoqnTIjaWfftaLf4AUi5oUQu7SDSAmYmciAq_Wip1WWFVIJaOO69 for SKU DR07/NV: Failed to download image: https://buywinenow.com/product/champagne-drappier-charles-de-gaulle-brut-nv/?srsltid=AfmBOoqnTIjaWfftaLf4AUi5oUQu7SDSAmYmciAq_Wip1WWFVIJaOO69
+2026-06-03 19:44:28,316 [WARNING] No image found for rep DR07/NV: Champagne Drappier Cuvée Charles de Gaulle Brut
+2026-06-03 19:44:28,317 [INFO] [24/65] Searching (rep) DR08/NV: Champagne Drappier Quattuor Extra Brut
+2026-06-03 19:44:29,510 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Champagne+Champagne+Drappier+Quattuor+Extra+Brut+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:44:29,528 [INFO] SerpApi returned 100 candidates for SKU DR08/NV
+2026-06-03 19:44:30,677 [INFO] HTTP Request: GET https://www.idealwine.com/media/00-migrated-variant-photos/B2743724_43.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:44:31,116 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:44:36,342 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:44:42,453 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/34a27529-33de-4e8e-8d8f-81d943c622c5.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:44:42,538 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:44:47,328 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:44:56,009 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/1c97fc01-edee-4cc3-ae5c-51445f2f71ec.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:44:56,093 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:45:00,396 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:45:05,435 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/1c97fc01-edee-4cc3-ae5c-51445f2f71ec.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:45:05,481 [INFO] [25/65] Searching (rep) DR09/NV: Champagne Drappier Clarevallis
+2026-06-03 19:45:08,675 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Champagne+Champagne+Drappier+Clarevallis+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:45:08,758 [INFO] SerpApi returned 98 candidates for SKU DR09/NV
+2026-06-03 19:45:09,452 [INFO] HTTP Request: GET https://sagesociety.com/cdn/shop/products/NVDrappierChampagneClarevallis.jpg?v=1637097744&width=1024 "HTTP/1.1 200 OK"
+2026-06-03 19:45:09,544 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:45:21,540 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:45:29,709 [INFO] HTTP Request: GET http://shopsauergrapes.com/cdn/shop/files/D41BF3F1-F50E-4691-B54C-9A51D33AC975.jpg?v=1692552205 "HTTP/1.1 301 Moved Permanently"
+2026-06-03 19:45:30,574 [INFO] HTTP Request: GET https://shopsauergrapes.com/cdn/shop/files/D41BF3F1-F50E-4691-B54C-9A51D33AC975.jpg?v=1692552205 "HTTP/1.1 200 OK"
+2026-06-03 19:45:30,943 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:45:35,875 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:45:40,522 [INFO] HTTP Request: GET http://shopsauergrapes.com/cdn/shop/files/D41BF3F1-F50E-4691-B54C-9A51D33AC975.jpg?v=1692552205 "HTTP/1.1 301 Moved Permanently"
+2026-06-03 19:45:40,575 [INFO] HTTP Request: GET https://shopsauergrapes.com/cdn/shop/files/D41BF3F1-F50E-4691-B54C-9A51D33AC975.jpg?v=1692552205 "HTTP/1.1 200 OK"
+2026-06-03 19:45:40,660 [INFO] [26/65] Searching (rep) DR12/2012: Champagne Drappier Grande Sendree Millesime Brut
+2026-06-03 19:45:45,719 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Champagne+Champagne+Drappier+Grande+Sendree+Millesime+Brut+2012+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:45:45,725 [INFO] SerpApi returned 100 candidates for SKU DR12/2012
+2026-06-03 19:45:46,183 [INFO] HTTP Request: GET https://vinonueva.com/cdn/shop/files/Photoroom_096_20260102_162026_1800x.jpg?v=1767393905 "HTTP/1.1 200 OK"
+2026-06-03 19:45:46,337 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:45:52,084 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:45:56,892 [INFO] HTTP Request: GET https://vinonueva.com/cdn/shop/files/Photoroom_096_20260102_162026_1800x.jpg?v=1767393905 "HTTP/1.1 200 OK"
+2026-06-03 19:45:56,907 [INFO] [27/65] Searching (rep) DR15/NV: Champagne Drappier Coteaux Champenois Urville Rouge
+2026-06-03 19:45:58,752 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Champagne+Champagne+Drappier+Coteaux+Champenois+Urville+Rouge+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:45:58,760 [INFO] SerpApi returned 100 candidates for SKU DR15/NV
+2026-06-03 19:46:00,488 [INFO] HTTP Request: GET https://www.vinoseleccion.co.uk/media/catalog/product/d/r/drappier-coteaux-champenois-rouge_5.jpg "HTTP/1.1 403 Forbidden"
+2026-06-03 19:46:00,490 [ERROR] Image download failed for https://www.vinoseleccion.co.uk/media/catalog/product/d/r/drappier-coteaux-champenois-rouge_5.jpg: Client error '403 Forbidden' for url 'https://www.vinoseleccion.co.uk/media/catalog/product/d/r/drappier-coteaux-champenois-rouge_5.jpg'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-03 19:46:00,490 [ERROR] Error processing candidate https://www.vinoseleccion.co.uk/media/catalog/product/d/r/drappier-coteaux-champenois-rouge_5.jpg for SKU DR15/NV: Failed to download image: https://www.vinoseleccion.co.uk/media/catalog/product/d/r/drappier-coteaux-champenois-rouge_5.jpg
+2026-06-03 19:46:02,103 [INFO] HTTP Request: GET https://tienda.cvne.com/913-thickbox_default/drappier-urville-rouge-bottle-75cl.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:46:02,913 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:46:05,995 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:46:10,268 [INFO] HTTP Request: GET https://tienda.cvne.com/913-thickbox_default/drappier-urville-rouge-bottle-75cl.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:46:11,034 [INFO] [28/65] Searching (rep) DR16/NV: Champagne Drappier Carte d Or Brut 375ml
+2026-06-03 19:46:12,343 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Champagne+Champagne+Drappier+Carte+d+Or+Brut+375ml+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:46:12,350 [INFO] SerpApi returned 99 candidates for SKU DR16/NV
+2026-06-03 19:46:12,894 [INFO] HTTP Request: GET https://cdn11.bigcommerce.com/s-9hu30/images/stencil/2048x2048/products/1136/2781/drappier_carte_dor__39609.1574808234.jpg?c=2 "HTTP/1.1 200 OK"
+2026-06-03 19:46:12,933 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:46:16,848 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:46:20,932 [INFO] HTTP Request: GET https://cdn11.bigcommerce.com/s-9hu30/images/stencil/2048x2048/products/1136/2781/drappier_carte_dor__39609.1574808234.jpg?c=2 "HTTP/1.1 200 OK"
+2026-06-03 19:46:20,942 [INFO] [29/65] Searching (rep) DR17/NV: Champagne Drappier Carte d Or Brut 1.5L
+2026-06-03 19:46:23,607 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Champagne+Champagne+Drappier+Carte+d+Or+Brut+1.5L+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:46:23,619 [INFO] SerpApi returned 100 candidates for SKU DR17/NV
+2026-06-03 19:46:24,427 [INFO] HTTP Request: GET https://buywinenow.com/wp-content/uploads/2024/01/Champagne-Drappier-Carte-d-Or-Brut-1.5-NV.png "HTTP/1.1 200 OK"
+2026-06-03 19:46:24,530 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:46:29,957 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:46:34,861 [INFO] HTTP Request: GET https://buywinenow.com/wp-content/uploads/2024/01/Champagne-Drappier-Carte-d-Or-Brut-1.5-NV.png "HTTP/1.1 200 OK"
+2026-06-03 19:46:34,884 [INFO] [30/65] Searching (rep) DR20/NV: Champagne Drappier Brut Nature Trop M en Faut
+2026-06-03 19:46:36,727 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Champagne+Champagne+Drappier+Brut+Nature+Trop+M+en+Faut+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:46:36,733 [INFO] SerpApi returned 97 candidates for SKU DR20/NV
+2026-06-03 19:46:37,114 [INFO] HTTP Request: GET https://thechampagnecompany.com/media/catalog/product/cache/6bee3d6f61ce6264dc2c2bb40fe3d3f4/d/r/drappier_trop_m_en_faut_brut_nature_nv_champagne_75cl.jpg "HTTP/1.1 403 Forbidden"
+2026-06-03 19:46:37,115 [ERROR] Image download failed for https://thechampagnecompany.com/media/catalog/product/cache/6bee3d6f61ce6264dc2c2bb40fe3d3f4/d/r/drappier_trop_m_en_faut_brut_nature_nv_champagne_75cl.jpg: Client error '403 Forbidden' for url 'https://thechampagnecompany.com/media/catalog/product/cache/6bee3d6f61ce6264dc2c2bb40fe3d3f4/d/r/drappier_trop_m_en_faut_brut_nature_nv_champagne_75cl.jpg'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-03 19:46:37,115 [ERROR] Error processing candidate https://thechampagnecompany.com/media/catalog/product/cache/6bee3d6f61ce6264dc2c2bb40fe3d3f4/d/r/drappier_trop_m_en_faut_brut_nature_nv_champagne_75cl.jpg for SKU DR20/NV: Failed to download image: https://thechampagnecompany.com/media/catalog/product/cache/6bee3d6f61ce6264dc2c2bb40fe3d3f4/d/r/drappier_trop_m_en_faut_brut_nature_nv_champagne_75cl.jpg
+2026-06-03 19:46:38,559 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/0d494990-5b38-4615-a086-e17125035de3.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:46:38,714 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:46:43,064 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:46:47,254 [INFO] HTTP Request: GET https://thechampagnecompany.com/media/catalog/product/cache/6bee3d6f61ce6264dc2c2bb40fe3d3f4/d/r/drappier_trop_m_en_faut_75cl.jpg "HTTP/1.1 403 Forbidden"
+2026-06-03 19:46:47,256 [ERROR] Image download failed for https://thechampagnecompany.com/media/catalog/product/cache/6bee3d6f61ce6264dc2c2bb40fe3d3f4/d/r/drappier_trop_m_en_faut_75cl.jpg: Client error '403 Forbidden' for url 'https://thechampagnecompany.com/media/catalog/product/cache/6bee3d6f61ce6264dc2c2bb40fe3d3f4/d/r/drappier_trop_m_en_faut_75cl.jpg'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-03 19:46:47,256 [ERROR] Error processing candidate https://thechampagnecompany.com/media/catalog/product/cache/6bee3d6f61ce6264dc2c2bb40fe3d3f4/d/r/drappier_trop_m_en_faut_75cl.jpg for SKU DR20/NV: Failed to download image: https://thechampagnecompany.com/media/catalog/product/cache/6bee3d6f61ce6264dc2c2bb40fe3d3f4/d/r/drappier_trop_m_en_faut_75cl.jpg
+2026-06-03 19:46:47,356 [INFO] HTTP Request: GET https://thechampagnecompany.com/media/catalog/product/cache/6bee3d6f61ce6264dc2c2bb40fe3d3f4/d/r/drappier_brut_nature_sans_soufre_zero_dosage_champagne_nv_75cl.jpg "HTTP/1.1 403 Forbidden"
+2026-06-03 19:46:47,359 [ERROR] Image download failed for https://thechampagnecompany.com/media/catalog/product/cache/6bee3d6f61ce6264dc2c2bb40fe3d3f4/d/r/drappier_brut_nature_sans_soufre_zero_dosage_champagne_nv_75cl.jpg: Client error '403 Forbidden' for url 'https://thechampagnecompany.com/media/catalog/product/cache/6bee3d6f61ce6264dc2c2bb40fe3d3f4/d/r/drappier_brut_nature_sans_soufre_zero_dosage_champagne_nv_75cl.jpg'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-03 19:46:47,359 [ERROR] Error processing candidate https://thechampagnecompany.com/media/catalog/product/cache/6bee3d6f61ce6264dc2c2bb40fe3d3f4/d/r/drappier_brut_nature_sans_soufre_zero_dosage_champagne_nv_75cl.jpg for SKU DR20/NV: Failed to download image: https://thechampagnecompany.com/media/catalog/product/cache/6bee3d6f61ce6264dc2c2bb40fe3d3f4/d/r/drappier_brut_nature_sans_soufre_zero_dosage_champagne_nv_75cl.jpg
+2026-06-03 19:46:48,515 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/3039e1a3-56ca-40d1-91c1-6de8db5273f2.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:46:48,633 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:46:56,966 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:47:02,631 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/0d494990-5b38-4615-a086-e17125035de3.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:47:02,683 [INFO] [31/65] Searching (rep) DR21/NV: Champagne Drappier Coteaux Champenois Trop M en Faut
+2026-06-03 19:47:07,211 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Champagne+Champagne+Drappier+Coteaux+Champenois+Trop+M+en+Faut+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:47:07,480 [INFO] SerpApi returned 99 candidates for SKU DR21/NV
+2026-06-03 19:47:07,561 [INFO] HTTP Request: GET https://thechampagnecompany.com/media/catalog/product/cache/6bee3d6f61ce6264dc2c2bb40fe3d3f4/d/r/drappier_trop_m_en_faut_75cl.jpg "HTTP/1.1 403 Forbidden"
+2026-06-03 19:47:07,563 [ERROR] Image download failed for https://thechampagnecompany.com/media/catalog/product/cache/6bee3d6f61ce6264dc2c2bb40fe3d3f4/d/r/drappier_trop_m_en_faut_75cl.jpg: Client error '403 Forbidden' for url 'https://thechampagnecompany.com/media/catalog/product/cache/6bee3d6f61ce6264dc2c2bb40fe3d3f4/d/r/drappier_trop_m_en_faut_75cl.jpg'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-03 19:47:07,563 [ERROR] Error processing candidate https://thechampagnecompany.com/media/catalog/product/cache/6bee3d6f61ce6264dc2c2bb40fe3d3f4/d/r/drappier_trop_m_en_faut_75cl.jpg for SKU DR21/NV: Failed to download image: https://thechampagnecompany.com/media/catalog/product/cache/6bee3d6f61ce6264dc2c2bb40fe3d3f4/d/r/drappier_trop_m_en_faut_75cl.jpg
+2026-06-03 19:47:07,679 [INFO] HTTP Request: GET http://shopsauergrapes.com/cdn/shop/files/D0055171-D9CF-4A5C-B9A4-345F6F0341D5.jpg?v=1692552175 "HTTP/1.1 301 Moved Permanently"
+2026-06-03 19:47:08,051 [INFO] HTTP Request: GET https://shopsauergrapes.com/cdn/shop/files/D0055171-D9CF-4A5C-B9A4-345F6F0341D5.jpg?v=1692552175 "HTTP/1.1 200 OK"
+2026-06-03 19:47:08,457 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:47:12,785 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:47:17,655 [INFO] HTTP Request: GET http://shopsauergrapes.com/cdn/shop/files/D0055171-D9CF-4A5C-B9A4-345F6F0341D5.jpg?v=1692552175 "HTTP/1.1 301 Moved Permanently"
+2026-06-03 19:47:17,747 [INFO] HTTP Request: GET https://shopsauergrapes.com/cdn/shop/files/D0055171-D9CF-4A5C-B9A4-345F6F0341D5.jpg?v=1692552175 "HTTP/1.1 200 OK"
+2026-06-03 19:47:17,796 [INFO] [32/65] Searching (rep) DR27/NV: Champagne Drappier Coteaux Champenois Perpetuite Blanc de Pinot Noir
+2026-06-03 19:47:19,108 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Champagne+Champagne+Drappier+Coteaux+Champenois+Perpetuite+Blanc+de+Pinot+Noir+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:47:19,182 [INFO] SerpApi returned 56 candidates for SKU DR27/NV
+2026-06-03 19:47:19,337 [INFO] HTTP Request: GET https://thechampagnecompany.com/media/catalog/product/cache/6bee3d6f61ce6264dc2c2bb40fe3d3f4/d/r/drappier_p_rpetuit_coteaux_champenois_75cl.jpg "HTTP/1.1 403 Forbidden"
+2026-06-03 19:47:19,338 [ERROR] Image download failed for https://thechampagnecompany.com/media/catalog/product/cache/6bee3d6f61ce6264dc2c2bb40fe3d3f4/d/r/drappier_p_rpetuit_coteaux_champenois_75cl.jpg: Client error '403 Forbidden' for url 'https://thechampagnecompany.com/media/catalog/product/cache/6bee3d6f61ce6264dc2c2bb40fe3d3f4/d/r/drappier_p_rpetuit_coteaux_champenois_75cl.jpg'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-03 19:47:19,338 [ERROR] Error processing candidate https://thechampagnecompany.com/media/catalog/product/cache/6bee3d6f61ce6264dc2c2bb40fe3d3f4/d/r/drappier_p_rpetuit_coteaux_champenois_75cl.jpg for SKU DR27/NV: Failed to download image: https://thechampagnecompany.com/media/catalog/product/cache/6bee3d6f61ce6264dc2c2bb40fe3d3f4/d/r/drappier_p_rpetuit_coteaux_champenois_75cl.jpg
+2026-06-03 19:47:20,380 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/959605c2-ecd2-4ba2-a531-1196c50b5ffc.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:47:20,434 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:47:24,333 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:47:30,644 [INFO] HTTP Request: GET https://www.albatrosswines.com/cdn/shop/files/ebfee14934ff77bc61597981234f5d86_1.webp?v=1755190904&width=3200 "HTTP/1.1 200 OK"
+2026-06-03 19:47:30,721 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:47:56,010 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:48:08,078 [INFO] HTTP Request: GET https://cdn.sanity.io/images/h7fg0cr3/production/3826127ca2b782b9d6ef88dd5f3be555aca4f654-1920x2560.jpg?w=1000&fit=crop&auto=format "HTTP/1.1 200 OK"
+2026-06-03 19:48:08,320 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:48:17,745 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:48:26,050 [INFO] HTTP Request: GET https://lacavedeleon.fr/wp-content/uploads/2025/04/8-10-scaled.png "HTTP/1.1 200 OK"
+2026-06-03 19:48:26,949 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:48:31,670 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:48:36,340 [INFO] HTTP Request: GET https://lacavedeleon.fr/wp-content/uploads/2025/04/8-10-scaled.png "HTTP/1.1 200 OK"
+2026-06-03 19:48:37,043 [INFO] [33/65] Searching (rep) JB04/2011: Paul Jaboulet Crozes Hermitage Domaine de Thalabert
+2026-06-03 19:48:41,440 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Paul+Rhone+Paul+Jaboulet+Crozes+Hermitage+Domaine+de+Thalabert+100%25+Syrah+2011+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:48:41,447 [INFO] SerpApi returned 100 candidates for SKU JB04/2011
+2026-06-03 19:48:42,465 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/5b878271-960f-4f36-b4b7-eec1e24aa0ce.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:48:42,552 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:48:50,008 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:48:56,197 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/a27f9b45-7600-462b-aeda-5ceb1d67a46b.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:48:56,278 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:49:03,235 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:49:08,115 [INFO] HTTP Request: GET https://vinify-prod.s3.eu-west-2.amazonaws.com/vintages-o/77edde5a33ca5049.jpeg "HTTP/1.1 200 OK"
+2026-06-03 19:49:09,462 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:49:15,878 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:50:37,104 [ERROR] Timeout (120s) for rep JB04/2011 — skipping
+2026-06-03 19:50:37,105 [INFO] [34/65] Searching (rep) JB07/2017: Paul Jaboulet Cote Rotie Les Jumelles
+2026-06-03 19:50:38,575 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Paul+Rhone+Paul+Jaboulet+Cote+Rotie+Les+Jumelles+100%25+Syrah+2017+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:50:38,581 [INFO] SerpApi returned 100 candidates for SKU JB07/2017
+2026-06-03 19:50:39,588 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/346beeb4-e443-4cf9-8d2f-437b17858672.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:50:39,635 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:50:43,898 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:50:50,403 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/a2f7c52d-7da3-4fb1-b31c-6877233ddd05.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:50:50,473 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:50:53,833 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:51:02,412 [INFO] HTTP Request: GET https://hedonism.co.uk/sites/default/files/uploads/vintner/vintner-images/HED97704.JPG "HTTP/1.1 403 Forbidden"
+2026-06-03 19:51:02,414 [ERROR] Image download failed for https://hedonism.co.uk/sites/default/files/uploads/vintner/vintner-images/HED97704.JPG: Client error '403 Forbidden' for url 'https://hedonism.co.uk/sites/default/files/uploads/vintner/vintner-images/HED97704.JPG'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-03 19:51:02,415 [ERROR] Error processing candidate https://hedonism.co.uk/sites/default/files/uploads/vintner/vintner-images/HED97704.JPG for SKU JB07/2017: Failed to download image: https://hedonism.co.uk/sites/default/files/uploads/vintner/vintner-images/HED97704.JPG
+2026-06-03 19:51:03,597 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/6a40c5c1-7e62-4815-a76d-68fdea55a72c.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:51:03,704 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:51:07,860 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:51:12,602 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/6cb23c77-cb62-42a7-9fa0-5a1c25bf0966.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:51:12,701 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:51:17,716 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:51:21,579 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/6cb23c77-cb62-42a7-9fa0-5a1c25bf0966.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:51:21,617 [INFO] [35/65] Searching (rep) JB09/2022: Paul Jaboulet La Maison Bleue Hermitage AOP
+2026-06-03 19:51:23,508 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Paul+Rhone+Paul+Jaboulet+La+Maison+Bleue+Hermitage+AOP+100%25+Syrah+2022+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:51:23,510 [INFO] SerpApi returned 100 candidates for SKU JB09/2022
+2026-06-03 19:51:25,429 [INFO] HTTP Request: GET https://aem.lcbo.com/content/dam/lcbo/products/6/8/8/6/688663.jpg.thumb.1280.1280.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:51:25,518 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:51:29,263 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:51:32,517 [INFO] HTTP Request: GET https://aem.lcbo.com/content/dam/lcbo/products/6/8/8/6/688663.jpg.thumb.1280.1280.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:51:32,533 [INFO] [36/65] Searching (rep) JB10/1982: Paul Jaboulet Hermitage La Chapelle
+2026-06-03 19:51:34,207 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Paul+Rhone+Paul+Jaboulet+Hermitage+La+Chapelle+100%25+Syrah+1982+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:51:34,501 [INFO] SerpApi returned 100 candidates for SKU JB10/1982
+2026-06-03 19:51:35,867 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/ddbd4404-8df0-4cf1-bd73-873aa7181d37.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:51:35,982 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:51:48,963 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:51:53,710 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/ddbd4404-8df0-4cf1-bd73-873aa7181d37.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:51:53,729 [INFO] [37/65] Searching (rep) JB10/2006: Paul Jaboulet Hermitage La Chapelle
+2026-06-03 19:51:55,989 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Paul+Rhone+Paul+Jaboulet+Hermitage+La+Chapelle+Syrah+2006+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:51:55,995 [INFO] SerpApi returned 99 candidates for SKU JB10/2006
+2026-06-03 19:51:56,930 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/4c68aa0b-d482-4f66-8068-ed56e190eafd.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:51:57,005 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:52:01,511 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:52:07,139 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/4c68aa0b-d482-4f66-8068-ed56e190eafd.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:52:07,152 [INFO] [38/65] Searching (rep) JB15/2020: Paul Jaboulet Hermitage Le Chevalier de Sterimberg Blanc
+2026-06-03 19:52:14,442 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Paul+Rhone+Paul+Jaboulet+Hermitage+Le+Chevalier+de+Sterimberg+Blanc+50%25+White+Grenache%2C+20%25++Marsanne%2C+20%25Viognier+%2C10%25+Bourboulenc+2020+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:52:14,445 [INFO] SerpApi returned 5 candidates for SKU JB15/2020
+2026-06-03 19:52:14,992 [INFO] HTTP Request: GET https://imgv2-1-f.scribdassets.com/img/document/37757723/original/4987db5049/1?v=1 "HTTP/1.1 200 OK"
+2026-06-03 19:52:15,073 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:52:17,494 [ERROR] Error processing candidate https://imgv2-1-f.scribdassets.com/img/document/37757723/original/4987db5049/1?v=1 for SKU JB15/2020: Image does not contain a wine bottle with a label
+2026-06-03 19:52:17,905 [INFO] HTTP Request: GET https://imgv2-1-f.scribdassets.com/img/document/708452638/original/1457954b6d/1?v=1 "HTTP/1.1 200 OK"
+2026-06-03 19:52:17,976 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:52:20,104 [ERROR] Error processing candidate https://imgv2-1-f.scribdassets.com/img/document/708452638/original/1457954b6d/1?v=1 for SKU JB15/2020: Image does not contain a wine bottle with a label
+2026-06-03 19:52:21,392 [INFO] HTTP Request: GET https://www.yumpu.com/en/image/facebook/35318239.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:52:21,948 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:52:24,076 [ERROR] Error processing candidate https://www.yumpu.com/en/image/facebook/35318239.jpg for SKU JB15/2020: Image does not contain a wine bottle with a label
+2026-06-03 19:52:25,620 [INFO] HTTP Request: GET https://www.yumpu.com/en/image/facebook/29436228.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:52:26,127 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:52:28,082 [ERROR] Error processing candidate https://www.yumpu.com/en/image/facebook/29436228.jpg for SKU JB15/2020: Image does not contain a wine bottle with a label
+2026-06-03 19:52:28,132 [ERROR] Image download failed for x-raw-image:///5da84b9242805aea142ada7b5d8157140ba317c220f086dfa051f1e9d78bbd1d: Request URL is missing an 'http://' or 'https://' protocol.
+2026-06-03 19:52:28,133 [ERROR] Error processing candidate x-raw-image:///5da84b9242805aea142ada7b5d8157140ba317c220f086dfa051f1e9d78bbd1d for SKU JB15/2020: Failed to download image: x-raw-image:///5da84b9242805aea142ada7b5d8157140ba317c220f086dfa051f1e9d78bbd1d
+2026-06-03 19:52:28,133 [WARNING] No image found for rep JB15/2020: Paul Jaboulet Hermitage Le Chevalier de Sterimberg Blanc
+2026-06-03 19:52:28,133 [INFO] [39/65] Searching (rep) JB18/2022: Paul Jaboulet Domaine Mule Blanche Crozes Hermitage
+2026-06-03 19:52:42,663 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Paul+Rhone+Paul+Jaboulet+Domaine+Mule+Blanche+Crozes+Hermitage+50%25+Marsanne+and+50%25+Roussanne+2022+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:52:42,671 [INFO] SerpApi returned 93 candidates for SKU JB18/2022
+2026-06-03 19:52:44,119 [INFO] HTTP Request: GET https://www.kensingtonwinemarket.com/images/labels/856339.jpeg "HTTP/1.1 200 OK"
+2026-06-03 19:52:44,585 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:53:04,803 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:53:10,277 [INFO] HTTP Request: GET https://www.kensingtonwinemarket.com/images/labels/856339.jpeg "HTTP/1.1 200 OK"
+2026-06-03 19:53:10,745 [INFO] [40/65] Searching (rep) JB19/2021: Paul Jaboulet La Chapelle Blanc Hermitage AOC
+2026-06-03 19:53:12,437 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Paul+Rhone+Paul+Jaboulet+La+Chapelle+Blanc+Hermitage+AOC+100%25+Marsanne+2021+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:53:12,454 [INFO] SerpApi returned 100 candidates for SKU JB19/2021
+2026-06-03 19:53:12,539 [INFO] HTTP Request: GET https://hedonism.co.uk/sites/default/files/uploads/vintner/vintner-images/HED90303.JPG "HTTP/1.1 403 Forbidden"
+2026-06-03 19:53:12,542 [ERROR] Image download failed for https://hedonism.co.uk/sites/default/files/uploads/vintner/vintner-images/HED90303.JPG: Client error '403 Forbidden' for url 'https://hedonism.co.uk/sites/default/files/uploads/vintner/vintner-images/HED90303.JPG'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-03 19:53:12,542 [ERROR] Error processing candidate https://hedonism.co.uk/sites/default/files/uploads/vintner/vintner-images/HED90303.JPG for SKU JB19/2021: Failed to download image: https://hedonism.co.uk/sites/default/files/uploads/vintner/vintner-images/HED90303.JPG
+2026-06-03 19:53:13,575 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/9c3b04db-4f0f-4c3f-8839-4ac9c5c2dbaa.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:53:13,651 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:53:19,087 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:53:25,933 [INFO] HTTP Request: GET https://vinothentic.ch/wp-content/uploads/2023/12/D45C531D-1FD6-4BF5-B7BE-544E73212C15.png "HTTP/1.1 200 OK"
+2026-06-03 19:53:27,744 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:53:31,735 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:53:37,061 [INFO] HTTP Request: GET https://vinothentic.ch/wp-content/uploads/2023/12/D45C531D-1FD6-4BF5-B7BE-544E73212C15.png "HTTP/1.1 200 OK"
+2026-06-03 19:53:38,936 [INFO] [41/65] Searching (rep) JD02/2022: John Duval Entity Shiraz
+2026-06-03 19:53:47,504 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=John+John+Duval+Entity+Shiraz+2022+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:53:47,512 [INFO] SerpApi returned 100 candidates for SKU JD02/2022
+2026-06-03 19:53:48,177 [INFO] HTTP Request: GET https://www.mycellars.com.au/wp-content/uploads/2022/02/johnduvalentityshiraz2021.png "HTTP/1.1 418 "
+2026-06-03 19:53:48,178 [ERROR] Image download failed for https://www.mycellars.com.au/wp-content/uploads/2022/02/johnduvalentityshiraz2021.png: Client error '418 ' for url 'https://www.mycellars.com.au/wp-content/uploads/2022/02/johnduvalentityshiraz2021.png'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/418
+2026-06-03 19:53:48,178 [ERROR] Error processing candidate https://www.mycellars.com.au/wp-content/uploads/2022/02/johnduvalentityshiraz2021.png for SKU JD02/2022: Failed to download image: https://www.mycellars.com.au/wp-content/uploads/2022/02/johnduvalentityshiraz2021.png
+2026-06-03 19:53:49,128 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/6da7fd23-6d89-4204-98ae-81c940edeefc.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:53:49,194 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:53:55,117 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:54:00,822 [INFO] HTTP Request: GET http://www.oldbridge.com.au/cdn/shop/products/OBC-Red-John-Duval-Entity.jpg?v=1638276864 "HTTP/1.1 301 Moved Permanently"
+2026-06-03 19:54:01,432 [INFO] HTTP Request: GET https://www.oldbridge.com.au/cdn/shop/products/OBC-Red-John-Duval-Entity.jpg?v=1638276864 "HTTP/1.1 200 OK"
+2026-06-03 19:54:01,635 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:54:06,292 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:54:10,728 [INFO] HTTP Request: GET http://www.oldbridge.com.au/cdn/shop/products/OBC-Red-John-Duval-Entity.jpg?v=1638276864 "HTTP/1.1 301 Moved Permanently"
+2026-06-03 19:54:10,780 [INFO] HTTP Request: GET https://www.oldbridge.com.au/cdn/shop/products/OBC-Red-John-Duval-Entity.jpg?v=1638276864 "HTTP/1.1 200 OK"
+2026-06-03 19:54:10,824 [INFO] [42/65] Searching (rep) JD04/2021: John Duval Eligo Shiraz
+2026-06-03 19:54:12,382 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=John+John+Duval+Eligo+Shiraz+2021+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:54:12,389 [INFO] SerpApi returned 100 candidates for SKU JD04/2021
+2026-06-03 19:54:13,582 [INFO] HTTP Request: GET https://media.nicks.com.au/products/5bc3b927/john-duval-wines-eligo-new.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:54:14,069 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:54:17,925 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:54:20,883 [INFO] HTTP Request: GET https://media.nicks.com.au/products/5bc3b927/john-duval-wines-eligo-new.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:54:20,903 [INFO] [43/65] Searching (rep) LS02/2021: Legacy Peak Kalavinka Cabernet Sauvignon
+2026-06-03 19:54:22,093 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Legacy+Peak+Legacy+Peak+Kalavinka+Cabernet+Sauvignon+2021+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:54:22,095 [INFO] SerpApi returned 45 candidates for SKU LS02/2021
+2026-06-03 19:54:23,060 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/841a6cea-80d4-433e-b45c-76a670b1600a.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:54:23,121 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:54:28,465 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:54:37,193 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/6f94ae5d-b4dd-48b2-989a-7f55cf10948e.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:54:37,251 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:54:46,592 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:54:51,479 [INFO] HTTP Request: GET https://italia.marketingtochina.com/wp-content/uploads/2022/03/Legacy-Peak-768x1024.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:54:51,884 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:54:56,335 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:55:04,730 [INFO] HTTP Request: GET https://cgliquor.com.au/cdn/shop/products/penfolds-bin-389-cabernet-shiraz-gift-box-750ml-707120_900x.png?v=1690502361 "HTTP/1.1 200 OK"
+2026-06-03 19:55:04,830 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:55:10,715 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:55:14,351 [INFO] HTTP Request: GET https://cgliquor.com.au/cdn/shop/products/penfolds-bin-389-cabernet-shiraz-gift-box-750ml-707120_900x.png?v=1690502361 "HTTP/1.1 200 OK"
+2026-06-03 19:55:14,376 [INFO] [44/65] Searching (rep) LS03/2022: Legacy Peak Family Heritage
+2026-06-03 19:55:24,583 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Legacy+Peak+Legacy+Peak+Family+Heritage+2022+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:55:24,591 [INFO] SerpApi returned 100 candidates for SKU LS03/2022
+2026-06-03 19:55:25,233 [INFO] HTTP Request: GET https://cdn.shopify.com/s/files/1/0319/8592/6203/files/SQNSQNFAWH-0750-2020-F0L0C0.jpg?v=1776730491 "HTTP/1.1 200 OK"
+2026-06-03 19:55:25,345 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:55:28,263 [ERROR] Error processing candidate https://cdn.shopify.com/s/files/1/0319/8592/6203/files/SQNSQNFAWH-0750-2020-F0L0C0.jpg?v=1776730491 for SKU LS03/2022: Image does not contain a wine bottle with a label
+2026-06-03 19:55:29,081 [INFO] HTTP Request: GET https://monarch.wine/wp-content/uploads/2026/03/Antinori_Wines_A26_900x1100_edited-838x1024.webp "HTTP/1.1 200 OK"
+2026-06-03 19:55:29,123 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:55:32,595 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:55:36,566 [INFO] HTTP Request: GET https://monarch.wine/wp-content/uploads/2026/03/Antinori_Wines_A26_900x1100_edited-838x1024.webp "HTTP/1.1 200 OK"
+2026-06-03 19:55:36,578 [INFO] [45/65] Searching (rep) LS04/2023: Legacy Peak Chardonnay
+2026-06-03 19:55:38,663 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Legacy+Peak+Legacy+Peak+Chardonnay+2023+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:55:38,668 [INFO] SerpApi returned 100 candidates for SKU LS04/2023
+2026-06-03 19:55:39,712 [INFO] HTTP Request: GET https://burgundycave.com.tw/wp-content/uploads/2025/04/Legacy-Peak-Estate-%E7%95%99%E4%B8%96%E9%85%92%E8%8E%8A-Chardonnay.webp "HTTP/1.1 200 OK"
+2026-06-03 19:55:39,958 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:55:46,998 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:55:51,410 [INFO] HTTP Request: GET https://burgundycave.com.tw/wp-content/uploads/2025/04/Legacy-Peak-Estate-%E7%95%99%E4%B8%96%E9%85%92%E8%8E%8A-Chardonnay.webp "HTTP/1.1 200 OK"
+2026-06-03 19:55:51,618 [INFO] [46/65] Searching (rep) LS29/2015: Legacy Peak Family Heritage 1.5L
+2026-06-03 19:55:58,384 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Legacy+Peak+Legacy+Peak+Family+Heritage+1.5L+2015+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:55:58,389 [INFO] SerpApi returned 100 candidates for SKU LS29/2015
+2026-06-03 19:55:58,727 [INFO] HTTP Request: GET https://cdn.shopify.com/s/files/1/0319/8592/6203/files/BURHEIPERR-0750-2019-F0L0C0.jpg?v=1777074216 "HTTP/1.1 200 OK"
+2026-06-03 19:55:58,944 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:56:01,738 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:56:05,755 [INFO] HTTP Request: GET https://cdn.shopify.com/s/files/1/0319/8592/6203/files/BURHEIPERR-0750-2019-F0L0C0.jpg?v=1777074216 "HTTP/1.1 200 OK"
+2026-06-03 19:56:05,783 [INFO] [47/65] Searching (rep) LS30/2023: Legacy Peak Family Heritage Chardonnay 1.5L
+2026-06-03 19:56:12,033 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Legacy+Peak+Legacy+Peak+Family+Heritage+Chardonnay+1.5L+2023+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:56:12,039 [INFO] SerpApi returned 100 candidates for SKU LS30/2023
+2026-06-03 19:56:12,654 [INFO] HTTP Request: GET https://cdn.shopify.com/s/files/1/0319/8592/6203/files/USWKONKONJ-1500-2023-F0L0C0.jpg?v=1780007187 "HTTP/1.1 200 OK"
+2026-06-03 19:56:12,750 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:56:17,829 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:56:22,219 [INFO] HTTP Request: GET https://cdn.shopify.com/s/files/1/0319/8592/6203/files/USWKONKONJ-1500-2023-F0L0C0.jpg?v=1780007187 "HTTP/1.1 200 OK"
+2026-06-03 19:56:22,239 [INFO] [48/65] Searching (rep) MS20/NV: Mindful Sparks Sparkling Dragon Pearl Jasmine Tea 375ml (Case of 12)
+2026-06-03 19:56:25,205 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Mindful+Mindful+Sparks+Sparkling+Dragon+Pearl+Jasmine+Tea+375ml+%28Case+of+12%29+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:56:25,210 [INFO] SerpApi returned 83 candidates for SKU MS20/NV
+2026-06-03 19:56:25,487 [INFO] HTTP Request: GET https://www.lemon8-app.com/seo/image?item_id=7458389820428157486&index=0&sign=27fe1a4992b8fd951f47ade4b9a9e87e "HTTP/1.1 302 Moved Temporarily"
+2026-06-03 19:56:26,634 [INFO] HTTP Request: GET https://p16-lemon8-sign-sg.tiktokcdn.com/tos-maliva-v-ac5634-us/oUI2MJzBMhCSGI4BBBElJwiCSAABnwf2ih6Aph~tplv-sdweummd6v-text-logo-v1:QHhvaXNlbGxhdG9kYXk=:q75.jpeg?lk3s=c7f08e79&source=lemon8_seo&x-expires=1783101600&x-signature=Cz5ML%2FMQM68lzIImZtGp0mFfgn4%3D "HTTP/1.1 200 OK"
+2026-06-03 19:56:27,052 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:56:32,191 [ERROR] Error processing candidate https://www.lemon8-app.com/seo/image?item_id=7458389820428157486&index=0&sign=27fe1a4992b8fd951f47ade4b9a9e87e for SKU MS20/NV: Image does not contain a wine bottle with a label
+2026-06-03 19:56:32,482 [INFO] HTTP Request: GET https://www.lemon8-app.com/seo/image?item_id=7531914049404076557&index=2&sign=9c46951087f3468c724b75d0a6f0118f "HTTP/1.1 302 Moved Temporarily"
+2026-06-03 19:56:34,764 [INFO] HTTP Request: GET https://p16-lemon8-sign-sg.tiktokcdn.com/tos-maliva-v-ac5634-us/oIAAs3iIEBw0O9Qf4viJGCCO6B46O6B5BB12Aw~tplv-sdweummd6v-text-logo-v1:QGVwYW5ldHQ=:q75.jpeg?lk3s=c7f08e79&source=lemon8_seo&x-expires=1783101600&x-signature=jL5FUE2oSALBmnVrqCKjem%2FFEk8%3D "HTTP/1.1 200 OK"
+2026-06-03 19:56:35,190 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:56:38,791 [ERROR] Error processing candidate https://www.lemon8-app.com/seo/image?item_id=7531914049404076557&index=2&sign=9c46951087f3468c724b75d0a6f0118f for SKU MS20/NV: Image does not contain a wine bottle with a label
+2026-06-03 19:56:39,093 [INFO] HTTP Request: GET https://www.lemon8-app.com/seo/image?item_id=7405828381503865349&index=0&sign=559219894bbdc04ccddf94d68562f6f1 "HTTP/1.1 302 Moved Temporarily"
+2026-06-03 19:56:39,892 [INFO] HTTP Request: GET https://p16-lemon8-sign-sg.tiktokcdn.com/tos-maliva-v-ac5634-us/o8QAMEsSmBAlybJxDDCcDXVxFArEJIfts1ReGp~tplv-sdweummd6v-text-logo-v1:QGNoaWRvcGVwZQ==:q75.jpeg?lk3s=c7f08e79&source=lemon8_seo&x-expires=1783101600&x-signature=gZ%2Buk1snRl0YbPfxyqdTcDp1BxY%3D "HTTP/1.1 200 OK"
+2026-06-03 19:56:40,317 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:56:46,307 [ERROR] Error processing candidate https://www.lemon8-app.com/seo/image?item_id=7405828381503865349&index=0&sign=559219894bbdc04ccddf94d68562f6f1 for SKU MS20/NV: Image does not contain a wine bottle with a label
+2026-06-03 19:56:46,611 [INFO] HTTP Request: GET https://www.lemon8-app.com/seo/image?item_id=7497803647468929582&index=0&sign=244d2e12ca21086149289be29d2ae2d5 "HTTP/1.1 302 Moved Temporarily"
+2026-06-03 19:56:47,252 [INFO] HTTP Request: GET https://p16-lemon8-sign-sg.tiktokcdn.com/tos-maliva-v-ac5634-us/o8s0BNJAiSSiZAjB8wqEBXoA2aAWBBA56fVIrJ~tplv-sdweummd6v-text-logo-v1:QG1lZHVzYV9wYXJhZGE=:q75.jpeg?lk3s=c7f08e79&source=lemon8_seo&x-expires=1783101600&x-signature=oeEleBNem77fJd07mwJoMd4mnt4%3D "HTTP/1.1 200 OK"
+2026-06-03 19:56:47,475 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:56:55,618 [ERROR] Error processing candidate https://www.lemon8-app.com/seo/image?item_id=7497803647468929582&index=0&sign=244d2e12ca21086149289be29d2ae2d5 for SKU MS20/NV: Image does not contain a wine bottle with a label
+2026-06-03 19:56:55,897 [INFO] HTTP Request: GET https://www.lemon8-app.com/seo/image?item_id=7328676850439750150&index=0&sign=4ad95fc80fa21a010fc3593ca59a96bd "HTTP/1.1 302 Moved Temporarily"
+2026-06-03 19:56:57,071 [INFO] HTTP Request: GET https://p16-lemon8-sign-sg.tiktokcdn.com/tos-maliva-v-ac5634-us/o0ZrTEIDgxAEObGFfALbCAH2IDprvaQVWe0FeS~tplv-sdweummd6v-text-logo-v1:QGVhc3lhc3RyeQ==:q75.jpeg?lk3s=c7f08e79&source=lemon8_seo&x-expires=1783101600&x-signature=ZmCHHR5HEiAK8Qkh0C3%2B8BiC03o%3D "HTTP/1.1 200 OK"
+2026-06-03 19:56:57,437 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:56:59,614 [ERROR] Error processing candidate https://www.lemon8-app.com/seo/image?item_id=7328676850439750150&index=0&sign=4ad95fc80fa21a010fc3593ca59a96bd for SKU MS20/NV: Image does not contain a wine bottle with a label
+2026-06-03 19:56:59,615 [WARNING] No image found for rep MS20/NV: Mindful Sparks Sparkling Dragon Pearl Jasmine Tea 375ml (Case of 12)
+2026-06-03 19:56:59,615 [INFO] [49/65] Searching (rep) MS21/NV: Mindful Sparks Sparkling Dragon Pearl Jasmine Tea (Case of 6)
+2026-06-03 19:57:00,955 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Mindful+Mindful+Sparks+Sparkling+Dragon+Pearl+Jasmine+Tea+%28Case+of+6%29+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:57:00,963 [INFO] SerpApi returned 85 candidates for SKU MS21/NV
+2026-06-03 19:57:01,472 [INFO] HTTP Request: GET https://static.wixstatic.com/media/0bdcf8_af43c44e287447d68dfe33488d04829f~mv2.jpg/v1/fill/w_980,h_1239,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Mindful-Sparks-Sparkling-Dragon-Jasmine-Tea-2.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:57:01,723 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:57:05,035 [ERROR] Error processing candidate https://static.wixstatic.com/media/0bdcf8_af43c44e287447d68dfe33488d04829f~mv2.jpg/v1/fill/w_980,h_1239,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Mindful-Sparks-Sparkling-Dragon-Jasmine-Tea-2.jpg for SKU MS21/NV: Image does not contain a wine bottle with a label
+2026-06-03 19:57:06,060 [INFO] HTTP Request: GET https://cdn.shoplightspeed.com/shops/607989/files/70069065/800x1024x2/image.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:57:06,422 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:57:11,078 [ERROR] Error processing candidate https://cdn.shoplightspeed.com/shops/607989/files/70069065/800x1024x2/image.jpg for SKU MS21/NV: Image does not contain a wine bottle with a label
+2026-06-03 19:57:11,508 [INFO] HTTP Request: GET https://static.wixstatic.com/media/0bdcf8_ffa0d64ee7934dae8dd2bb746d26d414~mv2.png/v1/fill/w_980,h_1225,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/MS_YuzuGenmaicha.png "HTTP/1.1 200 OK"
+2026-06-03 19:57:11,795 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:57:15,732 [ERROR] Error processing candidate https://static.wixstatic.com/media/0bdcf8_ffa0d64ee7934dae8dd2bb746d26d414~mv2.png/v1/fill/w_980,h_1225,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/MS_YuzuGenmaicha.png for SKU MS21/NV: Image does not contain a wine bottle with a label
+2026-06-03 19:57:16,085 [INFO] HTTP Request: GET https://medias.watsonswine.com/publishing/WWHK-400697-front-zoom.png?version=1773350818 "HTTP/1.1 200 OK"
+2026-06-03 19:57:16,291 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:57:21,606 [ERROR] Error processing candidate https://medias.watsonswine.com/publishing/WWHK-400697-front-zoom.png?version=1773350818 for SKU MS21/NV: Image does not contain a wine bottle with a label
+2026-06-03 19:57:22,137 [INFO] HTTP Request: GET https://static.wixstatic.com/media/0bdcf8_3bdd003fd7bb49e0b3fe0180366ad944~mv2.jpg/v1/fill/w_980,h_1512,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Mindful-Sparks-ZING-2025.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:57:22,344 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:57:28,767 [ERROR] Error processing candidate https://static.wixstatic.com/media/0bdcf8_3bdd003fd7bb49e0b3fe0180366ad944~mv2.jpg/v1/fill/w_980,h_1512,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Mindful-Sparks-ZING-2025.jpg for SKU MS21/NV: Image does not contain a wine bottle with a label
+2026-06-03 19:57:28,767 [WARNING] No image found for rep MS21/NV: Mindful Sparks Sparkling Dragon Pearl Jasmine Tea (Case of 6)
+2026-06-03 19:57:28,767 [INFO] [50/65] Searching (rep) MS26/NV: Mindful Sparks Cranberry Rose Sparkling Tea (Case of 6)
+2026-06-03 19:57:31,149 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Mindful+Mindful+Sparks+Cranberry+Rose+Sparkling+Tea+%28Case+of+6%29+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:57:31,156 [INFO] SerpApi returned 99 candidates for SKU MS26/NV
+2026-06-03 19:57:32,276 [INFO] HTTP Request: GET https://cdn.shoplightspeed.com/shops/607989/files/70069135/800x1024x2/image.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:57:32,309 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:57:37,431 [ERROR] Error processing candidate https://cdn.shoplightspeed.com/shops/607989/files/70069135/800x1024x2/image.jpg for SKU MS26/NV: Image does not contain a wine bottle with a label
+2026-06-03 19:57:37,906 [INFO] HTTP Request: GET https://medias.watsonswine.com/publishing/WWHK-400708-front-zoom.png?version=1773350769 "HTTP/1.1 200 OK"
+2026-06-03 19:57:38,353 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:57:42,710 [ERROR] Error processing candidate https://medias.watsonswine.com/publishing/WWHK-400708-front-zoom.png?version=1773350769 for SKU MS26/NV: Image does not contain a wine bottle with a label
+2026-06-03 19:57:43,128 [INFO] HTTP Request: GET https://www.lemon8-app.com/seo/image?item_id=7461049933702349358&index=0&sign=ba730e6ce27399024c57e773541e00ca "HTTP/1.1 302 Moved Temporarily"
+2026-06-03 19:57:45,002 [INFO] HTTP Request: GET https://p16-lemon8-sign-sg.tiktokcdn.com/tos-maliva-v-ac5634-us/o4VxQWgsAtaf8EMc4AAXeKWLI8eveNQkeALTVe~tplv-sdweummd6v-text-logo-v1:QGxhc2hpbmRhbW9udHJpY2U=:q75.jpeg?lk3s=c7f08e79&source=lemon8_seo&x-expires=1783101600&x-signature=P0I7QDWUQ30fOZLQK38aPhyezNU%3D "HTTP/1.1 200 OK"
+2026-06-03 19:57:45,279 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:57:50,234 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:57:55,177 [INFO] HTTP Request: GET https://www.lemon8-app.com/seo/image?item_id=7593027679239062047&index=0&sign=e5542ab47b6a47bc638021b13563c245 "HTTP/1.1 302 Moved Temporarily"
+2026-06-03 19:57:56,852 [INFO] HTTP Request: GET https://p16-lemon8-sign-sg.tiktokcdn.com/tos-maliva-v-ac5634-us/owfp9WtC1ODXmfyEh2FuoIA6DYARQgCs9pASCD~tplv-sdweummd6v-text-logo-v1:QGtpc2hhcm4=:q75.jpeg?lk3s=c7f08e79&source=lemon8_seo&x-expires=1783101600&x-signature=Rh2GeOBZedTQNrEAduweENAMZ%2Bg%3D "HTTP/1.1 200 OK"
+2026-06-03 19:57:57,196 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:58:04,636 [ERROR] Error processing candidate https://www.lemon8-app.com/seo/image?item_id=7593027679239062047&index=0&sign=e5542ab47b6a47bc638021b13563c245 for SKU MS26/NV: Image does not contain a wine bottle with a label
+2026-06-03 19:58:04,922 [INFO] HTTP Request: GET https://www.lemon8-app.com/seo/image?item_id=7543028004344103455&index=1&sign=87f65d5988b3d2e53a2515bdb0898c57 "HTTP/1.1 302 Moved Temporarily"
+2026-06-03 19:58:07,273 [INFO] HTTP Request: GET https://p16-lemon8-sign-sg.tiktokcdn.com/tos-maliva-v-ac5634-us/oYHBA30IuQoBNBCOwPJ5xfiJi6B2CAV590rWAE~tplv-sdweummd6v-text-logo-v1:QGJyb3duaW4yMjA=:q75.jpeg?lk3s=c7f08e79&source=lemon8_seo&x-expires=1783101600&x-signature=rlEwQn9rVwOrH6Sa8utvlTun5wc%3D "HTTP/1.1 200 OK"
+2026-06-03 19:58:07,845 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:58:15,099 [ERROR] Error processing candidate https://www.lemon8-app.com/seo/image?item_id=7543028004344103455&index=1&sign=87f65d5988b3d2e53a2515bdb0898c57 for SKU MS26/NV: Image does not contain a wine bottle with a label
+2026-06-03 19:58:15,415 [INFO] HTTP Request: GET https://www.lemon8-app.com/seo/image?item_id=7461049933702349358&index=0&sign=ba730e6ce27399024c57e773541e00ca "HTTP/1.1 302 Moved Temporarily"
+2026-06-03 19:58:15,458 [INFO] HTTP Request: GET https://p16-lemon8-sign-sg.tiktokcdn.com/tos-maliva-v-ac5634-us/o4VxQWgsAtaf8EMc4AAXeKWLI8eveNQkeALTVe~tplv-sdweummd6v-text-logo-v1:QGxhc2hpbmRhbW9udHJpY2U=:q75.jpeg?lk3s=c7f08e79&source=lemon8_seo&x-expires=1783101600&x-signature=P0I7QDWUQ30fOZLQK38aPhyezNU%3D "HTTP/1.1 200 OK"
+2026-06-03 19:58:15,477 [INFO] [51/65] Searching (rep) PT03/2022: Planeta Santa Cecilia, Doc Noto
+2026-06-03 19:58:17,154 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Planeta+Planeta+Santa+Cecilia%2C+Doc+Noto+2022+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:58:17,253 [INFO] SerpApi returned 100 candidates for SKU PT03/2022
+2026-06-03 19:58:18,493 [INFO] HTTP Request: GET https://www.vinvm.co.uk/image/cache/catalog/planeta-santa-cecilia-noto-doc-2015-popup.jpg?v1559761952 "HTTP/1.1 403 Forbidden"
+2026-06-03 19:58:18,494 [ERROR] Image download failed for https://www.vinvm.co.uk/image/cache/catalog/planeta-santa-cecilia-noto-doc-2015-popup.jpg?v1559761952: Client error '403 Forbidden' for url 'https://www.vinvm.co.uk/image/cache/catalog/planeta-santa-cecilia-noto-doc-2015-popup.jpg?v1559761952'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-03 19:58:18,494 [ERROR] Error processing candidate https://www.vinvm.co.uk/image/cache/catalog/planeta-santa-cecilia-noto-doc-2015-popup.jpg?v1559761952 for SKU PT03/2022: Failed to download image: https://www.vinvm.co.uk/image/cache/catalog/planeta-santa-cecilia-noto-doc-2015-popup.jpg?v1559761952
+2026-06-03 19:58:19,861 [INFO] HTTP Request: GET https://www.palmbay.com/images/Vf7XYULJ48BOiUKjdnZxX12gDc4=/1294/original/planeta-santa-cecilia-nero-davola-noto-doc-back-label.jpg "HTTP/1.1 302 Found"
+2026-06-03 19:58:21,018 [INFO] HTTP Request: GET https://pbi.nyc3.digitaloceanspaces.com/images/planeta-santa-cecilia-nero-davola-noto-doc-back.original.png "HTTP/1.1 200 OK"
+2026-06-03 19:58:23,658 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:58:35,240 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:58:44,807 [INFO] HTTP Request: GET https://www.signorvino.com/on/demandware.static/-/Sites-SGV_EC_COM/default/dw32d8ebe3/images/VFR002332022-F.png "HTTP/1.1 200 OK"
+libpng warning: iCCP: known incorrect sRGB profile
+2026-06-03 19:58:45,648 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:58:48,516 [ERROR] Error processing candidate https://www.signorvino.com/on/demandware.static/-/Sites-SGV_EC_COM/default/dw32d8ebe3/images/VFR002332022-F.png for SKU PT03/2022: Image does not contain a wine bottle with a label
+2026-06-03 19:58:49,737 [INFO] HTTP Request: GET https://cdn.shopify.com/s/files/1/0650/4356/2708/files/santa-cecilia-planeta-202220251021175252.png?v=1778513782 "HTTP/1.1 200 OK"
+2026-06-03 19:58:50,479 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:58:55,015 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:59:00,495 [INFO] HTTP Request: GET https://cdn.shopify.com/s/files/1/0650/4356/2708/files/santa-cecilia-planeta-202220251021175252.png?v=1778513782 "HTTP/1.1 200 OK"
+2026-06-03 19:59:00,834 [INFO] [52/65] Searching (rep) PT05/2023: Planeta Chardonnay I.G.T Sicilia
+2026-06-03 19:59:06,778 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Planeta+Planeta+Chardonnay+I.G.T+Sicilia+2023+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:59:06,783 [INFO] SerpApi returned 100 candidates for SKU PT05/2023
+2026-06-03 19:59:07,117 [INFO] HTTP Request: GET http://buywinesonline.com/cdn/shop/files/PlanetaChardonnay2020.jpg?v=1693606106 "HTTP/1.1 301 Moved Permanently"
+2026-06-03 19:59:07,675 [INFO] HTTP Request: GET https://buywinesonline.com/cdn/shop/files/PlanetaChardonnay2020.jpg?v=1693606106 "HTTP/1.1 200 OK"
+2026-06-03 19:59:07,732 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:59:10,477 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:59:13,527 [INFO] HTTP Request: GET http://buywinesonline.com/cdn/shop/files/PlanetaChardonnay2020.jpg?v=1693606106 "HTTP/1.1 301 Moved Permanently"
+2026-06-03 19:59:13,580 [INFO] HTTP Request: GET https://buywinesonline.com/cdn/shop/files/PlanetaChardonnay2020.jpg?v=1693606106 "HTTP/1.1 200 OK"
+2026-06-03 19:59:13,589 [INFO] [53/65] Searching (rep) PT24/2022: Planeta Eruzione 1614 Carricante DOC Sicilia
+2026-06-03 19:59:14,987 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Planeta+Planeta+Eruzione+1614+Carricante+DOC+Sicilia+2022+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:59:14,999 [INFO] SerpApi returned 100 candidates for SKU PT24/2022
+2026-06-03 19:59:16,164 [INFO] HTTP Request: GET https://www.vinvm.co.uk/image/cache/catalog/planeta-eruzione-carricante-popup.jpg?v1753696114 "HTTP/1.1 403 Forbidden"
+2026-06-03 19:59:16,166 [ERROR] Image download failed for https://www.vinvm.co.uk/image/cache/catalog/planeta-eruzione-carricante-popup.jpg?v1753696114: Client error '403 Forbidden' for url 'https://www.vinvm.co.uk/image/cache/catalog/planeta-eruzione-carricante-popup.jpg?v1753696114'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-03 19:59:16,166 [ERROR] Error processing candidate https://www.vinvm.co.uk/image/cache/catalog/planeta-eruzione-carricante-popup.jpg?v1753696114 for SKU PT24/2022: Failed to download image: https://www.vinvm.co.uk/image/cache/catalog/planeta-eruzione-carricante-popup.jpg?v1753696114
+2026-06-03 19:59:17,531 [INFO] HTTP Request: GET https://aem.lcbo.com/content/dam/lcbo/products/0/2/5/3/025354.jpg.thumb.1280.1280.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:59:17,579 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:59:21,469 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:59:25,506 [INFO] HTTP Request: GET https://aem.lcbo.com/content/dam/lcbo/products/0/2/5/3/025354.jpg.thumb.1280.1280.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:59:25,515 [INFO] [54/65] Searching (rep) PT31/2022: Planeta Didacus Chardonnay
+2026-06-03 19:59:26,964 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Planeta+Planeta+Didacus+Chardonnay+2022+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:59:26,971 [INFO] SerpApi returned 99 candidates for SKU PT31/2022
+2026-06-03 19:59:28,109 [INFO] HTTP Request: GET https://www.vinvm.co.uk/image/cache/catalog/planeta-didacus-chardonnay-popup.jpg?v1664884157 "HTTP/1.1 403 Forbidden"
+2026-06-03 19:59:28,111 [ERROR] Image download failed for https://www.vinvm.co.uk/image/cache/catalog/planeta-didacus-chardonnay-popup.jpg?v1664884157: Client error '403 Forbidden' for url 'https://www.vinvm.co.uk/image/cache/catalog/planeta-didacus-chardonnay-popup.jpg?v1664884157'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-03 19:59:28,111 [ERROR] Error processing candidate https://www.vinvm.co.uk/image/cache/catalog/planeta-didacus-chardonnay-popup.jpg?v1664884157 for SKU PT31/2022: Failed to download image: https://www.vinvm.co.uk/image/cache/catalog/planeta-didacus-chardonnay-popup.jpg?v1664884157
+2026-06-03 19:59:28,578 [INFO] HTTP Request: GET https://i.redd.it/planeta-chardonnay-2022-v0-9mvcr2maypdd1.jpg?width=3072&format=pjpg&auto=webp&s=a6257b4fbb3d3e54c5db2d7e3b449ba40b6fa4c7 "HTTP/1.1 200 OK"
+2026-06-03 19:59:29,115 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:59:32,498 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:59:37,519 [INFO] HTTP Request: GET https://www.flaschenpost.ch/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fqygihzjkzuyj%2F7oHC94wq7Y2Nw6hGjYT39B%2Fb5d6f6a79682252170c281ff32bb80ef%2FTDW_26-05___Chardonnay_1216650_Kopie.webp&w=1920&q=90 "HTTP/1.1 403 Forbidden"
+2026-06-03 19:59:37,521 [ERROR] Image download failed for https://www.flaschenpost.ch/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fqygihzjkzuyj%2F7oHC94wq7Y2Nw6hGjYT39B%2Fb5d6f6a79682252170c281ff32bb80ef%2FTDW_26-05___Chardonnay_1216650_Kopie.webp&w=1920&q=90: Client error '403 Forbidden' for url 'https://www.flaschenpost.ch/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fqygihzjkzuyj%2F7oHC94wq7Y2Nw6hGjYT39B%2Fb5d6f6a79682252170c281ff32bb80ef%2FTDW_26-05___Chardonnay_1216650_Kopie.webp&w=1920&q=90'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-03 19:59:37,522 [ERROR] Error processing candidate https://www.flaschenpost.ch/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fqygihzjkzuyj%2F7oHC94wq7Y2Nw6hGjYT39B%2Fb5d6f6a79682252170c281ff32bb80ef%2FTDW_26-05___Chardonnay_1216650_Kopie.webp&w=1920&q=90 for SKU PT31/2022: Failed to download image: https://www.flaschenpost.ch/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fqygihzjkzuyj%2F7oHC94wq7Y2Nw6hGjYT39B%2Fb5d6f6a79682252170c281ff32bb80ef%2FTDW_26-05___Chardonnay_1216650_Kopie.webp&w=1920&q=90
+2026-06-03 19:59:38,537 [INFO] HTTP Request: GET https://cdn.shopify.com/s/files/1/0650/4356/2708/files/HP_Desktop_FotoneNEW_52.png?v=1779726488 "HTTP/1.1 200 OK"
+2026-06-03 19:59:38,864 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:59:43,350 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:59:49,073 [INFO] HTTP Request: GET https://cdn.shopify.com/s/files/1/0650/4356/2708/files/HP_Desktop_FotoneNEW_52.png?v=1779726488 "HTTP/1.1 200 OK"
+2026-06-03 19:59:49,447 [INFO] [55/65] Searching (rep) PT34/2016: Planeta Didacus Cabernet Franc Menfi DOC
+2026-06-03 19:59:54,515 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Planeta+Planeta+Didacus+Cabernet+Franc+Menfi+DOC+2016+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 19:59:54,520 [INFO] SerpApi returned 100 candidates for SKU PT34/2016
+2026-06-03 19:59:55,334 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/c7d1f13b-b2f1-4918-8831-d4bb491f3539.jpg "HTTP/1.1 200 OK"
+2026-06-03 19:59:55,445 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 19:59:59,441 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 20:00:06,200 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/79b699d4-cbe9-47e4-9de3-7fcbada99d41.jpg "HTTP/1.1 200 OK"
+2026-06-03 20:00:06,300 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 20:00:11,174 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 20:00:16,805 [INFO] HTTP Request: GET https://data.negoziodelvino.it/imgprodotto/cabernet-franc-sicilia-menfi-didacus-doc-in-wooden-case_15066_zoom.jpg "HTTP/1.1 200 "
+2026-06-03 20:00:17,055 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 20:00:23,498 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 20:00:32,603 [INFO] HTTP Request: GET https://data.negoziodelvino.it/imgprodotto/cabernet-franc-sicilia-menfi-didacus-doc-in-wooden-case_15066_zoom.jpg "HTTP/1.1 200 "
+2026-06-03 20:00:32,810 [INFO] [56/65] Searching (rep) SK04/2024: Skyline Chardonnay Reserve
+2026-06-03 20:00:34,618 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Skyline+Skyline+Chardonnay+Reserve+2024+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 20:00:34,623 [INFO] SerpApi returned 99 candidates for SKU SK04/2024
+2026-06-03 20:00:35,960 [INFO] HTTP Request: GET https://images.squarespace-cdn.com/content/v1/60db477f9524867536405085/f25e8a42-9878-477a-bb95-e4500aef4636/IMG_0861+%282%29+%281%29.jpg "HTTP/1.1 200 OK"
+2026-06-03 20:00:36,413 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 20:00:40,883 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 20:00:50,464 [INFO] HTTP Request: GET http://www.empirewinehk.com/cdn/shop/files/Tiansai-Skyline-of-Gobi-Reserve-Chardonnay-2023.jpg?v=1766123010 "HTTP/1.1 301 Moved Permanently"
+2026-06-03 20:00:50,741 [INFO] HTTP Request: GET https://www.empirewinehk.com/cdn/shop/files/Tiansai-Skyline-of-Gobi-Reserve-Chardonnay-2023.jpg?v=1766123010 "HTTP/1.1 200 OK"
+2026-06-03 20:00:50,779 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 20:00:55,132 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 20:00:58,221 [INFO] HTTP Request: GET http://www.empirewinehk.com/cdn/shop/files/Tiansai-Skyline-of-Gobi-Reserve-Chardonnay-2023.jpg?v=1766123010 "HTTP/1.1 301 Moved Permanently"
+2026-06-03 20:00:58,265 [INFO] HTTP Request: GET https://www.empirewinehk.com/cdn/shop/files/Tiansai-Skyline-of-Gobi-Reserve-Chardonnay-2023.jpg?v=1766123010 "HTTP/1.1 200 OK"
+2026-06-03 20:00:58,276 [INFO] [57/65] Searching (rep) SK05/2019: Skyline Marselan Selection
+2026-06-03 20:01:03,846 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Skyline+Skyline+Marselan+Selection+2019+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 20:01:03,852 [INFO] SerpApi returned 99 candidates for SKU SK05/2019
+2026-06-03 20:01:04,511 [INFO] HTTP Request: GET https://corvinoasia.com/wp-content/uploads/2024/04/%E4%B8%AD%E5%9C%8B%E8%91%A1%E8%90%84%E9%85%92%E5%A4%A7%E8%B3%BD3-scaled.jpg "HTTP/1.1 403 Forbidden"
+2026-06-03 20:01:04,515 [ERROR] Image download failed for https://corvinoasia.com/wp-content/uploads/2024/04/%E4%B8%AD%E5%9C%8B%E8%91%A1%E8%90%84%E9%85%92%E5%A4%A7%E8%B3%BD3-scaled.jpg: Client error '403 Forbidden' for url 'https://corvinoasia.com/wp-content/uploads/2024/04/%E4%B8%AD%E5%9C%8B%E8%91%A1%E8%90%84%E9%85%92%E5%A4%A7%E8%B3%BD3-scaled.jpg'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-03 20:01:04,515 [ERROR] Error processing candidate https://corvinoasia.com/wp-content/uploads/2024/04/%E4%B8%AD%E5%9C%8B%E8%91%A1%E8%90%84%E9%85%92%E5%A4%A7%E8%B3%BD3-scaled.jpg for SKU SK05/2019: Failed to download image: https://corvinoasia.com/wp-content/uploads/2024/04/%E4%B8%AD%E5%9C%8B%E8%91%A1%E8%90%84%E9%85%92%E5%A4%A7%E8%B3%BD3-scaled.jpg
+2026-06-03 20:01:05,372 [INFO] HTTP Request: GET https://www.chinawinemap.com/cdn/shop/files/NX001007_2018_2f58317e-f6cd-4b12-8fac-062fff0eb9c3.jpg?v=1748342114&width=1500 "HTTP/1.1 200 OK"
+2026-06-03 20:01:05,435 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 20:01:10,743 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 20:01:13,916 [INFO] HTTP Request: GET https://www.chinawinemap.com/cdn/shop/files/NX001007_2018_2f58317e-f6cd-4b12-8fac-062fff0eb9c3.jpg?v=1748342114&width=1500 "HTTP/1.1 200 OK"
+2026-06-03 20:01:13,932 [INFO] [58/65] Searching (rep) SK11/2019: Skyline of Gobi Grand Reserve Marselan, Xinjiang
+2026-06-03 20:01:15,611 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Skyline+Skyline+of+Gobi+Grand+Reserve+Marselan%2C+Xinjiang+2019+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 20:01:15,627 [INFO] SerpApi returned 100 candidates for SKU SK11/2019
+2026-06-03 20:01:15,760 [INFO] HTTP Request: GET https://corvinoasia.com/wp-content/uploads/2024/04/%E4%B8%AD%E5%9C%8B%E8%91%A1%E8%90%84%E9%85%92%E5%A4%A7%E8%B3%BD3-scaled.jpg "HTTP/1.1 403 Forbidden"
+2026-06-03 20:01:15,764 [ERROR] Image download failed for https://corvinoasia.com/wp-content/uploads/2024/04/%E4%B8%AD%E5%9C%8B%E8%91%A1%E8%90%84%E9%85%92%E5%A4%A7%E8%B3%BD3-scaled.jpg: Client error '403 Forbidden' for url 'https://corvinoasia.com/wp-content/uploads/2024/04/%E4%B8%AD%E5%9C%8B%E8%91%A1%E8%90%84%E9%85%92%E5%A4%A7%E8%B3%BD3-scaled.jpg'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-03 20:01:15,764 [ERROR] Error processing candidate https://corvinoasia.com/wp-content/uploads/2024/04/%E4%B8%AD%E5%9C%8B%E8%91%A1%E8%90%84%E9%85%92%E5%A4%A7%E8%B3%BD3-scaled.jpg for SKU SK11/2019: Failed to download image: https://corvinoasia.com/wp-content/uploads/2024/04/%E4%B8%AD%E5%9C%8B%E8%91%A1%E8%90%84%E9%85%92%E5%A4%A7%E8%B3%BD3-scaled.jpg
+2026-06-03 20:01:19,503 [INFO] HTTP Request: GET https://s.terroirsense.com/2022/04/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220422110035-768x1024.jpg "HTTP/1.1 200 OK"
+2026-06-03 20:01:20,292 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 20:01:23,394 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 20:01:29,023 [INFO] HTTP Request: GET https://s.terroirsense.com/2022/04/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220422110021-768x1024.jpg "HTTP/1.1 200 OK"
+2026-06-03 20:01:29,680 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 20:01:34,452 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 20:01:39,459 [INFO] HTTP Request: GET https://www.chinawinemap.com/cdn/shop/files/NX001007_2018_2f58317e-f6cd-4b12-8fac-062fff0eb9c3.jpg?v=1748342114&width=1500 "HTTP/1.1 200 OK"
+2026-06-03 20:01:39,540 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 20:01:44,491 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 20:01:47,812 [INFO] HTTP Request: GET https://www.chinawinemap.com/cdn/shop/files/NX001007_2018_2f58317e-f6cd-4b12-8fac-062fff0eb9c3.jpg?v=1748342114&width=1500 "HTTP/1.1 200 OK"
+2026-06-03 20:01:47,828 [INFO] [59/65] Searching (rep) SK16/2024: Tiansai Vineyards T20 Chardonnay Dry White Wine
+2026-06-03 20:01:54,005 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Tiansai+Vineyards+Tiansai+Vineyards+T20+Chardonnay+Dry+White+Wine+2023+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 20:01:54,020 [INFO] SerpApi returned 94 candidates for SKU SK16/2024
+2026-06-03 20:01:56,497 [INFO] HTTP Request: GET https://s.terroirsense.com/2024/04/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240402163128.jpg "HTTP/1.1 200 OK"
+2026-06-03 20:01:57,259 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 20:02:19,511 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 20:02:25,447 [INFO] HTTP Request: GET https://s.terroirsense.com/2024/04/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240402163121.jpg "HTTP/1.1 200 OK"
+2026-06-03 20:02:26,109 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 20:02:28,524 [ERROR] Error processing candidate https://s.terroirsense.com/2024/04/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240402163121.jpg for SKU SK16/2024: Image does not contain a wine bottle with a label
+2026-06-03 20:02:31,961 [INFO] HTTP Request: GET https://s.terroirsense.com/2022/11/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20221111175250-768x1024.jpg "HTTP/1.1 200 OK"
+2026-06-03 20:02:32,319 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 20:02:35,705 [ERROR] Error processing candidate https://s.terroirsense.com/2022/11/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20221111175250-768x1024.jpg for SKU SK16/2024: Image does not contain a wine bottle with a label
+2026-06-03 20:02:35,858 [INFO] HTTP Request: GET https://s.terroirsense.com/2024/04/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240402163126.jpg "HTTP/1.1 200 OK"
+2026-06-03 20:02:35,987 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 20:02:41,184 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 20:02:50,659 [INFO] HTTP Request: GET https://s.terroirsense.com/2022/11/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20221111175308-768x1024.jpg "HTTP/1.1 200 OK"
+2026-06-03 20:02:51,794 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 20:02:54,238 [ERROR] Error processing candidate https://s.terroirsense.com/2022/11/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20221111175308-768x1024.jpg for SKU SK16/2024: Image does not contain a wine bottle with a label
+2026-06-03 20:02:54,340 [INFO] HTTP Request: GET https://s.terroirsense.com/2024/04/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240402163126.jpg "HTTP/1.1 200 OK"
+2026-06-03 20:02:54,370 [INFO] [60/65] Searching (rep) SK17/2019: Tiansai Vineyards T20 Syrah Marselan
+2026-06-03 20:02:55,375 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Tiansai+Vineyards+Tiansai+Vineyards+T20+Syrah+Marselan+2019+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 20:02:55,380 [INFO] SerpApi returned 46 candidates for SKU SK17/2019
+2026-06-03 20:02:55,475 [INFO] HTTP Request: GET https://s.terroirsense.com/2024/04/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240402163121.jpg "HTTP/1.1 200 OK"
+2026-06-03 20:02:55,562 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 20:02:57,824 [ERROR] Error processing candidate https://s.terroirsense.com/2024/04/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240402163121.jpg for SKU SK17/2019: Image does not contain a wine bottle with a label
+2026-06-03 20:02:57,929 [INFO] HTTP Request: GET https://s.terroirsense.com/2022/04/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220422110021-768x1024.jpg "HTTP/1.1 200 OK"
+2026-06-03 20:02:57,987 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 20:03:01,494 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 20:03:08,248 [INFO] HTTP Request: GET https://s.terroirsense.com/2022/04/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220422110035-768x1024.jpg "HTTP/1.1 200 OK"
+2026-06-03 20:03:08,323 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 20:03:11,940 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 20:03:16,035 [INFO] HTTP Request: GET https://s.terroirsense.com/2024/04/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240402163128.jpg "HTTP/1.1 200 OK"
+2026-06-03 20:03:16,171 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 20:03:37,109 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 20:03:44,683 [INFO] HTTP Request: GET https://s.terroirsense.com/2022/04/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220422111507-768x1024.jpg "HTTP/1.1 200 OK"
+2026-06-03 20:03:45,761 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 20:03:48,417 [ERROR] Error processing candidate https://s.terroirsense.com/2022/04/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220422111507-768x1024.jpg for SKU SK17/2019: Image does not contain a wine bottle with a label
+2026-06-03 20:03:48,493 [INFO] HTTP Request: GET https://s.terroirsense.com/2022/04/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220422110021-768x1024.jpg "HTTP/1.1 200 OK"
+2026-06-03 20:03:48,508 [INFO] [61/65] Searching (rep) SK18/2020: Tiansai Vineyards T50 Syrah
+2026-06-03 20:03:49,623 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Tiansai+Vineyards+Tiansai+Vineyards+T50+Syrah+2020+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 20:03:49,627 [INFO] SerpApi returned 7 candidates for SKU SK18/2020
+2026-06-03 20:03:51,497 [INFO] HTTP Request: GET https://www.internationalwinechallenge.com/canopy/images/wine_images/IWC/wine/2020/zoom/6779.jpg "HTTP/1.1 200 OK"
+2026-06-03 20:03:52,730 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 20:03:58,476 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 20:04:03,709 [INFO] HTTP Request: GET https://www.internationalwinechallenge.com/canopy/images/wine_images/IWC/wine/2020/zoom/6779.jpg "HTTP/1.1 200 OK"
+2026-06-03 20:04:04,076 [INFO] [62/65] Searching (rep) SK19/2021: Tiansai Vineyards T95 Marselan
+2026-06-03 20:04:07,534 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Tiansai+Vineyards+Tiansai+Vineyards+T95+Marselan+2021+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 20:04:07,540 [INFO] SerpApi returned 89 candidates for SKU SK19/2021
+2026-06-03 20:04:08,176 [INFO] HTTP Request: GET https://www.internationalwinechallenge.com/canopy/images/wine_images/IWC/wine/2020/zoom/5501.jpg "HTTP/1.1 200 OK"
+2026-06-03 20:04:08,822 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 20:04:13,650 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 20:04:17,735 [INFO] HTTP Request: GET https://www.internationalwinechallenge.com/canopy/images/wine_images/IWC/wine/2020/zoom/5501.jpg "HTTP/1.1 200 OK"
+2026-06-03 20:04:18,398 [INFO] [63/65] Searching (rep) SK21/2017: Skyline Sparking Wine
+2026-06-03 20:04:20,920 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Skyline+Skyline+Sparking+Wine+2017+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 20:04:20,933 [INFO] SerpApi returned 100 candidates for SKU SK21/2017
+2026-06-03 20:04:21,916 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/d3999b52-c04e-4826-92b8-8b6ce1e53ea7.jpg "HTTP/1.1 200 OK"
+2026-06-03 20:04:21,981 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 20:04:28,943 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 20:04:34,063 [INFO] HTTP Request: GET https://amigoni.com/wp-content/uploads/2022/07/2.jpg "HTTP/1.1 200 OK"
+2026-06-03 20:04:34,336 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 20:04:38,102 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 20:04:41,731 [INFO] HTTP Request: GET https://amigoni.com/wp-content/uploads/2022/07/2.jpg "HTTP/1.1 200 OK"
+2026-06-03 20:04:41,747 [INFO] [64/65] Searching (rep) VF01/2021: Vilafonte Series C
+2026-06-03 20:04:44,308 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Vilafonte+Vilafonte+Series+C+2021+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 20:04:44,317 [INFO] SerpApi returned 98 candidates for SKU VF01/2021
+2026-06-03 20:04:44,860 [INFO] HTTP Request: GET http://www.londonendwines.com/cdn/shop/files/VilafonteSeriesC_1200x1200.jpg?v=1694765958 "HTTP/1.1 301 Moved Permanently"
+2026-06-03 20:04:45,172 [INFO] HTTP Request: GET https://www.londonendwines.com/cdn/shop/files/VilafonteSeriesC_1200x1200.jpg?v=1694765958 "HTTP/1.1 200 OK"
+2026-06-03 20:04:45,204 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 20:04:47,918 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 20:04:52,266 [INFO] HTTP Request: GET http://www.londonendwines.com/cdn/shop/files/VilafonteSeriesC_1200x1200.jpg?v=1694765958 "HTTP/1.1 301 Moved Permanently"
+2026-06-03 20:04:52,316 [INFO] HTTP Request: GET https://www.londonendwines.com/cdn/shop/files/VilafonteSeriesC_1200x1200.jpg?v=1694765958 "HTTP/1.1 200 OK"
+2026-06-03 20:04:52,326 [INFO] [65/65] Searching (rep) VF02/2021: Vilafonte Series M
+2026-06-03 20:04:55,254 [INFO] HTTP Request: GET https://serpapi.com/search?engine=google_images&q=Vilafonte+Vilafonte+Series+M+2021+wine+bottle+-site%3Ainstagram.com+-site%3Afacebook.com+-site%3Apinterest.com+-site%3Atiktok.com+-site%3Atwitter.com+-site%3Ax.com&api_key=6507934244ec5d105def13275985cc32791c2c5e8841ae31dce98b8a2c762461&ijn=0&imgsz=l&imgtype=photo&imgar=t "HTTP/1.1 200 OK"
+2026-06-03 20:04:55,259 [INFO] SerpApi returned 98 candidates for SKU VF02/2021
+2026-06-03 20:04:56,025 [INFO] HTTP Request: GET https://images.commerce7.com/vilafonte/images/large/m-2020-1676362143512.jpg "HTTP/1.1 200 OK"
+2026-06-03 20:04:56,223 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 20:04:59,420 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-03 20:05:03,022 [INFO] HTTP Request: GET https://images.commerce7.com/vilafonte/images/large/m-2020-1676362143512.jpg "HTTP/1.1 200 OK"
+2026-06-03 20:05:03,152 [INFO] [TIMING] Process 87 wines through pipeline: 1823.05s
+2026-06-03 20:05:03,152 [INFO] Copying images with SKU Code filenames...
+2026-06-03 20:05:03,185 [INFO] [TIMING] Rename 79 images: 0.03s
+2026-06-03 20:05:03,185 [INFO] Creating ZIP file: vinobuzz_images_use_this.zip
+2026-06-03 20:05:04,409 [INFO] [TIMING] Create ZIP file with 79 images: 1.22s
+2026-06-03 20:05:04,409 [INFO] [TIMING] TOTAL PROCESSING TIME: 1824.81s
+2026-06-03 20:05:04,409 [INFO] ==================================================
+2026-06-03 20:05:04,409 [INFO] SUMMARY
+2026-06-03 20:05:04,409 [INFO] ==================================================
+2026-06-03 20:05:04,409 [INFO] Total wines: 87
+2026-06-03 20:05:04,409 [INFO] Images found: 59
+2026-06-03 20:05:04,409 [INFO] Images not found: 6
+2026-06-03 20:05:04,409 [INFO] Total time: 1824.81s (30.41 minutes)
+2026-06-03 20:05:04,409 [INFO] Average time per wine: 20.97s
+2026-06-03 20:05:04,409 [INFO] ZIP file created: vinobuzz_images_use_this.zip
+2026-06-03 20:05:04,409 [INFO] Wines with images: ['BH08/2021', 'BH09/2021', 'BH10/2021', 'BH11/2021', 'BH12/2021', 'BH13/2021', 'BH14/2021', 'BH15/2021', 'BH17/2021', 'BH21/2021', 'BM14/2008', 'CY05/2021', 'CY06/2021', 'CY19/2016', 'DA04/2004', 'DA05/2016', 'DA09/2021', 'DR01/NV', 'DR02/NV', 'DR05/NV', 'DR06/NV', 'DR08/NV', 'DR09/NV', 'DR12/2012', 'DR15/NV', 'DR16/NV', 'DR17/NV', 'DR20/NV', 'DR21/NV', 'DR27/NV', 'JB07/2017', 'JB09/2022', 'JB10/1982', 'JB10/2006', 'JB18/2022', 'JB19/2021', 'JD02/2022', 'JD04/2021', 'LS02/2021', 'LS03/2022', 'LS04/2023', 'LS29/2015', 'LS30/2023', 'MS26/NV', 'PT03/2022', 'PT05/2023', 'PT24/2022', 'PT31/2022', 'PT34/2016', 'SK04/2024', 'SK05/2019', 'SK11/2019', 'SK16/2024', 'SK17/2019', 'SK18/2020', 'SK19/2021', 'SK21/2017', 'VF01/2021', 'VF02/2021']
+2026-06-03 20:05:04,409 [INFO] Wines without images: ['BH23/2021', 'DR07/NV', 'JB04/2011', 'JB15/2020', 'MS20/NV', 'MS21/NV']
+2026-06-03 20:05:04,409 [INFO] Timing log saved to: pricelist_timing.json

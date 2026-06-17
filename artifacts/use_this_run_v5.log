@@ -1,0 +1,113 @@
+/home/gitanjali/.pyenv/versions/3.10.14/lib/python3.10/site-packages/google/api_core/_python_version_support.py:273: FutureWarning: You are using a Python version (3.10.14) which Google will stop supporting in new releases of google.api_core once it reaches its end of life (2026-10-04). Please upgrade to the latest Python version, or at least Python 3.11, to continue receiving updates for google.api_core past that date.
+  warnings.warn(message, FutureWarning)
+/home/gitanjali/.pyenv/versions/3.10.14/lib/python3.10/site-packages/google/api_core/_python_version_support.py:273: FutureWarning: You are using a Python version (3.10.14) which Google will stop supporting in new releases of google.cloud.vision_v1 once it reaches its end of life (2026-10-04). Please upgrade to the latest Python version, or at least Python 3.11, to continue receiving updates for google.cloud.vision_v1 past that date.
+  warnings.warn(message, FutureWarning)
+2026-06-06 23:11:04,666 [INFO] Loading pricelist from use_this.xlsx
+2026-06-06 23:11:04,751 [INFO] [TIMING] Load Excel file: 0.08s
+2026-06-06 23:11:04,751 [INFO] Found 87 wines to process
+2026-06-06 23:11:04,752 [INFO] Initializing pipeline...
+2026-06-06 23:11:04,863 [INFO] The user provided project/location will take precedence over the Vertex AI API key from the environment variable.
+2026-06-06 23:11:05,029 [INFO] The user provided project/location will take precedence over the Vertex AI API key from the environment variable.
+2026-06-06 23:11:05,147 [INFO] [TIMING] Initialize pipeline: 0.40s
+2026-06-06 23:11:05,153 [INFO] [TIMING] Create 87 SKU objects: 0.00s
+2026-06-06 23:11:05,153 [INFO] Processing wines through pipeline (one search per SKU, no dedup)...
+2026-06-06 23:11:05,156 [INFO] [1/87] Searching BH08/2021: Domaine de Bila-Haut V.I.T Cotes du Roussillon Latour de France AOP
+2026-06-06 23:11:05,444 [INFO] response: https://www.bing.com/images/async?q=Domaine+de+Bila-Haut+V.I.T+Cotes+du+Roussillon+Latour+de+France+AOP+2021+wine+bottle&async=1&first=1&count=35 200
+2026-06-06 23:11:05,463 [INFO] DuckDuckGo returned 10 candidates for SKU BH08/2021
+2026-06-06 23:11:05,680 [INFO] HTTP Request: GET https://www.saq.com/media/catalog/product/1/5/15371980-1_1730227690.png?optimize=high&fit=bounds&height=&width=&format=jpeg "HTTP/1.1 200 OK"
+2026-06-06 23:11:05,803 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:11:12,966 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:11:20,130 [INFO] HTTP Request: GET https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhWcUiyAMYpxV1aIBwSEED1oH8S_Z34TFSYOkufYesKOx1-TffC9gfmMzWozIgE-k9RVObsePZVxSvnDPDBhkzQbOS54hMkQ8aF5mwv7PZNAoAlluSCQNLCC-lHn2Vq6tX_EfdUKDety43FWIqNl625zgjWYaEMfS8F8bdcUQgYOl2PHwdmZj_4TS8A_Q/s900/M-Chapoutier-Bila-Haut-Cotes-du-Roussillon-Blanc-2021-AP-Midi-France_07240.JPG "HTTP/1.1 200 OK"
+2026-06-06 23:11:20,179 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:11:23,495 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:11:30,673 [INFO] HTTP Request: GET https://media.bbr.com/s/bbr/20118109655-ms?img404=Default_Wine "HTTP/1.1 200 OK"
+2026-06-06 23:11:31,068 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:11:43,710 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:11:49,469 [INFO] HTTP Request: GET https://cdn11.bigcommerce.com/s-41e84jdtvf/images/stencil/1280x1280/products/48370/89381/61333__36700.1686081121.jpg?c=1 "HTTP/1.1 200 OK"
+2026-06-06 23:11:49,525 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:12:04,963 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:12:09,743 [INFO] HTTP Request: GET https://1.bp.blogspot.com/-BzSH_pt_jPk/YBHrHdwNY_I/AAAAAAAARKY/PxodD3Iz5issdT_1MT0EQvEqDTkF7-BkgCNcBGAsYHQ/s900/Les-Vignes-de-Bila-Haut-Cotes-du-Roussillon-Blanc-2018-AP-Midi-France_06006.JPG "HTTP/1.1 200 OK"
+2026-06-06 23:12:09,792 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:12:13,246 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:12:18,656 [INFO] HTTP Request: GET https://media.bbr.com/s/bbr/20118109655-ms?img404=Default_Wine "HTTP/1.1 200 OK"
+2026-06-06 23:12:23,117 [INFO] HTTP Request: POST https://api.remove.bg/v1.0/removebg "HTTP/1.1 200 OK"
+2026-06-06 23:12:24,468 [INFO]   ✓ BH08/2021 confidence=63% producer=100% vintage=0%
+2026-06-06 23:12:24,468 [INFO] [2/87] Searching BH09/2021: Domaine de Bila-Haut R.I Cotes du Roussillon Villages Lesquerde AOP
+2026-06-06 23:12:24,645 [INFO] response: https://duckduckgo.com/?q=Domaine+de+Bila-Haut+R.I+Cotes+du+Roussillon+Villages+Lesquerde+AOP+2021+wine+bottle 200
+2026-06-06 23:12:25,256 [INFO] response: https://duckduckgo.com/i.js?o=json&q=Domaine+de+Bila-Haut+R.I+Cotes+du+Roussillon+Villages+Lesquerde+AOP+2021+wine+bottle&l=us-en&vqd=4-97260935611020237501134966031392198834&p=1&ct=AT 200
+2026-06-06 23:12:25,299 [INFO] DuckDuckGo returned 10 candidates for SKU BH09/2021
+2026-06-06 23:12:26,261 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/344ceae9-cb07-4d4b-9bab-e8ea8dfc741f.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:12:26,318 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:12:29,761 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:12:35,572 [INFO] HTTP Request: GET http://tablewineasheville.com/cdn/shop/products/Bila-HautRoussillonRouge.jpg?v=1623791139 "HTTP/1.1 301 Moved Permanently"
+2026-06-06 23:12:35,907 [INFO] HTTP Request: GET https://tablewineasheville.com/cdn/shop/products/Bila-HautRoussillonRouge.jpg?v=1623791139 "HTTP/1.1 200 OK"
+2026-06-06 23:12:36,410 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:12:42,287 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:12:47,680 [INFO] HTTP Request: GET https://www.saratogawine.com/wp-content/uploads/2024/01/0575e31-0-0.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:12:47,746 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:12:50,433 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:12:57,162 [INFO] HTTP Request: GET https://vinumlector.com/wp-content/uploads/2021/05/M.-Chapoutier-Bila-Haut-C%C3%B4tes-du-Roussillon-Villages-AOP-Rouge.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:12:57,359 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:13:00,573 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:13:06,712 [INFO] HTTP Request: GET https://avis-vin.lefigaro.fr/media/cache/bottle_fiche/var/src/165/41039-bouteille-domaine-de-bila-haut-ri-rouge--cotes-du-roussillon-villages.png "HTTP/1.1 200 OK"
+2026-06-06 23:13:07,249 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:13:16,354 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:13:20,110 [INFO] HTTP Request: GET http://tablewineasheville.com/cdn/shop/products/Bila-HautRoussillonRouge.jpg?v=1623791139 "HTTP/1.1 301 Moved Permanently"
+2026-06-06 23:13:20,157 [INFO] HTTP Request: GET https://tablewineasheville.com/cdn/shop/products/Bila-HautRoussillonRouge.jpg?v=1623791139 "HTTP/1.1 200 OK"
+2026-06-06 23:13:24,032 [INFO] HTTP Request: POST https://api.remove.bg/v1.0/removebg "HTTP/1.1 200 OK"
+2026-06-06 23:13:24,065 [INFO]   ✓ BH09/2021 confidence=42% producer=10% vintage=50%
+2026-06-06 23:13:24,065 [INFO] [3/87] Searching BH10/2021: Domaine de Bila-Haut Chrysopee Blanc, Collioure AOP
+2026-06-06 23:13:24,235 [INFO] response: https://duckduckgo.com/?q=Domaine+de+Bila-Haut+Chrysopee+Blanc%2C+Collioure+AOP+2021+wine+bottle 200
+2026-06-06 23:13:24,751 [INFO] response: https://duckduckgo.com/i.js?o=json&q=Domaine+de+Bila-Haut+Chrysopee+Blanc%2C+Collioure+AOP+2021+wine+bottle&l=us-en&vqd=4-135293364484661836756844833526667356837&p=1&ct=AT 200
+2026-06-06 23:13:24,792 [INFO] DuckDuckGo returned 10 candidates for SKU BH10/2021
+2026-06-06 23:13:24,953 [INFO] HTTP Request: GET https://static2.wineandco.com/themes/wineandco/images/produits/4/9/8/6/grd49864.jpg "HTTP/1.1 403 Forbidden"
+2026-06-06 23:13:24,956 [ERROR] Image download failed for https://static2.wineandco.com/themes/wineandco/images/produits/4/9/8/6/grd49864.jpg: Client error '403 Forbidden' for url 'https://static2.wineandco.com/themes/wineandco/images/produits/4/9/8/6/grd49864.jpg'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:13:24,956 [ERROR] Error processing candidate https://static2.wineandco.com/themes/wineandco/images/produits/4/9/8/6/grd49864.jpg for SKU BH10/2021: Failed to download image: https://static2.wineandco.com/themes/wineandco/images/produits/4/9/8/6/grd49864.jpg
+2026-06-06 23:13:25,363 [INFO] HTTP Request: GET https://www.mchapoutier.com.au/wp-content/uploads/2023/04/M.-CHAPOUTIER-Domaine-de-Bila-Haut-Chrysopee-Blanc-75cL-NM-AOP-550x550.png "HTTP/1.1 403 Forbidden"
+2026-06-06 23:13:25,367 [ERROR] Image download failed for https://www.mchapoutier.com.au/wp-content/uploads/2023/04/M.-CHAPOUTIER-Domaine-de-Bila-Haut-Chrysopee-Blanc-75cL-NM-AOP-550x550.png: Client error '403 Forbidden' for url 'https://www.mchapoutier.com.au/wp-content/uploads/2023/04/M.-CHAPOUTIER-Domaine-de-Bila-Haut-Chrysopee-Blanc-75cL-NM-AOP-550x550.png'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-06-06 23:13:25,367 [ERROR] Error processing candidate https://www.mchapoutier.com.au/wp-content/uploads/2023/04/M.-CHAPOUTIER-Domaine-de-Bila-Haut-Chrysopee-Blanc-75cL-NM-AOP-550x550.png for SKU BH10/2021: Failed to download image: https://www.mchapoutier.com.au/wp-content/uploads/2023/04/M.-CHAPOUTIER-Domaine-de-Bila-Haut-Chrysopee-Blanc-75cL-NM-AOP-550x550.png
+2026-06-06 23:13:25,456 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/5ae1e824-78df-47a5-a4f6-063a5366b5d3.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:13:25,530 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:13:31,509 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:13:37,037 [INFO] HTTP Request: GET https://www.chapoutier.com/media/cache/JOURNAL/Articles/m/c/mch_amb_bilahaut_chrysopee2_5472x3648.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:13:39,293 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:13:42,669 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:13:51,171 [INFO] HTTP Request: GET https://cache3.voyageursduvin.com/products/M.-Chapoutier-Domaine-de-Bila-Haut-Collioure-Chrysopee-Blanc-zoom.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:13:51,502 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:13:54,482 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:14:00,388 [INFO] HTTP Request: GET https://cache3.voyageursduvin.com/products/M.-Chapoutier-Domaine-de-Bila-Haut-Collioure-Chrysopee-Blanc-zoom.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:14:02,132 [INFO] HTTP Request: POST https://api.remove.bg/v1.0/removebg "HTTP/1.1 200 OK"
+2026-06-06 23:14:03,008 [INFO]   ✓ BH10/2021 confidence=10% producer=0% vintage=0%
+2026-06-06 23:14:03,009 [INFO] [4/87] Searching BH11/2021: M. Chapoutier L ermite Rouge Ermitage AOP
+2026-06-06 23:14:03,337 [INFO] response: https://www.bing.com/images/async?q=M.+Chapoutier+L+ermite+Rouge+Ermitage+AOP+2021+wine+bottle&async=1&first=1&count=35 200
+2026-06-06 23:14:03,405 [INFO] DuckDuckGo returned 10 candidates for SKU BH11/2021
+2026-06-06 23:14:04,071 [INFO] HTTP Request: GET http://worldwine.com.au/cdn/shop/files/F284_2014NM_c.jpg?crop=center&height=1200&v=1701870204&width=1200 "HTTP/1.1 301 Moved Permanently"
+2026-06-06 23:14:04,253 [INFO] HTTP Request: GET https://worldwine.com.au/cdn/shop/files/F284_2014NM_c.jpg?crop=center&height=1200&v=1701870204&width=1200 "HTTP/1.1 200 OK"
+2026-06-06 23:14:04,272 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:14:07,759 [ERROR] Error processing candidate http://worldwine.com.au/cdn/shop/files/F284_2014NM_c.jpg?crop=center&height=1200&v=1701870204&width=1200 for SKU BH11/2021: Image does not contain a wine bottle with a label
+2026-06-06 23:14:08,729 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/c3548c78-2ca5-483e-8f15-3f6054b70695.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:14:08,794 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:14:13,575 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:14:18,910 [INFO] HTTP Request: GET https://www.saq.com/media/catalog/product/1/5/15371761-1_1730227686.png?optimize=high&fit=bounds&height=&width=&format=jpeg "HTTP/1.1 200 OK"
+2026-06-06 23:14:19,002 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:14:22,826 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:14:26,888 [INFO] HTTP Request: GET https://www.saq.com/media/catalog/product/1/5/15371875-1_1730227688.png?optimize=high&fit=bounds&height=&width=&format=jpeg "HTTP/1.1 200 OK"
+2026-06-06 23:14:26,982 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:14:31,258 [ERROR] Error processing candidate https://www.saq.com/media/catalog/product/1/5/15371875-1_1730227688.png?optimize=high&fit=bounds&height=&width=&format=jpeg for SKU BH11/2021: Image does not contain a wine bottle with a label
+2026-06-06 23:14:31,342 [INFO] HTTP Request: GET https://bestofwines.com/wine-images/18277_big.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:14:31,361 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:14:33,767 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:14:38,242 [INFO] HTTP Request: GET https://www.saq.com/media/catalog/product/1/5/15371761-1_1730227686.png?optimize=high&fit=bounds&height=&width=&format=jpeg "HTTP/1.1 200 OK"
+2026-06-06 23:14:39,612 [INFO] HTTP Request: POST https://api.remove.bg/v1.0/removebg "HTTP/1.1 200 OK"
+2026-06-06 23:14:39,911 [INFO]   ✓ BH11/2021 confidence=61% producer=100% vintage=0%
+2026-06-06 23:14:39,911 [INFO] [5/87] Searching BH11/2022: M. Chapoutier L ermite Rouge Ermitage AOP
+2026-06-06 23:14:40,130 [INFO] response: https://www.bing.com/images/async?q=M.+Chapoutier+L+ermite+Rouge+Ermitage+AOP+2022+wine+bottle&async=1&first=1&count=35 200
+2026-06-06 23:14:40,140 [INFO] DuckDuckGo returned 10 candidates for SKU BH11/2022
+2026-06-06 23:14:40,306 [INFO] HTTP Request: GET https://www.foliowine.com/wp-content/uploads/2022/05/m-chapoutier-lErmite-rouge-nv-bottle-scaled.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:14:40,384 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:14:42,942 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:14:47,470 [INFO] HTTP Request: GET https://cdn.ct-static.com/labels/c3548c78-2ca5-483e-8f15-3f6054b70695.jpg "HTTP/1.1 200 OK"
+2026-06-06 23:14:47,529 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-06 23:14:51,673 [INFO] AFC is enabled with max remote calls: 10.

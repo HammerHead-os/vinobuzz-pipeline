@@ -1,0 +1,61 @@
+{
+  "date": "2026-06-07T01:36:14.199530",
+  "total_wines": 87,
+  "images_found": 63,
+  "images_not_found": [
+    "BH08/2021",
+    "BH11/2021",
+    "BH11/2022",
+    "BH12/2021",
+    "BH12/2022",
+    "BH13/2021",
+    "BH15/2021",
+    "BH15/2022",
+    "BH17/2021",
+    "BM14/2008",
+    "CY06/2021",
+    "CY19/2016",
+    "DA04/2005",
+    "DR09/NV",
+    "JB04/2011",
+    "JB04/2012",
+    "JB07/2017",
+    "JB15/2020",
+    "LS03/2022",
+    "LS29/2015",
+    "MS20/NV",
+    "PT05/2023",
+    "SK04/2024",
+    "SK21/2017"
+  ],
+  "timing": [
+    {
+      "step": "Load Excel file",
+      "seconds": 0.09
+    },
+    {
+      "step": "Initialize pipeline",
+      "seconds": 0.4
+    },
+    {
+      "step": "Create 87 SKU objects",
+      "seconds": 0.0
+    },
+    {
+      "step": "Process 87 wines through pipeline",
+      "seconds": 5913.07
+    },
+    {
+      "step": "Rename 63 images",
+      "seconds": 0.02
+    },
+    {
+      "step": "Create ZIP file with 63 images",
+      "seconds": 0.04
+    },
+    {
+      "step": "TOTAL PROCESSING TIME",
+      "seconds": 5913.61
+    }
+  ]
+}
