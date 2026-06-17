@@ -24,9 +24,10 @@ class TestQualityFilterUnit:
         raw_text = """
         {
             "watermarks": "pass",
-            "blur_glare": "pass",
-            "single_upright_bottle": "pass",
-            "background": "pass",
+            "full_bottle_visible": "pass",
+            "sharp_legible_label": "pass",
+            "single_bottle_only": "pass",
+            "clean_background": "pass",
             "no_lifestyle_props": "pass",
             "not_ai_generated": "pass"
         }
@@ -42,9 +43,10 @@ class TestQualityFilterUnit:
         raw_text = """
         {
             "watermarks": "pass",
-            "blur_glare": "fail",
-            "single_upright_bottle": "pass",
-            "background": "fail",
+            "full_bottle_visible": "pass",
+            "sharp_legible_label": "fail",
+            "single_bottle_only": "pass",
+            "clean_background": "fail",
             "no_lifestyle_props": "pass",
             "not_ai_generated": "pass"
         }
@@ -52,19 +54,20 @@ class TestQualityFilterUnit:
         result = QualityFilter._parse_response(raw_text)
 
         assert result.passed is False
-        assert result.image_quality_score == pytest.approx(4 / 6, rel=0.01)
+        assert result.image_quality_score == pytest.approx(5 / 7, rel=0.01)
         assert len(result.rejection_reasons) == 2
-        assert "Image exhibits blur or glare that obscures label text" in result.rejection_reasons
-        assert "Background is not white or neutral grey" in result.rejection_reasons
+        assert "Image is blurry / label text not legible" in result.rejection_reasons
+        assert "Background is cluttered / not a clean product shot" in result.rejection_reasons
 
     def test_parse_response_all_fail(self):
         """Test parsing when all criteria fail."""
         raw_text = """
         {
             "watermarks": "fail",
-            "blur_glare": "fail",
-            "single_upright_bottle": "fail",
-            "background": "fail",
+            "full_bottle_visible": "fail",
+            "sharp_legible_label": "fail",
+            "single_bottle_only": "fail",
+            "clean_background": "fail",
             "no_lifestyle_props": "fail",
             "not_ai_generated": "fail"
         }
@@ -73,7 +76,7 @@ class TestQualityFilterUnit:
 
         assert result.passed is False
         assert result.image_quality_score == 0.0
-        assert len(result.rejection_reasons) == 6
+        assert len(result.rejection_reasons) == 7
 
     def test_parse_response_with_markdown_fences(self):
         """Test parsing when response includes markdown fences."""
@@ -81,9 +84,10 @@ class TestQualityFilterUnit:
         ```json
         {
             "watermarks": "pass",
-            "blur_glare": "pass",
-            "single_upright_bottle": "pass",
-            "background": "pass",
+            "full_bottle_visible": "pass",
+            "sharp_legible_label": "pass",
+            "single_bottle_only": "pass",
+            "clean_background": "pass",
             "no_lifestyle_props": "pass",
             "not_ai_generated": "pass"
         }
@@ -111,13 +115,13 @@ class TestQualityFilterUnit:
         raw_text = """
         {
             "watermarks": "pass",
-            "blur_glare": "pass"
+            "full_bottle_visible": "pass"
         }
         """
         result = QualityFilter._parse_response(raw_text)
 
         assert result.passed is False
-        assert len(result.rejection_reasons) == 4  # Missing criteria default to fail
+        assert len(result.rejection_reasons) == 5  # Missing criteria default to fail
 
     def test_parse_response_non_dict(self):
         """Test parsing when response is not a dictionary."""
@@ -138,9 +142,10 @@ class TestQualityFilterUnit:
         mock_response.text = """
         {
             "watermarks": "pass",
-            "blur_glare": "pass",
-            "single_upright_bottle": "pass",
-            "background": "pass",
+            "full_bottle_visible": "pass",
+            "sharp_legible_label": "pass",
+            "single_bottle_only": "pass",
+            "clean_background": "pass",
             "no_lifestyle_props": "pass",
             "not_ai_generated": "pass"
         }
@@ -175,17 +180,25 @@ class TestQualityFilterUnit:
         # Test each criterion individually
         criteria_and_descriptions = [
             ("watermarks", "Image contains visible watermarks"),
-            ("blur_glare", "Image exhibits blur or glare that obscures label text"),
-            ("single_upright_bottle", "Image does not show a single upright bottle"),
-            ("background", "Background is not white or neutral grey"),
+            ("full_bottle_visible", "Bottle is cropped / not fully visible"),
+            ("sharp_legible_label", "Image is blurry / label text not legible"),
+            ("single_bottle_only", "Image contains multiple bottles / group shot"),
+            ("clean_background", "Background is cluttered / not a clean product shot"),
             ("no_lifestyle_props", "Image contains lifestyle props or non-product elements"),
             ("not_ai_generated", "Image appears to be AI-generated"),
         ]
         
         for criterion, expected_description in criteria_and_descriptions:
             # Create a response with only this criterion failing
-            pass_criteria = ["watermarks", "blur_glare", "single_upright_bottle", 
-                           "background", "no_lifestyle_props", "not_ai_generated"]
+            pass_criteria = [
+                "watermarks",
+                "full_bottle_visible",
+                "sharp_legible_label",
+                "single_bottle_only",
+                "clean_background",
+                "no_lifestyle_props",
+                "not_ai_generated",
+            ]
             response_dict = {c: "pass" for c in pass_criteria}
             response_dict[criterion] = "fail"
             
@@ -202,31 +215,35 @@ class TestQualityFilterUnit:
         
         Validates: Requirements 7.3
         """
-        # 6/6 pass = 1.0
+        # 7/7 pass = 1.0
         result = QualityFilter._parse_response(
-            '{"watermarks":"pass","blur_glare":"pass","single_upright_bottle":"pass",'
-            '"background":"pass","no_lifestyle_props":"pass","not_ai_generated":"pass"}'
+            '{"watermarks":"pass","full_bottle_visible":"pass","sharp_legible_label":"pass",'
+            '"single_bottle_only":"pass","clean_background":"pass","no_lifestyle_props":"pass",'
+            '"not_ai_generated":"pass"}'
         )
         assert result.image_quality_score == pytest.approx(1.0, rel=0.01)
         
-        # 5/6 pass
+        # 6/7 pass
         result = QualityFilter._parse_response(
-            '{"watermarks":"pass","blur_glare":"pass","single_upright_bottle":"pass",'
-            '"background":"pass","no_lifestyle_props":"pass","not_ai_generated":"fail"}'
+            '{"watermarks":"pass","full_bottle_visible":"pass","sharp_legible_label":"pass",'
+            '"single_bottle_only":"pass","clean_background":"pass","no_lifestyle_props":"pass",'
+            '"not_ai_generated":"fail"}'
         )
-        assert result.image_quality_score == pytest.approx(5/6, rel=0.01)
+        assert result.image_quality_score == pytest.approx(6/7, rel=0.01)
         
-        # 3/6 pass = 0.5
+        # 3/7 pass
         result = QualityFilter._parse_response(
-            '{"watermarks":"pass","blur_glare":"fail","single_upright_bottle":"pass",'
-            '"background":"fail","no_lifestyle_props":"pass","not_ai_generated":"fail"}'
+            '{"watermarks":"pass","full_bottle_visible":"fail","sharp_legible_label":"pass",'
+            '"single_bottle_only":"fail","clean_background":"fail","no_lifestyle_props":"pass",'
+            '"not_ai_generated":"fail"}'
         )
-        assert result.image_quality_score == pytest.approx(0.5, rel=0.01)
+        assert result.image_quality_score == pytest.approx(3/7, rel=0.01)
         
-        # 0/6 pass = 0.0
+        # 0/7 pass = 0.0
         result = QualityFilter._parse_response(
-            '{"watermarks":"fail","blur_glare":"fail","single_upright_bottle":"fail",'
-            '"background":"fail","no_lifestyle_props":"fail","not_ai_generated":"fail"}'
+            '{"watermarks":"fail","full_bottle_visible":"fail","sharp_legible_label":"fail",'
+            '"single_bottle_only":"fail","clean_background":"fail","no_lifestyle_props":"fail",'
+            '"not_ai_generated":"fail"}'
         )
         assert result.image_quality_score == pytest.approx(0.0, rel=0.01)
 
@@ -237,8 +254,9 @@ class TestQualityFilterUnit:
         """
         # Any failing criterion should cause rejection
         result = QualityFilter._parse_response(
-            '{"watermarks":"pass","blur_glare":"pass","single_upright_bottle":"pass",'
-            '"background":"pass","no_lifestyle_props":"fail","not_ai_generated":"pass"}'
+            '{"watermarks":"pass","full_bottle_visible":"pass","sharp_legible_label":"pass",'
+            '"single_bottle_only":"pass","clean_background":"pass","no_lifestyle_props":"fail",'
+            '"not_ai_generated":"pass"}'
         )
         assert result.passed is False
         assert len(result.rejection_reasons) > 0

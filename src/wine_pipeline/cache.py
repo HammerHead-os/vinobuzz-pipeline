@@ -17,7 +17,7 @@ class ResultCache:
     """SQLite cache for pipeline results."""
 
     def __init__(self, db_path: str = "pipeline_cache.db"):
-        self._conn = sqlite3.connect(db_path)
+        self._conn = sqlite3.connect(db_path, check_same_thread=False)
         self._conn.row_factory = sqlite3.Row
         self._create_table()
 

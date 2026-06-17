@@ -34,7 +34,7 @@ class SKU:
 @dataclass
 class CandidateImage:
     url: str
-    source: str  # "serpapi", "vivino", "wine-searcher", "producer", etc.
+    source: str  # "serper", "brave", "google", "bing", "duckduckgo", etc.
     raw_image: Optional[bytes] = None
 
 

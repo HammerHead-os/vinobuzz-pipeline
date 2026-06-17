@@ -23,8 +23,8 @@ criterion_value_strategy = st.sampled_from(["pass", "fail"])
 gemini_response_strategy = st.dictionaries(
     keys=st.sampled_from(_ALL_CRITERIA),
     values=criterion_value_strategy,
-    min_size=6,  # All 6 criteria
-    max_size=6,
+    min_size=len(_ALL_CRITERIA),  # All criteria
+    max_size=len(_ALL_CRITERIA),
 )
 
 # Strategy for generating raw JSON text (including with markdown fences optionally)
@@ -44,8 +44,7 @@ def test_quality_evaluation_checks_all_criteria(raw_text: str):
     """Property 6: Quality evaluation checks all criteria and returns rejection reasons.
 
     For any candidate image response from Gemini, the quality filter should:
-    1. Parse all 6 criteria (watermarks, blur_glare, single_upright_bottle, 
-       background, no_lifestyle_props, not_ai_generated)
+    1. Parse all criteria (including full bottle visibility)
     2. Return rejection reasons for each failed criterion
     3. Calculate quality score as ratio of passed criteria
     4. Set passed=True only if all criteria pass

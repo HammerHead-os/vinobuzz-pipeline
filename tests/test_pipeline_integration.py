@@ -1,6 +1,6 @@
 """Integration tests for the full Pipeline flow.
 
-Mocks all external APIs (SerpAPI, Gemini, Google Vision) and verifies
+Mocks all external APIs (Serper, Gemini, Google Vision) and verifies
 that all stages execute in correct order and produce a valid ScoredResult.
 
 Requirements: 1.1–6.6
@@ -62,7 +62,7 @@ def pipeline_with_mocks(fake_image, tmp_path):
     # Search: returns one candidate with raw_image already set
     candidate = CandidateImage(
         url="https://example.com/wine.jpg",
-        source="serpapi",
+        source="serper",
         raw_image=fake_image,
     )
     mock_search = MagicMock(spec=SearchModule)
