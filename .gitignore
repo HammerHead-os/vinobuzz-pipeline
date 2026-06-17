@@ -1,7 +1,51 @@
+# Secrets and credentials
 .env
 credentials.json
-credentials2.0.json
-*.db
+credentials*.json
+credentials.backup*
+artifacts/credentials_backups/
+
+# Python
 __pycache__/
+*.py[cod]
 .hypothesis/
 .pytest_cache/
+*.egg-info/
+.venv/
+venv/
+
+# Runtime cache and generated images
+data/images/
+self/
+pricelist_images*/
+artifacts/Goldgate_wine/
+artifacts/08_06_2026_images/
+artifacts/*_images/
+
+# Archives and large deliverables
+*.zip
+
+# Client pricelist data (keep local only)
+*.xlsx
+*.xls
+.~lock.*
+~$*
+
+# Local databases
+*.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Generated timing at repo root (also written under artifacts/)
+pricelist_timing.json
+
+image_gallery*.html
+artifacts/live_gallery.html
+artifacts/test_run_100/image_gallery_100.html
